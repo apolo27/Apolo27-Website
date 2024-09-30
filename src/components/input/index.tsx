@@ -64,7 +64,7 @@ export const Input: FC<InputProps> = ({
     ?.message as string;
   const isDirty = getErrorFromFormState(name, formState.dirtyFields) as boolean;
   const isValid = !hasErrors && isDirty && hasValue;
-  const defaultClass = "w-full p-4 h-[56px] border rounded-md bg-[#F7F7F769]";
+  const defaultClass = "w-full p-4 h-[48px] border rounded-md bg-[#F7F7F769]";
 
   return (
     <div className="w-full">
