@@ -102,19 +102,34 @@ export const Form = () => {
             <Image src={logo} width={75} alt="logo" />
             <div className="flex justify-evenly items-center" {...stepperProps}>
               {stepsProps?.map((step, index) => (
-                <>
+                <React.Fragment key={index}>
                   <div
-                    key={index}
-                    className={`rounded-full bg-gray-300 w-5 h-5 border-double border-2 ${index <= state.currentStep ? "bg-red-500" : "bg-gray-200"}`}
+                    id="circle"
+                    className={`rounded-full w-5 h-5 border-double border-2 transition-colors duration-500 ease-in-out ${
+                      index <= state.currentStep
+                        ? "bg-red-500 border-white"
+                        : "bg-gray-200"
+                    } ${index <= state.currentStep ? "delay-400" : ""}`}
                     style={{
                       opacity: steps[index].disabled ? 0.6 : 1,
-                      borderColor: state.currentStep === index ? "white" : "",
                     }}
                   ></div>
-                  {index < 3 && <div className={`h-1 w-24 ${index+1 <= state.currentStep ? "bg-red-500" : "bg-gray-200"}`}></div>}
-                </>
+
+                  {/* Line with no delay */}
+                  {index < 3 && (
+                    <div
+                      id="line"
+                      className={`h-1 w-24 transition-colors duration-500 ease-in-out ${
+                        index + 1 <= state.currentStep
+                          ? "bg-red-500"
+                          : "bg-gray-200"
+                      }`}
+                    ></div>
+                  )}
+                </React.Fragment>
               ))}
             </div>
+
             <div>
               <p className="font-bold text-3xl">Contactenos</p>
               <p className="font-extralight">
