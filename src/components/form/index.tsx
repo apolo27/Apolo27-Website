@@ -100,23 +100,26 @@ export const Form = () => {
         <FormProvider {...form}>
           <form className="w-96 flex flex-col gap-5 p-4">
             <Image src={logo} width={75} alt="logo" />
-            <div className="flex" {...stepperProps}>
+            <div className="flex justify-evenly items-center" {...stepperProps}>
               {stepsProps?.map((step, index) => (
-                <ol
-                  key={index}
-                  className="w-full text-center"
-                  style={{
-                    opacity: steps[index].disabled ? 0.6 : 1,
-                    fontWeight: state.currentStep === index ? "bold" : "unset",
-                  }}
-                >
-                  <p>{steps[index].label}</p>
-                </ol>
+                <>
+                  <div
+                    key={index}
+                    className={`rounded-full bg-gray-300 w-5 h-5 border-double border-2 ${index <= state.currentStep ? "bg-red-500" : "bg-gray-200"}`}
+                    style={{
+                      opacity: steps[index].disabled ? 0.6 : 1,
+                      borderColor: state.currentStep === index ? "white" : "",
+                    }}
+                  ></div>
+                  {index < 3 && <div className={`h-1 w-24 ${index+1 <= state.currentStep ? "bg-red-500" : "bg-gray-200"}`}></div>}
+                </>
               ))}
             </div>
             <div>
               <p className="font-bold text-3xl">Contactenos</p>
-              <p className="font-extralight">Solicite una visita a su institución</p>
+              <p className="font-extralight">
+                Solicite una visita a su institución
+              </p>
             </div>
             <div>
               {state.currentStep === 0 && (
@@ -138,7 +141,6 @@ export const Form = () => {
               )}
               {state.currentStep === 1 && (
                 <div>
-                  
                   <div className="flex gap-4 items-center justify-center">
                     <button
                       className="px-2 py-1 border-2 font-semibold rounded-md flex gap-3 items-center text-[#0069DB]"
@@ -175,7 +177,11 @@ export const Form = () => {
               )}
               {state.currentStep === 3 && (
                 <div>
-                  <Input placeholder="Fecha de la reunion" type="date" name="meetingDate" />
+                  <Input
+                    placeholder="Fecha de la reunion"
+                    type="date"
+                    name="meetingDate"
+                  />
                   <Input placeholder="Mensaje" name="message" />
                   <div className="flex gap-4 items-center justify-center">
                     <button
