@@ -109,7 +109,7 @@ export const Form = () => {
                       index <= state.currentStep
                         ? "bg-red-500 border-white"
                         : "bg-gray-200"
-                    } ${index <= state.currentStep ? "delay-400" : ""}`}
+                    } ${index <= state.currentStep ? "delay-50" : ""}`}
                     style={{
                       opacity: steps[index].disabled ? 0.6 : 1,
                     }}
