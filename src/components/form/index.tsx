@@ -8,13 +8,14 @@ import { FormType } from "@/app/shared/models/form";
 import { Stepper, Step } from "headless-stepper/components";
 
 import { useStepper } from "headless-stepper";
-import React from "react";
+import React, { useRef } from "react";
 import { Input } from "../input";
 import logo from "@/app/shared/imgs/gray-logo.png";
 import bus from "@/app/shared/imgs/bus.png";
 import { ArrowLeftIcon, ArrowRightIcon } from "@heroicons/react/16/solid";
 import { CheckBox } from "../checkBox";
 import { validateSchema } from "@/app/shared/utils";
+import { POST } from "@/app/api/send/route";
 
 export const Form = () => {
   const formSchema = yup.object().shape({
@@ -81,17 +82,20 @@ export const Form = () => {
 
   const goNext = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
-    form.trigger();
     if (state.currentStep === 0 && (form.getValues().institution === "" || form.getValues().email === "" || form.getValues().phoneNumber === "" || form.getValues().location === "")) {
+      form.setError("institution", { message: "Campo requerido" });
+      form.setError("email", { message: "Campo requerido" });
+      form.setError("phoneNumber", { message: "Campo requerido" });
+      form.setError("location", { message: "Campo requerido" });
       return;
     }
     nextStep();
   };
 
-  const sendForm = (e: React.MouseEvent<HTMLButtonElement>) => {
-    e.preventDefault();
-    const data = form.getValues();
-    console.log(data);
+  const sendForm = async () => {
+    await fetch("/api/mail", {
+      method: "POST",
+    });
   };
 
   return (
@@ -106,7 +110,7 @@ export const Form = () => {
         />
 
         <FormProvider {...form}>
-          <form  className="w-96 flex flex-col gap-5 p-4">
+          <form className="w-96 flex flex-col gap-5 p-4">
             <Image src={logo} width={75} alt="logo" />
             <div className="flex justify-evenly items-center" {...stepperProps}>
               {stepsProps?.map((step, index) => (
@@ -164,14 +168,14 @@ export const Form = () => {
               )}
               {state.currentStep === 1 && (
                 <div>
-                  <div className="flex flex-col">
+                  <div className="flex flex-col h-60 justify-around">
 
-                  <CheckBox label="Salon de actividades" name={"activitiesRoom"}/>
-                  <CheckBox label="Reuniones bajo techo" name={"indoorMeetings"}/>
-                  <CheckBox label="Laboratories" name={"laboratories"}/>
+                  <CheckBox className="text-xl" label="Salon de actividades" name={"activitiesRoom"}/>
+                  <CheckBox className="text-xl" label="Reuniones bajo techo" name={"indoorMeetings"}/>
+                  <CheckBox className="text-xl" label="Laboratories" name={"laboratories"}/>
 
                   </div>
-                  <div className="flex gap-4 items-center justify-center">
+                  <div className="mt-10 flex gap-4 items-center justify-center">
                     <button
                       className="px-2 py-1 border-2 font-semibold rounded-md flex gap-3 items-center text-[#0069DB]"
                       onClick={goBack}
@@ -189,11 +193,11 @@ export const Form = () => {
               )}
               {state.currentStep === 2 && (
                 <div>
-                  <div className="flex flex-col">
-                    <CheckBox label="Proyectores" name={"proyectors"}/>
-                    <CheckBox label="Pantallas" name={"screens"}/>
-                    <CheckBox label="Parlantes" name={"speakers"}/>
-                    <CheckBox label="Microfonos" name={"microphones"}/>
+                  <div className="flex flex-col h-60 justify-around">
+                    <CheckBox className="text-xl" label="Proyectores" name={"proyectors"}/>
+                    <CheckBox className="text-xl" label="Pantallas" name={"screens"}/>
+                    <CheckBox className="text-xl" label="Parlantes" name={"speakers"}/>
+                    <CheckBox className="text-xl" label="Microfonos" name={"microphones"}/>
                     </div>
                   <div className="flex gap-4 items-center justify-center">
                     
@@ -220,7 +224,7 @@ export const Form = () => {
                     name="meetingDate"
                   />
                   <Input placeholder="Mensaje" name="message" />
-                  <div className="flex gap-4 items-center justify-center">
+                  <div className=" my-10 flex gap-4 items-center justify-center">
                     <button
                       className="px-2 py-1 border-2 font-semibold rounded-md flex gap-3 items-center text-[#0069DB]"
                       onClick={goBack}
