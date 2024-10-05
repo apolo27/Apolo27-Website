@@ -7,6 +7,7 @@ interface CheckBoxProps {
   selected?: boolean;
   label: string;
   isLink?: boolean;
+  value?: string;
   onLinkClicked?: () => void;
   onCheck?: (selected: boolean) => void;
   className?: string;
@@ -17,6 +18,7 @@ export const CheckBox: FC<CheckBoxProps> = ({
   label,
   onCheck,
   selected,
+  value,
   isLink,
   onLinkClicked,
   className,
@@ -33,6 +35,7 @@ export const CheckBox: FC<CheckBoxProps> = ({
             onChange: (e) => onCheck && onCheck(e.target.checked),
           })}
           name={name}
+          value={value}
           disabled={disabled}
           type="checkbox"
           className="form-checkbox h-5 w-5 text-white cursor-pointer"

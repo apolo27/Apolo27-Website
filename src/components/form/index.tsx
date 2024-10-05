@@ -8,16 +8,34 @@ import { FormType } from "@/app/shared/models/form";
 import { Stepper, Step } from "headless-stepper/components";
 
 import { useStepper } from "headless-stepper";
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { Input } from "../input";
 import logo from "@/app/shared/imgs/gray-logo.png";
 import bus from "@/app/shared/imgs/bus.png";
 import { ArrowLeftIcon, ArrowRightIcon } from "@heroicons/react/16/solid";
 import { CheckBox } from "../checkBox";
 import { validateSchema } from "@/app/shared/utils";
-import { POST } from "@/app/api/send/route";
+import emailjs from "@emailjs/browser";
 
 export const Form = () => {
+  const formRef = useRef<HTMLFormElement>(null);
+
+  const [name, setName] = useState("")
+  const [phoneNumber, setPhoneNumber] = useState("")
+  const [email, setEmail] = useState("")
+  const [location, setLocation] = useState("")
+  const [date, setDate] = useState("")
+  const [message, setMessage] = useState("")
+
+  const [activitiesRoomChecked, setActivitiesRoomChecked] = useState(false)
+  const [indoorMeetingsChecked, setIndoorMeetingsChecked] = useState(false)
+  const [laboratoriesChecked, setLaboratoriesChecked] = useState(false)
+
+  const [recurso1, setRecurso1] = useState(false)
+  const [recurso2, setRecurso2] = useState(false)
+  const [recurso3, setRecurso3] = useState(false)
+  const [recurso4, setRecurso4] = useState(false)
+
   const formSchema = yup.object().shape({
     institution: yup.string().required("Institución requerida"),
     email: emailValidation,
@@ -82,7 +100,13 @@ export const Form = () => {
 
   const goNext = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
-    if (state.currentStep === 0 && (form.getValues().institution === "" || form.getValues().email === "" || form.getValues().phoneNumber === "" || form.getValues().location === "")) {
+    if (
+      state.currentStep === 0 &&
+      (form.getValues().institution === "" ||
+        form.getValues().email === "" ||
+        form.getValues().phoneNumber === "" ||
+        form.getValues().location === "")
+    ) {
       form.setError("institution", { message: "Campo requerido" });
       form.setError("email", { message: "Campo requerido" });
       form.setError("phoneNumber", { message: "Campo requerido" });
@@ -92,10 +116,23 @@ export const Form = () => {
     nextStep();
   };
 
-  const sendForm = async () => {
-    await fetch("/api/mail", {
-      method: "POST",
-    });
+  const sendForm = () => {
+    emailjs
+      .sendForm(
+        "service_prx1qkr",
+        "template_x8zmeal",
+        formRef.current as HTMLFormElement,
+        "6HMNKbrBqDfm-dMBG",
+        
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
   };
 
   return (
@@ -110,7 +147,7 @@ export const Form = () => {
         />
 
         <FormProvider {...form}>
-          <form className="w-96 flex flex-col gap-5 p-4">
+          <form ref={formRef} className="w-96 flex flex-col gap-5 p-4">
             <Image src={logo} width={75} alt="logo" />
             <div className="flex justify-evenly items-center" {...stepperProps}>
               {stepsProps?.map((step, index) => (
@@ -156,8 +193,8 @@ export const Form = () => {
                     name={"institution"}
                   />
                   <Input placeholder="Correo electronico" name="email" />
-                  <Input placeholder="Numero de telefono" name="phoneNumber" />
-                  <Input placeholder="Ubicacion" name="location" />
+                  <Input placeholder="Numero de telefono" name="phoneNumber"/>
+                  <Input placeholder="Ubicacion" name="location"/>
                   <button
                     className="mt-10 px-2 py-1 border-2 font-semibold rounded-md flex gap-3 items-center text-[#0069DB]"
                     onClick={goNext}
@@ -169,11 +206,25 @@ export const Form = () => {
               {state.currentStep === 1 && (
                 <div>
                   <div className="flex flex-col h-60 justify-around">
-
-                  <CheckBox className="text-xl" label="Salon de actividades" name={"activitiesRoom"}/>
-                  <CheckBox className="text-xl" label="Reuniones bajo techo" name={"indoorMeetings"}/>
-                  <CheckBox className="text-xl" label="Laboratories" name={"laboratories"}/>
-
+                    <CheckBox
+                      className="text-xl"
+                      label="Salon de actividades"
+                      name={"activitiesRoom"}
+                      onCheck={(selected) => setActivitiesRoomChecked(selected)}
+                      
+                    />
+                    <CheckBox
+                      className="text-xl"
+                      label="Reuniones bajo techo"
+                      name={"indoorMeetings"}
+                      onCheck={(selected) => setIndoorMeetingsChecked(selected)}
+                    />
+                    <CheckBox
+                      className="text-xl"
+                      label="Laboratories"
+                      name={"laboratories"}
+                      onCheck={(selected) => setLaboratoriesChecked(selected)}
+                    />
                   </div>
                   <div className="mt-10 flex gap-4 items-center justify-center">
                     <button
@@ -194,13 +245,34 @@ export const Form = () => {
               {state.currentStep === 2 && (
                 <div>
                   <div className="flex flex-col h-60 justify-around">
-                    <CheckBox className="text-xl" label="Proyectores" name={"proyectors"}/>
-                    <CheckBox className="text-xl" label="Pantallas" name={"screens"}/>
-                    <CheckBox className="text-xl" label="Parlantes" name={"speakers"}/>
-                    <CheckBox className="text-xl" label="Microfonos" name={"microphones"}/>
-                    </div>
+                    <CheckBox
+                      className="text-xl"
+                      label="Proyectores"
+                      name={"proyectors"}
+                      onCheck={(selected) => setRecurso1(selected)}
+
+                    />
+                    <CheckBox
+                      className="text-xl"
+                      label="Pantallas"
+                      name={"screens"}
+                      onCheck={(selected) => setRecurso2(selected)}
+
+                    />
+                    <CheckBox
+                      className="text-xl"
+                      label="Parlantes"
+                      name={"speakers"}
+                      onCheck={(selected) => setRecurso3(selected)}
+                    />
+                    <CheckBox
+                      className="text-xl"
+                      label="Microfonos"
+                      name={"microphones"}
+                      onCheck={(selected) => setRecurso4(selected)}
+                    />
+                  </div>
                   <div className="flex gap-4 items-center justify-center">
-                    
                     <button
                       className="px-2 py-1 border-2 font-semibold rounded-md flex gap-3 items-center text-[#0069DB]"
                       onClick={goBack}
