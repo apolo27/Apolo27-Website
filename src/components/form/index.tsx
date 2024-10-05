@@ -20,13 +20,6 @@ import emailjs from "@emailjs/browser";
 export const Form = () => {
   const formRef = useRef<HTMLFormElement>(null);
 
-  const [name, setName] = useState("")
-  const [phoneNumber, setPhoneNumber] = useState("")
-  const [email, setEmail] = useState("")
-  const [location, setLocation] = useState("")
-  const [date, setDate] = useState("")
-  const [message, setMessage] = useState("")
-
   const [activitiesRoomChecked, setActivitiesRoomChecked] = useState(false)
   const [indoorMeetingsChecked, setIndoorMeetingsChecked] = useState(false)
   const [laboratoriesChecked, setLaboratoriesChecked] = useState(false)
@@ -35,6 +28,7 @@ export const Form = () => {
   const [recurso2, setRecurso2] = useState(false)
   const [recurso3, setRecurso3] = useState(false)
   const [recurso4, setRecurso4] = useState(false)
+
 
   const formSchema = yup.object().shape({
     institution: yup.string().required("Institución requerida"),
@@ -127,10 +121,11 @@ export const Form = () => {
       )
       .then(
         (result) => {
-          console.log(result.text);
+          alert("Formulario enviado correctamente");
+          console.log(formRef.current)
         },
         (error) => {
-          console.log(error.text);
+          alert("Error al enviar el formulario: " + error.text);
         }
       );
   };
@@ -163,8 +158,6 @@ export const Form = () => {
                       opacity: steps[index].disabled ? 0.6 : 1,
                     }}
                   ></div>
-
-                  {/* Line with no delay */}
                   {index < 3 && (
                     <div
                       id="line"
@@ -185,9 +178,10 @@ export const Form = () => {
                 Solicite una visita a su institución
               </p>
             </div>
+            
             <div>
-              {state.currentStep === 0 && (
-                <div>
+              {
+                <div className={state.currentStep === 0 ? "block" : "hidden"}>
                   <Input
                     placeholder="Nombre de su institucion"
                     name={"institution"}
@@ -202,9 +196,10 @@ export const Form = () => {
                     Continuar <ArrowRightIcon className="w-4" />{" "}
                   </button>
                 </div>
-              )}
-              {state.currentStep === 1 && (
-                <div>
+              }
+
+              {
+                <div className={state.currentStep === 1 ? "block" : "hidden"}>
                   <div className="flex flex-col h-60 justify-around">
                     <CheckBox
                       className="text-xl"
@@ -241,9 +236,10 @@ export const Form = () => {
                     </button>
                   </div>
                 </div>
-              )}
-              {state.currentStep === 2 && (
-                <div>
+              }
+
+              {
+                <div className={state.currentStep === 2 ? "block" : "hidden"}>
                   <div className="flex flex-col h-60 justify-around">
                     <CheckBox
                       className="text-xl"
@@ -287,9 +283,10 @@ export const Form = () => {
                     </button>
                   </div>
                 </div>
-              )}
-              {state.currentStep === 3 && (
-                <div>
+              }
+
+              {
+                <div className={state.currentStep === 3 ? "block" : "hidden"}>
                   <Input
                     placeholder="Fecha de la reunion"
                     type="date"
@@ -311,8 +308,10 @@ export const Form = () => {
                     </button>
                   </div>
                 </div>
-              )}
+              }
+
             </div>
+
 
             <div {...progressProps} />
           </form>
