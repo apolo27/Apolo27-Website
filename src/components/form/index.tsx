@@ -2,7 +2,7 @@
 import Image from "next/image";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
-import { emailValidation } from "@/app/shared/utils/validations";
+import { emailValidation, phoneValidation } from "@/app/shared/utils/validations";
 import { FormProvider, useForm } from "react-hook-form";
 import { FormType } from "@/app/shared/models/form";
 import { Stepper, Step } from "headless-stepper/components";
@@ -14,26 +14,15 @@ import logo from "@/app/shared/imgs/gray-logo.png";
 import bus from "@/app/shared/imgs/bus.png";
 import { ArrowLeftIcon, ArrowRightIcon } from "@heroicons/react/16/solid";
 import { CheckBox } from "../checkBox";
-import { validateSchema } from "@/app/shared/utils";
 import emailjs from "@emailjs/browser";
 
 export const Form = () => {
   const formRef = useRef<HTMLFormElement>(null);
 
-  const [activitiesRoomChecked, setActivitiesRoomChecked] = useState(false)
-  const [indoorMeetingsChecked, setIndoorMeetingsChecked] = useState(false)
-  const [laboratoriesChecked, setLaboratoriesChecked] = useState(false)
-
-  const [recurso1, setRecurso1] = useState(false)
-  const [recurso2, setRecurso2] = useState(false)
-  const [recurso3, setRecurso3] = useState(false)
-  const [recurso4, setRecurso4] = useState(false)
-
-
   const formSchema = yup.object().shape({
     institution: yup.string().required("Institución requerida"),
     email: emailValidation,
-    phoneNumber: yup.string().required("Número de teléfono requerido"),
+    phoneNumber: phoneValidation,
     location: yup.string().required("Ubicación requerida"),
 
     activitiesRoom: yup.boolean(),
@@ -72,7 +61,7 @@ export const Form = () => {
     resolver: yupResolver(formSchema),
   });
 
-  const { handleSubmit } = form;
+  const { handleSubmit, reset } = form;
 
   const steps = React.useMemo(
     () => [
@@ -116,13 +105,14 @@ export const Form = () => {
         "service_prx1qkr",
         "template_x8zmeal",
         formRef.current as HTMLFormElement,
-        "6HMNKbrBqDfm-dMBG",
-        
+        "6HMNKbrBqDfm-dMBG"
       )
       .then(
         (result) => {
           alert("Formulario enviado correctamente");
-          console.log(formRef.current)
+          reset();
+          state.currentStep = 0;
+          console.log(formRef.current);
         },
         (error) => {
           alert("Error al enviar el formulario: " + error.text);
@@ -133,7 +123,7 @@ export const Form = () => {
   return (
     <div>
       <p>Formulario</p>
-      <div className="flex rounded-xl bg-white text-black justify-center">
+      <div className="flex rounded-xl h-[630px] bg-white text-black justify-center">
         <Image
           src={bus}
           width={400}
@@ -178,7 +168,7 @@ export const Form = () => {
                 Solicite una visita a su institución
               </p>
             </div>
-            
+
             <div>
               {
                 <div className={state.currentStep === 0 ? "block" : "hidden"}>
@@ -187,8 +177,8 @@ export const Form = () => {
                     name={"institution"}
                   />
                   <Input placeholder="Correo electronico" name="email" />
-                  <Input placeholder="Numero de telefono" name="phoneNumber"/>
-                  <Input placeholder="Ubicacion" name="location"/>
+                  <Input placeholder="Numero de telefono" name="phoneNumber" />
+                  <Input placeholder="Ubicacion" name="location" />
                   <button
                     className="mt-10 px-2 py-1 border-2 font-semibold rounded-md flex gap-3 items-center text-[#0069DB]"
                     onClick={goNext}
@@ -205,20 +195,16 @@ export const Form = () => {
                       className="text-xl"
                       label="Salon de actividades"
                       name={"activitiesRoom"}
-                      onCheck={(selected) => setActivitiesRoomChecked(selected)}
-                      
                     />
                     <CheckBox
                       className="text-xl"
                       label="Reuniones bajo techo"
                       name={"indoorMeetings"}
-                      onCheck={(selected) => setIndoorMeetingsChecked(selected)}
                     />
                     <CheckBox
                       className="text-xl"
                       label="Laboratories"
                       name={"laboratories"}
-                      onCheck={(selected) => setLaboratoriesChecked(selected)}
                     />
                   </div>
                   <div className="mt-10 flex gap-4 items-center justify-center">
@@ -245,27 +231,21 @@ export const Form = () => {
                       className="text-xl"
                       label="Proyectores"
                       name={"proyectors"}
-                      onCheck={(selected) => setRecurso1(selected)}
-
                     />
                     <CheckBox
                       className="text-xl"
                       label="Pantallas"
                       name={"screens"}
-                      onCheck={(selected) => setRecurso2(selected)}
-
                     />
                     <CheckBox
                       className="text-xl"
                       label="Parlantes"
                       name={"speakers"}
-                      onCheck={(selected) => setRecurso3(selected)}
                     />
                     <CheckBox
                       className="text-xl"
                       label="Microfonos"
                       name={"microphones"}
-                      onCheck={(selected) => setRecurso4(selected)}
                     />
                   </div>
                   <div className="flex gap-4 items-center justify-center">
@@ -309,9 +289,7 @@ export const Form = () => {
                   </div>
                 </div>
               }
-
             </div>
-
 
             <div {...progressProps} />
           </form>
