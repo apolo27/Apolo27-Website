@@ -2,16 +2,16 @@
 import Image from "next/image";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
-import { emailValidation, phoneValidation } from "@/app/shared/utils/validations";
+import { emailValidation, phoneValidation } from "@/shared/utils/validations";
 import { FormProvider, useForm } from "react-hook-form";
-import { FormType } from "@/app/shared/models/form";
+import { FormType } from "@/shared/models/form";
 import { Stepper, Step } from "headless-stepper/components";
 
 import { useStepper } from "headless-stepper";
 import React, { useRef, useState } from "react";
 import { Input } from "../input";
-import logo from "@/app/shared/imgs/gray-logo.png";
-import bus from "@/app/shared/imgs/bus.png";
+import logo from "@/shared/imgs/gray-logo.png";
+import bus from "@/shared/imgs/bus.png";
 import { ArrowLeftIcon, ArrowRightIcon } from "@heroicons/react/16/solid";
 import { CheckBox } from "../checkBox";
 import emailjs from "@emailjs/browser";
