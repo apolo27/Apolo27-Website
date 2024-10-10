@@ -1,4 +1,7 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+import path from 'path';
+
+const nextConfig = {
+};
 
 export default nextConfig;
