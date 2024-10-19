@@ -102,10 +102,10 @@ export const Form = () => {
   const sendForm = () => {
     emailjs
       .sendForm(
-        "service_prx1qkr",
-        "template_x8zmeal",
+        process.env.EMAIL_JS_SERVICE as string,
+        process.env.EMAIL_JS_TEMPLATE as string,
         formRef.current as HTMLFormElement,
-        "6HMNKbrBqDfm-dMBG"
+        process.env.EMAIL_JS_USER
       )
       .then(
         (result) => {
