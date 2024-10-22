@@ -10,6 +10,7 @@ export default function Home() {
         <Link className='bg-zinc-200 text-black p-4 rounded-full hover:cursor-pointer' href="/games">Games</Link>
         <Link className='bg-zinc-200 text-black p-4 rounded-full hover:cursor-pointer' href="/dashboard">Dashboard</Link>
         <Link className='bg-zinc-200 text-black p-4 rounded-full hover:cursor-pointer' href="/sponsors">Sponsors</Link>         
+        <Link className='bg-zinc-200 text-black p-4 rounded-full hover:cursor-pointer' href="/marketplace">Marketplace</Link>         
         </div>
       </main>
     </div>
