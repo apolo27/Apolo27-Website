@@ -34,7 +34,7 @@ export const Chatbot = () => {
   const { handleSubmit, reset } = form;
 
   async function AskApolito(prompt: string) {
-    const apiKey = "AIzaSyAHtzOwh7VL80Kzp95zdyekrCTF4ypnv2U";
+    const apiKey = process.env.GEMINI_API_KEY;
     const genAI = new GoogleGenerativeAI(apiKey);
 
     const model = genAI.getGenerativeModel({
@@ -94,20 +94,18 @@ export const Chatbot = () => {
 
     const processedMessage = await remark().use(remarkHtml).process(response);
 
-    // Append the chatbot's response to the current list of parsed messages
     setParsedMessages((prevMessages) => [
       ...prevMessages,
       processedMessage.toString(),
     ]);
   }
 
-  const sendPrompt = async () => {
+  const sendPrompt = async (values:any, event:any) => {
+    event.preventDefault()
     const prompt = form.getValues("prompt");
 
-    // Append the user's message to the current list of parsed messages
     setParsedMessages((prevMessages) => [...prevMessages, `<p>${prompt}</p>`]);
 
-    // Ask Apolito for a response
     await AskApolito(prompt);
 
     reset();
@@ -137,22 +135,20 @@ export const Chatbot = () => {
             index % 2 === 0 ? "ml-32" : ""
           }`}
         >
-          {/* Render HTML safely */}
           {parse(message)}
         </div>
       ))}
     </div>
 
     <FormProvider {...form}>
-      <form className="p-2 flex gap-2 mr-4">
+      <form onSubmit={handleSubmit(sendPrompt)} className="p-2 flex gap-2 mr-4">
         <Input
           className="font-semibold"
           name="prompt"
           placeholder="Escribe tu mensaje"
         />
         <button
-          type="button"
-          onClick={handleSubmit(sendPrompt)}
+          type="submit"
           className="rounded-md shadow px-2 w-2xl bg-white hover:bg-slate-50"
         >
           <ArrowRightIcon className="h-6 w-6 text-cyan-800" />
