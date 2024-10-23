@@ -1,9 +1,9 @@
 import Link from 'next/link';
-import Navbar from './components/Navbar';
+import { Navigation } from './components/Nav/Navbar';
 export default function Home() {
   return (
-    <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 h-10 flex align-center p-4">
-      <Navbar />
+    <div className="w-10/12 mt-4 m-auto">
+      <Navigation />
     </div>
   );
 }
