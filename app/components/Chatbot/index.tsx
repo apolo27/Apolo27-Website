@@ -90,32 +90,27 @@ export const Chatbot = ({ isSidebarOpen }: { isSidebarOpen: boolean }) => {
   return (
     <div
       id="chatbot"
-      className={`fixed bottom-4 right-4 bg-white rounded-lg shadow-2xl w-80 z-50 transition-transform transform hover:scale-105 duration-300 ${
-        open ? 'animate-bounce' : ''
+      className={`fixed bottom-4 right-4 bg-white rounded-lg shadow-lg w-72 z-50 transition-transform transform duration-300 ${
+        open ? 'scale-105' : ''
       }`}
     >
       <button
         onClick={() => setOpen(!open)}
-        className="w-full py-2 font-bold text-white text-lg flex justify-between items-center bg-gradient-to-r from-blue-500 to-indigo-600 rounded-t-lg"
+        className="w-full h-12 flex justify-center items-center bg-gradient-to-r from-blue-500 to-indigo-600 rounded-t-lg transition-all duration-300"
       >
-        <span className="ml-4">💬 Apolito Chat</span>
-        <ArrowRightIcon
-          className={`h-6 w-6 mr-4 transform transition-transform ${
-            open ? 'rotate-90' : ''
-          }`}
-        />
+        <span className="text-white text-xl font-bold">💬</span>
       </button>
 
       <div
         className={`transition-all duration-500 ease-in-out overflow-hidden ${
-          open ? 'max-h-[500px] h-auto' : 'max-h-0'
+          open ? 'max-h-[400px]' : 'max-h-0'
         }`}
       >
-        <div className="p-4 overflow-y-auto h-60 bg-gray-50 rounded-b-lg">
+        <div className="p-2 overflow-y-auto h-64 bg-gray-50 rounded-b-lg">
           {parsedMessages.map((message, index) => (
             <div
               key={index}
-              className={`p-2 my-2 rounded-xl shadow-md text-sm font-medium ${
+              className={`p-2 my-1 rounded-xl shadow-md text-sm font-medium ${
                 index % 2 === 0
                   ? 'bg-blue-100 text-right'
                   : 'bg-white text-left'
@@ -129,18 +124,18 @@ export const Chatbot = ({ isSidebarOpen }: { isSidebarOpen: boolean }) => {
         <FormProvider {...form}>
           <form
             onSubmit={handleSubmit(sendPrompt)}
-            className="p-2 flex items-center gap-2 bg-gray-100 rounded-b-lg"
+            className="p-2 flex items-center gap-1 bg-gray-100 rounded-b-lg"
           >
             <Input
-              className="flex-grow p-2 rounded-md border border-gray-300 focus:ring focus:ring-indigo-300 focus:outline-none"
+              className="flex-grow p-1 rounded-md border border-gray-300 focus:ring focus:ring-indigo-300 focus:outline-none"
               name="prompt"
               placeholder="Escribe tu mensaje..."
             />
             <button
               type="submit"
-              className="p-2 bg-indigo-600 text-white rounded-md shadow hover:bg-indigo-700 focus:ring focus:ring-indigo-400"
+              className="p-1 bg-indigo-600 text-white rounded-md shadow hover:bg-indigo-700 focus:ring focus:ring-indigo-400"
             >
-              <ArrowRightIcon className="h-6 w-6" />
+              <ArrowRightIcon className="h-5 w-5" />
             </button>
           </form>
         </FormProvider>
