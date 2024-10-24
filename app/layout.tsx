@@ -32,8 +32,9 @@ export default function RootLayout({
       <body>
         <Navbar />
         {children}
-        <Footer />
         <Chatbot isSidebarOpen={false} />
+
+        <Footer />
       </body>
     </html>
   );
