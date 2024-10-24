@@ -1,18 +1,13 @@
-import Link from 'next/link'
-
+import Link from 'next/link';
+import Navbar from './components/Nav/Navbar';
+import Footer from './components/Footer/Footer';
+import Background from './components/Background/Background';
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-        <Link className='bg-zinc-200 text-black p-4 rounded-full hover:cursor-pointer' href="/">Home</Link>
-        <Link className='bg-zinc-200 text-black p-4 rounded-full hover:cursor-pointer' href="/stem-with-us">Stem With Us</Link>
-        <Link className='bg-zinc-200 text-black p-4 rounded-full hover:cursor-pointer' href="/games">Games</Link>
-        <Link className='bg-zinc-200 text-black p-4 rounded-full hover:cursor-pointer' href="/dashboard">Dashboard</Link>
-        <Link className='bg-zinc-200 text-black p-4 rounded-full hover:cursor-pointer' href="/sponsors">Sponsors</Link>         
-        <Link className='bg-zinc-200 text-black p-4 rounded-full hover:cursor-pointer' href="/marketplace">Marketplace</Link>         
-        </div>
-      </main>
+    <div className="">
+      <Navbar />
+      <Background />
+      <Footer />
     </div>
   );
 }
