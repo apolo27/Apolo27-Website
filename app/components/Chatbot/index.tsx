@@ -90,7 +90,7 @@ export const Chatbot = ({ isSidebarOpen }: { isSidebarOpen: boolean }) => {
   return (
     <div
       id="chatbot"
-      className={`fixed bottom-4 right-4 bg-white rounded-lg shadow-lg w-72 z-50 transition-transform transform duration-300 ${
+      className={`fixed bottom-0 right-4 bg-white rounded-lg shadow-lg w-72 z-50 transition-transform transform duration-300 ${
         open ? 'scale-105' : ''
       }`}
     >
