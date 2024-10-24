@@ -15,7 +15,7 @@ const {
   HarmBlockThreshold,
 } = require('@google/generative-ai');
 
-export const Chatbot = () => {
+export const Chatbot = ({ isSidebarOpen }: { isSidebarOpen: boolean }) => {
   const [open, setOpen] = useState(false);
   const [parsedMessages, setParsedMessages] = useState<string[]>([]);
 
@@ -85,10 +85,14 @@ export const Chatbot = () => {
     reset();
   };
 
+  if (isSidebarOpen) return null;
+
   return (
     <div
       id="chatbot"
-      className="fixed bottom-4 right-4 bg-white rounded-lg shadow-2xl w-80 z-50 transition-transform transform hover:scale-105 duration-300"
+      className={`fixed bottom-4 right-4 bg-white rounded-lg shadow-2xl w-80 z-50 transition-transform transform hover:scale-105 duration-300 ${
+        open ? 'animate-bounce' : ''
+      }`}
     >
       <button
         onClick={() => setOpen(!open)}
@@ -107,7 +111,7 @@ export const Chatbot = () => {
           open ? 'max-h-[500px] h-auto' : 'max-h-0'
         }`}
       >
-        <div className="p-4 overflow-y-auto h-60 bg-gray-50">
+        <div className="p-4 overflow-y-auto h-60 bg-gray-50 rounded-b-lg">
           {parsedMessages.map((message, index) => (
             <div
               key={index}
@@ -125,7 +129,7 @@ export const Chatbot = () => {
         <FormProvider {...form}>
           <form
             onSubmit={handleSubmit(sendPrompt)}
-            className="p-2 flex items-center gap-2 bg-gray-100"
+            className="p-2 flex items-center gap-2 bg-gray-100 rounded-b-lg"
           >
             <Input
               className="flex-grow p-2 rounded-md border border-gray-300 focus:ring focus:ring-indigo-300 focus:outline-none"
