@@ -5,9 +5,7 @@ import Background from './components/Background/Background';
 export default function Home() {
   return (
     <div className="">
-      <Navbar />
-      <Background />
-      <Footer />
+      <p>landing</p>
     </div>
   );
 }
