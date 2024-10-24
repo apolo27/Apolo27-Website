@@ -29,7 +29,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`h-14 bg-gradient-to-r from-sky-500 to-indigo-500`}>
+      <body>
         <Navbar />
         {children}
         <Footer />

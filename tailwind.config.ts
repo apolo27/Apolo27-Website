@@ -10,6 +10,7 @@ const config: Config = {
       colors: {
         background: 'var(--background)',
         foreground: 'var(--foreground)',
+        "apolo-empty-background": "#0D0F19",
       },
       fontFamily: {
         poppins: ['Poppins', 'sans-serif'],

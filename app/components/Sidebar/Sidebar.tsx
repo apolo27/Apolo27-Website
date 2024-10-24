@@ -45,6 +45,20 @@ const Sidebar: React.FC<SidebarProps> = ({ toggleSidebar, isOpen }) => {
               </span>
             </Link>
           </li>
+          <li>
+            <Link href="/social-media" onClick={toggleSidebar}>
+              <span className="block bg-blue-600 text-white py-3 px-6 rounded-lg shadow-md transition-transform duration-300 transform hover:scale-105 hover:bg-blue-700 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                Social Media
+              </span>
+            </Link>
+          </li>
+          <li>
+            <Link href="/marketplace" onClick={toggleSidebar}>
+              <span className="block bg-blue-600 text-white py-3 px-6 rounded-lg shadow-md transition-transform duration-300 transform hover:scale-105 hover:bg-blue-700 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                Marketplace
+              </span>
+            </Link>
+          </li>
         </ul>
       </div>
     </div>

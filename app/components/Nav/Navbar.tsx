@@ -31,6 +31,12 @@ export default function Navbar() {
             <li className="hover:text-gray-300">
               <Link href="/sponsors">Become a Sponsor</Link>
             </li>
+            <li className="hover:text-gray-300">
+              <Link href="/social-media">Social Media</Link>
+            </li>
+            <li className="hover:text-gray-300">
+              <Link href="/marketplace">Marketplace</Link>
+            </li>
           </ul>
         </div>
 
