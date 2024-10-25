@@ -101,9 +101,9 @@ export default function Marketplace() {
         <i className="text-5xl font-bold text-white">Social Media</i>
       </div>
 
-      <div className="flex flex-wrap gap-5 ">
+      <div className="flex flex-wrap lg:flex-nowrap gap-5 ">
         <Image src="/caribestem.png" alt="Instagram" width={300} height={300} />
-        <div className="text-center md:text-centerflex flex-col justify-between">
+        <div className="text-center md:text-left flex flex-col justify-between">
           <p className="text-[#67E1A8] text-4xl font-semibold">Podcast</p>
           <div className="text-6xl md:text-9xl font-extrabold">
             <span className="bg-clip-text text-transparent bg-gradient-to-t from-[#379AE1] to-[#69BF77]">
@@ -122,14 +122,14 @@ export default function Marketplace() {
 
       <hr className="my-16"></hr>
 
-      <div className="flex flex-col justify-between gap-10">
-        <div>
+      <div className="flex flex-col lg:flex-row  justify-between gap-10">
+        <div className="text-center">
           <p className="text-[#DFC86A] text-2xl mb-3">Latest Episodes</p>
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-4 items-center">
             {episodes.map((episode, i) => (
               <div
                 key={i}
-                className="flex flex-wrap justify-center w-full gap-5 bg-gradient-to-r from-[#2A2A2A] to-[#161A2C] p-4 rounded-3xl"
+                className="flex flex-col lg:flex-row items-center w-80 lg:w-full gap-5 bg-gradient-to-r from-[#2A2A2A] to-[#161A2C] p-4 rounded-3xl"
               >
                 <Image
                   src={episode.img}
@@ -160,7 +160,7 @@ export default function Marketplace() {
             ))}
           </div>
         </div>
-        <div className="flex flex-col text-center justify-center items-center">
+        <div className="flex flex-col text-center justify-center ">
           <p className="text-[#DFC86A] text-2xl mb-3">About our hosts</p>
           <Image src="/blankProfile.jpeg" alt="host" width={300} height={300} />
           <div className="bg-gradient-to-l from-[#2A2A2A] to-[#161A2C] p-4 rounded-b-3xl text-white flex flex-col gap-2 font-semibold">
@@ -214,6 +214,25 @@ export default function Marketplace() {
                 </div>
               </div>
             ))}
+        </div>
+      </div>
+
+      <div className="mt-10 pb-20">
+        <div className="flex">
+          <Image src={"/listen-on-itunes.png"} alt="listen on itunes" width={400} height={40}/>
+          <Image src={"/listen-on-spotify.png"} alt="listen on spotify" width={300} height={100}/>
+        </div>
+        <div className="text-center">
+          <span className=" text-6xl font-extrabold bg-clip-text text-transparent bg-gradient-to-t from-[#379AE1] to-[#69BF77]">Connect with us!</span>
+          <p className="font-semibold text-white text-xl">FOLLOW US ON ALL OUR SOCIAL MEDIA</p>
+        </div>
+
+        <div className="bg-black border-white border-2 p-4 flex justify-evenly text-white">
+            <p>t</p>
+            <p>i</p>
+            <p>f</p>
+            <p>y</p>
+            <p>x</p>
         </div>
       </div>
     </div>
