@@ -1,5 +1,5 @@
 'use client';
-
+import Image from 'next/image';
 import React, { useState } from 'react';
 import Link from 'next/link';
 import Sidebar from '../Sidebar/Sidebar';
@@ -17,7 +17,7 @@ export default function Navbar() {
     <nav className="w-full bg-gray-800 font-poppins">
       <div className="flex items-center justify-between p-4">
         <div className="flex-shrink-0 ml-0">
-          <img src="gray-logo.png" alt="logo" className="h-10" />
+          <Image src="/images/gray-logo.png" alt="Apolo 27 Logo" width={50} height={50} />
         </div>
 
         <div className="flex-grow">
@@ -41,7 +41,7 @@ export default function Navbar() {
         </div>
 
         <button onClick={toggleSidebar} className="md:hidden">
-          <img src="menu.svg" alt="Menu" className="h-8 w-8" />
+          <img src="/images/menu.svg" alt="Menu" className="h-8 w-8" />
         </button>
 
         {isSidebarOpen && (

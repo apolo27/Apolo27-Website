@@ -2,6 +2,16 @@
 import { useState } from "react";
 import { PlayCircleIcon } from "@heroicons/react/20/solid";
 import Image from "next/image";
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faFacebook,
+  faTiktok,
+  faYoutube,
+  faInstagram,
+  faXTwitter,
+} from "@fortawesome/free-brands-svg-icons";
+
 export default function Marketplace() {
   const [platform, setPlatform] = useState("Youtube");
   type Episode = {
@@ -21,7 +31,7 @@ export default function Marketplace() {
 
   const episodes = [
     {
-      img: "/caribestem.png",
+      img: "/images/caribestem.png",
       title: "Episode 1",
       description:
         "This is the first episode of the Caribe STEM podcast This is the first episode of the Caribe STEM podcast This is the first episode of the Caribe STEM podcast This is the first episode of the Caribe STEM podcast This is the first episode of the Caribe STEM podcast",
@@ -29,7 +39,7 @@ export default function Marketplace() {
       date: new Date(),
     },
     {
-      img: "/caribestem.png",
+      img: "/images/caribestem.png",
       title: "Episode 2",
       description:
         "This is the second episode of the Caribe STEM podcast This is the second episode of the Caribe STEM podcast This is the second episode of the Caribe STEM podcast This is the second episode of the Caribe STEM podcast This is the second episode of the Caribe STEM podcast",
@@ -40,55 +50,55 @@ export default function Marketplace() {
 
   const videos = [
     {
-      img: "/caribestem.png",
+      img: "/images/caribestem.png",
       title: "Video 1",
       platform: "Youtube",
       color: "red-500",
     },
     {
-      img: "/caribestem.png",
+      img: "/images/caribestem.png",
       title: "Video 2",
       platform: "Youtube",
       color: "red-500",
     },
     {
-      img: "/caribestem.png",
+      img: "/images/caribestem.png",
       title: "Video 3",
       platform: "Youtube",
       color: "red-500",
     },
     {
-      img: "/caribestem.png",
+      img: "/images/caribestem.png",
       title: "Video 1",
       platform: "Instagram",
       color: "pink-400",
     },
     {
-      img: "/caribestem.png",
+      img: "/images/caribestem.png",
       title: "Video 2",
       platform: "Instagram",
       color: "pink-400",
     },
     {
-      img: "/caribestem.png",
+      img: "/images/caribestem.png",
       title: "Video 3",
       platform: "Instagram",
       color: "pink-400",
     },
     {
-      img: "/caribestem.png",
+      img: "/images/caribestem.png",
       title: "Video 1",
       platform: "TikTok",
       color: "black",
     },
     {
-      img: "/caribestem.png",
+      img: "/images/caribestem.png",
       title: "Video 2",
       platform: "TikTok",
       color: "black",
     },
     {
-      img: "/caribestem.png",
+      img: "/images/caribestem.png",
       title: "Video 3",
       platform: "TikTok",
       color: "black",
@@ -102,7 +112,12 @@ export default function Marketplace() {
       </div>
 
       <div className="flex flex-wrap lg:flex-nowrap gap-5 ">
-        <Image src="/caribestem.png" alt="Instagram" width={300} height={300} />
+        <Image
+          src="/images/caribestem.png"
+          alt="Instagram"
+          width={300}
+          height={300}
+        />
         <div className="text-center md:text-left flex flex-col justify-between">
           <p className="text-[#67E1A8] text-4xl font-semibold">Podcast</p>
           <div className="text-6xl md:text-9xl font-extrabold">
@@ -123,7 +138,7 @@ export default function Marketplace() {
       <hr className="my-16"></hr>
 
       <div className="flex flex-col lg:flex-row  justify-between gap-10">
-        <div className="text-center">
+        <div className="text-center md:text-left">
           <p className="text-[#DFC86A] text-2xl mb-3">Latest Episodes</p>
           <div className="flex flex-col gap-4 items-center">
             {episodes.map((episode, i) => (
@@ -160,9 +175,14 @@ export default function Marketplace() {
             ))}
           </div>
         </div>
-        <div className="flex flex-col text-center justify-center ">
+        <div className="flex flex-col px-10">
           <p className="text-[#DFC86A] text-2xl mb-3">About our hosts</p>
-          <Image src="/blankProfile.jpeg" alt="host" width={300} height={300} />
+          <Image
+            src="/images/blankProfile.jpeg"
+            alt="host"
+            width={300}
+            height={300}
+          />
           <div className="bg-gradient-to-l from-[#2A2A2A] to-[#161A2C] p-4 rounded-b-3xl text-white flex flex-col gap-2 font-semibold">
             <p>Nombre</p>
             <p>Descripcion</p>
@@ -200,7 +220,7 @@ export default function Marketplace() {
                 <div
                   className="w-[300px] h-[500px] rounded-xl overflow-hidden"
                   style={{
-                    backgroundImage: `url(/thumbnailExample.jpg)`,
+                    backgroundImage: `url(/images/thumbnailExample.jpg)`,
                     backgroundSize: "100%",
                   }}
                 >
@@ -208,7 +228,7 @@ export default function Marketplace() {
                     className={`w-full h-full bg-gradient-to-t from-${video.color} to-transparent`}
                   ></div>
                 </div>
-                {/* <Image src={"/thumbnailExample.jpg"} alt="Video" width={300} height={500} className={``}/> */}
+                {/* <Image src={"/images/thumbnailExample.jpg"} alt="Video" width={300} height={500} className={``}/> */}
                 <div className="absolute bottom-2 left-1/2 -translate-x-1/2 text-center text-xl">
                   <p className="text-white font-semibold">{video.title}</p>
                 </div>
@@ -217,22 +237,50 @@ export default function Marketplace() {
         </div>
       </div>
 
-      <div className="mt-10 pb-20">
-        <div className="flex">
-          <Image src={"/listen-on-itunes.png"} alt="listen on itunes" width={400} height={40}/>
-          <Image src={"/listen-on-spotify.png"} alt="listen on spotify" width={300} height={100}/>
-        </div>
-        <div className="text-center">
-          <span className=" text-6xl font-extrabold bg-clip-text text-transparent bg-gradient-to-t from-[#379AE1] to-[#69BF77]">Connect with us!</span>
-          <p className="font-semibold text-white text-xl">FOLLOW US ON ALL OUR SOCIAL MEDIA</p>
+      <div className="mt-10 pb-20 flex flex-col text-center items-center gap-10">
+        <div className="flex flex-col items-center gap-4">
+          <div className="bg-black border-2 border-white rounded-lg p-3 w-fit">
+            <Image
+              src={"/images/icons/spotify.svg"}
+              alt="listen on spotify"
+              width={300}
+              height={100}
+            />
+          </div>
+          <span className=" text-6xl font-extrabold bg-clip-text text-transparent bg-gradient-to-t from-[#379AE1] to-[#69BF77]">
+            Connect with us!
+          </span>
+          <p className="font-semibold text-white text-xl w-3/4">
+            FOLLOW US ON ALL OUR SOCIAL MEDIA
+          </p>
         </div>
 
-        <div className="bg-black border-white border-2 p-4 flex justify-evenly text-white">
-            <p>t</p>
-            <p>i</p>
-            <p>f</p>
-            <p>y</p>
-            <p>x</p>
+        <div className="bg-black border-white border-2 p-4 flex justify-evenly text-white w-3/4 lg:w-1/3">
+          <FontAwesomeIcon
+            className="hover:cursor-pointer hover:scale-110"
+            icon={faTiktok}
+            size="2xl"
+          />
+          <FontAwesomeIcon
+            className="hover:cursor-pointer hover:scale-110"
+            icon={faInstagram}
+            size="2xl"
+          />
+          <FontAwesomeIcon
+            className="hover:cursor-pointer hover:scale-110"
+            icon={faFacebook}
+            size="2xl"
+          />
+          <FontAwesomeIcon
+            className="hover:cursor-pointer hover:scale-110"
+            icon={faYoutube}
+            size="2xl"
+          />
+          <FontAwesomeIcon
+            className="hover:cursor-pointer hover:scale-110"
+            icon={faXTwitter}
+            size="2xl"
+          />
         </div>
       </div>
     </div>

@@ -7,7 +7,7 @@ import {
   EyeIcon,
   EyeSlashIcon,
 } from "@heroicons/react/24/outline";
-import { getErrorFromFormState } from "@/shared/utils";
+import { getErrorFromFormState } from "../../shared/utils";
 
 interface InputProps {
   type?:

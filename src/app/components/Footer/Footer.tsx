@@ -7,7 +7,7 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center space-y-10 md:space-y-0">
           <div className="flex flex-col items-center md:items-start flex-1">
             <div className="flex items-center mb-6">
-              <img src="gray-logo.png" alt="logo" className="h-12 mr-4" />
+              <img src="/images/gray-logo.png" alt="logo" className="h-12 mr-4" />
               <h5 className="text-xl font-semibold">APOLO 27</h5>
             </div>
             <p className="text-base mb-6 text-center md:text-left w-80">
@@ -24,7 +24,7 @@ export default function Footer() {
                   className="bg-blue-600 rounded-full p-2 hover:bg-transparent transition-colors duration-300"
                 >
                   <img
-                    src={`${icon}.svg`}
+                    src={`/images/${icon}.svg`}
                     alt={icon}
                     className="h-6 w-6 text-white hover:text-blue-600"
                   />

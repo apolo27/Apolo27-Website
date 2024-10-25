@@ -5,6 +5,10 @@ import { Chatbot } from "./components/Chatbot";
 import Navbar from "./components/Nav/Navbar";
 import Footer from "./components/Footer/Footer";
 
+import { config } from '@fortawesome/fontawesome-svg-core'
+import '@fortawesome/fontawesome-svg-core/styles.css'
+config.autoAddCss = false
+
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
