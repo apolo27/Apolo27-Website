@@ -4,7 +4,7 @@ export default function CenteredContent() {
   return (
     <div className="relative bottom-0 left-0 bg-white rounded-tr-full w-full h-full z-0 shadow-lg">
       <img
-        src="Planet.png"
+        src="/images/Planet.png"
         alt="Planet"
         className="absolute w-96 h-96 md:w-[32rem] md:h-[32rem] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-full shadow-lg"
       />
@@ -21,7 +21,7 @@ export default function CenteredContent() {
         <div className="flex items-center justify-start space-x-2 mt-4 text-sm sm:text-base md:text-lg lg:text-xl">
           <span className="">Press to Start</span>
           <img
-            src="Icons/right-button.png"
+            src="/images/icons/right-button.png"
             alt="Right Button"
             className="w-2 h-2 sm:w-4 sm:h-4 md:w-6 md:h-6"
           />

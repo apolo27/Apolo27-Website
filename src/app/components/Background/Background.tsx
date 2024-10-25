@@ -7,7 +7,7 @@ export default function Background() {
   return (
     <div
       className="flex flex-col items-center justify-center min-h-screen bg-cover bg-center relative"
-      style={{ backgroundImage: 'url(BackgroundGalaxy.png)' }}
+      style={{ backgroundImage: 'url(/images/BackgroundGalaxy.png)' }}
     >
       <CenteredContent />
       <div className="mt-4">
