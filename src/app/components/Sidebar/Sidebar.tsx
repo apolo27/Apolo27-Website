@@ -3,26 +3,35 @@ import Link from 'next/link';
 
 interface SidebarProps {
   toggleSidebar: () => void;
-  isOpen: boolean; // Agregar prop para saber si el sidebar está abierto
+  isOpen: boolean;
 }
 
 const Sidebar: React.FC<SidebarProps> = ({ toggleSidebar, isOpen }) => {
   useEffect(() => {
     if (isOpen) {
-      document.body.style.overflow = 'hidden'; // Evitar desplazamiento
+      document.body.style.overflow = 'hidden';
     } else {
-      document.body.style.overflow = 'auto'; // Permitir desplazamiento
+      document.body.style.overflow = 'auto';
     }
 
-    // Limpiar efecto al desmontar
     return () => {
       document.body.style.overflow = 'auto';
     };
   }, [isOpen]);
 
+  const handleBackgroundClick = () => {
+    toggleSidebar();
+  };
+
   return (
-    <div className="fixed inset-0 bg-gray-900 bg-opacity-90 z-50 backdrop-blur-md">
-      <div className="flex flex-col items-center justify-center h-full">
+    <div
+      className="fixed inset-0 bg-gray-900 bg-opacity-90 z-50 backdrop-blur-md"
+      onClick={handleBackgroundClick}
+    >
+      <div
+        className="flex flex-col items-center justify-center h-full"
+        onClick={(e) => e.stopPropagation()}
+      >
         <ul className="space-y-6">
           <li>
             <Link href="/dashboard" onClick={toggleSidebar}>

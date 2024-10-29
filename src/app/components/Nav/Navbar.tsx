@@ -6,46 +6,68 @@ import Sidebar from '../Sidebar/Sidebar';
 
 export default function Navbar() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-  const [isOpen, setIsOpen] = useState(false);
+  const [activeLink, setActiveLink] = useState(null);
 
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
-    setIsOpen(!isOpen);
+  };
+
+  const handleLinkClick = (link) => {
+    setActiveLink(link);
+    setIsSidebarOpen(false); // Cierra la sidebar después de seleccionar un link en dispositivos móviles
   };
 
   return (
-    <nav className="w-full bg-gray-800 font-poppins">
+    <nav className="w-full bg-gray-800 font-poppins shadow-md  top-0 z-50">
       <div className="flex items-center justify-between p-4">
         <div className="flex-shrink-0 ml-0">
-          <Image src="/images/gray-logo.png" alt="Apolo 27 Logo" width={50} height={50} />
+          <Link href={'/'}>
+            <Image
+              src="/images/gray-logo.png"
+              alt="Apolo 27 Logo"
+              width={50}
+              height={50}
+              className="hover:scale-110 transition-transform duration-300 cursor-pointer"
+            />
+          </Link>
         </div>
 
         <div className="flex-grow">
           <ul className="hidden md:flex justify-center space-x-8 text-white">
-            <li className="hover:text-gray-300">
-              <Link href="/dashboard">Data Dashboard</Link>
-            </li>
-            <li className="hover:text-gray-300">
-              <Link href="/stem-with-us">Stem With Us</Link>
-            </li>
-            <li className="hover:text-gray-300">
-              <Link href="/sponsors">Become a Sponsor</Link>
-            </li>
-            <li className="hover:text-gray-300">
-              <Link href="/social-media">Social Media</Link>
-            </li>
-            <li className="hover:text-gray-300">
-              <Link href="/marketplace">Marketplace</Link>
-            </li>
+            {[
+              { href: '/dashboard', label: 'Data Dashboard' },
+              { href: '/stem-with-us', label: 'Stem With Us' },
+              { href: '/sponsors', label: 'Become a Sponsor' },
+              { href: '/social-media', label: 'Social Media' },
+              { href: '/marketplace', label: 'Marketplace' },
+            ].map((item, index) => (
+              <li key={index} className="relative">
+                <Link
+                  href={item.href}
+                  onClick={() => handleLinkClick(item.href)}
+                  className={`${
+                    activeLink === item.href ? 'text-blue-400' : 'text-white'
+                  } hover:text-blue-300 transition-colors duration-300`}
+                >
+                  {item.label}
+                </Link>
+                {activeLink === item.href && (
+                  <span className="absolute -bottom-1 left-0 w-full h-[2px] bg-blue-400 rounded-full"></span>
+                )}
+              </li>
+            ))}
           </ul>
         </div>
 
-        <button onClick={toggleSidebar} className="md:hidden">
+        <button
+          onClick={toggleSidebar}
+          className="md:hidden focus:outline-none transform transition-transform duration-300 hover:scale-110"
+        >
           <img src="/images/menu.svg" alt="Menu" className="h-8 w-8" />
         </button>
 
         {isSidebarOpen && (
-          <Sidebar toggleSidebar={toggleSidebar} isOpen={isOpen} />
+          <Sidebar toggleSidebar={toggleSidebar} isOpen={isSidebarOpen} />
         )}
       </div>
     </nav>
