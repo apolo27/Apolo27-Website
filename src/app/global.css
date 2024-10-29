@@ -16,3 +16,19 @@
   padding: 0;
   margin: 0;
 }
+
+.swiper-wrapper {
+  width: 100%;
+  height: max-content !important;
+  padding-bottom: 64px !important;
+  -webkit-transition-timing-function: linear !important;
+  transition-timing-function: linear !important;
+  position: relative;
+}
+.swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+  background: #4f46e5 !important;
+}
+.landing-banner {
+  background: rgb(16,19,33);
+  background: radial-gradient(circle, rgba(16,19,33,1) 24%, rgba(28,68,90,1) 59%, rgba(52,162,200,1) 100%, rgba(64,209,255,1) 100%); 
+}
