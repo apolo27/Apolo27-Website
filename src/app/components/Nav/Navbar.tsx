@@ -6,22 +6,22 @@ import Sidebar from '../Sidebar/Sidebar';
 
 export default function Navbar() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-  const [activeLink, setActiveLink] = useState(null);
+  const [activeLink, setActiveLink] = useState('/');
 
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
 
-  const handleLinkClick = (link) => {
+  const handleLinkClick = (link: string) => {
     setActiveLink(link);
     setIsSidebarOpen(false); // Cierra la sidebar después de seleccionar un link en dispositivos móviles
   };
 
   return (
-    <nav className="w-full bg-gray-800 font-poppins shadow-md  top-0 z-50">
+    <nav className={`${activeLink === '/' ? "bg-transparent" : "bg-gray-800"} w-full absolute font-poppins shadow-md top-0 z-50`}>
       <div className="flex items-center justify-between p-4">
         <div className="flex-shrink-0 ml-0">
-          <Link href={'/'}>
+          <Link href={'/'} onClick={() => handleLinkClick('/')}>
             <Image
               src="/images/gray-logo.png"
               alt="Apolo 27 Logo"

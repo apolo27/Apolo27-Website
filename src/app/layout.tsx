@@ -5,6 +5,7 @@ import { Chatbot } from './components/Chatbot';
 import Navbar from './components/Nav/Navbar';
 import Footer from './components/Footer/Footer';
 import Header from './components/Header/Header';
+import Starfield from './components/Starfield';
 
 const geistSans = localFont({
   src: './fonts/GeistVF.woff',
@@ -32,7 +33,8 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <Header />
-        <main className="flex flex-col min-h-screen">
+        <main className="flex flex-col min-h-screen overflow-hidden">
+          <Starfield />
           {children}
           <Chatbot isSidebarOpen={false} />
         </main>

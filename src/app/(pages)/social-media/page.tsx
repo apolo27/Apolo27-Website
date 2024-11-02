@@ -31,22 +31,81 @@ export default function Marketplace() {
   };
 
   const episodes = [
-    //... tus episodios
+    {
+      img: "/caribestem.png",
+      title: "Episode 1",
+      description:
+        "This is the first episode of the Caribe STEM podcast This is the first episode of the Caribe STEM podcast This is the first episode of the Caribe STEM podcast This is the first episode of the Caribe STEM podcast This is the first episode of the Caribe STEM podcast",
+      duration: "30:00",
+      date: new Date(),
+    },
+    {
+      img: "/caribestem.png",
+      title: "Episode 2",
+      description:
+        "This is the second episode of the Caribe STEM podcast This is the second episode of the Caribe STEM podcast This is the second episode of the Caribe STEM podcast This is the second episode of the Caribe STEM podcast This is the second episode of the Caribe STEM podcast",
+      duration: "30:00",
+      date: new Date(),
+    },
   ] as Episode[];
 
   const videos = [
-    //... tus videos
+    {
+      img: "/caribestem.png",
+      title: "Video 1",
+      platform: "Youtube",
+    },
+    {
+      img: "/caribestem.png",
+      title: "Video 2",
+      platform: "Youtube",
+    },
+    {
+      img: "/caribestem.png",
+      title: "Video 3",
+      platform: "Youtube",
+    },
+    {
+      img: "/caribestem.png",
+      title: "Video 1",
+      platform: "Instagram",
+    },
+    {
+      img: "/caribestem.png",
+      title: "Video 2",
+      platform: "Instagram",
+    },
+    {
+      img: "/caribestem.png",
+      title: "Video 3",
+      platform: "Instagram",
+    },
+    {
+      img: "/caribestem.png",
+      title: "Video 1",
+      platform: "TikTok",
+    },
+    {
+      img: "/caribestem.png",
+      title: "Video 2",
+      platform: "TikTok",
+    },
+    {
+      img: "/caribestem.png",
+      title: "Video 3",
+      platform: "TikTok",
+    },
   ] as Video[];
 
   return (
-    <div className="bg-apolo-empty-background lg:px-8 px-4 pt-16">
+    <div className="bg-apolo-empty-background lg:px-40 px-4 pt-28">
       <div className="mb-20 rounded-full p-4 text-center bg-gradient-to-t from-[#379AE1] to-[#69BF77]">
         <i className="text-3xl md:text-5xl font-bold text-white">
           Social Media
         </i>
       </div>
 
-      <div className="flex flex-wrap lg:flex-nowrap gap-5">
+      <div className="flex flex-wrap lg:flex-nowrap">
         <div className="w-full lg:w-1/2 flex justify-center">
           <Image
             src="/images/caribestem.png"
@@ -83,7 +142,7 @@ export default function Marketplace() {
             {episodes.map((episode, i) => (
               <div
                 key={i}
-                className="flex flex-col lg:flex-row items-center w-full max-w-md gap-5 bg-gradient-to-r from-[#2A2A2A] to-[#161A2C] p-4 rounded-3xl"
+                className="flex flex-col lg:flex-row items-center w-full gap-5 bg-gradient-to-r from-[#2A2A2A] to-[#161A2C] p-4 rounded-3xl"
               >
                 <Image
                   src={episode.img}
@@ -136,7 +195,7 @@ export default function Marketplace() {
       </div>
 
       <div className="mt-20 pb-10">
-        <div className="flex flex-col items-center gap-5 mb-5">
+        <div className="flex flex-col lg:flex-row lg:justify-between items-center gap-5 mb-5">
           <button
             className="rounded-full w-42 p-4 text-white text-sm md:text-xl font-bold bg-black w-full max-w-xs"
             onClick={() => setPlatform('TikTok')}
