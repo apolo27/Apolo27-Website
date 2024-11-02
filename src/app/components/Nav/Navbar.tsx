@@ -1,32 +1,36 @@
-'use client';
-import Image from 'next/image';
-import React, { useState } from 'react';
-import Link from 'next/link';
-import Sidebar from '../Sidebar/Sidebar';
+"use client";
+import Image from "next/image";
+import React, { useState } from "react";
+import Link from "next/link";
+import Sidebar from "../Sidebar/Sidebar";
+import { usePathname } from "next/navigation";
 
 export default function Navbar() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-  const [activeLink, setActiveLink] = useState('/');
+  const pathName = usePathname();
 
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
 
-  const handleLinkClick = (link: string) => {
-    setActiveLink(link);
+  const handleLinkClick = () => {
     setIsSidebarOpen(false); // Cierra la sidebar después de seleccionar un link en dispositivos móviles
   };
 
   return (
-    <nav className={`${activeLink === '/' ? "bg-transparent" : "bg-gray-800"} w-full absolute font-poppins shadow-md top-0 z-50`}>
+    <nav
+      className={`${
+        pathName === "/" ? "bg-[#40D1FF]" : "bg-gray-800"
+      } w-full font-poppins shadow-md` }
+    >
       <div className="flex items-center justify-between p-4">
         <div className="flex-shrink-0 ml-0">
-          <Link href={'/'} onClick={() => handleLinkClick('/')}>
+          <Link href={"/"}>
             <Image
-              src="/images/gray-logo.png"
+              src="/images/logoblanco.png"
               alt="Apolo 27 Logo"
-              width={50}
-              height={50}
+              width={45}
+              height={45}
               className="hover:scale-110 transition-transform duration-300 cursor-pointer"
             />
           </Link>
@@ -35,23 +39,22 @@ export default function Navbar() {
         <div className="flex-grow">
           <ul className="hidden md:flex justify-center space-x-8 text-white">
             {[
-              { href: '/dashboard', label: 'Data Dashboard' },
-              { href: '/stem-with-us', label: 'Stem With Us' },
-              { href: '/sponsors', label: 'Become a Sponsor' },
-              { href: '/social-media', label: 'Social Media' },
-              { href: '/marketplace', label: 'Marketplace' },
-            ].map((item, index) => (
-              <li key={index} className="relative">
+              { href: "/stem-with-us", label: "Stem With Us" },
+              { href: "/sponsors", label: "Become a Sponsor" },
+              { href: "/games", label: "STEM Games" },
+              { href: "/social-media", label: "Social Media" },
+              { href: "/marketplace", label: "Marketplace" },
+            ].map((item, i) => (
+              <li key={i} className="relative">
                 <Link
                   href={item.href}
-                  onClick={() => handleLinkClick(item.href)}
                   className={`${
-                    activeLink === item.href ? 'text-blue-400' : 'text-white'
+                    pathName === item.href ? "text-blue-400" : "text-white"
                   } hover:text-blue-300 transition-colors duration-300`}
                 >
                   {item.label}
                 </Link>
-                {activeLink === item.href && (
+                {pathName === item.href && (
                   <span className="absolute -bottom-1 left-0 w-full h-[2px] bg-blue-400 rounded-full"></span>
                 )}
               </li>

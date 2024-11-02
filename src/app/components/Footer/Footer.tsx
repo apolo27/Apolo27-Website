@@ -1,8 +1,8 @@
-import React from 'react';
+import React from "react";
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-gray-900 text-white py-10 font-poppins">
+    <footer className="w-full bg-gray-900 text-white py-10 font-poppins ">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-center space-y-10 md:space-y-0">
           <div className="flex flex-col items-center md:items-start flex-1">
@@ -22,7 +22,7 @@ export default function Footer() {
             </p>
 
             <div className="flex space-x-6">
-              {['twitter', 'instagram', 'tiktok', 'youtube'].map((icon) => (
+              {["twitter", "instagram", "tiktok", "youtube"].map((icon) => (
                 <div
                   key={icon}
                   className="bg-blue-600 rounded-full p-2 hover:bg-transparent transition-colors duration-300"
@@ -41,11 +41,11 @@ export default function Footer() {
             <h6 className="text-xl font-semibold mb-6">Páginas</h6>
             <div className="space-y-3 text-center md:text-left">
               {[
-                'Inicio',
-                'Servicios',
-                'Sobre Nosotros',
-                'Contacto',
-                'Blog',
+                "Inicio",
+                "Servicios",
+                "Sobre Nosotros",
+                "Contacto",
+                "Blog",
               ].map((page) => (
                 <div key={page}>
                   <a href="#" className="text-base hover:text-red-500">
@@ -53,6 +53,15 @@ export default function Footer() {
                   </a>
                 </div>
               ))}
+              <div>
+                <a
+                  href="https://www.flaticon.com/free-icons/deploy"
+                  className="text-base hover:text-red-500"
+                  title="deploy icons"
+                >
+                  Deploy icons created by Freepik - Flaticon
+                </a>
+              </div>
             </div>
           </div>
         </div>

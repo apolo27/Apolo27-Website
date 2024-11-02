@@ -3,14 +3,14 @@ import Image from "next/image";
 import { Timer } from "./components/Timer";
 import { ArrowDownIcon, ArrowUpIcon } from "@heroicons/react/20/solid";
 import { ClipboardDocumentListIcon } from "@heroicons/react/24/solid";
-import ReactCurvedText from "react-curved-text";
+import Link from "next/link";
 
 export default function Home() {
   const teamClassName = `opacity-80 hover:opacity-100 transition-all hover:cursor-pointer hover:scale-105`;
 
   return (
     <div className="text-center ">
-      <div className="h-fit bg-gradient-to-t from-[#101321] to-[#40D1FF] px-40 flex flex-col items-center pt-32 py-20 ">
+      <div className="h-fit bg-gradient-to-t from-[#101321] to-[#40D1FF] px-40 flex flex-col items-center py-10 ">
         <Timer />
         <p className="mt-4 font-bold text-5xl w-4/6 text-transparent bg-clip-text bg-gradient-to-b from-white to-gray-500">
           The First Dominican Republic University Division Winners at
@@ -65,9 +65,10 @@ export default function Home() {
         <section className="transform -translate-y-64  pt-96 ">
           <p className="text-white font-bold text-5xl">About Us</p>
           <div className="flex justify-between">
-            <div
+            <Link
+              href="/human-powered-team"
               className={`${teamClassName} rounded-r-[250px] h-fit w-2/5`}
-              style={{backgroundImage: "url('/images/red-galaxy.jpg')"}}
+              style={{backgroundImage: "url('/images/red-galaxy.jpg')", backgroundRepeat: 'no-repeat'}}
             >
               <p className="font-bold text-6xl w-1/3 text-white text-left -mb-10 pl-5 pt-10">
               Human Powered Constelation
@@ -89,8 +90,9 @@ export default function Home() {
                   height={300}
                 />
               </div>
-            </div>
-            <div
+            </Link>
+            <Link
+              href="/remote-controlled-team"
               className={`${teamClassName} rounded-l-[250px] w-2/5 text-right`}
               style={{backgroundImage: "url('/images/blue-galaxy.jpg')"}}
             >
@@ -113,7 +115,7 @@ export default function Home() {
                   height={300}
                 />
               </div>
-            </div>
+            </Link>
           </div>
         </section>
 
