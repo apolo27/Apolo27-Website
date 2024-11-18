@@ -1,80 +1,51 @@
 import React from "react";
-
+import Link from "next/link";
+import "./Footer.css";
 export default function Footer() {
   return (
-    <footer className="w-full bg-gray-900 text-white py-10 font-poppins ">
-      <div className="container mx-auto px-4">
-        <div className="flex flex-col md:flex-row justify-between items-center space-y-10 md:space-y-0">
-          <div className="flex flex-col items-center md:items-start flex-1">
-            <div className="flex items-center mb-6">
-              <img
-                src="/images/gray-logo.png"
-                alt="logo"
-                className="h-12 mr-4"
-              />
-              <h5 className="text-xl font-semibold">APOLO 27</h5>
-            </div>
-            <p className="text-base mb-6 text-center md:text-left w-80">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id
-              doloremque qui unde quam ab ex cum itaque nobis placeat distinctio
-              quaerat officiis, amet iure. Sed nihil tenetur ducimus vitae
-              molestias.
-            </p>
-
-            <div className="flex space-x-6">
-              {["twitter", "instagram", "tiktok", "youtube"].map((icon) => (
-                <div
-                  key={icon}
-                  className="bg-blue-600 rounded-full p-2 hover:bg-transparent transition-colors duration-300"
-                >
-                  <img
-                    src={`/images/icons/${icon}.png`}
-                    alt={icon}
-                    className="h-5 w-5 text-white hover:text-blue-600"
-                  />
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div className="flex flex-col items-center md:items-start flex-1">
-            <h6 className="text-xl font-semibold mb-6">Páginas</h6>
-            <div className="space-y-3 text-center md:text-left">
-              {[
-                "Inicio",
-                "Servicios",
-                "Sobre Nosotros",
-                "Contacto",
-                "Blog",
-              ].map((page) => (
-                <div key={page}>
-                  <a href="#" className="text-base hover:text-red-500">
-                    {page}
-                  </a>
-                </div>
-              ))}
-              <div>
-                <a
-                  href="https://www.flaticon.com/free-icons/deploy"
-                  className="text-base hover:text-red-500"
-                  title="deploy icons"
-                >
-                  Deploy icons created by Freepik - Flaticon
-                </a>
-              </div>
-            </div>
+    <footer className="footer z-10">
+    <div className="container">
+      <div className="row">
+        <div className="footer-col">
+          <h4>Apolo 27</h4>
+          <ul className="">
+                  <li><Link href="/#timeline">Our Shrefry</Link></li>
+                  <li><Link href="/#Members">Members</Link></li>
+                  <li><Link href="Telemetry">Telemetry</Link></li>
+                  <li><Link href="STEM">STEM</Link></li>
+                  <li><Link href="Manufacturing">Manufacturing</Link></li>
+                  <li><Link href="Simulation">HERC Simulation</Link></li>
+          </ul>
+        </div>
+        <div className="footer-col">
+          <h4>Data Dashboard</h4>
+          <ul>
+                   <li><Link href="DataDashboard#overview">Overview</Link></li>
+                   <li><Link href="DataDashboard#rover">Rover</Link></li>
+                   <li><Link href="DataDashboard#crewmembers">Crewmembers</Link></li>
+                   {/* <li><Link href="DataDashboard#environment">Environment</Link></li> */}
+                   <li><Link href="DataDashboard#sensors">Sensors</Link></li>
+          </ul>
+        </div>
+        <div className="footer-col">
+          <h4>Stem With Us</h4>
+          <ul>
+            <li><Link href="StemWithUs#blogs">Blog</Link></li>
+            <li><Link href="StemWithUs#events">Events Calendar</Link></li>
+            <li><Link href="ContactUs">Book a School Visit</Link></li>
+          </ul>
+        </div>
+        <div className="footer-col">
+          <h4>follow us</h4>
+          <div className="social-links">
+                   <a href="https://www.instagram.com/apolo27_rd/" target="_blank"><i className="fab fa-instagram"></i></a>
+                   <a href="https://www.youtube.com/@apolo2730" target="_blank"><i className="fab fa-youtube"></i></a>
+                   <a href="https://www.linkedin.com/company/apolo27/" target="_blank"><i className="fab fa-linkedin-in"></i></a>
+                   <a href="https://www.tiktok.com/@apolo27rd" target="_blank"><i className="fab fa-tiktok"></i></a>
           </div>
         </div>
       </div>
-
-      <div className="flex justify-center mt-8">
-        <div className="relative w-4/5">
-          <div className="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-red-500 to-transparent" />
-          <p className="text-center text-base mt-2">
-            @Designed by Telemetry Team
-          </p>
-        </div>
-      </div>
-    </footer>
+    </div>
+ </footer>
   );
 }
