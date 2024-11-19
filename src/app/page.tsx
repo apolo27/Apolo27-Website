@@ -1,43 +1,53 @@
-"use client"
+"use client";
 import Image from "next/image";
 import { Timer } from "./components/Timer";
 import { ArrowDownIcon, ArrowUpIcon } from "@heroicons/react/20/solid";
 import { ClipboardDocumentListIcon } from "@heroicons/react/24/solid";
 import Link from "next/link";
+import { ArrowDownCircleIcon, ArrowRightIcon, LinkIcon } from "@heroicons/react/24/outline";
 
 export default function Home() {
   const teamClassName = `opacity-80 hover:opacity-100 transition-all hover:cursor-pointer hover:scale-105`;
 
   return (
     <div className="text-center ">
-      <div className="h-fit bg-gradient-to-t from-[#101321] to-[#40D1FF] px-40 flex flex-col items-center py-10 ">
+      <div className="h-fit space-y-10 bg-gradient-to-t from-[#101321] to-[#40D1FF] px-40 flex flex-col items-center py-10 ">
         <Timer />
-        <p className="mt-4 font-bold text-5xl w-4/6 text-transparent bg-clip-text bg-gradient-to-b from-white to-gray-500">
+        <p className="mt-4 font-bold text-5xl 2xl:text-6xl w-4/6 text-transparent bg-clip-text bg-gradient-to-b from-white to-gray-500">
           The First Dominican Republic University Division Winners at
           NASA&apos;s Human Exploration Rover Challenge
         </p>
       </div>
-      <section className="bg-[#101321] h-[220px] relative flex">
+
+      <section className="bg-[#101321] h-[220px] 2xl:h-[240px] pt-5">
         <div
-          className="w-[555px] h-[210px] absolute left-20 hover:cursor-pointer hover:opacity-65"
+          className="w-[555px] h-[220px] absolute left-20 2xl:left-60 hover:cursor-pointer hover:opacity-65"
           style={{
             backgroundImage: "url('/images/simulation.png')",
             backgroundRepeat: "no-repeat",
           }}
         ></div>
-        <div className="border border-1 border-[#424B5B] bg-black/[0.8] w-[520px] py-2 h-fit absolute left-1/2 transform -translate-x-1/2 rounded-full flex items-center justify-evenly hover:cursor-pointer hover:scale-105 transition-all">
+        <div className="transition-all border border-1 border-[#424B5B] bg-black/[0.8] w-[520px] py-2 h-fit absolute left-1/2 transform -translate-x-1/2 rounded-full flex items-center justify-evenly hover:cursor-pointer hover:scale-105 ">
           <ClipboardDocumentListIcon className="w-12 h-12 text-white" />
           <div className="text-left">
-            <p className="font-semibold text-white">
-              Programa nuestra visita STEM!
+            <p className="font-semibold text-white text-lg">
+              Programa nuestra visita <span className="text-green-300">S</span>
+              <span className="text-blue-300">T</span>
+              <span className="text-red-300">E</span>
+              <span className="text-purple-300">M</span>
+              <span className="text-white">!</span>
             </p>
-            <p className="text-gray-100">
+            <p className="text-gray-100 ">
               Completa el formulario para tu Centro Educativo
             </p>
           </div>
+          <div>
+            <ArrowRightIcon className="w-5 h-5 text-white transition-transform hover:translate-x-5" />
+          </div>
         </div>
+
         <div
-          className="w-[555px] h-[210px] absolute right-20 text-center"
+          className="w-[555px] h-[240px] absolute right-20 2xl:right-60 text-center"
           style={{
             backgroundImage: "url('/images/sponsorus.png')",
             backgroundRepeat: "no-repeat",
@@ -49,29 +59,30 @@ export default function Home() {
           <p className="font-bold text-white text-4xl pl-16 pt-3">Sponsor Us</p>
         </div>
       </section>
-      <div className="relative z-10 bg-[#101321] text-center flex items-center justify-center">
-        <p className="explore-more-text bg-clip-text bg-gradient-to-r from-black via-white via-50% to-black text-transparent font-bold text-4xl w-60">
+
+      <div className=" bg-[#101321] text-center flex flex-col gap-7 items-center justify-center">
+        <p className="explore-more-text bg-clip-text bg-gradient-to-r from-gray-800 via-white via-50% to-gray-800 text-transparent font-bold text-4xl 2xl:text-5xl w-60 2xl:w-80">
           Explore More About Us
         </p>
-      </div>
-      <div className="bg-[#101321]">
-        <div className="relative z-10 w-full rounded-b-full h-60 border-b-4 border-white drop-shadow-2xl shadow-white">
-          <div className="absolute -bottom-10 left-1/2 transform -translate-x-1/2 rounded-full border-4 border-white bg-white/[0.2]  drop-shadow-2xl shadow-white flex items-center justify-center w-fit p-3">
-            <ArrowDownIcon className="w-12  h-12 text-white " />
-          </div>
-          <div className="absolute -bottom-10 left-1/2 transform -translate-x-1/2 rounded-full bg-transparent  drop-shadow-2xl shadow-white flex items-center justify-center w-20 h-20 filter blur-xl  p-3"></div>
+        <div>
+          <ArrowDownCircleIcon className="w-20 h-20 text-white transition-transform animate-bounce" />
         </div>
+      </div>
 
+      <div className="bg-[#101321]">
         <section className="transform -translate-y-64  pt-96 ">
           <p className="text-white font-bold text-5xl">About Us</p>
           <div className="flex justify-between">
             <Link
               href="/human-powered-team"
               className={`${teamClassName} rounded-r-[250px] h-fit w-2/5`}
-              style={{backgroundImage: "url('/images/red-galaxy.jpg')", backgroundRepeat: 'no-repeat'}}
+              style={{
+                backgroundImage: "url('/images/red-galaxy.jpg')",
+                backgroundRepeat: "no-repeat",
+              }}
             >
               <p className="font-bold text-6xl w-1/3 text-white text-left -mb-10 pl-5 pt-10">
-              Human Powered Constelation
+                Human Powered Constelation
               </p>
 
               <div className="flex">
@@ -94,7 +105,7 @@ export default function Home() {
             <Link
               href="/remote-controlled-team"
               className={`${teamClassName} rounded-l-[250px] w-2/5 text-right`}
-              style={{backgroundImage: "url('/images/blue-galaxy.jpg')"}}
+              style={{ backgroundImage: "url('/images/blue-galaxy.jpg')" }}
             >
               <p className="font-bold text-6xl text-white text-right -mb-10 pt-10 w-3/4 ml-32">
                 Remote Controlled Constelation
