@@ -1,69 +1,110 @@
-import React from 'react';
-
+import React from "react";
+import Link from "next/link";
+import "./Footer.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faFacebook,
+  faInstagram,
+  faTiktok,
+  faXTwitter,
+  faYoutube,
+} from "@fortawesome/free-brands-svg-icons";
 export default function Footer() {
   return (
-    <footer className="w-full bg-gray-900 text-white py-10 font-poppins">
-      <div className="container mx-auto px-4">
-        <div className="flex flex-col md:flex-row justify-between items-center space-y-10 md:space-y-0">
-          <div className="flex flex-col items-center md:items-start flex-1">
-            <div className="flex items-center mb-6">
-              <img
-                src="/images/gray-logo.png"
-                alt="logo"
-                className="h-12 mr-4"
+    <footer
+      className="flex z-50 p-10 bg-[#0d0f18]"
+      style={{ position: "relative", zIndex: 10 }}
+    >
+      <div className="container">
+        <div className="row">
+          <div className="footer-col">
+            <h4>Apolo 27</h4>
+            <ul className="">
+              <li>
+                <Link href="">Our Shrefry</Link>
+              </li>
+              <li>
+                <Link href="">Members</Link>
+              </li>
+              <li>
+                <Link href="">Telemetry</Link>
+              </li>
+              <li>
+                <Link href="">STEM</Link>
+              </li>
+              <li>
+                <Link href="">Manufacturing</Link>
+              </li>
+              <li>
+                <Link href="">HERC Simulation</Link>
+              </li>
+            </ul>
+          </div>
+          <div className="footer-col">
+            <h4>Data Dashboard</h4>
+            <ul>
+              <li>
+                <Link href="">Overview</Link>
+              </li>
+              <li>
+                <Link href="">Rover</Link>
+              </li>
+              <li>
+                <Link href="">Crewmembers</Link>
+              </li>
+              {/* <li><Link href="#environment">Environment</Link></li> */}
+              <li>
+                <Link href="">Sensors</Link>
+              </li>
+            </ul>
+          </div>
+          <div className="footer-col">
+            <h4>Stem With Us</h4>
+            <ul>
+              <li>
+                <Link href="">Blog</Link>
+              </li>
+              <li>
+                <Link href="">Events Calendar</Link>
+              </li>
+              <li>
+                <Link href="">Book a School Visit</Link>
+              </li>
+            </ul>
+          </div>
+          <div className="footer-col">
+            <h4>follow us</h4>
+            <div className="social-links flex gap-5">
+              <FontAwesomeIcon
+                className="hover:cursor-pointer hover:scale-110 text-white"
+                icon={faTiktok}
+                size="2xl"
               />
-              <h5 className="text-xl font-semibold">APOLO 27</h5>
-            </div>
-            <p className="text-base mb-6 text-center md:text-left w-80">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id
-              doloremque qui unde quam ab ex cum itaque nobis placeat distinctio
-              quaerat officiis, amet iure. Sed nihil tenetur ducimus vitae
-              molestias.
-            </p>
-
-            <div className="flex space-x-6">
-              {['twitter', 'instagram', 'tiktok', 'youtube'].map((icon) => (
-                <div
-                  key={icon}
-                  className="bg-blue-600 rounded-full p-2 hover:bg-transparent transition-colors duration-300"
-                >
-                  <img
-                    src={`/images/icons/${icon}.png`}
-                    alt={icon}
-                    className="h-5 w-5 text-white hover:text-blue-600"
-                  />
-                </div>
-              ))}
-            </div>
-          </div>
-
-          <div className="flex flex-col items-center md:items-start flex-1">
-            <h6 className="text-xl font-semibold mb-6">Páginas</h6>
-            <div className="space-y-3 text-center md:text-left">
-              {[
-                'Inicio',
-                'Servicios',
-                'Sobre Nosotros',
-                'Contacto',
-                'Blog',
-              ].map((page) => (
-                <div key={page}>
-                  <a href="#" className="text-base hover:text-red-500">
-                    {page}
-                  </a>
-                </div>
-              ))}
+              <FontAwesomeIcon
+                href="://www.instagram.com/apolo27_rd/"
+                className="hover:cursor-pointer hover:scale-110 text-pink-500"
+                icon={faInstagram}
+                size="2xl"
+              />
+              <FontAwesomeIcon
+                className="hover:cursor-pointer hover:scale-110 text-blue-500"
+                icon={faFacebook}
+                size="2xl"
+              />
+              <FontAwesomeIcon
+                href="://www.tiktok.com/@apolo27rd"
+                className="hover:cursor-pointer hover:scale-110 text-white"
+                icon={faXTwitter}
+                size="2xl"
+              />
+              <FontAwesomeIcon
+                href="://www.youtube.com/@apolo2730"
+                className="hover:cursor-pointer hover:scale-110 text-red-500"
+                icon={faYoutube}
+                size="2xl"
+              />
             </div>
           </div>
-        </div>
-      </div>
-
-      <div className="flex justify-center mt-8">
-        <div className="relative w-4/5">
-          <div className="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-red-500 to-transparent" />
-          <p className="text-center text-base mt-2">
-            @Designed by Telemetry Team
-          </p>
         </div>
       </div>
     </footer>
