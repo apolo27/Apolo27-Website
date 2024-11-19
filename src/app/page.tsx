@@ -4,10 +4,61 @@ import { Timer } from "./components/Timer";
 import { ArrowDownIcon, ArrowUpIcon } from "@heroicons/react/20/solid";
 import { ClipboardDocumentListIcon } from "@heroicons/react/24/solid";
 import Link from "next/link";
-import { ArrowDownCircleIcon, ArrowRightIcon, LinkIcon } from "@heroicons/react/24/outline";
+import {
+  ArrowDownCircleIcon,
+  ArrowRightIcon,
+  LinkIcon,
+} from "@heroicons/react/24/outline";
 
 export default function Home() {
   const teamClassName = `opacity-80 hover:opacity-100 transition-all hover:cursor-pointer hover:scale-105`;
+
+  const teamPanelClassName = `w-[400px] h-[500px] bg-[#121837] border border-[#666A95] text-white text-left rounded-lg flex flex-col p-5 m-5`;
+  const teams = [
+    {
+      year: 2019,
+      title: "THE ORIGIN",
+      description: `Formed in 2019, our small team made history: 1st university division team from our country at the NASA Rover Challenge!`,
+      image: "/images/",
+    },
+    {
+      year: 2020,
+      title: "THE ORIGIN",
+      description: `2020's pandemic brought challenges, but our team persevered. Learned lessons fueled historic "System Safety Award" win!`,
+      image: "/images/",
+    },
+    {
+      year: 2021,
+      title: "THE ORIGIN",
+      description: `Rover revamp boosted strength! Team knowledge soared, igniting national STEM passion through our previous experience.`,
+      image: "/images/",
+    },
+    {
+      year: 2022,
+      title: "THE ORIGIN",
+      description: `STEM focus expanded in 2022! Launched "STEM Tour" (interactive projects!), crowned "Engagement Award" winners!`,
+      image: "/images/",
+    },
+    {
+      year: 2023,
+      title: "THE ORIGIN",
+      description: `Dominican DOMINANCE! Major improvements across the board earned "Most Improved" & "Team Spirit" awards - a historic first!`,
+      image: "/images/",
+    },
+
+    {
+      year: 2024,
+      title: "THE ORIGIN",
+      description: `Fueled by 2023's challenges, we've leveled up all areas of our team. Ready to crush ambitious goals & achieve excellence in 2024!`,
+      image: "/images/",
+    },
+    {
+      year: 2025,
+      title: "THE ORIGIN",
+      description: `The first year of the Apolo Division`,
+      image: "/images/",
+    },
+  ];
 
   return (
     <div className="text-center ">
@@ -71,8 +122,8 @@ export default function Home() {
 
       <div className="bg-[#101321]">
         <section className="transform -translate-y-64  pt-96 ">
-          <p className="text-white font-bold text-5xl">About Us</p>
-          <div className="flex justify-between">
+          <p className="text-white font-bold text-5xl">APOLO DIVISIONS</p>
+          <div className="w-full flex justify-between">
             <Link
               href="/human-powered-team"
               className={`${teamClassName} rounded-r-[250px] h-fit w-2/5`}
@@ -105,12 +156,17 @@ export default function Home() {
             <Link
               href="/remote-controlled-team"
               className={`${teamClassName} rounded-l-[250px] w-2/5 text-right`}
-              style={{ backgroundImage: "url('/images/blue-galaxy.jpg')" }}
+              style={{
+                backgroundImage: "url('/images/blue-galaxy.jpg')",
+                objectFit: "cover",
+
+                backgroundRepeat: "no-repeat",
+              }}
             >
               <p className="font-bold text-6xl text-white text-right -mb-10 pt-10 w-3/4 ml-32">
                 Remote Controlled Constelation
               </p>
-              <div className="flex">
+              <div className="absolute right-0">
                 <Image
                   className="transform absolute bottom-0 right-24 scale-x-[-1]"
                   src="/images/about-us/Anne1.png"
@@ -130,40 +186,28 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="flex justify-between w-full relative px-60">
-          <div className="w-1/2 text-left">
-            <p className="outlined-text text-[#101321] text-7xl font-extrabold ">
+        <section className="flex justify-between w-full relative px-5 lg:px-40 2xl:px-60 pb-40">
+          <div className="w-1/2 text-left space-y-12">
+            <p className="outlined-text text-[#101321] text-7xl font-extrabold w-2/3 ">
               MISSION APOLO 27
             </p>
-            <p className="text-white font-semibold text-xl">2019-2020</p>
-            <p className="text-white font-semibold text-xl">2021-2022</p>
-            <p className="text-white font-semibold text-xl">2023-2024</p>
+            <div>
+              <p className="text-white font-semibold text-xl">2019-2020</p>
+              <p className="text-white font-semibold text-xl">2021-2022</p>
+              <p className="text-white font-semibold text-xl">2023-2024</p>
+            </div>
             <p className="text-white font-semibold text-xl">Members</p>
             <p className="text-white font-semibold text-xl">Awards</p>
           </div>
 
-          <div className="">
-            <div className="p-4 bg-[#242E5C] text-white font-semibold rounded-xl w-96">
-              2019
-            </div>
-            <div className="p-4 bg-[#242E5C] text-white font-semibold rounded-xl w-96">
-              2020
-            </div>
-            <div className="p-4 bg-[#242E5C] text-white font-semibold rounded-xl w-96">
-              2021
-            </div>
-            <div className="p-4 bg-[#242E5C] text-white font-semibold rounded-xl w-96">
-              2022
-            </div>
-            <div className="p-4 bg-[#242E5C] text-white font-semibold rounded-xl w-96">
-              2023
-            </div>
-            <div className="p-4 bg-[#242E5C] text-white font-semibold rounded-xl w-96">
-              2024
-            </div>
-            <div className="p-4 bg-[#242E5C] text-white font-semibold rounded-xl w-96">
-              2025
-            </div>
+          <div className="w-3/5 overflow-y-hidden overflow-x-scroll flex ">
+            {teams.map((team, index) => (
+              <div key={index} className={`${teamPanelClassName}`}>
+                <p className="text-3xl font-bold">{team.year}</p>
+                <p className="text-2xl font-semibold">{team.title}</p>
+                <p className="text-lg">{team.description}</p>
+              </div>
+            ))}
           </div>
         </section>
       </div>
