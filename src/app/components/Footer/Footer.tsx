@@ -74,7 +74,7 @@ export default function Footer() {
           </div>
           <div className="footer-col">
             <h4>follow us</h4>
-            <div className="social-links flex flex-wrap gap-5">
+            <div className="social-links flex gap-5">
               <FontAwesomeIcon
                 className="hover:cursor-pointer hover:scale-110 text-white"
                 icon={faTiktok}
