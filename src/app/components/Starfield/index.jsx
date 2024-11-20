@@ -2,18 +2,12 @@
 
 import React, { useEffect } from 'react';
 
-interface Props {
-	speedFactor?: number;
-	backgroundColor?: string;
-	starColor?: [number, number, number];
-	starCount?: number;
-}
 
-export default function Starfield(props: Props) {
+export default function Starfield(props) {
 	const { speedFactor = 0.05, backgroundColor = 'black', starColor = [255, 255, 255], starCount = 2000 } = props;
 
 	useEffect(() => {
-		const canvas = document.getElementById('starfield') as HTMLCanvasElement;
+		const canvas = document.getElementById('starfield');
 
 		if (canvas) {
 			const c = canvas.getContext('2d');
@@ -33,7 +27,7 @@ export default function Starfield(props: Props) {
 					setCanvasExtents();
 				};
 
-				const makeStars = (count: number) => {
+				const makeStars = (count) => {
 					const out = [];
 					for (let i = 0; i < count; i++) {
 						const s = {
@@ -53,14 +47,14 @@ export default function Starfield(props: Props) {
 					c.fillRect(0, 0, canvas.width, canvas.height);
 				};
 
-				const putPixel = (x: number, y: number, brightness: number) => {
+				const putPixel = (x, y, brightness) => {
 					const rgb =
 						'rgba(' + starColor[0] + ',' + starColor[1] + ',' + starColor[2] + ',' + brightness + ')';
 					c.fillStyle = rgb;
 					c.fillRect(x, y, 1, 1);
 				};
 
-				const moveStars = (distance: number) => {
+				const moveStars = (distance) => {
 					const count = stars.length;
 					for (var i = 0; i < count; i++) {
 						const s = stars[i];
@@ -71,13 +65,13 @@ export default function Starfield(props: Props) {
 					}
 				};
 
-				let prevTime: number;
-				const init = (time: number) => {
+				let prevTime;
+				const init = (time) => {
 					prevTime = time;
 					requestAnimationFrame(tick);
 				};
 
-				const tick = (time: number) => {
+				const tick = (time) => {
 					let elapsed = time - prevTime;
 					prevTime = time;
 

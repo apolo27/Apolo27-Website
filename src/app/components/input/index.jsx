@@ -7,34 +7,11 @@ import {
   EyeIcon,
   EyeSlashIcon,
 } from "@heroicons/react/24/outline";
-import { getErrorFromFormState } from "../../shared/utils";
+import { getErrorFromFormState } from "../../shared/utils/getErrorFromFormState";
 
-interface InputProps {
-  type?:
-  | "text"
-  | "file"
-  | "email"
-  | "number"
-  | "password"
-  | "date"
-  | "color"
-  | "tel"
-  | "radio"
-  | "checkbox";
-  placeholder?: string;
-  label?: string;
-  defaultValue?: string | number;
-  value?: string | number;
-  onBlur?: () => void;
-  className?: string;
-  maxLength?: number;
-  style?: any;
-  disabled?: boolean;
-  onChange?: (e: string) => void;
-  name: string;
-}
 
-export const Input: FC<InputProps> = ({
+
+export const Input = ({
   label,
   placeholder,
   type = "text",
@@ -52,8 +29,8 @@ export const Input: FC<InputProps> = ({
 
   const hasValue = getValues(name);
   const hasErrors = getErrorFromFormState(name, formState.errors)
-    ?.message as string;
-  const isDirty = getErrorFromFormState(name, formState.dirtyFields) as boolean;
+    ?.message;
+  const isDirty = getErrorFromFormState(name, formState.dirtyFields);
   const isValid = !hasErrors && isDirty && hasValue;
   const defaultClass = "w-full p-4 h-[48px] border rounded-md bg-[#F7F7F769]";
 
@@ -72,7 +49,7 @@ export const Input: FC<InputProps> = ({
           id={name}
           {...register(name, {
             onBlur: onBlur,
-            onChange: (e: any) => onChange && onChange(e?.target?.value),
+            onChange: (e) => onChange && onChange(e?.target?.value),
           })}
           autoCapitalize={'on'}
           disabled={disabled}

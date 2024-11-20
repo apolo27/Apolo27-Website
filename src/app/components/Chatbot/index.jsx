@@ -15,9 +15,9 @@ const {
   HarmBlockThreshold,
 } = require('@google/generative-ai');
 
-export const Chatbot = ({ isSidebarOpen }: { isSidebarOpen: boolean }) => {
+export const Chatbot = ({ isSidebarOpen }) => {
   const [open, setOpen] = useState(false);
-  const [parsedMessages, setParsedMessages] = useState<string[]>([]);
+  const [parsedMessages, setParsedMessages] = useState([]);
 
   const formSchema = yup.object().shape({
     prompt: yup.string().required('Mensaje requerido'),
@@ -33,7 +33,7 @@ export const Chatbot = ({ isSidebarOpen }: { isSidebarOpen: boolean }) => {
 
   const { handleSubmit, reset } = form;
 
-  async function AskApolito(prompt: string) {
+  async function AskApolito(prompt) {
     const apiKey = process.env.GEMINI_API_KEY;
     const genAI = new GoogleGenerativeAI(apiKey);
 
@@ -74,7 +74,7 @@ export const Chatbot = ({ isSidebarOpen }: { isSidebarOpen: boolean }) => {
     ]);
   }
 
-  const sendPrompt = async (values: any, event: any) => {
+  const sendPrompt = async (values, event) => {
     event.preventDefault();
     const prompt = form.getValues('prompt');
 

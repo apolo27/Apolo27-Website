@@ -1,12 +1,7 @@
 import React, { useEffect } from 'react';
 import Link from 'next/link';
 
-interface SidebarProps {
-  toggleSidebar: () => void;
-  isOpen: boolean;
-}
-
-const Sidebar: React.FC<SidebarProps> = ({ toggleSidebar, isOpen }) => {
+const Sidebar = ({ toggleSidebar, isOpen }) => {
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden';
