@@ -50,7 +50,7 @@ export default function Navbar() {
                   href={item.href}
                   className={`${
                     pathName === item.href ? "text-blue-400" : "text-white"
-                  } hover:text-blue-300 transition-colors duration-300`}
+                  } ${pathName === "/" ? "hover:text-blue-900" : "hover:text-blue-300"}  transition-colors duration-300`}
                 >
                   {item.label}
                 </Link>
