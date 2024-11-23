@@ -12,7 +12,7 @@ import {
 
 export default function Home() {
   const teamClassName = `opacity-80 hover:opacity-100 transition-all hover:cursor-pointer hover:scale-105`;
-  const teamPanelClassName = `h-[500px] w-full md:w-[350px] bg-[#121837] border border-[#666A95] text-white text-left rounded-2xl flex flex-col justify-evenly p-4 `;
+  const teamPanelClassName = `h-[500px] w-full md:w-[350px] bg-[#121837] border border-[#666A95] text-white text-center md:p-4 rounded-2xl flex flex-col justify-evenly items-center md:items-start`;
   const currentTeamPanelClassName = `space-y-5 shadow-[0px_20px_207px_10px_rgba(165,_39,_255,_0.48)] w-full md:w-[350px] bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-violet-700 via-blue-800 to-violet-500  text-white text-left rounded-lg flex flex-col p-4 `;
 
   const awards = [
@@ -170,34 +170,53 @@ export default function Home() {
   ];
 
   return (
-    <div className="text-center ">
-      <div className="h-fit space-y-10 bg-gradient-to-t from-[#101321] to-[#40D1FF] px-40 flex flex-col items-center py-10 ">
+    <div className="text-center">
+      <div className="h-fit  space-y-8 2xl:space-y-5 bg-gradient-to-t from-[#101321] to-[#40D1FF] px-5 md:px-40 flex flex-col items-center pt-5">
         <Timer />
-        <p className="mt-4 font-bold text-5xl 2xl:text-6xl w-4/6 text-transparent bg-clip-text bg-gradient-to-b from-white to-gray-500">
+        <p className="mt-4 font-bold text-4xl 2xl:text-5xl w-full md:w-4/6 text-transparent bg-clip-text bg-gradient-to-b from-white to-gray-500">
           The First Dominican Republic University Division Winners at
           NASA&apos;s Human Exploration Rover Challenge
         </p>
-      </div>
-
-      <section className="bg-[#101321] h-[220px] 2xl:h-[240px] pt-5">
-        <div
-          className="w-[555px] h-[220px] absolute left-20 2xl:left-60 hover:cursor-pointer hover:opacity-65"
-          style={{
-            backgroundImage: "url('/images/landing/simulation.png')",
-            backgroundRepeat: "no-repeat",
-          }}
-        ></div>
-        <div className="transition-all border border-1 border-[#424B5B] bg-black/[0.8] w-[520px] py-2 h-fit absolute left-1/2 transform -translate-x-1/2 rounded-full flex items-center justify-evenly hover:cursor-pointer hover:scale-105 ">
-          <ClipboardDocumentListIcon className="w-12 h-12 text-white" />
+        <div className="flex md:hidden transition-all border border-1 border-[#424B5B] bg-black/[0.8] w-full  md:w-[520px] py-2 h-fit md:absolute md:left-1/2 md:transform md:-translate-x-1/2 rounded-full  items-center justify-evenly hover:cursor-pointer hover:scale-105 ">
+          <ClipboardDocumentListIcon className="w-8 h-8 md:w-12 md:h-12 text-white" />
           <div className="text-left">
-            <p className="font-semibold text-white text-lg">
+            <p className="font-semibold text-white md:text-lg">
               Programa nuestra visita <span className="text-green-300">S</span>
               <span className="text-blue-300">T</span>
               <span className="text-red-300">E</span>
               <span className="text-purple-300">M</span>
               <span className="text-white">!</span>
             </p>
-            <p className="text-gray-100 ">
+            <p className="text-gray-100 text-xs md:text-normal">
+              Completa el formulario para tu Centro Educativo
+            </p>
+          </div>
+          <div>
+            <ArrowRightIcon className="w-5 h-5 text-white transition-transform hover:translate-x-5" />
+          </div>
+        </div>
+      </div>
+
+      <section className="bg-[#101321] 2xl:h-[240px] px-5 md:pt-10 flex flex-col md:flex-row justify-center items-center md:items-start space-y-5 md:space-y-0">
+        <div
+          className="hidden w-[555px] h-[220px] md:block absolute left-20 3xl:left-60 hover:cursor-pointer hover:opacity-65"
+          style={{
+            backgroundImage: "url('/images/landing/simulation.png')",
+            backgroundRepeat: "no-repeat",
+          }}
+        ></div>
+
+        <div className="hidden md:flex transition-all border border-1 border-[#424B5B] bg-black/[0.8] w-full md:w-[520px] py-2 h-fit md:absolute md:left-1/2 md:transform md:-translate-x-1/2 rounded-full items-center justify-evenly hover:cursor-pointer hover:scale-105 ">
+          <ClipboardDocumentListIcon className="w-8 h-8 md:w-12 md:h-12 text-white" />
+          <div className="text-left">
+            <p className="font-semibold text-white md:text-lg">
+              Programa nuestra visita <span className="text-green-300">S</span>
+              <span className="text-blue-300">T</span>
+              <span className="text-red-300">E</span>
+              <span className="text-purple-300">M</span>
+              <span className="text-white">!</span>
+            </p>
+            <p className="text-gray-100 text-xs md:text-normal">
               Completa el formulario para tu Centro Educativo
             </p>
           </div>
@@ -206,8 +225,28 @@ export default function Home() {
           </div>
         </div>
 
+        <div className="md:hidden relative w-5/6 h-auto">
+          <Image
+            src={"/images/landing/sponsorus-rectangle.png"}
+            alt="Simulation"
+            width="0"
+            height="0"
+            sizes="100vw"
+            className="w-full h-full relative"
+          />
+          <p className="absolute font-bold text-3xl text-white top-5 left-5">
+            Sponsor Us!
+          </p>
+          <p className="absolute font-semibold text-xl text-left text-white top-16 left-5">
+            The team needs your help to win!
+          </p>
+          <div className="absolute top-1 right-0 bg-[#3b9fc6] rounded-full w-10 h-10 flex items-center justify-center hover:cursor-pointer hover:scale-105 transition-all">
+            <ArrowUpIcon className="text-white w-8 h-8  transform rotate-45" />
+          </div>
+        </div>
+
         <div
-          className="w-[555px] h-[240px] absolute right-20 2xl:right-60 text-center"
+          className="w-[555px] h-[240px] hidden md:block absolute right-20 3xl:right-60 text-center"
           style={{
             backgroundImage: "url('/images/landing/sponsorus.png')",
             backgroundRepeat: "no-repeat",
@@ -220,16 +259,16 @@ export default function Home() {
         </div>
       </section>
 
-      <div className=" bg-[#101321] text-center flex flex-col gap-7 items-center justify-center">
-        <p className="explore-more-text bg-clip-text bg-gradient-to-r from-gray-800 via-white via-50% to-gray-800 text-transparent font-bold text-4xl 2xl:text-5xl w-60 2xl:w-80">
+      <div className="hidden md:flex bg-[#101321] text-center flex-col gap-7 items-center justify-center pt-20 md:pt-5">
+        <p className="explore-more-text bg-clip-text bg-gradient-to-r from-gray-800 via-white via-50% to-gray-800 text-transparent font-bold text-3xl md:text-4xl 3xl:text-5xl w-full md:w-60 2xl:w-80">
           Explore More About Us
         </p>
         <div>
-          <ArrowDownCircleIcon className="w-20 h-20 text-white transition-transform animate-bounce" />
+          <ArrowDownCircleIcon className="w-10 3xl:w-20 h-10 3xl:h-20 text-white transition-transform animate-bounce" />
         </div>
       </div>
 
-      <section className="bg-[#101321] justify-between w-full space-y-10 pt-20 px-5 lg:px-40 2xl:px-60 pb-40">
+      <section className=" bg-[#101321] justify-between w-full space-y-10 pt-20 px-5 lg:px-40 2xl:px-60 pb-40">
         <p className="outlined-title text-[#101321] text-7xl font-extrabold w-full ">
           MISSION APOLO 27
         </p>
@@ -238,9 +277,10 @@ export default function Home() {
           Our Timeline
         </p>
 
-        <div className=" justify-evenly flex flex-wrap gap-20">
+        <div className="relative flex flex-wrap justify-around px-8 md:px-0 gap-20">
+          <div className="md:hidden w-[1px] bg-white h-full absolute left-1/2 transform -translate-x-1/2 "></div>
           {teams.map((team, i) => (
-            <div key={i} className="">
+            <div key={i} className="z-10">
               <div
                 className={
                   i === teams.length - 1
@@ -248,19 +288,22 @@ export default function Home() {
                     : `${teamPanelClassName}`
                 }
               >
-                <p className="text-3xl xl:text-5xl font-bold">{team.year}</p>
-                <p className="text-2xl xl:text-3xl font-semibold">
+                <p className="text-5xl font-bold md:px-4">{team.year}</p>
+                <p className="text-2xl xl:text-3xl font-semibold text-center md:text-left px-4">
                   {team.title}
                 </p>
-                <p className="text-lg font-semibold">{team.description}</p>
+                <p className="text-md md:text-lg text-center md:text-left font-semibold px-8 md:px-4">
+                  {team.description}
+                </p>
                 <Image
                   src={team.image}
                   alt="Team Image"
-                  width={300}
-                  height={300}
+                  width="0"
+                  height="0"
+                  sizes="100vw"
+                  className="px-8 md:px-4 w-full h-30"
                 />
               </div>
-
               <div className="flex justify-evenly">
                 {team.teamAwards?.map((award, j) => (
                   <div key={j} className={""}>
@@ -283,7 +326,7 @@ export default function Home() {
           <p className="text-white font-bold text-5xl 2xl:text-6xl">
             APOLO 2025 DIVISIONS
           </p>
-          <div className="w-full flex justify-evenly">
+          <div className="hidden md:flex w-full justify-evenly">
             <Link
               href="/human-powered-team"
               className={`${teamClassName} rounded-[50px] h-fit w-2/5 2xl:w-2/6 overflow-hidden relative `}
@@ -323,7 +366,7 @@ export default function Home() {
                 Remote Controlled Constelation
               </p>
               <div className="flex ">
-              <Image
+                <Image
                   className="absolute bottom-0 right-0"
                   src="/images/about-us/Humberto1.png"
                   alt="Team Lead HP"
@@ -337,8 +380,48 @@ export default function Home() {
                   width={520}
                   height={300}
                 />
-     
               </div>
+            </Link>
+          </div>
+
+          <div className="flex justify-between gap-5 md:hidden">
+            <Link
+              href="/human-powered-team"
+              className={`${teamClassName} w-1/2 rounded-br-[100px] rounded-tr-[100px] overflow-hidden relative pt-10`}
+              style={{
+                backgroundImage: "url('/images/about-us/red-galaxy.jpg')",
+              }}
+            >
+              {" "}
+              <p className="font-bold text-2xl text-white text-left pl-5">
+                Human <br></br> Powered Constelation
+              </p>
+              <Image
+                  className=""
+                  src="/images/about-us/Anne1.png"
+                  alt="Team Lead HP"
+                  width={520}
+                  height={300}
+                />
+            </Link>
+
+            <Link
+              href="/remote-controlled-team"
+              className={`${teamClassName} w-1/2 rounded-bl-[100px] rounded-tl-[100px] text-right overflow-hidden relative pt-10`}
+              style={{
+                backgroundImage: "url('/images/about-us/blue-galaxy.jpg')",
+              }}
+            >
+              <p className="font-bold text-2xl text-white text-right pr-5">
+                Remote Controlled Constelation
+              </p>
+              <Image
+                  className=" scale-x-[-1]"
+                  src="/images/about-us/Anne1.png"
+                  alt="Team Lead HP"
+                  width={520}
+                  height={300}
+                />
             </Link>
           </div>
         </section>
