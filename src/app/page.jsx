@@ -183,7 +183,7 @@ export default function Home() {
         <div
           className="w-[555px] h-[220px] absolute left-20 2xl:left-60 hover:cursor-pointer hover:opacity-65"
           style={{
-            backgroundImage: "url('/images/simulation.png')",
+            backgroundImage: "url('/images/landing/simulation.png')",
             backgroundRepeat: "no-repeat",
           }}
         ></div>
@@ -209,7 +209,7 @@ export default function Home() {
         <div
           className="w-[555px] h-[240px] absolute right-20 2xl:right-60 text-center"
           style={{
-            backgroundImage: "url('/images/sponsorus.png')",
+            backgroundImage: "url('/images/landing/sponsorus.png')",
             backgroundRepeat: "no-repeat",
           }}
         >
@@ -288,7 +288,7 @@ export default function Home() {
               href="/human-powered-team"
               className={`${teamClassName} rounded-[50px] h-fit w-2/5 2xl:w-2/6 overflow-hidden relative `}
               style={{
-                backgroundImage: "url('/images/red-galaxy.jpg')",
+                backgroundImage: "url('/images/about-us/red-galaxy.jpg')",
               }}
             >
               <p className="font-bold text-6xl w-1/3 text-white text-left -mb-10 pl-5 pt-10">
@@ -316,7 +316,7 @@ export default function Home() {
               href="/remote-controlled-team"
               className={`${teamClassName} rounded-[50px] w-2/5 2xl:w-2/6 text-right overflow-hidden relative`}
               style={{
-                backgroundImage: "url('/images/blue-galaxy.jpg')",
+                backgroundImage: "url('/images/about-us/blue-galaxy.jpg')",
               }}
             >
               <p className="font-bold text-6xl text-white text-right -mb-10 pt-10 w-3/4 ml-32">

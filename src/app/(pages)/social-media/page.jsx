@@ -17,7 +17,7 @@ export default function Marketplace() {
 
   const episodes = [
     {
-      img: "/caribestem.png",
+      img: "/images/social-media/caribestem.png",
       title: "Episode 1",
       description:
         "This is the first episode of the Caribe STEM podcast This is the first episode of the Caribe STEM podcast This is the first episode of the Caribe STEM podcast This is the first episode of the Caribe STEM podcast This is the first episode of the Caribe STEM podcast",
@@ -25,7 +25,7 @@ export default function Marketplace() {
       date: new Date(),
     },
     {
-      img: "/caribestem.png",
+      img: "/images/social-media/caribestem.png",
       title: "Episode 2",
       description:
         "This is the second episode of the Caribe STEM podcast This is the second episode of the Caribe STEM podcast This is the second episode of the Caribe STEM podcast This is the second episode of the Caribe STEM podcast This is the second episode of the Caribe STEM podcast",
@@ -36,47 +36,50 @@ export default function Marketplace() {
 
   const videos = [
     {
-      img: "/caribestem.png",
+      img: "/images/social-media/thumbnailExample.jpg",
       title: "Video 1",
       platform: "Youtube",
     },
     {
-      img: "/caribestem.png",
+      img: "/images/social-media/thumbnailExample.jpg",
       title: "Video 2",
       platform: "Youtube",
     },
     {
-      img: "/caribestem.png",
+      img: "/images/social-media/thumbnailExample.jpg",
       title: "Video 3",
       platform: "Youtube",
     },
+
     {
-      img: "/caribestem.png",
+      img: "/images/social-media/thumbnailExample.jpg",
       title: "Video 1",
       platform: "Instagram",
     },
     {
-      img: "/caribestem.png",
+      img: "/images/social-media/thumbnailExample.jpg",
       title: "Video 2",
       platform: "Instagram",
     },
     {
-      img: "/caribestem.png",
+      img: "/images/social-media/thumbnailExample.jpg",
       title: "Video 3",
       platform: "Instagram",
     },
+
+
     {
-      img: "/caribestem.png",
+      img: "/images/social-media/thumbnailExample.jpg",
       title: "Video 1",
       platform: "TikTok",
     },
     {
-      img: "/caribestem.png",
+      img: "/images/social-media/thumbnailExample.jpg",
       title: "Video 2",
       platform: "TikTok",
     },
     {
-      img: "/caribestem.png",
+      img: "/images/social-media/thumbnailExample.jpg",
       title: "Video 3",
       platform: "TikTok",
     },
@@ -93,23 +96,24 @@ export default function Marketplace() {
       <div className="flex flex-wrap lg:flex-nowrap">
         <div className="w-full lg:w-1/2 flex justify-center">
           <Image
-            src="/images/caribestem.png"
+            src="/images/social-media/caribestem.png"
             alt="Instagram"
-            width={300}
-            height={300}
-            className="object-cover"
+            width="0"
+            height="0"
+            sizes='100vw'
+            className="w-[300px] h-[300px] 2xl:w-[400px] 2xl:h-[400px] "
           />
         </div>
         <div className="w-full lg:w-1/2 text-center md:text-left flex flex-col justify-between">
-          <p className="text-[#67E1A8] text-2xl md:text-4xl font-semibold">
+          <p className="text-[#67E1A8] text-2xl md:text-4xl 2xl:text-5xl font-semibold">
             Podcast
           </p>
           <div className="text-4xl md:text-6xl font-extrabold">
-            <span className="bg-clip-text text-transparent bg-gradient-to-t from-[#379AE1] to-[#69BF77]">
+            <span className="bg-clip-text text-transparent bg-gradient-to-t from-[#379AE1] to-[#69BF77] 2xl:text-8xl">
               Caribe STEM
             </span>
           </div>
-          <p className="text-white font-bold">
+          <p className="text-white font-bold 2xl:text-2xl">
             Caribe STEM is a podcast created to share and disseminate STEM
             (science, technology, engineering and mathematics) in the Dominican
             Republic and throughout Latin America. Created by Apolo 27, the
@@ -122,7 +126,7 @@ export default function Marketplace() {
 
       <div className="flex flex-col lg:flex-row justify-between gap-10">
         <div className="text-center md:text-left">
-          <p className="text-[#DFC86A] text-2xl mb-3">Latest Episodes</p>
+          <p className="text-[#DFC86A] font-medium text-2xl 2xl:text-3xl mb-3">Latest Episodes</p>
           <div className="flex flex-col gap-4 items-center">
             {episodes.map((episode, i) => (
               <div
@@ -132,13 +136,13 @@ export default function Marketplace() {
                 <Image
                   src={episode.img}
                   alt="Episode"
-                  width={200}
-                  height={200}
-                  className="w-32 h-32 object-cover"
+                  width={300}
+                  height={300}
+                  className="w-56 h-56 object-cover"
                 />
-                <div className="flex flex-col gap-4 justify-around md:w-[400px]">
+                <div className="flex flex-col gap-4 justify-around md:w-[400px] 2xl:w-[600px]">
                   <div className="bg-gradient-to-t from-[#379AE1] to-[#69BF77] bg-clip-text">
-                    <p className="text-2xl md:text-4xl text-transparent">
+                    <p className="text-2xl md:text-4xl text-transparent font-medium">
                       {episode.title}
                     </p>
                   </div>
@@ -162,7 +166,7 @@ export default function Marketplace() {
           </div>
         </div>
         <div className="flex flex-col px-10">
-          <p className="text-[#DFC86A] text-2xl mb-3">About our hosts</p>
+          <p className="text-[#DFC86A] text-2xl 2xl:text-3xl mb-3 font-medium">About our hosts</p>
           <div className="flex justify-center">
             <Image
               src="/images/blankProfile.jpeg"
@@ -180,7 +184,7 @@ export default function Marketplace() {
       </div>
 
       <div className="mt-20 pb-10">
-        <div className="flex flex-col lg:flex-row lg:justify-between items-center gap-5 mb-5">
+        <div className="flex flex-col lg:flex-row justify-center items-center gap-5 mb-5">
           <button
             className="rounded-full w-42 p-4 text-white text-sm md:text-xl font-bold bg-black w-full max-w-xs"
             onClick={() => setPlatform('TikTok')}
@@ -201,7 +205,7 @@ export default function Marketplace() {
           </button>
         </div>
 
-        <div className="flex flex-wrap gap-4 justify-center lg:justify-between">
+        <div className="flex flex-wrap gap-4 justify-center">
           {videos
             .filter((x) => x.platform === platform)
             .map((video, i) => (
@@ -209,7 +213,7 @@ export default function Marketplace() {
                 <div
                   className="w-[300px] h-[500px] rounded-xl overflow-hidden"
                   style={{
-                    backgroundImage: `url(/images/thumbnailExample.jpg)`,
+                    backgroundImage: `url('/images/social-media/thumbnailExample.jpg')`,
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
                   }}
