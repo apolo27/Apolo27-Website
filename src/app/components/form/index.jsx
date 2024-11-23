@@ -7,8 +7,6 @@ import {
   phoneValidation,
 } from '../../shared/utils/validations';
 import { FormProvider, useForm } from 'react-hook-form';
-import { FormType } from '../../shared/models/form';
-import { Stepper, Step } from 'headless-stepper/components';
 import { useStepper } from 'headless-stepper';
 import React, { useRef } from 'react';
 import { Input } from '../input';
@@ -17,7 +15,7 @@ import { CheckBox } from '../checkBox';
 import emailjs from '@emailjs/browser';
 
 export const Form = () => {
-  const formRef = useRef<HTMLFormElement>(null);
+  const formRef = useRef(null);
 
   const formSchema = yup.object().shape({
     institution: yup.string().required('Institución requerida'),
@@ -38,7 +36,7 @@ export const Form = () => {
     message: yup.string().required('Mensaje requerido'),
   });
 
-  const form = useForm<FormType>({
+  const form = useForm({
     mode: 'onBlur',
     defaultValues: {
       institution: '',
@@ -73,12 +71,12 @@ export const Form = () => {
   const { state, nextStep, prevStep, progressProps, stepsProps, stepperProps } =
     useStepper({ steps });
 
-  const goBack = (e: React.MouseEvent<HTMLButtonElement>) => {
+  const goBack = (e) => {
     e.preventDefault();
     prevStep();
   };
 
-  const goNext = (e: React.MouseEvent<HTMLButtonElement>) => {
+  const goNext = (e) => {
     e.preventDefault();
     if (
       state.currentStep === 0 &&
@@ -99,9 +97,9 @@ export const Form = () => {
   const sendForm = () => {
     emailjs
       .sendForm(
-        process.env.EMAIL_JS_SERVICE as string,
-        process.env.EMAIL_JS_TEMPLATE as string,
-        formRef.current as HTMLFormElement,
+        process.env.EMAIL_JS_SERVICE,
+        process.env.EMAIL_JS_TEMPLATE,
+        formRef.current,
         process.env.EMAIL_JS_USER
       )
       .then(

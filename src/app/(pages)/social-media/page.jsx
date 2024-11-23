@@ -15,21 +15,6 @@ import {
 export default function Marketplace() {
   const [platform, setPlatform] = useState('Youtube');
 
-  type Episode = {
-    img: string;
-    title: string;
-    description: string;
-    duration: string;
-    date: Date;
-  };
-
-  type Video = {
-    img: string;
-    title: string;
-    platform: string;
-    color: string;
-  };
-
   const episodes = [
     {
       img: "/caribestem.png",
@@ -47,7 +32,7 @@ export default function Marketplace() {
       duration: "30:00",
       date: new Date(),
     },
-  ] as Episode[];
+  ];
 
   const videos = [
     {
@@ -95,7 +80,7 @@ export default function Marketplace() {
       title: "Video 3",
       platform: "TikTok",
     },
-  ] as Video[];
+  ];
 
   return (
     <div className="bg-apolo-empty-background lg:px-40 px-4 pt-28">
