@@ -10,10 +10,17 @@ import {
   LinkIcon,
 } from "@heroicons/react/24/outline";
 
+import Timeline from "@mui/lab/Timeline";
+import TimelineItem from "@mui/lab/TimelineItem";
+import TimelineSeparator from "@mui/lab/TimelineSeparator";
+import TimelineConnector from "@mui/lab/TimelineConnector";
+import TimelineContent from "@mui/lab/TimelineContent";
+import TimelineDot from "@mui/lab/TimelineDot";
+
 export default function Home() {
   const teamClassName = `opacity-80 hover:opacity-100 transition-all hover:cursor-pointer hover:scale-105`;
-  const teamPanelClassName = `h-[500px] w-full md:w-[350px] bg-[#121837] border border-[#666A95] text-white text-center md:p-4 rounded-2xl flex flex-col justify-evenly items-center md:items-start`;
-  const currentTeamPanelClassName = `space-y-5 shadow-[0px_20px_207px_10px_rgba(165,_39,_255,_0.48)] w-full md:w-[350px] bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-violet-700 via-blue-800 to-violet-500  text-white text-left rounded-lg flex flex-col p-4 `;
+  const teamPanelClassName = `max-h-[500px] w-full md:w-[350px] bg-[#121837] border border-[#666A95] text-white text-center rounded-2xl flex flex-col items-center md:items-start`;
+  const currentTeamPanelClassName = `shadow-[0px_20px_207px_10px_rgba(165,_39,_255,_0.48)] bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] max-h-[500px] w-full md:w-[350px] bg-[#121837] border border-[#666A95] text-white text-center rounded-2xl flex flex-col items-center md:items-start `;
 
   const awards = [
     {
@@ -170,8 +177,8 @@ export default function Home() {
   ];
 
   return (
-    <div className="text-center">
-      <div className="h-fit  space-y-8 2xl:space-y-5 bg-gradient-to-t from-[#101321] to-[#40D1FF] px-5 md:px-40 flex flex-col items-center pt-5">
+    <div>
+      <div className="text-center h-fit  space-y-8 2xl:space-y-5 bg-gradient-to-t from-[#101321] to-[#40D1FF] px-5 md:px-40 flex flex-col items-center pt-5">
         <Timer />
         <p className="mt-4 font-bold text-4xl 2xl:text-5xl w-full md:w-4/6 text-transparent bg-clip-text bg-gradient-to-b from-white to-gray-500">
           The First Dominican Republic University Division Winners at
@@ -269,61 +276,74 @@ export default function Home() {
       </div>
 
       <section className=" bg-[#101321] justify-between w-full space-y-10 pt-20 px-5 lg:px-40 2xl:px-60 pb-40">
-        <p className="outlined-title text-[#101321] text-7xl font-extrabold w-full ">
+        <p className="text-center outlined-title text-[#101321] text-7xl font-extrabold w-full ">
           MISSION APOLO 27
         </p>
 
-        <p className="outlined-subtitle text-[#101321] text-5xl font-extrabold w-full ">
+        <p className="text-center outlined-subtitle text-[#101321] text-5xl font-extrabold w-full ">
           Our Timeline
         </p>
 
-        <div className="relative flex flex-wrap justify-around px-8 md:px-0 gap-20">
-          <div className="md:hidden w-[1px] bg-white h-full absolute left-1/2 transform -translate-x-1/2 "></div>
+        <Timeline position="alternate-reverse" >
           {teams.map((team, i) => (
-            <div key={i} className="z-10">
-              <div
-                className={
-                  i === teams.length - 1
-                    ? `${currentTeamPanelClassName}`
-                    : `${teamPanelClassName}`
-                }
-              >
-                <p className="text-5xl font-bold md:px-4">{team.year}</p>
-                <p className="text-2xl xl:text-3xl font-semibold text-center md:text-left px-4">
-                  {team.title}
-                </p>
-                <p className="text-md md:text-lg text-center md:text-left font-semibold px-8 md:px-4">
-                  {team.description}
-                </p>
-                <Image
-                  src={team.image}
-                  alt="Team Image"
-                  width="0"
-                  height="0"
-                  sizes="100vw"
-                  className="px-8 md:px-4 w-full h-30"
-                />
-              </div>
-              <div className="flex justify-evenly">
-                {team.teamAwards?.map((award, j) => (
-                  <div key={j} className={""}>
+            <TimelineItem key={i} className="z-10">
+              <TimelineSeparator>
+                <TimelineDot />
+                <TimelineConnector />
+              </TimelineSeparator>
+              <TimelineContent>
+                <div
+                  className={
+                    i === teams.length - 1
+                      ? `${currentTeamPanelClassName}`
+                      : `${teamPanelClassName}`
+                  }
+                >
+                  <div className="flex items-center w-full justify-evenly bg-gradient-to-b from-cyan-600 to-cyan-900 rounded-t-2xl py-8">
+                    <p className="text-5xl font-boldrounded-xl bg-cyan-950/[0.7] rounded-lg p-1">
+                      {team.year}
+                    </p>
+                    <p className="text-2xl text-center md:text-left w-1/2">
+                      {team.title}
+                    </p>
+                  </div>
+                  <div className="py-4 space-y-5">
+                    <p className="text-md md:text-lg text-center md:text-left font-semibold px-8 md:px-4">
+                      {team.description}
+                    </p>
                     <Image
-                      src={"/images/timeline/glass-award.webp"}
-                      alt={award.title}
-                      width={75}
-                      height={50}
+                      src={team.image}
+                      alt="Team Image"
+                      width="0"
+                      height="0"
+                      sizes="100vw"
+                      className="px-8 md:px-4 w-full h-30"
                     />
                   </div>
-                ))}
-              </div>
-            </div>
+                </div>
+                <div className="flex justify-evenly">
+                  {team.teamAwards?.map((award, j) => (
+                    <div key={j} className={""}>
+                      <Image
+                        src={"/images/timeline/glass-award.webp"}
+                        alt={award.title}
+                        width={75}
+                        height={50}
+                      />
+                    </div>
+                  ))}
+                </div>  
+              </TimelineContent>
+            </TimelineItem>
           ))}
-        </div>
+        </Timeline>
+
+        <Timeline position="alternate"></Timeline>
       </section>
 
       <div className="bg-[#101321]">
         <section className="transform space-y-20 pb-40">
-          <p className="text-white font-bold text-5xl 2xl:text-6xl">
+          <p className="text-center text-white font-bold text-5xl 2xl:text-6xl">
             APOLO 2025 DIVISIONS
           </p>
           <div className="hidden md:flex w-full justify-evenly">
@@ -357,7 +377,7 @@ export default function Home() {
             </Link>
             <Link
               href="/remote-controlled-team"
-              className={`${teamClassName} rounded-[50px] w-2/5 2xl:w-2/6 text-right overflow-hidden relative`}
+              className={`${teamClassName} rounded-[50px] w-2/5 2xl:w-2/6 text-right pr-5 overflow-hidden relative`}
               style={{
                 backgroundImage: "url('/images/about-us/blue-galaxy.jpg')",
               }}
@@ -397,12 +417,12 @@ export default function Home() {
                 Human <br></br> Powered Constelation
               </p>
               <Image
-                  className=""
-                  src="/images/about-us/Anne1.png"
-                  alt="Team Lead HP"
-                  width={520}
-                  height={300}
-                />
+                className=""
+                src="/images/about-us/Anne1.png"
+                alt="Team Lead HP"
+                width={520}
+                height={300}
+              />
             </Link>
 
             <Link
@@ -416,12 +436,12 @@ export default function Home() {
                 Remote Controlled Constelation
               </p>
               <Image
-                  className=" scale-x-[-1]"
-                  src="/images/about-us/Anne1.png"
-                  alt="Team Lead HP"
-                  width={520}
-                  height={300}
-                />
+                className=" scale-x-[-1]"
+                src="/images/about-us/Anne1.png"
+                alt="Team Lead HP"
+                width={520}
+                height={300}
+              />
             </Link>
           </div>
         </section>
