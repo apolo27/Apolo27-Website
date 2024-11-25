@@ -115,25 +115,25 @@ export const Form = () => {
   };
 
   return (
-    <div className="flex flex-col lg:flex-row rounded-xl bg-white text-black justify-center mt-8">
+    <div className="w-5/6 md:w-full flex flex-col lg:flex-row rounded-xl bg-white text-black justify-center mt-8">
       <div className="lg:w-1/2 w-full flex justify-center">
         <Image
-          src="/images/bus.png"
-          width={400}
+          src="/images/stem-with-us/bus.png"
+          width={500}
           height={200}
           alt="Formulario"
-          className="rounded-tl-lg rounded-bl-lg object-contain max-w-full h-auto opacity-60 lg:opacity-100"
+          className="hidden md:block rounded-tl-lg rounded-bl-lg object-contain max-w-full h-auto opacity-60 lg:opacity-100"
         />
       </div>
 
       <FormProvider {...form}>
-        <form ref={formRef} className="lg:w-1/2 w-full flex flex-col gap-5 p-4">
+        <form ref={formRef} className="lg:w-1/2 w-full flex flex-col gap-5 p-8 lg:p-4">
           <Image
-            src="/images/gray-logo.png"
-            height={200}
-            width={75}
+            src="/images/logos/gray-logo.png"
+            height={100}
+            width={100}
             alt="logo"
-            className="mx-auto opacity-80 lg:opacity-100"
+            className="mx-auto lg:opacity-100"
           />
 
           <div className="flex justify-evenly items-center" {...stepperProps}>
@@ -143,7 +143,7 @@ export const Form = () => {
                   id="circle"
                   className={`rounded-full w-5 h-5 border-double border-2 transition-colors duration-500 ease-in-out ${
                     index <= state.currentStep
-                      ? 'bg-red-500 border-white'
+                      ? 'bg-red-500'
                       : 'bg-gray-200'
                   } ${index <= state.currentStep ? 'delay-50' : ''}`}
                   style={{
@@ -173,7 +173,7 @@ export const Form = () => {
 
           <div>
             {state.currentStep === 0 && (
-              <div className="block">
+              <div className="block space-y-3">
                 <Input
                   placeholder="Nombre de su institución"
                   name={'institution'}
@@ -192,7 +192,7 @@ export const Form = () => {
 
             {state.currentStep === 1 && (
               <div className="block">
-                <div className="flex flex-col h-60 justify-around">
+                <div className="space-y-3 flex flex-col h-60 justify-around">
                   <CheckBox
                     className="text-xl"
                     label="Salón de actividades"
@@ -228,7 +228,7 @@ export const Form = () => {
 
             {state.currentStep === 2 && (
               <div className="block">
-                <div className="flex flex-col h-60 justify-around">
+                <div className="space-y-3 flex flex-col h-60 justify-around">
                   <CheckBox
                     className="text-xl"
                     label="Proyectores"
@@ -269,7 +269,7 @@ export const Form = () => {
 
             {state.currentStep === 3 && (
               <div className="block">
-                <div>
+                <div className='space-y-3 pb-5'>
                   <Input type="date" name="meetingDate" className="text-xl" />
                   <Input
                     type="text"
