@@ -19,8 +19,8 @@ import TimelineDot from "@mui/lab/TimelineDot";
 
 export default function Home() {
   const teamClassName = `opacity-80 hover:opacity-100 transition-all hover:cursor-pointer hover:scale-105`;
-  const teamPanelClassName = `max-h-[500px] w-full md:w-[350px] bg-[#121837] border border-[#666A95] text-white text-center rounded-2xl flex flex-col items-center md:items-start`;
-  const currentTeamPanelClassName = `shadow-[0px_20px_207px_10px_rgba(165,_39,_255,_0.48)] bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] max-h-[500px] w-full md:w-[350px] bg-[#121837] border border-[#666A95] text-white text-center rounded-2xl flex flex-col items-center md:items-start `;
+  const timelineItem = `bg-[#121837] border border-[#666A95] text-white text-center rounded-2xl flex flex-col items-center md:items-start`;
+  const currentTimelineItem = `bg-[#121837] border border-[#666A95] text-white text-center rounded-2xl flex flex-col items-center md:items-start shadow-[0px_20px_207px_10px_rgba(165,_39,_255,_0.48)] bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] `;
 
   const awards = [
     {
@@ -284,7 +284,7 @@ export default function Home() {
           Our Timeline
         </p>
 
-        <Timeline position="alternate-reverse" >
+        <Timeline position="md:alternate-reverse" className="hidden md:block w-full">
           {teams.map((team, i) => (
             <TimelineItem key={i} className="z-10">
               <TimelineSeparator>
@@ -295,19 +295,19 @@ export default function Home() {
                 <div
                   className={
                     i === teams.length - 1
-                      ? `${currentTeamPanelClassName}`
-                      : `${teamPanelClassName}`
+                      ? `${currentTimelineItem}`
+                      : `${timelineItem}`
                   }
                 >
-                  <div className="flex items-center w-full justify-evenly bg-gradient-to-b from-cyan-600 to-cyan-900 rounded-t-2xl py-8">
-                    <p className="text-5xl font-boldrounded-xl bg-cyan-950/[0.7] rounded-lg p-1">
+                  <div className="px-4 flex flex-col md:flex-row items-center w-full justify-evenly bg-gradient-to-b from-cyan-600 to-cyan-900 rounded-t-2xl py-8">
+                    <p className="text-5xl lg:text-6xl font-boldrounded-xl bg-cyan-950/[0.7] rounded-lg p-1">
                       {team.year}
                     </p>
-                    <p className="text-2xl text-center md:text-left w-1/2">
+                    <p className="text-2xl lg:text-3xl text-center md:text-left w-1/2">
                       {team.title}
                     </p>
                   </div>
-                  <div className="py-4 space-y-5">
+                  <div className="p-4 space-y-5">
                     <p className="text-md md:text-lg text-center md:text-left font-semibold px-8 md:px-4">
                       {team.description}
                     </p>
@@ -317,7 +317,7 @@ export default function Home() {
                       width="0"
                       height="0"
                       sizes="100vw"
-                      className="px-8 md:px-4 w-full h-30"
+                      className="px-8 pb-8 md:px-4 w-full h-30"
                     />
                   </div>
                 </div>
@@ -338,7 +338,54 @@ export default function Home() {
           ))}
         </Timeline>
 
-        <Timeline position="alternate"></Timeline>
+        <div className="md:hidden relative flex flex-wrap justify-around px-8 md:px-0 gap-20">
+          <div className="md:hidden w-[1px] bg-white h-full absolute left-1/2 transform -translate-x-1/2 "></div>
+          {teams.map((team, i) => (
+            <div key={i} className="z-10">
+              <div
+                  className={
+                    i === teams.length - 1
+                      ? `${currentTimelineItem}`
+                      : `${timelineItem}`
+                  }
+                >
+                  <div className="md:px-4 flex flex-col md:flex-row items-center w-full justify-evenly bg-gradient-to-b from-cyan-600 to-cyan-900 rounded-t-2xl py-8">
+                    <p className="text-5xl lg:text-6xl font-boldrounded-xl bg-cyan-950/[0.7] rounded-lg p-1">
+                      {team.year}
+                    </p>
+                    <p className="text-2xl lg:text-3xl text-center md:text-left w-1/2">
+                      {team.title}
+                    </p>
+                  </div>
+                  <div className="p-4 space-y-5">
+                    <p className="text-md md:text-lg text-center md:text-left font-semibold px-8 md:px-4">
+                      {team.description}
+                    </p>
+                    <Image
+                      src={team.image}
+                      alt="Team Image"
+                      width="0"
+                      height="0"
+                      sizes="100vw"
+                      className="px-8 pb-8 md:px-4 w-full h-30"
+                    />
+                  </div>
+                </div>
+                <div className="flex justify-evenly">
+                  {team.teamAwards?.map((award, j) => (
+                    <div key={j} className={""}>
+                      <Image
+                        src={"/images/timeline/glass-award.webp"}
+                        alt={award.title}
+                        width={75}
+                        height={50}
+                      />
+                    </div>
+                  ))}
+                </div> 
+            </div>
+          ))}
+        </div>
       </section>
 
       <div className="bg-[#101321]">
