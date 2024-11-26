@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Sparkles } from "../../components/Sparkles";
 
 export default function Games() {
   return (
@@ -16,7 +15,7 @@ export default function Games() {
       </h1>
       <div className="flex justify-evenly flex-wrap">
         <Link
-          href="/Science"
+          href="/games/science"
           className="rounded-2xl overflow-clip border border-opacity-50 border-[#28A53C] shadow-[#28A53C] shadow-xl hover:shadow-[#28A53C] hover:shadow-2xl hover:scale-105 hover:cursor-pointer transition-all duration-200 ease-in-out"
         >
           <Image
@@ -27,7 +26,7 @@ export default function Games() {
           />
         </Link>
         <Link
-          href="/Technology"
+          href="/games/technology"
           className="rounded-2xl overflow-clip border border-opacity-50 border-[#067DD3] shadow-[#067DD3] shadow-xl hover:shadow-[#067DD3] hover:shadow-2xl hover:scale-105 hover:cursor-pointer transition-all duration-200 ease-in-out"
         >
           <Image
@@ -38,7 +37,7 @@ export default function Games() {
           />
         </Link>
         <Link
-          href="/HERC-Simulation"
+          href="/games/herc-simulation"
           className="rounded-2xl overflow-clip border border-opacity-50 border-[#710609] shadow-[#710609] shadow-xl hover:shadow-[#710609] hover:shadow-2xl hover:scale-105 hover:cursor-pointer transition-all duration-200 ease-in-out "
         >
           <Image
@@ -49,7 +48,7 @@ export default function Games() {
           />
         </Link>
         <Link
-          href="/Math"
+          href="/games/math"
           className="rounded-2xl overflow-clip border border-opacity-50 border-[#A010C5] shadow-[#A010C5] shadow-xl hover:shadow-[#A010C5] hover:shadow-2xl hover:scale-105 hover:cursor-pointer transition-all duration-200 ease-in-out"
         >
           <Image
@@ -60,15 +59,6 @@ export default function Games() {
           />
         </Link>
       </div>
-      <Sparkles
-        density={800}
-        speed={1.2}
-        size={1.2}
-        direction="top"
-        opacitySpeed={2}
-        color="#32A7FF"
-        className="absolute -z-10 inset-x-0 bottom-0 h-full w-full "
-      />
     </div>
   );
 }

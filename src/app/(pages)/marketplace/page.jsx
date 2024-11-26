@@ -1,9 +1,9 @@
 "use client";
 import { useState } from "react";
+import Image from "next/image";
+import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 export default function Marketplace() {
-  const [selectedCategory, setSelectedCategory] = useState(null);
-  const itemStyle = `bg-[#121837] border border-[#666A95] text-white text-center rounded-2xl flex flex-col items-center md:items-start`;
-const categoryBtnStyle = `px-3 py-2 hover:shadow-lg`
+  const categoryBtnStyle = `text-left text-lg font-semibold px-3 py-2 hover:shadow-lg shadow-white hover:bg-[#666A95] rounded-xl transition-all ease-out`;
   const CategoryEnum = Object.freeze({
     T_SHIRT: "T-Shirt",
     HOODIE: "Hoodie",
@@ -11,6 +11,8 @@ const categoryBtnStyle = `px-3 py-2 hover:shadow-lg`
     ACCESSORIES: "Accessories",
     ALL: "All",
   });
+
+  const [selectedCategory, setSelectedCategory] = useState(CategoryEnum.ALL);
 
   const items = [
     // T-Shirts
@@ -109,11 +111,12 @@ const categoryBtnStyle = `px-3 py-2 hover:shadow-lg`
   return (
     <>
       <div
-        className="w-full h-[350px] text-center flex flex-col justify-center"
+        className="w-full h-[350px] text-center flex flex-col justify-center border-b border-blue-100"
         style={{
           backgroundImage: `url('/images/marketplace/banner2.jpg')`,
-          objectPosition: '50%',
-          objectFit: "fill"
+          backgroundPosition: "center center", // Adjust position of image
+          backgroundSize: "cover",
+          backgroundRepeat: "no-repeat",
         }}
       >
         <p className="font-extrabold text-white text-8xl pb-2">Apolo 27</p>
@@ -122,35 +125,88 @@ const categoryBtnStyle = `px-3 py-2 hover:shadow-lg`
         </p>
       </div>
       <div className="flex flex-row">
-        <div className="flex flex-col text-left gap-5 text-white px-4 py-8">
-          <p>Category</p>
-          <button onClick={() => setCategory(CategoryEnum.ALL)}>All</button>
-          <button onClick={() => setCategory(CategoryEnum.T_SHIRT)}>
+        <div className="w-1/4 flex flex-col text-left gap-5 text-white px-4 py-8 border-r-2 border-blue-100">
+          <p className="px-3 text-2xl font-bold">Category</p>
+          <button
+            className={
+              categoryBtnStyle +
+              (selectedCategory === CategoryEnum.ALL ? " bg-[#666A95]" : "")
+            }
+            onClick={() => setSelectedCategory(CategoryEnum.ALL)}
+          >
+            All
+          </button>
+          <button
+            className={
+              categoryBtnStyle +
+              (selectedCategory === CategoryEnum.T_SHIRT ? " bg-[#666A95]" : "")
+            }
+            onClick={() => setSelectedCategory(CategoryEnum.T_SHIRT)}
+          >
             T-Shirt
           </button>
-          <button onClick={() => setCategory(CategoryEnum.HOODIE)}>
+          <button
+            className={
+              categoryBtnStyle +
+              (selectedCategory === CategoryEnum.HOODIE ? " bg-[#666A95]" : "")
+            }
+            onClick={() => setSelectedCategory(CategoryEnum.HOODIE)}
+          >
             Hoodie
           </button>
-          <button onClick={() => setCategory(CategoryEnum.HATS)}>Hats</button>
-          <button onClick={() => setCategory(CategoryEnum.ACCESSORIES)}>
+          <button
+            className={
+              categoryBtnStyle +
+              (selectedCategory === CategoryEnum.HATS ? " bg-[#666A95]" : "")
+            }
+            onClick={() => setSelectedCategory(CategoryEnum.HATS)}
+          >
+            Hats
+          </button>
+          <button
+            className={
+              categoryBtnStyle +
+              (selectedCategory === CategoryEnum.ACCESSORIES
+                ? " bg-[#666A95]"
+                : "")
+            }
+            onClick={() => setSelectedCategory(CategoryEnum.ACCESSORIES)}
+          >
             Accesories
           </button>
         </div>
-        <div className="p-8">
-          <input type="text" placeholder="search" />
-          <section>
-            {items.map((item) => {
-              <div className={itemStyle}>
-                <Image
-                  src={item.image}
-                  alt={item.name}
-                  width={150}
-                  height={150}
-                />
-                <p>{item.name}</p>
-                <p>{item.price}</p>
-              </div>;
-            })}
+        <div className="w-3/4 p-8 space-y-5">
+          <div className="flex items-center">
+            <MagnifyingGlassIcon className="w-8 h-8 text-white text-opacity-50 bg-white bg-opacity-20 rounded-l-xl" />
+            <input
+              type="text"
+              className="px-4 py-3 rounded-r-xl font-semibold w-full bg-white bg-opacity-20 text-white"
+              placeholder="Search for your next fit"
+            />
+          </div>
+          <section className="w-full grid grid-cols-3 gap-10">
+            {items
+              .filter((item) =>
+                selectedCategory !== CategoryEnum.ALL
+                  ? item.category === selectedCategory
+                  : true
+              )
+              .map((item, i) => (
+                <div
+                  key={i}
+                  className="space-y-2 text-left items-center w-fit bg-gradient-to-r from-[#2A2A2A] to-[#161A2C] p-5 rounded-xl"
+                >
+                  <Image
+                    src={"/images/250.png"}
+                    width={250}
+                    height={250}
+                    alt={item.name}
+                    className="rounded-xl"
+                  />
+                  <p className="text-white font-bold">{item.name}</p>
+                  <p className="text-white font-semibold">${item.price}</p>
+                </div>
+              ))}
           </section>
         </div>
       </div>
