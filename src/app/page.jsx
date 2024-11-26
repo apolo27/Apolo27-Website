@@ -284,7 +284,7 @@ export default function Home() {
           Our Timeline
         </p>
 
-        <Timeline position="md:alternate-reverse" className="hidden md:block w-full">
+        <Timeline position="alternate-reverse" className="hidden md:block w-full">
           {teams.map((team, i) => (
             <TimelineItem key={i} className="z-10">
               <TimelineSeparator>
@@ -317,8 +317,9 @@ export default function Home() {
                       width="0"
                       height="0"
                       sizes="100vw"
-                      className="px-8 pb-8 md:px-4 w-full h-30"
+                      className="px-8 md:px-4 w-full h-30"
                     />
+                    <button className="bg-gradient-to-br from-cyan-950 to-cyan-800 p-4 rounded-xl font-semibold hover:scale-105 transition-all">Ver mas</button>
                   </div>
                 </div>
                 <div className="flex justify-evenly">

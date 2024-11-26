@@ -36,50 +36,50 @@ export default function Marketplace() {
 
   const videos = [
     {
-      img: "/images/social-media/thumbnailExample.jpg",
+      img: "/images/thumbnailExample.jpg",
       title: "Video 1",
       platform: "Youtube",
     },
     {
-      img: "/images/social-media/thumbnailExample.jpg",
+      img: "/images/thumbnailExample.jpg",
       title: "Video 2",
       platform: "Youtube",
     },
     {
-      img: "/images/social-media/thumbnailExample.jpg",
+      img: "/images/thumbnailExample.jpg",
       title: "Video 3",
       platform: "Youtube",
     },
 
     {
-      img: "/images/social-media/thumbnailExample.jpg",
+      img: "/images/thumbnailExample.jpg",
       title: "Video 1",
       platform: "Instagram",
     },
     {
-      img: "/images/social-media/thumbnailExample.jpg",
+      img: "/images/thumbnailExample.jpg",
       title: "Video 2",
       platform: "Instagram",
     },
     {
-      img: "/images/social-media/thumbnailExample.jpg",
+      img: "/images/thumbnailExample.jpg",
       title: "Video 3",
       platform: "Instagram",
     },
 
 
     {
-      img: "/images/social-media/thumbnailExample.jpg",
+      img: "/images/thumbnailExample.jpg",
       title: "Video 1",
       platform: "TikTok",
     },
     {
-      img: "/images/social-media/thumbnailExample.jpg",
+      img: "/images/thumbnailExample.jpg",
       title: "Video 2",
       platform: "TikTok",
     },
     {
-      img: "/images/social-media/thumbnailExample.jpg",
+      img: "/images/thumbnailExample.jpg",
       title: "Video 3",
       platform: "TikTok",
     },
