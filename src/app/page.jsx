@@ -19,8 +19,8 @@ import TimelineDot from "@mui/lab/TimelineDot";
 
 export default function Home() {
   const teamClassName = `opacity-80 hover:opacity-100 transition-all hover:cursor-pointer hover:scale-105`;
-  const timelineItem = `bg-[#121837] border border-[#666A95] text-white text-center rounded-2xl flex flex-col items-center md:items-start`;
-  const currentTimelineItem = `bg-[#121837] border border-[#666A95] text-white text-center rounded-2xl flex flex-col items-center md:items-start shadow-[0px_20px_207px_10px_rgba(165,_39,_255,_0.48)] bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] `;
+  const timelineItem = `max-w-[450px] bg-[#121837] border border-[#666A95] text-white text-center rounded-2xl flex flex-col items-center md:items-start`;
+  const currentTimelineItem = `max-w-[450px] bg-[#121837] border border-[#666A95] text-white text-center rounded-2xl flex flex-col items-center md:items-start shadow-[0px_20px_207px_10px_rgba(165,_39,_255,_0.48)] bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] `;
 
   const awards = [
     {
@@ -177,10 +177,10 @@ export default function Home() {
   ];
 
   return (
-    <div>
+    <>
       <div className="text-center h-fit  space-y-8 2xl:space-y-5 bg-gradient-to-t from-[#101321] to-[#40D1FF] px-5 md:px-40 flex flex-col items-center pt-5">
         <Timer />
-        <p className="mt-4 font-bold text-4xl 2xl:text-5xl w-full md:w-4/6 text-transparent bg-clip-text bg-gradient-to-b from-white to-gray-500">
+        <p className="mt-4 font-bold text-4xl 2xl:text-5xl 3xl:text-7xl w-full md:w-4/6 text-transparent bg-clip-text bg-gradient-to-b from-white to-gray-500">
           The First Dominican Republic University Division Winners at
           NASA&apos;s Human Exploration Rover Challenge
         </p>
@@ -205,16 +205,22 @@ export default function Home() {
       </div>
 
       <section className="bg-[#101321] 2xl:h-[240px] px-5 md:pt-10 flex flex-col md:flex-row justify-center items-center md:items-start space-y-5 md:space-y-0">
+        {/* simulation big */}
         <div
-          className="hidden w-[555px] h-[220px] md:block absolute left-20 3xl:left-60 hover:cursor-pointer hover:opacity-65"
+          className="hidden scale-90 lg:w-[555px] lg:h-[220px] 1xl:scale-100 md:block absolute left-0 1xl:left-20 3xl:left-60 hover:cursor-pointer hover:opacity-65"
           style={{
             backgroundImage: "url('/images/landing/simulation.png')",
             backgroundRepeat: "no-repeat",
           }}
         ></div>
-
-        <div className="hidden md:flex transition-all border border-1 border-[#424B5B] bg-black/[0.8] w-full md:w-[520px] py-2 h-fit md:absolute md:left-1/2 md:transform md:-translate-x-1/2 rounded-full items-center justify-evenly hover:cursor-pointer hover:scale-105 ">
-          <ClipboardDocumentListIcon className="w-8 h-8 md:w-12 md:h-12 text-white" />
+        {/* stem big*/}
+        <div className="hidden md:flex transition-all border border-1 border-[#424B5B] bg-black/[0.8] w-full  lg:w-[425px] 1xl:w-[520px] py-2 h-fit md:absolute md:left-1/2 md:transform md:-translate-x-1/2 rounded-full items-center justify-evenly hover:cursor-pointer hover:scale-105 ">
+          <Image
+            src={"/images/icons/formIcon.png"}
+            alt="form icon"
+            width={44}
+            height={44}
+          />
           <div className="text-left">
             <p className="font-semibold text-white md:text-lg">
               Programa nuestra visita <span className="text-green-300">S</span>
@@ -231,7 +237,7 @@ export default function Home() {
             <ArrowRightIcon className="w-5 h-5 text-white transition-transform hover:translate-x-5" />
           </div>
         </div>
-
+        {/*sponsor us mobile*/}
         <div className="md:hidden relative w-5/6 h-auto">
           <Image
             src={"/images/landing/sponsorus-rectangle.png"}
@@ -252,8 +258,9 @@ export default function Home() {
           </div>
         </div>
 
+        {/* sponsor us big */}
         <div
-          className="w-[555px] h-[240px] hidden md:block absolute right-20 3xl:right-60 text-center"
+          className="scale-90 lg:w-[555px] lg:h-[240px] 1xl:scale-100 hidden md:block absolute right-0 1xl:right-20 3xl:right-60 text-center"
           style={{
             backgroundImage: "url('/images/landing/sponsorus.png')",
             backgroundRepeat: "no-repeat",
@@ -284,56 +291,63 @@ export default function Home() {
           Our Timeline
         </p>
 
-        <Timeline position="alternate-reverse" className="hidden md:block w-full">
+        <Timeline
+          position="alternate-reverse"
+          className="hidden md:block w-full"
+        >
           {teams.map((team, i) => (
-            <TimelineItem key={i} className="z-10">
+            <TimelineItem key={i} className="z-10 ">
               <TimelineSeparator>
                 <TimelineDot />
                 <TimelineConnector />
               </TimelineSeparator>
-              <TimelineContent>
-                <div
-                  className={
-                    i === teams.length - 1
-                      ? `${currentTimelineItem}`
-                      : `${timelineItem}`
-                  }
-                >
-                  <div className="px-4 flex flex-col md:flex-row items-center w-full justify-evenly bg-gradient-to-b from-cyan-600 to-cyan-900 rounded-t-2xl py-8">
-                    <p className="text-5xl lg:text-6xl font-boldrounded-xl bg-cyan-950/[0.7] rounded-lg p-1">
-                      {team.year}
-                    </p>
-                    <p className="text-2xl lg:text-3xl text-center md:text-left w-1/2">
-                      {team.title}
-                    </p>
+              <TimelineContent className="3xl:flex 3xl:justify-center">
+                <div>
+                  <div
+                    className={
+                      i === teams.length - 1
+                        ? `${currentTimelineItem}`
+                        : `${timelineItem}`
+                    }
+                  >
+                    <div className="px-4 flex flex-col md:flex-row items-center w-full justify-evenly bg-gradient-to-b from-cyan-600 to-cyan-900 rounded-t-2xl py-8">
+                      <p className="text-5xl lg:text-6xl font-boldrounded-xl bg-cyan-950/[0.7] rounded-lg p-1">
+                        {team.year}
+                      </p>
+                      <p className="text-2xl text-center md:text-left w-1/2">
+                        {team.title}
+                      </p>
+                    </div>
+                    <div className="p-4 space-y-5">
+                      <p className="text-md md:text-lg text-center md:text-left font-semibold px-8 md:px-4">
+                        {team.description}
+                      </p>
+                      <Image
+                        src={team.image}
+                        alt="Team Image"
+                        width="0"
+                        height="0"
+                        sizes="100vw"
+                        className="px-8 md:px-4 w-full h-30"
+                      />
+                      <button className="bg-gradient-to-br from-cyan-950 to-cyan-800 p-4 rounded-xl font-semibold hover:scale-105 transition-all">
+                        Ver mas
+                      </button>
+                    </div>
                   </div>
-                  <div className="p-4 space-y-5">
-                    <p className="text-md md:text-lg text-center md:text-left font-semibold px-8 md:px-4">
-                      {team.description}
-                    </p>
-                    <Image
-                      src={team.image}
-                      alt="Team Image"
-                      width="0"
-                      height="0"
-                      sizes="100vw"
-                      className="px-8 md:px-4 w-full h-30"
-                    />
-                    <button className="bg-gradient-to-br from-cyan-950 to-cyan-800 p-4 rounded-xl font-semibold hover:scale-105 transition-all">Ver mas</button>
+                  <div className="flex justify-evenly">
+                    {team.teamAwards?.map((award, j) => (
+                      <div key={j} className={""}>
+                        <Image
+                          src={"/images/timeline/glass-award.webp"}
+                          alt={award.title}
+                          width={75}
+                          height={50}
+                        />
+                      </div>
+                    ))}
                   </div>
                 </div>
-                <div className="flex justify-evenly">
-                  {team.teamAwards?.map((award, j) => (
-                    <div key={j} className={""}>
-                      <Image
-                        src={"/images/timeline/glass-award.webp"}
-                        alt={award.title}
-                        width={75}
-                        height={50}
-                      />
-                    </div>
-                  ))}
-                </div>  
               </TimelineContent>
             </TimelineItem>
           ))}
@@ -344,46 +358,46 @@ export default function Home() {
           {teams.map((team, i) => (
             <div key={i} className="z-10">
               <div
-                  className={
-                    i === teams.length - 1
-                      ? `${currentTimelineItem}`
-                      : `${timelineItem}`
-                  }
-                >
-                  <div className="md:px-4 flex flex-col md:flex-row items-center w-full justify-evenly bg-gradient-to-b from-cyan-600 to-cyan-900 rounded-t-2xl py-8">
-                    <p className="text-5xl lg:text-6xl font-boldrounded-xl bg-cyan-950/[0.7] rounded-lg p-1">
-                      {team.year}
-                    </p>
-                    <p className="text-2xl lg:text-3xl text-center md:text-left w-1/2">
-                      {team.title}
-                    </p>
-                  </div>
-                  <div className="p-4 space-y-5">
-                    <p className="text-md md:text-lg text-center md:text-left font-semibold px-8 md:px-4">
-                      {team.description}
-                    </p>
+                className={
+                  i === teams.length - 1
+                    ? `${currentTimelineItem}`
+                    : `${timelineItem}`
+                }
+              >
+                <div className="md:px-4 flex flex-col md:flex-row items-center w-full justify-evenly bg-gradient-to-b from-cyan-600 to-cyan-900 rounded-t-2xl py-8">
+                  <p className="text-5xl lg:text-6xl font-boldrounded-xl bg-cyan-950/[0.7] rounded-lg p-1">
+                    {team.year}
+                  </p>
+                  <p className="text-2xl lg:text-3xl text-center md:text-left w-1/2">
+                    {team.title}
+                  </p>
+                </div>
+                <div className="p-4 space-y-5">
+                  <p className="text-md md:text-lg text-center md:text-left font-semibold px-8 md:px-4">
+                    {team.description}
+                  </p>
+                  <Image
+                    src={team.image}
+                    alt="Team Image"
+                    width="0"
+                    height="0"
+                    sizes="100vw"
+                    className="px-8 pb-8 md:px-4 w-full h-30"
+                  />
+                </div>
+              </div>
+              <div className="flex justify-evenly">
+                {team.teamAwards?.map((award, j) => (
+                  <div key={j} className={""}>
                     <Image
-                      src={team.image}
-                      alt="Team Image"
-                      width="0"
-                      height="0"
-                      sizes="100vw"
-                      className="px-8 pb-8 md:px-4 w-full h-30"
+                      src={"/images/timeline/glass-award.webp"}
+                      alt={award.title}
+                      width={75}
+                      height={50}
                     />
                   </div>
-                </div>
-                <div className="flex justify-evenly">
-                  {team.teamAwards?.map((award, j) => (
-                    <div key={j} className={""}>
-                      <Image
-                        src={"/images/timeline/glass-award.webp"}
-                        alt={award.title}
-                        width={75}
-                        height={50}
-                      />
-                    </div>
-                  ))}
-                </div> 
+                ))}
+              </div>
             </div>
           ))}
         </div>
@@ -494,6 +508,6 @@ export default function Home() {
           </div>
         </section>
       </div>
-    </div>
+    </>
   );
 }
