@@ -1,8 +1,5 @@
 'use client';
-
 import React, { useEffect } from 'react';
-
-
 export default function Starfield(props) {
 	const { speedFactor = 0.05, backgroundColor = 'black', starColor = [255, 255, 255], starCount = 2000 } = props;
 

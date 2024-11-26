@@ -1,20 +1,7 @@
 import { ErrorMessage } from '@hookform/error-message';
-import { FC } from 'react';
 import { useFormContext } from 'react-hook-form';
 
-interface CheckBoxProps {
-  name: string;
-  selected?: boolean;
-  label: string;
-  isLink?: boolean;
-  value?: string;
-  onLinkClicked?: () => void;
-  onCheck?: (selected: boolean) => void;
-  className?: string;
-  disabled?:boolean;
-}
-
-export const CheckBox: FC<CheckBoxProps> = ({
+export const CheckBox= ({
   label,
   onCheck,
   selected,

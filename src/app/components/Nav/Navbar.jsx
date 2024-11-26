@@ -27,7 +27,7 @@ export default function Navbar() {
         <div className="flex-shrink-0 ml-0">
           <Link href={"/"}>
             <Image
-              src="/images/logoblanco.png"
+              src="/images/logos/logoblanco.png"
               alt="Apolo 27 Logo"
               width={45}
               height={45}

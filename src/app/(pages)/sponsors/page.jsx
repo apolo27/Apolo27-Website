@@ -1,5 +1,5 @@
 export default function Sponsors() {
     return (
-        <p>Sponsors</p>
+      <p>Sponsors</p>
     )
 }
