@@ -2,7 +2,10 @@
 import { useState } from "react";
 import Image from "next/image";
 import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
+import { Description, Dialog, DialogPanel, DialogTitle } from '@headlessui/react';
+
 export default function Marketplace() {
+  const [isOpen, setIsOpen] = useState(false);
   const categoryBtnStyle = `text-left text-lg font-semibold px-3 py-2 hover:shadow-lg shadow-white hover:bg-[#666A95] rounded-xl transition-all ease-out`;
   const CategoryEnum = Object.freeze({
     T_SHIRT: "T-Shirt",
@@ -177,10 +180,10 @@ export default function Marketplace() {
         </div>
         <div className="w-3/4 p-8 space-y-5">
           <div className="flex items-center">
-            <MagnifyingGlassIcon className="w-8 h-8 text-white text-opacity-50 bg-white bg-opacity-20 rounded-l-xl" />
+            <MagnifyingGlassIcon className="w-12 h-12 pl-5 py-2 text-white text-opacity-50 bg-white bg-opacity-20 rounded-l-xl" />
             <input
               type="text"
-              className="px-4 py-3 rounded-r-xl font-semibold w-full bg-white bg-opacity-20 text-white"
+              className="px-4 py-3 rounded-r-xl font-semibold w-full bg-white bg-opacity-20 text-white outline-none"
               placeholder="Search for your next fit"
             />
           </div>
@@ -194,7 +197,9 @@ export default function Marketplace() {
               .map((item, i) => (
                 <div
                   key={i}
-                  className="space-y-2 text-left items-center w-fit bg-gradient-to-r from-[#2A2A2A] to-[#161A2C] p-5 rounded-xl"
+                  className="space-y-2 text-left items-center w-fit bg-gradient-to-r from-[#2A2A2A] to-[#161A2C] p-5 rounded-xl
+                  hover:cursor-pointer"
+                  onClick={() => setIsOpen(true)}
                 >
                   <Image
                     src={"/images/250.png"}
@@ -210,6 +215,20 @@ export default function Marketplace() {
           </section>
         </div>
       </div>
+
+      <Dialog open={isOpen} onClose={() => setIsOpen(false)} className="relative z-50">
+        <div className="fixed inset-0 flex w-screen items-center justify-center p-4">
+          <DialogPanel className="max-w-lg space-y-4 border bg-white p-12">
+            <DialogTitle className="font-bold">Deactivate account</DialogTitle>
+            <Description>This will permanently deactivate your account</Description>
+            <p>Are you sure you want to deactivate your account? All of your data will be permanently removed.</p>
+            <div className="flex gap-4">
+              <button onClick={() => setIsOpen(false)}>Cancel</button>
+              <button onClick={() => setIsOpen(false)}>Deactivate</button>
+            </div>
+          </DialogPanel>
+        </div>
+      </Dialog>
     </>
   );
 }
