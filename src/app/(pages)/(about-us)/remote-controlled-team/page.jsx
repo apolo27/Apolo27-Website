@@ -1,6 +1,5 @@
 import Image from "next/image";
 export default function RemoteControlledTeam() {
-
   const members = [
     {
       name: "José Ezequiel Díaz",
@@ -75,25 +74,79 @@ export default function RemoteControlledTeam() {
       img: "/images/about-us/rc/JoseNeder.webp",
     },
   ];
-  
+
+  const mentors = [
+    {
+      name: "Chaljub",
+      career: "Prof. Ing. Mecatrónica",
+      img: "/images/about-us/rc/Ezequielwebp",
+    },
+    {
+      name: "Hilary",
+      career: "Prof. Ing. Mecatrónica",
+      img: "/images/about-us/rc/Ezequielwebp",
+    },
+    {
+      name: "Vantroi",
+      career: "Prof. Ing. Mecatrónica",
+      img: "/images/about-us/rc/Ezequielwebp",
+    },
+    {
+      name: "Irving",
+      career: "Prof. Ing. Mecatrónica",
+      img: "/images/about-us/rc/Ezequielwebp",
+    }
+    
+  ]
 
   return (
-    <div className="text-center pt-10">
-      <p className="text-4xl font-bold text-white">Remote Controlled Team</p>
-      <div className="h-fit justify-center w-full flex">
-        <Image
-          src={"/images/about-us/RCROVER.png"}
-          width={1280}
-          height={720}
-          alt="Remote Controlled Team"
-          className="py-10"
-        />
-        
-          <div className="w-3 h-3 bg-white rounded-full absolute top-72 left-1/2"></div>
-          <div className="w-3 h-3 bg-white rounded-full absolute left-0"></div>
-          <div className="w-3 h-3 bg-white rounded-full absolute right-0"></div>
-          <div className="w-3 h-3 bg-white rounded-full absolute -bottom-40 left-[51.5%]"></div>
-          <div className="w-3 h-3 bg-white rounded-full absolute bottom-0"></div>
+    <div
+      className="text-center m-10"
+      style={{
+        backgroundImage: "url('/images/about-us/RCROVER.png')",
+        backgroundSize: "contain",
+        backgroundRepeat: "no-repeat",
+
+      }}
+    >
+      <p className="text-5xl font-bold text-white pb-10">Remote Controlled Team</p>
+      <p className="text-white text-4xl font-semibold">Special mentors</p>
+      <div className="w-full flex flex-wrap justify-evenly gap-20 p-20">
+        {mentors.map((mentor, index) => (
+          <div
+            key={index}
+            className="w-60 bg-gradient-to-br from-[#1d2f49] to-[#20584a] p-5 rounded-xl position:relative z-10"
+          >
+            <Image
+              src={"/images/250.png"}
+              width={250}
+              height={250}
+              alt={mentor.img}
+              className="rounded-xl"
+            />
+            <p className="text-white font-bold">{mentor.name}</p>
+            <p className="text-white font-semibold">{mentor.career}</p>
+          </div>
+        ))}
+      </div>
+      <p className="text-white text-4xl font-semibold">Official Members</p>
+      <div className="w-full flex flex-wrap justify-evenly gap-20 p-20">
+        {members.map((member, index) => (
+          <div
+            key={index}
+            className="w-60 bg-gradient-to-t from-[#172746] to-[#056b82] p-5 rounded-xl position:relative z-10"
+          >
+            <Image
+              src={"/images/250.png"}
+              width={250}
+              height={250}
+              alt={member.img}
+              className="rounded-xl"
+            />
+            <p className="text-white font-bold">{member.name}</p>
+            <p className="text-white font-semibold">{member.career}</p>
+          </div>
+        ))}
       </div>
     </div>
   );

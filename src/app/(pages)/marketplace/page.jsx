@@ -2,11 +2,11 @@
 import { useState } from "react";
 import Image from "next/image";
 import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
-import { Description, Dialog, DialogPanel, DialogTitle } from '@headlessui/react';
+import { Description, Dialog, DialogPanel, DialogTitle, DialogBackdrop } from '@headlessui/react';
 
 export default function Marketplace() {
   const [isOpen, setIsOpen] = useState(false);
-  const categoryBtnStyle = `text-left text-lg font-semibold px-3 py-2 hover:shadow-lg shadow-white hover:bg-[#666A95] rounded-xl transition-all ease-out`;
+  const categoryBtnStyle = `text-left text-lg font-semibold px-3 py-3 my-5 hover:shadow-lg shadow-white hover:bg-[#666A95] rounded-xl transition-all ease-out`;
   const CategoryEnum = Object.freeze({
     T_SHIRT: "T-Shirt",
     HOODIE: "Hoodie",
@@ -16,6 +16,7 @@ export default function Marketplace() {
   });
 
   const [selectedCategory, setSelectedCategory] = useState(CategoryEnum.ALL);
+  const [selectedProduct, setSelectedProduct] = useState();
 
   const items = [
     // T-Shirts
@@ -111,6 +112,11 @@ export default function Marketplace() {
     },
   ];
 
+  const selectProduct = (product) => {
+    setSelectedProduct(product);
+    setIsOpen(true);
+  }
+
   return (
     <>
       <div
@@ -128,7 +134,7 @@ export default function Marketplace() {
         </p>
       </div>
       <div className="flex flex-row">
-        <div className="w-1/4 flex flex-col text-left gap-5 text-white px-4 py-8 border-r-2 border-blue-100">
+        <div className="w-1/4 flex flex-col text-left text-white px-4 py-8 border-r-2 border-blue-100">
           <p className="px-3 text-2xl font-bold">Category</p>
           <button
             className={
@@ -199,7 +205,7 @@ export default function Marketplace() {
                   key={i}
                   className="space-y-2 text-left items-center w-fit bg-gradient-to-r from-[#2A2A2A] to-[#161A2C] p-5 rounded-xl
                   hover:cursor-pointer"
-                  onClick={() => setIsOpen(true)}
+                  onClick={() => selectProduct(item)}
                 >
                   <Image
                     src={"/images/250.png"}
@@ -217,9 +223,10 @@ export default function Marketplace() {
       </div>
 
       <Dialog open={isOpen} onClose={() => setIsOpen(false)} className="relative z-50">
+      <DialogBackdrop className="fixed inset-0 bg-black/30" />
         <div className="fixed inset-0 flex w-screen items-center justify-center p-4">
           <DialogPanel className="max-w-lg space-y-4 border bg-white p-12">
-            <DialogTitle className="font-bold">Deactivate account</DialogTitle>
+            <DialogTitle className="font-bold">{selectedProduct.name}</DialogTitle>
             <Description>This will permanently deactivate your account</Description>
             <p>Are you sure you want to deactivate your account? All of your data will be permanently removed.</p>
             <div className="flex gap-4">
