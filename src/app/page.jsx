@@ -205,7 +205,7 @@ export default function Home() {
       </div>
 
       <section className="bg-[#101321] 2xl:h-[240px] px-5 md:pt-10 flex flex-col md:flex-row justify-center items-center md:items-start space-y-5 md:space-y-0">
-        {/* simulation big */}
+        {/* simulation large screen */}
         <div
           className="hidden scale-90 lg:w-[555px] lg:h-[220px] 1xl:scale-100 md:block absolute left-0 1xl:left-20 3xl:left-60 hover:cursor-pointer hover:opacity-65"
           style={{
@@ -213,7 +213,7 @@ export default function Home() {
             backgroundRepeat: "no-repeat",
           }}
         ></div>
-        {/* stem big*/}
+        {/* stem large screen*/}
         <div className="hidden md:flex transition-all border border-1 border-[#424B5B] bg-black/[0.8] w-full  lg:w-[425px] 1xl:w-[520px] py-2 h-fit md:absolute md:left-1/2 md:transform md:-translate-x-1/2 rounded-full items-center justify-evenly hover:cursor-pointer hover:scale-105 ">
           <Image
             src={"/images/icons/formIcon.png"}
@@ -258,7 +258,7 @@ export default function Home() {
           </div>
         </div>
 
-        {/* sponsor us big */}
+        {/* sponsor us large screen */}
         <div
           className="scale-90 lg:w-[555px] lg:h-[240px] 1xl:scale-100 hidden md:block absolute right-0 1xl:right-20 3xl:right-60 text-center"
           style={{
@@ -408,6 +408,9 @@ export default function Home() {
           <p className="text-center text-white font-bold text-5xl 2xl:text-6xl">
             APOLO 2025 DIVISIONS
           </p>
+
+          {/* team divisions large screen */}
+
           <div className="hidden md:flex w-full justify-evenly">
             <Link
               href="/human-powered-team"
@@ -466,6 +469,7 @@ export default function Home() {
             </Link>
           </div>
 
+          {/* team divisions mobile */}
           <div className="flex justify-between gap-5 md:hidden">
             <Link
               href="/human-powered-team"

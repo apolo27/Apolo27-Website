@@ -14,14 +14,14 @@ export default function Navbar() {
   };
 
   const handleLinkClick = () => {
-    setIsSidebarOpen(false); // Cierra la sidebar después de seleccionar un link en dispositivos móviles
+    setIsSidebarOpen(false);
   };
 
   return (
     <nav
       className={`${
-        pathName === "/" ? "bg-[#40D1FF]" : "bg-gray-800"
-      } w-full font-poppins shadow-md` }
+        pathName === "/" ? "bg-[#40D1FF]" : pathName === "/marketplace" ? "bg-transparent absolute" : "bg-gray-800 z-50"
+      } w-full font-poppins shadow-md`}
     >
       <div className="flex items-center justify-between p-4">
         <div className="flex-shrink-0 ml-0">

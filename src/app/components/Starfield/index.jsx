@@ -1,7 +1,7 @@
 'use client';
 import React, { useEffect } from 'react';
 export default function Starfield(props) {
-	const { speedFactor = 0.05, backgroundColor = 'black', starColor = [255, 255, 255], starCount = 2000 } = props;
+	const { speedFactor = 0.05, backgroundColor = 'black', starColor = [255, 255, 255], starCount = 3000 } = props;
 
 	useEffect(() => {
 		const canvas = document.getElementById('starfield');
@@ -48,7 +48,7 @@ export default function Starfield(props) {
 					const rgb =
 						'rgba(' + starColor[0] + ',' + starColor[1] + ',' + starColor[2] + ',' + brightness + ')';
 					c.fillStyle = rgb;
-					c.fillRect(x, y, 1, 1);
+					c.fillRect(x, y, 2, 2);
 				};
 
 				const moveStars = (distance) => {
