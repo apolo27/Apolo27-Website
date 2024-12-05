@@ -22,7 +22,7 @@ export default function Header() {
       <nav
         className={`${
           pathName === "/"
-            ? "bg-[#40D1FF] font-semibold drop-shadow-sm"
+            ? "bg-[#40D1FF] font-semibold"
             : pathName === "/marketplace"
             ? "bg-transparent absolute"
             : "bg-gray-800 z-50"
