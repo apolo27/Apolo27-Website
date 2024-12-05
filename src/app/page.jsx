@@ -180,11 +180,11 @@ export default function Home() {
     <>
       <div className="text-center h-fit  space-y-8 2xl:space-y-5 bg-gradient-to-t from-[#101321] to-[#40D1FF] px-5 md:px-40 flex flex-col items-center pt-5">
         <Timer />
-        <p className="mt-4 font-bold text-4xl 2xl:text-5xl 3xl:text-7xl w-full md:w-4/6 text-transparent bg-clip-text bg-gradient-to-b from-white to-gray-500">
+        <p className="mt-4 font-bold text-4xl lg:text-5xl 3xl:text-7xl w-full lg:w-4/6 text-transparent bg-clip-text bg-gradient-to-b from-white to-gray-500">
           The First Dominican Republic University Division Winners at
           NASA&apos;s Human Exploration Rover Challenge
         </p>
-        <div className="flex md:hidden transition-all border border-1 border-[#424B5B] bg-black/[0.8] w-full  md:w-[520px] py-2 h-fit md:absolute md:left-1/2 md:transform md:-translate-x-1/2 rounded-full  items-center justify-evenly hover:cursor-pointer hover:scale-105 ">
+        <div className="flex lg:hidden transition-all border border-1 border-[#424B5B] bg-black/[0.8] w-full  md:w-[520px] py-2 h-fit  rounded-full  items-center justify-evenly hover:cursor-pointer hover:scale-105 ">
           <ClipboardDocumentListIcon className="w-8 h-8 md:w-12 md:h-12 text-white" />
           <div className="text-left">
             <p className="font-semibold text-white md:text-lg">
@@ -207,14 +207,14 @@ export default function Home() {
       <section className="bg-[#101321] 2xl:h-[240px] px-5 md:pt-10 flex flex-col md:flex-row justify-center items-center md:items-start space-y-5 md:space-y-0">
         {/* simulation large screen */}
         <div
-          className="hidden scale-90 lg:w-[555px] lg:h-[220px] 1xl:scale-100 md:block absolute left-0 1xl:left-20 3xl:left-60 hover:cursor-pointer hover:opacity-65"
+          className="hidden scale-90 lg:w-[555px] lg:h-[220px] 1xl:scale-100 lg:block absolute left-0 1xl:left-20 3xl:left-60 hover:cursor-pointer hover:opacity-65"
           style={{
             backgroundImage: "url('/images/landing/simulation.png')",
             backgroundRepeat: "no-repeat",
           }}
         ></div>
         {/* stem large screen*/}
-        <div className="hidden md:flex transition-all border border-1 border-[#424B5B] bg-black/[0.8] w-full  lg:w-[425px] 1xl:w-[520px] py-2 h-fit md:absolute md:left-1/2 md:transform md:-translate-x-1/2 rounded-full items-center justify-evenly hover:cursor-pointer hover:scale-105 ">
+        <div className="hidden lg:flex transition-all border border-1 border-[#424B5B] bg-black/[0.8] w-full  lg:w-[425px] 1xl:w-[520px] py-2 h-fit md:absolute md:left-1/2 md:transform md:-translate-x-1/2 rounded-full items-center justify-evenly hover:cursor-pointer hover:scale-105 ">
           <Image
             src={"/images/icons/formIcon.png"}
             alt="form icon"
@@ -238,7 +238,7 @@ export default function Home() {
           </div>
         </div>
         {/*sponsor us mobile*/}
-        <div className="md:hidden relative w-5/6 h-auto">
+        <div className="lg:hidden relative w-5/6 md:w-4/6 h-auto">
           <Image
             src={"/images/landing/sponsorus-rectangle.png"}
             alt="Simulation"
@@ -247,20 +247,20 @@ export default function Home() {
             sizes="100vw"
             className="w-full h-full relative"
           />
-          <p className="absolute font-bold text-3xl text-white top-5 left-5">
+          <p className="absolute font-bold text-3xl md:text-4xl text-white top-5 left-5">
             Sponsor Us!
           </p>
-          <p className="absolute font-semibold text-xl text-left text-white top-16 left-5">
+          <p className="absolute font-semibold text-xl md:text-2xl text-left text-white top-16 left-5">
             The team needs your help to win!
           </p>
-          <div className="absolute top-1 right-0 bg-[#3b9fc6] rounded-full w-10 h-10 flex items-center justify-center hover:cursor-pointer hover:scale-105 transition-all">
-            <ArrowUpIcon className="text-white w-8 h-8  transform rotate-45" />
+          <div className="absolute top-1 right-0 bg-[#3b9fc6] rounded-full w-10 h-10 md:w-16 md:h-16  flex items-center justify-center hover:cursor-pointer hover:scale-105 transition-all">
+            <ArrowUpIcon className="text-white w-8 h-8 md:w-16 md:h-16  transform rotate-45" />
           </div>
         </div>
 
         {/* sponsor us large screen */}
         <div
-          className="scale-90 lg:w-[555px] lg:h-[240px] 1xl:scale-100 hidden md:block absolute right-0 1xl:right-20 3xl:right-60 text-center"
+          className="scale-90 lg:w-[555px] lg:h-[240px] 1xl:scale-100 hidden lg:block absolute right-0 1xl:right-20 3xl:right-60 text-center"
           style={{
             backgroundImage: "url('/images/landing/sponsorus.png')",
             backgroundRepeat: "no-repeat",
@@ -293,7 +293,7 @@ export default function Home() {
 
         <Timeline
           position="alternate-reverse"
-          className="hidden md:block w-full"
+          className="hidden lg:block w-full"
         >
           {teams.map((team, i) => (
             <TimelineItem key={i} className="z-10 ">
@@ -411,7 +411,7 @@ export default function Home() {
 
           {/* team divisions large screen */}
 
-          <div className="hidden md:flex w-full justify-evenly">
+          <div className="hidden lg:flex w-full justify-evenly">
             <Link
               href="/human-powered-team"
               className={`${teamClassName} rounded-[50px] h-fit w-2/5 2xl:w-2/6 overflow-hidden relative `}
@@ -470,7 +470,7 @@ export default function Home() {
           </div>
 
           {/* team divisions mobile */}
-          <div className="flex justify-between gap-5 md:hidden">
+          <div className="flex lg:hidden justify-between gap-5 ">
             <Link
               href="/human-powered-team"
               className={`${teamClassName} w-1/2 rounded-br-[100px] rounded-tr-[100px] overflow-hidden relative pt-10`}
