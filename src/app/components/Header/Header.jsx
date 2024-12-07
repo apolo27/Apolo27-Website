@@ -18,7 +18,7 @@ export default function Header() {
   };
 
   return (
-    <header className="w-full text-white ">
+    <header className="w-full text-white">
       <nav
         className={`${
           pathName === "/"
@@ -26,7 +26,7 @@ export default function Header() {
             : pathName === "/marketplace"
             ? "bg-transparent absolute"
             : "bg-gray-800 z-50"
-        } w-full font-poppins shadow-md`}
+        } w-full font-poppins shadow-md z-50`}
       >
         <div className="flex items-center justify-between p-4">
           <div className="flex-shrink-0 ml-0">
@@ -44,6 +44,7 @@ export default function Header() {
           <div className="flex-grow">
             <ul className="hidden md:flex justify-center space-x-8 text-white">
               {[
+                { href: "/", label: "Home" },
                 { href: "/stem-with-us", label: "Stem With Us" },
                 { href: "/sponsors", label: "Become a Sponsor" },
                 { href: "/games", label: "STEM Games" },

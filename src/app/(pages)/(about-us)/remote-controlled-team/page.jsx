@@ -103,7 +103,7 @@ export default function RemoteControlledTeam() {
     <div
       className="text-center m-10"
       style={{
-        backgroundImage: "url('/images/about-us/RCROVER.png')",
+        backgroundImage: "url('')",
         backgroundSize: "contain",
         backgroundRepeat: "no-repeat",
 

@@ -12,7 +12,7 @@ import {
 
 export default function Marketplace() {
   const [isOpen, setIsOpen] = useState(false);
-  const categoryBtnStyle = `text-left text-lg font-semibold px-3 py-1 my-2 hover:shadow-lg shadow-white hover:bg-[#666A95] rounded-xl transition-all ease-out`;
+  const categoryBtnStyle = `w-full text-left text-lg font-semibold px-3 py-1 my-2 hover:shadow-lg shadow-white hover:bg-[#666A95] rounded-xl transition-all ease-out`;
   const CategoryEnum = Object.freeze({
     T_SHIRT: "T-Shirt",
     HOODIE: "Hoodie",
@@ -126,7 +126,7 @@ export default function Marketplace() {
   return (
     <>
       <div
-        className="w-full h-[350px] p-8 lg:p-0 text-center flex flex-col justify-center border-b border-blue-100"
+        className="z-10 w-full h-[350px] p-8 lg:p-0 text-center flex flex-col justify-center border-b border-blue-100"
         style={{
           backgroundImage: `url('/images/marketplace/banner2.jpg')`,
           backgroundPosition: "center center", // Adjust position of image
@@ -141,10 +141,10 @@ export default function Marketplace() {
           An outer space clothing catalog
         </p>
       </div>
-      <div className="flex flex-col lg:flex-row">
-        <div className="w-full flex flex-col lg:flex-row lg:w-1/4 text-center lg:text-left text-white px-4 py-2 lg:py-8 lg:border-r-2 border-b-2 border-r-0 border-blue-100">
+      <div className="flex flex-col lg:flex-row bg-[#101321]">
+        <div className="w-full flex flex-col lg:w-1/5 text-center items-center lg:items-start lg:text-left text-white px-4 py-2 lg:py-8 lg:border-r-2 border-b-2 lg:border-b-0 border-r-0 border-blue-100">
           <p className="px-3 text-2xl font-bold">Filter by</p>
-          <div className="flex lg:block">
+          <div className="flex flex-row lg:flex-col">
             <button
               className={
                 categoryBtnStyle +
@@ -198,7 +198,7 @@ export default function Marketplace() {
             </button>
           </div>
         </div>
-        <div className="w-full lg:w-3/4 p-8 space-y-5">
+        <div className="w-full lg:w-4/5 p-8 space-y-5">
           <div className="flex items-center">
             <MagnifyingGlassIcon className="w-12 h-12 pl-5 py-2 text-white text-opacity-50 bg-white bg-opacity-20 rounded-l-xl" />
             <input
@@ -207,7 +207,7 @@ export default function Marketplace() {
               placeholder="Search for your next fit"
             />
           </div>
-          <section className="w-full grid grid-cols-2 lg:grid-cols-3 gap-10">
+          <section className="w-full grid grid-cols-2 lg:grid-cols-3 gap-10 justify-evenly">
             {items
               .filter((item) =>
                 selectedCategory !== CategoryEnum.ALL

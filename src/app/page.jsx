@@ -1,4 +1,3 @@
-"use client";
 import Image from "next/image";
 import { Timer } from "./components/Timer";
 import { ArrowDownIcon, ArrowUpIcon } from "@heroicons/react/20/solid";
@@ -414,12 +413,12 @@ export default function Home() {
           <div className="hidden lg:flex w-full justify-evenly">
             <Link
               href="/human-powered-team"
-              className={`${teamClassName} rounded-[50px] h-fit w-2/5 2xl:w-2/6 overflow-hidden relative `}
+              className={`${teamClassName} drop-shadow-sm rounded-[50px] h-[600px] w-2/5 2xl:w-2/6 overflow-hidden relative `}
               style={{
                 backgroundImage: "url('/images/about-us/red-galaxy.jpg')",
               }}
             >
-              <p className="font-bold text-6xl w-1/3 text-white text-left -mb-10 pl-5 pt-10">
+              <p className="font-bold text-5xl w-1/3 text-white text-left -mb-10 pl-5 pt-10">
                 Human Powered Constelation
               </p>
 
@@ -428,41 +427,41 @@ export default function Home() {
                   className="mt-20"
                   src="/images/about-us/Marko1.png"
                   alt="Team Lead HP"
-                  width={275}
+                  width={200}
                   height={300}
                 />
                 <Image
                   className="-ml-40"
                   src="/images/about-us/Anne1.png"
                   alt="Team Lead HP"
-                  width={520}
+                  width={400}
                   height={300}
                 />
               </div>
             </Link>
             <Link
               href="/remote-controlled-team"
-              className={`${teamClassName} rounded-[50px] w-2/5 2xl:w-2/6 text-right pr-5 overflow-hidden relative`}
+              className={`${teamClassName} drop-shadow-sm h-[600px] rounded-[50px] w-2/5 2xl:w-2/6 text-right pr-5 overflow-hidden relative`}
               style={{
                 backgroundImage: "url('/images/about-us/blue-galaxy.jpg')",
               }}
             >
-              <p className="font-bold text-6xl text-white text-right -mb-10 pt-10 w-3/4 ml-32">
+              <p className="font-bold text-5xl text-white text-right -mb-10 pt-10 w-3/4 ml-32">
                 Remote Controlled Constelation
               </p>
               <div className="flex ">
                 <Image
-                  className="absolute bottom-0 right-0"
+                  className="absolute -bottom-40 right-0"
                   src="/images/about-us/Humberto1.png"
                   alt="Team Lead HP"
-                  width={310}
+                  width={200}
                   height={300}
                 />
                 <Image
-                  className="absolute bottom-0 scale-x-[-1]"
+                  className="absolute scale-x-[-1]"
                   src="/images/about-us/Anne1.png"
                   alt="Team Lead HP"
-                  width={520}
+                  width={400}
                   height={300}
                 />
               </div>
