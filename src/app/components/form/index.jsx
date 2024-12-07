@@ -118,7 +118,7 @@ export const Form = () => {
     <div className="w-5/6 md:w-full flex flex-col lg:flex-row rounded-xl bg-white text-black justify-center mt-8">
       <div className="lg:w-1/2 w-full flex justify-center">
         <Image
-          src="/images/stem-with-us/bus.png"
+          src="/images/stem-with-us/bus.webp"
           width={500}
           height={200}
           alt="Formulario"
@@ -129,7 +129,7 @@ export const Form = () => {
       <FormProvider {...form}>
         <form ref={formRef} className="lg:w-1/2 w-full flex flex-col gap-5 p-8 lg:p-4">
           <Image
-            src="/images/logos/gray-logo.png"
+            src="/images/logos/gray-logo.webp"
             height={100}
             width={100}
             alt="logo"

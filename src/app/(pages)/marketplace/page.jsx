@@ -128,7 +128,7 @@ export default function Marketplace() {
       <div
         className="z-10 w-full h-[350px] p-8 lg:p-0 text-center flex flex-col justify-center border-b border-blue-100"
         style={{
-          backgroundImage: `url('/images/marketplace/banner2.jpg')`,
+          backgroundImage: `url('/images/marketplace/banner2.webp')`,
           backgroundPosition: "center center", // Adjust position of image
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
@@ -222,7 +222,7 @@ export default function Marketplace() {
                   onClick={() => selectProduct(item)}
                 >
                   <Image
-                    src={"/images/250.png"}
+                    src={"/images/250.webp"}
                     width={250}
                     height={250}
                     alt={item.name}

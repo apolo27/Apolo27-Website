@@ -128,49 +128,49 @@ export default function Home() {
       year: 2019,
       title: "THE ORIGIN",
       description: `Our journey began in 2019 with a groundbreaking achievement: becoming the first university division team from our country to compete in the NASA Rover Challenge.`,
-      image: "/images/timeline/2019.png",
+      image: "/images/timeline/2019.webp",
       teamAwards: [],
     },
     {
       year: 2020,
       title: "PERSEVERANCE IN ADVERSITY",
       description: `Despite the challenges of the global pandemic, our resilience shone through. Lessons learned paved the way for our historic "System Safety Award" victory.`,
-      image: "/images/timeline/2019.png",
+      image: "/images/timeline/2019.webp",
       teamAwards: [awards[11]],
     },
     {
       year: 2021,
       title: "REVAMP AND REINVENTION",
       description: `With a revamped rover, our team reached new levels of expertise and ignited a passion for STEM in our community through innovative efforts.`,
-      image: "/images/timeline/2019.png",
+      image: "/images/timeline/2019.webp",
       teamAwards: [],
     },
     {
       year: 2022,
       title: "EXPANDING OUR IMPACT",
       description: `2022 marked a turning point with the launch of our interactive "STEM Tour," culminating in winning the prestigious "Engagement Award."`,
-      image: "/images/timeline/2019.png",
+      image: "/images/timeline/2019.webp",
       teamAwards: [awards[3]],
     },
     {
       year: 2023,
       title: "A HISTORIC YEAR",
       description: `A year of Dominican dominance! Major improvements earned us the "Most Improved" and "Team Spirit" awards, cementing our place in history.`,
-      image: "/images/timeline/2019.png",
+      image: "/images/timeline/2019.webp",
       teamAwards: [awards[19], awards[12]],
     },
     {
       year: 2024,
       title: "SETTING THE STANDARD",
       description: `Rising from 2023's successes, we reached new heights in 2024. Our hard work earned us the coveted "Overall Award (2nd place)" and the "Spirit Award", showcasing excellence and unity.`,
-      image: "/images/timeline/2019.png",
+      image: "/images/timeline/2019.webp",
       teamAwards: [awards[1], awards[12]],
     },
     {
       year: 2025,
       title: "NEW FRONTIERS",
       description: `The dawn of the Apolo Division marks a new chapter in 2025. With our sights set high, we're pushing the boundaries of innovation and teamwork.`,
-      image: "/images/timeline/2019.png",
+      image: "/images/timeline/2019.webp",
       teamAwards: [],
     },
   ];
@@ -208,14 +208,14 @@ export default function Home() {
         <div
           className="hidden scale-90 lg:w-[555px] lg:h-[220px] 1xl:scale-100 lg:block absolute left-0 1xl:left-20 3xl:left-60 hover:cursor-pointer hover:opacity-65"
           style={{
-            backgroundImage: "url('/images/landing/simulation.png')",
+            backgroundImage: "url('/images/landing/simulation.webp')",
             backgroundRepeat: "no-repeat",
           }}
         ></div>
         {/* stem large screen*/}
         <div className="hidden lg:flex transition-all border border-1 border-[#424B5B] bg-black/[0.8] w-full  lg:w-[425px] 1xl:w-[520px] py-2 h-fit md:absolute md:left-1/2 md:transform md:-translate-x-1/2 rounded-full items-center justify-evenly hover:cursor-pointer hover:scale-105 ">
           <Image
-            src={"/images/icons/formIcon.png"}
+            src={"/images/icons/formIcon.webp"}
             alt="form icon"
             width={44}
             height={44}
@@ -239,7 +239,7 @@ export default function Home() {
         {/*sponsor us mobile*/}
         <div className="lg:hidden relative w-5/6 md:w-4/6 h-auto">
           <Image
-            src={"/images/landing/sponsorus-rectangle.png"}
+            src={"/images/landing/sponsorus-rectangle.webp"}
             alt="Simulation"
             width="0"
             height="0"
@@ -261,7 +261,7 @@ export default function Home() {
         <div
           className="scale-90 lg:w-[555px] lg:h-[240px] 1xl:scale-100 hidden lg:block absolute right-0 1xl:right-20 3xl:right-60 text-center"
           style={{
-            backgroundImage: "url('/images/landing/sponsorus.png')",
+            backgroundImage: "url('/images/landing/sponsorus.webp')",
             backgroundRepeat: "no-repeat",
           }}
         >
@@ -415,7 +415,7 @@ export default function Home() {
               href="/human-powered-team"
               className={`${teamClassName} drop-shadow-sm rounded-[50px] h-[600px] w-2/5 2xl:w-2/6 overflow-hidden relative `}
               style={{
-                backgroundImage: "url('/images/about-us/red-galaxy.jpg')",
+                backgroundImage: "url('/images/about-us/red-galaxy.webp')",
               }}
             >
               <p className="font-bold text-5xl w-1/3 text-white text-left -mb-10 pl-5 pt-10">
@@ -425,14 +425,14 @@ export default function Home() {
               <div className="flex">
                 <Image
                   className="mt-20"
-                  src="/images/about-us/Marko1.png"
+                  src="/images/about-us/Marko1.webp"
                   alt="Team Lead HP"
                   width={200}
                   height={300}
                 />
                 <Image
                   className="-ml-40"
-                  src="/images/about-us/Anne1.png"
+                  src="/images/about-us/Anne1.webp"
                   alt="Team Lead HP"
                   width={400}
                   height={300}
@@ -443,7 +443,7 @@ export default function Home() {
               href="/remote-controlled-team"
               className={`${teamClassName} drop-shadow-sm h-[600px] rounded-[50px] w-2/5 2xl:w-2/6 text-right pr-5 overflow-hidden relative`}
               style={{
-                backgroundImage: "url('/images/about-us/blue-galaxy.jpg')",
+                backgroundImage: "url('/images/about-us/blue-galaxy.webp')",
               }}
             >
               <p className="font-bold text-5xl text-white text-right -mb-10 pt-10 w-3/4 ml-32">
@@ -452,14 +452,14 @@ export default function Home() {
               <div className="flex ">
                 <Image
                   className="absolute -bottom-40 right-0"
-                  src="/images/about-us/Humberto1.png"
+                  src="/images/about-us/Humberto1.webp"
                   alt="Team Lead HP"
                   width={200}
                   height={300}
                 />
                 <Image
                   className="absolute scale-x-[-1]"
-                  src="/images/about-us/Anne1.png"
+                  src="/images/about-us/Anne1.webp"
                   alt="Team Lead HP"
                   width={400}
                   height={300}
@@ -474,7 +474,7 @@ export default function Home() {
               href="/human-powered-team"
               className={`${teamClassName} w-1/2 rounded-br-[100px] rounded-tr-[100px] overflow-hidden relative pt-10`}
               style={{
-                backgroundImage: "url('/images/about-us/red-galaxy.jpg')",
+                backgroundImage: "url('/images/about-us/red-galaxy.webp')",
               }}
             >
               {" "}
@@ -483,7 +483,7 @@ export default function Home() {
               </p>
               <Image
                 className=""
-                src="/images/about-us/Anne1.png"
+                src="/images/about-us/Anne1.webp"
                 alt="Team Lead HP"
                 width={520}
                 height={300}
@@ -494,7 +494,7 @@ export default function Home() {
               href="/remote-controlled-team"
               className={`${teamClassName} w-1/2 rounded-bl-[100px] rounded-tl-[100px] text-right overflow-hidden relative pt-10`}
               style={{
-                backgroundImage: "url('/images/about-us/blue-galaxy.jpg')",
+                backgroundImage: "url('/images/about-us/blue-galaxy.webp')",
               }}
             >
               <p className="font-bold text-2xl text-white text-right pr-5">
@@ -502,7 +502,7 @@ export default function Home() {
               </p>
               <Image
                 className=" scale-x-[-1]"
-                src="/images/about-us/Anne1.png"
+                src="/images/about-us/Anne1.webp"
                 alt="Team Lead HP"
                 width={520}
                 height={300}

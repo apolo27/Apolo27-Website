@@ -15,7 +15,7 @@ export default async function StemWithUs() {
     <div className="relative flex flex-col items-center justify-between min-h-screen pt-16 pb-16">
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-fixed"
-        style={{ backgroundImage: "url(/images/BackgroundGalaxy.png)" }}
+        style={{ backgroundImage: "url(/images/BackgroundGalaxy.webp)" }}
       ></div>
       <StemPlanet />
       <Slider />
