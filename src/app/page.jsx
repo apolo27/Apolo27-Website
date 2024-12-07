@@ -203,15 +203,15 @@ export default function Home() {
         </div>
       </div>
 
-      <section className="bg-[#101321] 2xl:h-[240px] px-5 md:pt-10 flex flex-col md:flex-row justify-center items-center md:items-start space-y-5 md:space-y-0">
+      <section className="bg-[#101321] 2xl:h-[240px] px-5 md:pt-10 flex flex-col md:flex-row justify-center items-center md:items-start space-y-5 md:space-y-0 md:pb-56">
         {/* simulation large screen */}
-        <div
-          className="hidden scale-90 lg:w-[555px] lg:h-[220px] 1xl:scale-100 lg:block absolute left-0 1xl:left-20 3xl:left-60 hover:cursor-pointer hover:opacity-65"
+        <div className="hidden scale-90 lg:w-[555px] lg:h-[220px] 1xl:scale-100 lg:block absolute left-0 1xl:left-20 3xl:left-60 hover:cursor-pointer hover:opacity-65"
           style={{
             backgroundImage: "url('/images/landing/simulation.webp')",
             backgroundRepeat: "no-repeat",
           }}
         ></div>
+
         {/* stem large screen*/}
         <div className="hidden lg:flex transition-all border border-1 border-[#424B5B] bg-black/[0.8] w-full  lg:w-[425px] 1xl:w-[520px] py-2 h-fit md:absolute md:left-1/2 md:transform md:-translate-x-1/2 rounded-full items-center justify-evenly hover:cursor-pointer hover:scale-105 ">
           <Image
@@ -236,6 +236,7 @@ export default function Home() {
             <ArrowRightIcon className="w-5 h-5 text-white transition-transform hover:translate-x-5" />
           </div>
         </div>
+
         {/*sponsor us mobile*/}
         <div className="lg:hidden relative w-5/6 md:w-4/6 h-auto">
           <Image
@@ -258,8 +259,7 @@ export default function Home() {
         </div>
 
         {/* sponsor us large screen */}
-        <div
-          className="scale-90 lg:w-[555px] lg:h-[240px] 1xl:scale-100 hidden lg:block absolute right-0 1xl:right-20 3xl:right-60 text-center"
+        <div className="scale-90 lg:w-[555px] lg:h-[240px] 1xl:scale-100 hidden lg:block absolute right-0 1xl:right-20 3xl:right-60 text-center"
           style={{
             backgroundImage: "url('/images/landing/sponsorus.webp')",
             backgroundRepeat: "no-repeat",
