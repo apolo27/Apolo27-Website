@@ -17,7 +17,7 @@ export default function Marketplace() {
 
   const episodes = [
     {
-      img: "/images/social-media/caribestem.png",
+      img: "/images/social-media/caribestem.webp",
       title: "Episode 1",
       description:
         "This is the first episode of the Caribe STEM podcast This is the first episode of the Caribe STEM podcast This is the first episode of the Caribe STEM podcast This is the first episode of the Caribe STEM podcast This is the first episode of the Caribe STEM podcast",
@@ -25,7 +25,7 @@ export default function Marketplace() {
       date: new Date(),
     },
     {
-      img: "/images/social-media/caribestem.png",
+      img: "/images/social-media/caribestem.webp",
       title: "Episode 2",
       description:
         "This is the second episode of the Caribe STEM podcast This is the second episode of the Caribe STEM podcast This is the second episode of the Caribe STEM podcast This is the second episode of the Caribe STEM podcast This is the second episode of the Caribe STEM podcast",
@@ -36,50 +36,50 @@ export default function Marketplace() {
 
   const videos = [
     {
-      img: "/images/thumbnailExample.jpg",
+      img: "/images/thumbnailExample.webp",
       title: "Video 1",
       platform: "Youtube",
     },
     {
-      img: "/images/thumbnailExample.jpg",
+      img: "/images/thumbnailExample.webp",
       title: "Video 2",
       platform: "Youtube",
     },
     {
-      img: "/images/thumbnailExample.jpg",
+      img: "/images/thumbnailExample.webp",
       title: "Video 3",
       platform: "Youtube",
     },
 
     {
-      img: "/images/thumbnailExample.jpg",
+      img: "/images/thumbnailExample.webp",
       title: "Video 1",
       platform: "Instagram",
     },
     {
-      img: "/images/thumbnailExample.jpg",
+      img: "/images/thumbnailExample.webp",
       title: "Video 2",
       platform: "Instagram",
     },
     {
-      img: "/images/thumbnailExample.jpg",
+      img: "/images/thumbnailExample.webp",
       title: "Video 3",
       platform: "Instagram",
     },
 
 
     {
-      img: "/images/thumbnailExample.jpg",
+      img: "/images/thumbnailExample.webp",
       title: "Video 1",
       platform: "TikTok",
     },
     {
-      img: "/images/thumbnailExample.jpg",
+      img: "/images/thumbnailExample.webp",
       title: "Video 2",
       platform: "TikTok",
     },
     {
-      img: "/images/thumbnailExample.jpg",
+      img: "/images/thumbnailExample.webp",
       title: "Video 3",
       platform: "TikTok",
     },
@@ -96,7 +96,7 @@ export default function Marketplace() {
       <div className="flex flex-wrap lg:flex-nowrap">
         <div className="w-full lg:w-1/2 flex justify-center">
           <Image
-            src="/images/social-media/caribestem.png"
+            src="/images/social-media/caribestem.webp"
             alt="Instagram"
             width="0"
             height="0"
@@ -169,7 +169,7 @@ export default function Marketplace() {
           <p className="text-[#DFC86A] text-2xl 2xl:text-3xl mb-3 font-medium">About our hosts</p>
           <div className="flex justify-center">
             <Image
-              src="/images/blankProfile.jpeg"
+              src="/images/blankProfile.webp"
               alt="host"
               width={300}
               height={300}
@@ -213,7 +213,7 @@ export default function Marketplace() {
                 <div
                   className="w-[300px] h-[500px] rounded-xl overflow-hidden"
                   style={{
-                    backgroundImage: `url('/images/social-media/thumbnailExample.jpg')`,
+                    backgroundImage: `url('/images/social-media/thumbnailExample.webp')`,
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
                   }}

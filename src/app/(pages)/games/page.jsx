@@ -19,7 +19,7 @@ export default function Games() {
           className="w-fit rounded-2xl overflow-clip border border-opacity-50 border-[#28A53C] shadow-[#28A53C] shadow-xl hover:shadow-[#28A53C] hover:shadow-2xl hover:scale-105 hover:cursor-pointer transition-all duration-200 ease-in-out"
         >
           <Image
-            src="/images/thumbnailExample.jpg"
+            src="/images/thumbnailExample.webp"
             alt="Science Game"
             width="0"
             height="0"
@@ -32,7 +32,7 @@ export default function Games() {
           className="w-fit rounded-2xl overflow-clip border border-opacity-50 border-[#067DD3] shadow-[#067DD3] shadow-xl hover:shadow-[#067DD3] hover:shadow-2xl hover:scale-105 hover:cursor-pointer transition-all duration-200 ease-in-out"
         >
           <Image
-            src="/images/thumbnailExample.jpg"
+            src="/images/thumbnailExample.webp"
             alt="Technology Game"
             width="0"
             height="0"
@@ -45,7 +45,7 @@ export default function Games() {
           className="w-fit rounded-2xl overflow-clip border border-opacity-50 border-[#710609] shadow-[#710609] shadow-xl hover:shadow-[#710609] hover:shadow-2xl hover:scale-105 hover:cursor-pointer transition-all duration-200 ease-in-out "
         >
           <Image
-            src="/images/thumbnailExample.jpg"
+            src="/images/thumbnailExample.webp"
             alt="HERC Simulation"
             width="0"
             height="0"
@@ -58,7 +58,7 @@ export default function Games() {
           className="w-fit rounded-2xl overflow-clip border border-opacity-50 border-[#A010C5] shadow-[#A010C5] shadow-xl hover:shadow-[#A010C5] hover:shadow-2xl hover:scale-105 hover:cursor-pointer transition-all duration-200 ease-in-out"
         >
           <Image
-            src="/images/thumbnailExample.jpg"
+            src="/images/thumbnailExample.webp"
             alt="Math Game"
             width="0"
             height="0"

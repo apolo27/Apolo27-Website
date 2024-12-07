@@ -118,7 +118,7 @@ export default function RemoteControlledTeam() {
             className="w-60 bg-gradient-to-br from-[#1d2f49] to-[#20584a] p-5 rounded-xl position:relative z-10"
           >
             <Image
-              src={"/images/250.png"}
+              src={"/images/250.webp"}
               width={250}
               height={250}
               alt={mentor.img}
@@ -137,7 +137,7 @@ export default function RemoteControlledTeam() {
             className="w-60 bg-gradient-to-t from-[#172746] to-[#056b82] p-5 rounded-xl position:relative z-10"
           >
             <Image
-              src={"/images/250.png"}
+              src={"/images/250.webp"}
               width={250}
               height={250}
               alt={member.img}

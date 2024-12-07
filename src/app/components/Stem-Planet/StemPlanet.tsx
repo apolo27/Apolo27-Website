@@ -4,7 +4,7 @@ export default function StemPlanet() {
   return (
     <div className="flex flex-col md:flex-row items-center justify-center md:space-x-12 space-y-8 md:space-y-0 relative z-10 text-center md:text-left mb-8">
       <img
-        src="/images/stem-with-us/Planet.png"
+        src="/images/stem-with-us/Planet.webp"
         alt="Planet"
         className="w-48 h-48 sm:w-60 sm:h-60 md:w-72 md:h-72 lg:w-96 lg:h-96 rounded-full shadow-lg"
       />
@@ -26,7 +26,7 @@ export default function StemPlanet() {
               Press to Start
             </span>
             <img
-              src="/images/icons/right-button.png"
+              src="/images/icons/right-button.webp"
               alt="Right Button"
               className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 lg:w-8 lg:h-8 ml-2 transform transition-transform duration-300 group-hover:translate-x-1"
             />
