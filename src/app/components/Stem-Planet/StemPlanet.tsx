@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function CenteredContent() {
+export default function StemPlanet() {
   return (
     <div className="flex flex-col md:flex-row items-center justify-center md:space-x-12 space-y-8 md:space-y-0 relative z-10 text-center md:text-left mb-8">
       <img
