@@ -281,7 +281,7 @@ export default function Home() {
         </div>
       </div>
 
-      <section className=" bg-[#101321] justify-between w-full space-y-10 pt-20 px-5 lg:px-40 2xl:px-60 pb-40">
+      <section id="timeline" className=" bg-[#101321] justify-between w-full space-y-10 pt-20 px-5 lg:px-40 2xl:px-60 pb-40">
         <p className="text-center outlined-title text-[#101321] text-7xl font-extrabold w-full ">
           MISSION APOLO 27
         </p>
@@ -403,7 +403,7 @@ export default function Home() {
       </section>
 
       <div className="bg-[#101321]">
-        <section className="transform space-y-20 pb-40">
+        <section className="transform space-y-20 pb-20 xl:pb-40">
           <p className="text-center text-white font-bold text-5xl 2xl:text-6xl">
             APOLO 2025 DIVISIONS
           </p>
@@ -478,7 +478,7 @@ export default function Home() {
               }}
             >
               {" "}
-              <p className="font-bold text-2xl text-white text-left pl-5">
+              <p className="font-bold text-3xl sm:text-4xl text-white text-left pl-5">
                 Human <br></br> Powered Constelation
               </p>
               <Image
@@ -497,7 +497,7 @@ export default function Home() {
                 backgroundImage: "url('/images/about-us/blue-galaxy.webp')",
               }}
             >
-              <p className="font-bold text-2xl text-white text-right pr-5">
+              <p className="font-bold text-3xl sm:text-4xl text-white text-right pr-5">
                 Remote Controlled Constelation
               </p>
               <Image
