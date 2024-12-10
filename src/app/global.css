@@ -52,3 +52,39 @@
   background: rgb(16,19,33);
   background: radial-gradient(circle, rgba(16,19,33,1) 24%, rgba(28,68,90,1) 59%, rgba(52,162,200,1) 100%, rgba(64,209,255,1) 100%); 
 }
+
+
+.thecard{
+  position: relative;
+  transform-style: preserve-3d;
+  transition: all 0.6s ease;
+}
+
+.thecard.flipped{
+  transform: rotateY(180deg);
+  transition: all 0.6s ease-in-out;
+}
+
+.thecard:not(.flipped){
+  transform: rotateY(0deg);
+  transition: all 0.6s ease-in-out;
+}
+
+.thefront{
+  backface-visibility: hidden;
+  overflow: hidden;
+}
+
+.theback{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  backface-visibility: hidden;
+  overflow: hidden;
+
+  text-align: center;
+  transform: rotateY(180deg);
+}

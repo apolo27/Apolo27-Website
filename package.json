@@ -37,6 +37,7 @@
     "motion": "^11.11.17",
     "next": "15.0.3",
     "react": "^18",
+    "react-card-flip": "^1.2.3",
     "react-curved-text": "^3.0.1",
     "react-dom": "^18",
     "react-hook-form": "^7.53.0",

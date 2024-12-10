@@ -21,7 +21,7 @@ export default async function StemWithUs() {
       <Slider />
 
       {/* Botón para mostrar el formulario en pantallas pequeñas */}
-      <div className="mt-8 mb-8 relative z-10 flex justify-center">
+      <div id="form" className="mt-8 mb-8 relative z-10 flex justify-center">
         <Form />
       </div>
     </div>
