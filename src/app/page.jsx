@@ -1,4 +1,5 @@
 "use client";
+import { useState } from "react";
 import Image from "next/image";
 import { Timer } from "./components/Timer";
 import { ArrowUpIcon } from "@heroicons/react/20/solid";
@@ -15,7 +16,17 @@ import TimelineConnector from "@mui/lab/TimelineConnector";
 import TimelineContent from "@mui/lab/TimelineContent";
 import TimelineDot from "@mui/lab/TimelineDot";
 
+import {
+  Description,
+  Dialog,
+  DialogPanel,
+  DialogTitle,
+  DialogBackdrop,
+} from "@headlessui/react";
+
 export default function Home() {
+  const [isOpen, setIsOpen] = useState(false);
+  const [team, setTeam] = useState(undefined);
   const teamClassName = `opacity-80 hover:opacity-100 transition-all hover:cursor-pointer hover:scale-105`;
   const timelineItem = `max-w-[450px] bg-[#121837] border border-[#666A95] text-white text-center rounded-2xl flex flex-col items-center md:items-start`;
   const currentTimelineItem = `max-w-[450px] bg-[#121837] border border-[#666A95] text-white text-center rounded-2xl flex flex-col items-center md:items-start shadow-[0px_20px_207px_10px_rgba(165,_39,_255,_0.48)] bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] `;
@@ -180,6 +191,11 @@ export default function Home() {
     }
   };
 
+  const showTeam = (team) => {
+    setTeam(team);
+    setIsOpen(true);
+  };
+
   return (
     <>
       <div className="text-center h-fit  space-y-8 lg:space-y-20 2xl:space-y-10 bg-gradient-to-t from-[#101321] to-[#40D1FF] px-5 md:px-40 flex flex-col items-center pt-5">
@@ -327,55 +343,70 @@ export default function Home() {
                 <TimelineConnector />
               </TimelineSeparator>
               <TimelineContent className="3xl:flex 3xl:justify-center">
-                <div>
-                  <div
-                    className={
-                      i === teams.length - 1
-                        ? `${currentTimelineItem}`
-                        : `${timelineItem}`
-                    }
-                  >
-                    <div className="px-4 flex flex-col md:flex-row items-center w-full justify-evenly bg-gradient-to-b from-cyan-600 to-cyan-900 rounded-t-2xl py-8">
-                      <p className="text-5xl lg:text-6xl font-boldrounded-xl bg-cyan-950/[0.7] rounded-lg p-1">
-                        {team.year}
-                      </p>
-                      <p className="text-2xl text-center md:text-left w-1/2">
-                        {team.title}
-                      </p>
-                    </div>
-                    <div className="p-4 space-y-5">
-                      <p className="text-md md:text-lg text-center md:text-left font-semibold px-8 md:px-4">
-                        {team.description}
-                      </p>
-                      <Image
-                        src={team.image}
-                        alt="Team Image"
-                        width="0"
-                        height="0"
-                        sizes="100vw"
-                        className="px-8 md:px-4 w-full h-30"
-                      />
-                      <button className="bg-gradient-to-br from-cyan-950 to-cyan-800 p-4 rounded-xl font-semibold hover:scale-105 transition-all">
-                        Ver mas
-                      </button>
-                    </div>
+                <div
+                  className={
+                    i === teams.length - 1
+                      ? `${currentTimelineItem}`
+                      : `${timelineItem}`
+                  }
+                >
+                  <div className="px-4 flex flex-col md:flex-row items-center w-full justify-evenly bg-gradient-to-b from-cyan-600 to-cyan-900 rounded-t-2xl py-8">
+                    <p className="text-5xl lg:text-6xl font-boldrounded-xl bg-cyan-950/[0.7] rounded-lg p-1">
+                      {team.year}
+                    </p>
+                    <p className="text-2xl text-center md:text-left w-1/2">
+                      {team.title}
+                    </p>
                   </div>
-                  <div className="flex justify-evenly">
-                    {team.teamAwards?.map((award, j) => (
-                      <div key={j} className={""}>
-                        <Image
-                          src={"/images/timeline/glass-award.webp"}
-                          alt={award.title}
-                          width={75}
-                          height={50}
-                        />
-                      </div>
-                    ))}
+                  <div className="p-4 space-y-5">
+                    <p className="text-md md:text-lg text-center md:text-left font-semibold px-8 md:px-4">
+                      {team.description}
+                    </p>
+                    <Image
+                      src={team.image}
+                      alt="Team Image"
+                      width="0"
+                      height="0"
+                      sizes="100vw"
+                      className="px-8 md:px-4 w-full h-30"
+                    />
+                    <button
+                      onClick={() => showTeam(team)}
+                      className="bg-gradient-to-br from-cyan-950 to-cyan-800 p-4 rounded-xl font-semibold hover:scale-105 transition-all"
+                    >
+                      Ver mas
+                    </button>
                   </div>
                 </div>
               </TimelineContent>
             </TimelineItem>
           ))}
+          <Dialog
+            open={isOpen}
+            onClose={() => setIsOpen(false)}
+            className="relative z-50"
+          >
+            <div className="fixed inset-0 flex w-screen items-center justify-center p-4 text-white">
+              <DialogPanel className="w-2/3 space-y-4 border bg-cyan-950/[0.8] backdrop-blur-md p-12 rounded-2xl">
+                <DialogTitle className="font-bold text-5xl">
+                  {team?.year}
+                </DialogTitle>
+                <Description>
+                  {team?.description}
+                  {team?.description}
+                  {team?.description}
+                  {team?.description}
+                  {team?.description}
+                  {team?.description}
+                  {team?.description}
+                  {team?.description}
+                </Description>
+                <div className="flex gap-4">
+                  <button className="bg-[#022528] px-3 py-2 rounded-lg transition-shadow duration-100 hover:shadow-md " onClick={() => setIsOpen(false)}>Cancel</button>
+                </div>
+              </DialogPanel>
+            </div>
+          </Dialog>
         </Timeline>
 
         <div className="lg:hidden relative flex flex-wrap justify-around px-8 md:px-0 gap-20">
