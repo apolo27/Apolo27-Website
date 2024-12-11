@@ -45,6 +45,7 @@ export default function Header() {
             <ul className="hidden lg:flex justify-center space-x-8 text-white">
               {[
                 { href: "/", label: "Home" },
+                { href: "/#about-us", label: "About us"},
                 { href: "/stem-with-us", label: "Stem With Us" },
                 { href: "/sponsors", label: "Become a Sponsor" },
                 { href: "/games", label: "Games" },

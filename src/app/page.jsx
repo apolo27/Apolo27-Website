@@ -188,7 +188,10 @@ export default function Home() {
           The First Dominican Republic University Division Winners at
           NASA&apos;s Human Exploration Rover Challenge
         </p>
-        <Link href="/stem-with-us" className="flex lg:hidden transition-all border border-1 border-[#424B5B] bg-black/[0.8] w-5/6  md:w-[520px] py-2 h-fit  rounded-full  items-center justify-evenly hover:cursor-pointer hover:scale-105 ">
+        <Link
+          href="/stem-with-us"
+          className="flex lg:hidden transition-all border border-1 border-[#424B5B] bg-black/[0.8] w-5/6  md:w-[520px] py-2 h-fit  rounded-full  items-center justify-evenly hover:cursor-pointer hover:scale-105 "
+        >
           <Image
             src={"/images/icons/formIcon.webp"}
             alt="form icon"
@@ -435,7 +438,7 @@ export default function Home() {
         </div>
       </section>
 
-      <div className="bg-[#101321]">
+      <div id="about-us" className="bg-[#101321]">
         <section className="transform space-y-20 pb-20 xl:pb-40">
           <p className="text-center text-white font-bold text-5xl 2xl:text-6xl">
             APOLO 2025 DIVISIONS
