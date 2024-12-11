@@ -42,12 +42,13 @@ export default function Header() {
           </div>
 
           <div className="flex-grow">
-            <ul className="hidden md:flex justify-center space-x-8 text-white">
+            <ul className="hidden lg:flex justify-center space-x-8 text-white">
               {[
                 { href: "/", label: "Home" },
+                { href: "/#about-us", label: "About us"},
                 { href: "/stem-with-us", label: "Stem With Us" },
                 { href: "/sponsors", label: "Become a Sponsor" },
-                { href: "/games", label: "STEM Games" },
+                { href: "/games", label: "Games" },
                 { href: "/social-media", label: "Social Media" },
                 { href: "/marketplace", label: "Marketplace" },
               ].map((item, i) => (
@@ -55,10 +56,10 @@ export default function Header() {
                   <Link
                     href={item.href}
                     className={`${
-                      pathName === item.href ? "text-blue-400" : "text-white"
+                      pathName === item.href ? "text-blue-500" : "text-white"
                     } ${
                       pathName === "/"
-                        ? "hover:text-blue-900"
+                        ? "hover:text-blue-800"
                         : "hover:text-blue-300"
                     }  transition-colors duration-300 text-lg`}
                   >
@@ -74,7 +75,7 @@ export default function Header() {
 
           <button
             onClick={toggleSidebar}
-            className="md:hidden focus:outline-none transform transition-transform duration-300 hover:scale-110"
+            className="lg:hidden focus:outline-none transform transition-transform duration-300 hover:scale-110"
           >
             <img src="/images/menu.svg" alt="Menu" className="h-8 w-8" />
           </button>

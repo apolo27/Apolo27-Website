@@ -20,7 +20,7 @@ const Sidebar = ({ toggleSidebar, isOpen }) => {
 
   return (
     <div
-      className="transition-all fixed inset-0 bg-gray-900 bg-opacity-90 z-50 backdrop-blur-md"
+      className="transition-all fixed inset-0 bg-gray-900 bg-opacity-80 z-50 backdrop-blur-md"
       onClick={handleBackgroundClick}
     >
       <div
@@ -28,6 +28,13 @@ const Sidebar = ({ toggleSidebar, isOpen }) => {
         onClick={(e) => e.stopPropagation()}
       >
         <ul className="space-y-6 z-50">
+          <li>
+            <Link href="/" onClick={toggleSidebar}>
+              <span className="block bg-blue-600 text-white py-3 px-6 rounded-lg shadow-md transition-transform duration-300 transform hover:scale-105 hover:bg-blue-700 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                Home
+              </span>
+            </Link>
+          </li>
           <li>
             <Link href="/dashboard" onClick={toggleSidebar}>
               <span className="block bg-blue-600 text-white py-3 px-6 rounded-lg shadow-md transition-transform duration-300 transform hover:scale-105 hover:bg-blue-700 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-500">

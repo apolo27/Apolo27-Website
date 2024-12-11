@@ -1,12 +1,12 @@
+"use client";
+import { useState } from "react";
 import Image from "next/image";
 import { Timer } from "./components/Timer";
-import { ArrowDownIcon, ArrowUpIcon } from "@heroicons/react/20/solid";
-import { ClipboardDocumentListIcon } from "@heroicons/react/24/solid";
+import { ArrowUpIcon } from "@heroicons/react/20/solid";
 import Link from "next/link";
 import {
   ArrowDownCircleIcon,
   ArrowRightIcon,
-  LinkIcon,
 } from "@heroicons/react/24/outline";
 
 import Timeline from "@mui/lab/Timeline";
@@ -16,7 +16,17 @@ import TimelineConnector from "@mui/lab/TimelineConnector";
 import TimelineContent from "@mui/lab/TimelineContent";
 import TimelineDot from "@mui/lab/TimelineDot";
 
+import {
+  Description,
+  Dialog,
+  DialogPanel,
+  DialogTitle,
+  DialogBackdrop,
+} from "@headlessui/react";
+
 export default function Home() {
+  const [isOpen, setIsOpen] = useState(false);
+  const [team, setTeam] = useState(undefined);
   const teamClassName = `opacity-80 hover:opacity-100 transition-all hover:cursor-pointer hover:scale-105`;
   const timelineItem = `max-w-[450px] bg-[#121837] border border-[#666A95] text-white text-center rounded-2xl flex flex-col items-center md:items-start`;
   const currentTimelineItem = `max-w-[450px] bg-[#121837] border border-[#666A95] text-white text-center rounded-2xl flex flex-col items-center md:items-start shadow-[0px_20px_207px_10px_rgba(165,_39,_255,_0.48)] bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] `;
@@ -175,16 +185,35 @@ export default function Home() {
     },
   ];
 
+  const flipCard = (i) => {
+    if (typeof window !== "undefined") {
+      document.body.querySelectorAll(".thecard")[i].classList.toggle("flipped");
+    }
+  };
+
+  const showTeam = (team) => {
+    setTeam(team);
+    setIsOpen(true);
+  };
+
   return (
     <>
-      <div className="text-center h-fit  space-y-8 2xl:space-y-5 bg-gradient-to-t from-[#101321] to-[#40D1FF] px-5 md:px-40 flex flex-col items-center pt-5">
+      <div className="text-center h-fit  space-y-8 lg:space-y-20 2xl:space-y-10 bg-gradient-to-t from-[#101321] to-[#40D1FF] px-5 md:px-40 flex flex-col items-center pt-5">
         <Timer />
-        <p className="mt-4 font-bold text-4xl lg:text-5xl 3xl:text-7xl w-full lg:w-4/6 text-transparent bg-clip-text bg-gradient-to-b from-white to-gray-500">
+        <p className="mt-4 font-bold text-4xl lg:text-5xl 3xl:text-6xl w-full lg:w-5/6 text-transparent bg-clip-text bg-gradient-to-b from-white to-gray-500">
           The First Dominican Republic University Division Winners at
           NASA&apos;s Human Exploration Rover Challenge
         </p>
-        <div className="flex lg:hidden transition-all border border-1 border-[#424B5B] bg-black/[0.8] w-full  md:w-[520px] py-2 h-fit  rounded-full  items-center justify-evenly hover:cursor-pointer hover:scale-105 ">
-          <ClipboardDocumentListIcon className="w-8 h-8 md:w-12 md:h-12 text-white" />
+        <Link
+          href="/stem-with-us"
+          className="flex lg:hidden transition-all border border-1 border-[#424B5B] bg-black/[0.8] w-5/6  md:w-[520px] py-2 h-fit  rounded-full  items-center justify-evenly hover:cursor-pointer hover:scale-105 "
+        >
+          <Image
+            src={"/images/icons/formIcon.webp"}
+            alt="form icon"
+            width={36}
+            height={36}
+          />
           <div className="text-left">
             <p className="font-semibold text-white md:text-lg">
               Programa nuestra visita <span className="text-green-300">S</span>
@@ -198,22 +227,27 @@ export default function Home() {
             </p>
           </div>
           <div>
-            <ArrowRightIcon className="w-5 h-5 text-white transition-transform hover:translate-x-5" />
+            <ArrowRightIcon className="hidden sm:block w-8 h-8 text-white transition-transform hover:translate-x-5" />
           </div>
-        </div>
+        </Link>
       </div>
 
-      <section className="bg-[#101321] 2xl:h-[240px] px-5 md:pt-10 flex flex-col md:flex-row justify-center items-center md:items-start space-y-5 md:space-y-0">
+      <section className="bg-[#101321] 2xl:h-[240px] px-5 md:pt-10 3xl:py-20 flex flex-col md:flex-row justify-center items-center md:items-start space-y-5 md:space-y-0 md:pb-56 3xl:pb-72">
         {/* simulation large screen */}
-        <div
-          className="hidden scale-90 lg:w-[555px] lg:h-[220px] 1xl:scale-100 lg:block absolute left-0 1xl:left-20 3xl:left-60 hover:cursor-pointer hover:opacity-65"
+        <Link
+          href="/games/Herc-Simulation"
+          className="hidden scale-90 lg:w-[555px] lg:h-[220px] 1xl:scale-100 3xl:scale-110 lg:block absolute left-0 1xl:left-20 3xl:left-60 hover:cursor-pointer hover:opacity-65"
           style={{
             backgroundImage: "url('/images/landing/simulation.webp')",
             backgroundRepeat: "no-repeat",
           }}
-        ></div>
+        ></Link>
+
         {/* stem large screen*/}
-        <div className="hidden lg:flex transition-all border border-1 border-[#424B5B] bg-black/[0.8] w-full  lg:w-[425px] 1xl:w-[520px] py-2 h-fit md:absolute md:left-1/2 md:transform md:-translate-x-1/2 rounded-full items-center justify-evenly hover:cursor-pointer hover:scale-105 ">
+        <Link
+          href="/stem-with-us#form"
+          className="hidden lg:flex transition-all border border-1 border-[#424B5B] bg-black/[0.8] w-full  lg:w-[425px] 1xl:w-[520px] 3xl:scale-105 py-2 h-fit md:absolute md:left-1/2 md:transform md:-translate-x-1/2 rounded-full items-center justify-evenly hover:cursor-pointer hover:scale-105 "
+        >
           <Image
             src={"/images/icons/formIcon.webp"}
             alt="form icon"
@@ -235,9 +269,13 @@ export default function Home() {
           <div>
             <ArrowRightIcon className="w-5 h-5 text-white transition-transform hover:translate-x-5" />
           </div>
-        </div>
+        </Link>
+
         {/*sponsor us mobile*/}
-        <div className="lg:hidden relative w-5/6 md:w-4/6 h-auto">
+        <Link
+          href="/sponsors"
+          className="lg:hidden relative w-5/6 md:w-4/6 h-auto"
+        >
           <Image
             src={"/images/landing/sponsorus-rectangle.webp"}
             alt="Simulation"
@@ -255,11 +293,12 @@ export default function Home() {
           <div className="absolute top-1 right-0 bg-[#3b9fc6] rounded-full w-10 h-10 md:w-16 md:h-16  flex items-center justify-center hover:cursor-pointer hover:scale-105 transition-all">
             <ArrowUpIcon className="text-white w-8 h-8 md:w-16 md:h-16  transform rotate-45" />
           </div>
-        </div>
+        </Link>
 
         {/* sponsor us large screen */}
-        <div
-          className="scale-90 lg:w-[555px] lg:h-[240px] 1xl:scale-100 hidden lg:block absolute right-0 1xl:right-20 3xl:right-60 text-center"
+        <Link
+          href="/sponsors"
+          className="scale-90 lg:w-[555px] lg:h-[240px] 1xl:scale-100 3xl:scale-110 hidden lg:block absolute right-0 1xl:right-20 3xl:right-60 text-center"
           style={{
             backgroundImage: "url('/images/landing/sponsorus.webp')",
             backgroundRepeat: "no-repeat",
@@ -269,7 +308,7 @@ export default function Home() {
             <ArrowUpIcon className="text-white w-12 h-12  transform rotate-45" />
           </div>
           <p className="font-bold text-white text-4xl pl-16 pt-3">Sponsor Us</p>
-        </div>
+        </Link>
       </section>
 
       <div className="hidden md:flex bg-[#101321] text-center flex-col gap-7 items-center justify-center pt-20 md:pt-5">
@@ -281,7 +320,10 @@ export default function Home() {
         </div>
       </div>
 
-      <section className=" bg-[#101321] justify-between w-full space-y-10 pt-20 px-5 lg:px-40 2xl:px-60 pb-40">
+      <section
+        id="timeline"
+        className=" bg-[#101321] justify-between w-full space-y-10 pt-20 px-5 lg:px-40 2xl:px-60 pb-40"
+      >
         <p className="text-center outlined-title text-[#101321] text-7xl font-extrabold w-full ">
           MISSION APOLO 27
         </p>
@@ -301,69 +343,84 @@ export default function Home() {
                 <TimelineConnector />
               </TimelineSeparator>
               <TimelineContent className="3xl:flex 3xl:justify-center">
-                <div>
-                  <div
-                    className={
-                      i === teams.length - 1
-                        ? `${currentTimelineItem}`
-                        : `${timelineItem}`
-                    }
-                  >
-                    <div className="px-4 flex flex-col md:flex-row items-center w-full justify-evenly bg-gradient-to-b from-cyan-600 to-cyan-900 rounded-t-2xl py-8">
-                      <p className="text-5xl lg:text-6xl font-boldrounded-xl bg-cyan-950/[0.7] rounded-lg p-1">
-                        {team.year}
-                      </p>
-                      <p className="text-2xl text-center md:text-left w-1/2">
-                        {team.title}
-                      </p>
-                    </div>
-                    <div className="p-4 space-y-5">
-                      <p className="text-md md:text-lg text-center md:text-left font-semibold px-8 md:px-4">
-                        {team.description}
-                      </p>
-                      <Image
-                        src={team.image}
-                        alt="Team Image"
-                        width="0"
-                        height="0"
-                        sizes="100vw"
-                        className="px-8 md:px-4 w-full h-30"
-                      />
-                      <button className="bg-gradient-to-br from-cyan-950 to-cyan-800 p-4 rounded-xl font-semibold hover:scale-105 transition-all">
-                        Ver mas
-                      </button>
-                    </div>
+                <div
+                  className={
+                    i === teams.length - 1
+                      ? `${currentTimelineItem}`
+                      : `${timelineItem}`
+                  }
+                >
+                  <div className="px-4 flex flex-col md:flex-row items-center w-full justify-evenly bg-gradient-to-b from-cyan-600 to-cyan-900 rounded-t-2xl py-8">
+                    <p className="text-5xl lg:text-6xl font-boldrounded-xl bg-cyan-950/[0.7] rounded-lg p-1">
+                      {team.year}
+                    </p>
+                    <p className="text-2xl text-center md:text-left w-1/2">
+                      {team.title}
+                    </p>
                   </div>
-                  <div className="flex justify-evenly">
-                    {team.teamAwards?.map((award, j) => (
-                      <div key={j} className={""}>
-                        <Image
-                          src={"/images/timeline/glass-award.webp"}
-                          alt={award.title}
-                          width={75}
-                          height={50}
-                        />
-                      </div>
-                    ))}
+                  <div className="p-4 space-y-5">
+                    <p className="text-md md:text-lg text-center md:text-left font-semibold px-8 md:px-4">
+                      {team.description}
+                    </p>
+                    <Image
+                      src={team.image}
+                      alt="Team Image"
+                      width="0"
+                      height="0"
+                      sizes="100vw"
+                      className="px-8 md:px-4 w-full h-30"
+                    />
+                    <button
+                      onClick={() => showTeam(team)}
+                      className="bg-gradient-to-br from-cyan-950 to-cyan-800 p-4 rounded-xl font-semibold hover:scale-105 transition-all"
+                    >
+                      Ver mas
+                    </button>
                   </div>
                 </div>
               </TimelineContent>
             </TimelineItem>
           ))}
+          <Dialog
+            open={isOpen}
+            onClose={() => setIsOpen(false)}
+            className="relative z-50"
+          >
+            <div className="fixed inset-0 flex w-screen items-center justify-center p-4 text-white">
+              <DialogPanel className="w-2/3 space-y-4 border bg-cyan-950/[0.8] backdrop-blur-md p-12 rounded-2xl">
+                <DialogTitle className="font-bold text-5xl">
+                  {team?.year}
+                </DialogTitle>
+                <Description>
+                  {team?.description}
+                  {team?.description}
+                  {team?.description}
+                  {team?.description}
+                  {team?.description}
+                  {team?.description}
+                  {team?.description}
+                  {team?.description}
+                </Description>
+                <div className="flex gap-4">
+                  <button className="bg-[#022528] px-3 py-2 rounded-lg transition-shadow duration-100 hover:shadow-md " onClick={() => setIsOpen(false)}>Cancel</button>
+                </div>
+              </DialogPanel>
+            </div>
+          </Dialog>
         </Timeline>
 
-        <div className="md:hidden relative flex flex-wrap justify-around px-8 md:px-0 gap-20">
-          <div className="md:hidden w-[1px] bg-white h-full absolute left-1/2 transform -translate-x-1/2 "></div>
+        <div className="lg:hidden relative flex flex-wrap justify-around px-8 md:px-0 gap-20">
+          <div className="w-[1px] bg-white h-full absolute left-1/2 transform -translate-x-1/2 "></div>
           {teams.map((team, i) => (
-            <div key={i} className="z-10">
+            <div key={i} className="z-10 thecard" onClick={() => flipCard(i)}>
               <div
                 className={
                   i === teams.length - 1
-                    ? `${currentTimelineItem}`
-                    : `${timelineItem}`
+                    ? `${currentTimelineItem} thefront`
+                    : `${timelineItem} thefront`
                 }
               >
-                <div className="md:px-4 flex flex-col md:flex-row items-center w-full justify-evenly bg-gradient-to-b from-cyan-600 to-cyan-900 rounded-t-2xl py-8">
+                <div className="md:px-4 flex flex-col md:flex-row items-center w-full justify-evenly bg-gradient-to-b from-cyan-600 to-cyan-900 rounded-t-2xl py-4 md:py-8">
                   <p className="text-5xl lg:text-6xl font-boldrounded-xl bg-cyan-950/[0.7] rounded-lg p-1">
                     {team.year}
                   </p>
@@ -385,25 +442,35 @@ export default function Home() {
                   />
                 </div>
               </div>
-              <div className="flex justify-evenly">
-                {team.teamAwards?.map((award, j) => (
-                  <div key={j} className={""}>
-                    <Image
-                      src={"/images/timeline/glass-award.webp"}
-                      alt={award.title}
-                      width={75}
-                      height={50}
-                    />
+              <div
+                className={
+                  i === teams.length - 1
+                    ? `${currentTimelineItem} theback`
+                    : `${timelineItem} theback`
+                }
+              >
+                <div className="p-4 space-y-5">
+                  <div className="flex justify-evenly">
+                    {team.teamAwards?.map((award, j) => (
+                      <div key={j} className={""}>
+                        <Image
+                          src={"/images/timeline/glass-award.webp"}
+                          alt={award.title}
+                          width={75}
+                          height={50}
+                        />
+                      </div>
+                    ))}
                   </div>
-                ))}
+                </div>
               </div>
             </div>
           ))}
         </div>
       </section>
 
-      <div className="bg-[#101321]">
-        <section className="transform space-y-20 pb-40">
+      <div id="about-us" className="bg-[#101321]">
+        <section className="transform space-y-20 pb-20 xl:pb-40">
           <p className="text-center text-white font-bold text-5xl 2xl:text-6xl">
             APOLO 2025 DIVISIONS
           </p>
@@ -478,7 +545,7 @@ export default function Home() {
               }}
             >
               {" "}
-              <p className="font-bold text-2xl text-white text-left pl-5">
+              <p className="font-bold text-3xl sm:text-4xl text-white text-left pl-5">
                 Human <br></br> Powered Constelation
               </p>
               <Image
@@ -497,7 +564,7 @@ export default function Home() {
                 backgroundImage: "url('/images/about-us/blue-galaxy.webp')",
               }}
             >
-              <p className="font-bold text-2xl text-white text-right pr-5">
+              <p className="font-bold text-3xl sm:text-4xl text-white text-right pr-5">
                 Remote Controlled Constelation
               </p>
               <Image
