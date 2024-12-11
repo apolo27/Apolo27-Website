@@ -90,13 +90,13 @@ export const Chatbot = ({ isSidebarOpen }) => {
   return (
     <div
       id="chatbot"
-      className={`fixed bottom-0 right-4 bg-white rounded-lg shadow-lg w-72 z-50 transition-transform transform duration-300 ${
+      className={`fixed bottom-4 lg:bottom-0 right-4 bg-white rounded-full lg:rounded-lg shadow-lg w-16 lg:w-72 z-50 transition-transform transform duration-300 ${
         open ? 'scale-105' : ''
       }`}
     >
       <button
         onClick={() => setOpen(!open)}
-        className="w-full h-12 flex justify-center items-center bg-gradient-to-r from-blue-500 to-indigo-600 rounded-t-lg transition-all duration-300"
+        className="w-16 h-16 rounded-full lg:rounded-none lg:rounded-t-lg lg:w-full lg:h-12 flex justify-center items-center bg-gradient-to-r from-blue-500 to-indigo-600 transition-all duration-300"
       >
         <span className="text-white text-xl font-bold">💬</span>
       </button>
