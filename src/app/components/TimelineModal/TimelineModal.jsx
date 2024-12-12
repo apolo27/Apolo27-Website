@@ -6,6 +6,7 @@ import {
   Description,
 } from "@headlessui/react";
 import Image from "next/image";
+import './TimelineModal.css';
 
 const TimelineModal = ({ isOpen, onClose, team }) => {
   if (!team) return null;
