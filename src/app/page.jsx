@@ -15,7 +15,8 @@ import TimelineSeparator from "@mui/lab/TimelineSeparator";
 import TimelineConnector from "@mui/lab/TimelineConnector";
 import TimelineContent from "@mui/lab/TimelineContent";
 import TimelineDot from "@mui/lab/TimelineDot";
-
+import TimelineModal from "./components/TimelineModal/TimelineModal";
+import teams from "./data/teams"; // Importar datos de equipos
 import {
   Description,
   Dialog,
@@ -133,57 +134,9 @@ export default function Home() {
         "Awarded to the team that demonstrates the greatest improvement between the two days of the competition.",
     },
   ];
-  const teams = [
-    {
-      year: 2019,
-      title: "THE ORIGIN",
-      description: `Our journey began in 2019 with a groundbreaking achievement: becoming the first university division team from our country to compete in the NASA Rover Challenge.`,
-      image: "/images/timeline/2019.webp",
-      teamAwards: [],
-    },
-    {
-      year: 2020,
-      title: "PERSEVERANCE IN ADVERSITY",
-      description: `Despite the challenges of the global pandemic, our resilience shone through. Lessons learned paved the way for our historic "System Safety Award" victory.`,
-      image: "/images/timeline/2019.webp",
-      teamAwards: [awards[11]],
-    },
-    {
-      year: 2021,
-      title: "REVAMP AND REINVENTION",
-      description: `With a revamped rover, our team reached new levels of expertise and ignited a passion for STEM in our community through innovative efforts.`,
-      image: "/images/timeline/2019.webp",
-      teamAwards: [],
-    },
-    {
-      year: 2022,
-      title: "EXPANDING OUR IMPACT",
-      description: `2022 marked a turning point with the launch of our interactive "STEM Tour," culminating in winning the prestigious "Engagement Award."`,
-      image: "/images/timeline/2019.webp",
-      teamAwards: [awards[3]],
-    },
-    {
-      year: 2023,
-      title: "A HISTORIC YEAR",
-      description: `A year of Dominican dominance! Major improvements earned us the "Most Improved" and "Team Spirit" awards, cementing our place in history.`,
-      image: "/images/timeline/2019.webp",
-      teamAwards: [awards[19], awards[12]],
-    },
-    {
-      year: 2024,
-      title: "SETTING THE STANDARD",
-      description: `Rising from 2023's successes, we reached new heights in 2024. Our hard work earned us the coveted "Overall Award (2nd place)" and the "Spirit Award", showcasing excellence and unity.`,
-      image: "/images/timeline/2019.webp",
-      teamAwards: [awards[1], awards[12]],
-    },
-    {
-      year: 2025,
-      title: "NEW FRONTIERS",
-      description: `The dawn of the Apolo Division marks a new chapter in 2025. With our sights set high, we're pushing the boundaries of innovation and teamwork.`,
-      image: "/images/timeline/2019.webp",
-      teamAwards: [],
-    },
-  ];
+
+
+  
 
   const flipCard = (i) => {
     if (typeof window !== "undefined") {
@@ -381,33 +334,13 @@ export default function Home() {
               </TimelineContent>
             </TimelineItem>
           ))}
-          <Dialog
-            open={isOpen}
-            onClose={() => setIsOpen(false)}
-            className="relative z-50"
-          >
-            <div className="fixed inset-0 flex w-screen items-center justify-center p-4 text-white">
-              <DialogPanel className="w-2/3 space-y-4 border bg-cyan-950/[0.8] backdrop-blur-md p-12 rounded-2xl">
-                <DialogTitle className="font-bold text-5xl">
-                  {team?.year}
-                </DialogTitle>
-                <Description>
-                  {team?.description}
-                  {team?.description}
-                  {team?.description}
-                  {team?.description}
-                  {team?.description}
-                  {team?.description}
-                  {team?.description}
-                  {team?.description}
-                </Description>
-                <div className="flex gap-4">
-                  <button className="bg-[#022528] px-3 py-2 rounded-lg transition-shadow duration-100 hover:shadow-md " onClick={() => setIsOpen(false)}>Cancel</button>
-                </div>
-              </DialogPanel>
-            </div>
-          </Dialog>
         </Timeline>
+
+        <TimelineModal
+          isOpen={isOpen}
+          onClose={() => setIsOpen(false)}
+          team={team}
+        />
 
         <div className="lg:hidden relative flex flex-wrap justify-around px-8 md:px-0 gap-20">
           <div className="w-[1px] bg-white h-full absolute left-1/2 transform -translate-x-1/2 "></div>
