@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function StemPlanet() {
   return (
-    <div className="flex flex-col md:flex-row items-center justify-center md:space-x-12 space-y-8 md:space-y-0 relative z-10 text-center md:text-left mb-8">
+    <div className="flex flex-col md:flex-row items-center justify-center md:space-x-12 space-y-8 md:space-y-0 relative z-10 text-center md:text-left mb-8 mt-10">
       <img
         src="/images/stem-with-us/Planet.webp"
         alt="Planet"
