@@ -142,61 +142,18 @@ export default function Marketplace() {
           An outer space clothing catalog
         </p>
       </div>
-      <div className="flex flex-col lg:flex-row bg-[#101321]">
+      <div className="flex flex-col lg:flex-row bg-[#121836]">
         <div className="w-full flex flex-col lg:w-1/5 text-center items-center lg:items-start lg:text-left text-white px-4 py-2 lg:py-8 lg:border-r-2 border-b-2 lg:border-b-0 border-r-0 border-blue-100">
           <p className="px-3 text-2xl font-bold">Filter by</p>
           <div className="flex flex-row lg:flex-col">
-            <button
-              className={
-                categoryBtnStyle +
-                (selectedCategory === CategoryEnum.ALL ? " bg-[#666A95]" : "")
-              }
-              onClick={() => setSelectedCategory(CategoryEnum.ALL)}
-            >
-              All
-            </button>
-            <button
-              className={
-                categoryBtnStyle +
-                (selectedCategory === CategoryEnum.T_SHIRT
-                  ? " bg-[#666A95]"
-                  : "")
-              }
-              onClick={() => setSelectedCategory(CategoryEnum.T_SHIRT)}
-            >
-              T-Shirt
-            </button>
-            <button
-              className={
-                categoryBtnStyle +
-                (selectedCategory === CategoryEnum.HOODIE
-                  ? " bg-[#666A95]"
-                  : "")
-              }
-              onClick={() => setSelectedCategory(CategoryEnum.HOODIE)}
-            >
-              Hoodie
-            </button>
-            <button
-              className={
-                categoryBtnStyle +
-                (selectedCategory === CategoryEnum.HATS ? " bg-[#666A95]" : "")
-              }
-              onClick={() => setSelectedCategory(CategoryEnum.HATS)}
-            >
-              Hats
-            </button>
-            <button
-              className={
-                categoryBtnStyle +
-                (selectedCategory === CategoryEnum.ACCESSORIES
-                  ? " bg-[#666A95]"
-                  : "")
-              }
-              onClick={() => setSelectedCategory(CategoryEnum.ACCESSORIES)}
-            >
-              Accesories
-            </button>
+            {
+              [CategoryEnum.ALL, CategoryEnum.T_SHIRT, CategoryEnum.HOODIE, CategoryEnum.HATS, CategoryEnum.ACCESSORIES].map((category, i) => (
+                <button key={i} className={
+                  categoryBtnStyle +
+                  (selectedCategory === category ? " bg-[#666A95]" : "")
+                } onClick={() => setSelectedCategory(category)}>{category}</button>
+              ))
+            }
           </div>
         </div>
         <div className="w-full lg:w-4/5 p-8 space-y-5">
@@ -209,7 +166,7 @@ export default function Marketplace() {
               onChange={(e) => setSearchBar(e.target.value)}
             />
           </div>
-          <section className="w-full grid grid-cols-2 lg:grid-cols-3 gap-10 justify-evenly">
+          <section className="w-full grid grid-cols-2 lg:grid-cols-3 gap-10 justify-center">
             {items
               .filter((item) =>
                 selectedCategory !== CategoryEnum.ALL
@@ -220,7 +177,7 @@ export default function Marketplace() {
               .map((item, i) => (
                 <div
                   key={i}
-                  className="space-y-2 text-left items-center w-fit bg-gradient-to-r from-[#2A2A2A] to-[#161A2C] p-5 rounded-xl
+                  className="space-y-2 text-left items-center w-fit bg-black p-5 rounded-xl
                   hover:cursor-pointer z-10"
                   onClick={() => selectProduct(item)}
                 >

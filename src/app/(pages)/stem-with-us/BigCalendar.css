@@ -22,7 +22,6 @@ button.rbc-input::-moz-focus-inner {
 }
 
 .rbc-calendar {
-
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   display: -webkit-box;
