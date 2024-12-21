@@ -11,6 +11,7 @@ import {
 } from "@headlessui/react";
 
 export default function Marketplace() {
+  const [searchBar, setSearchBar] = useState("");
   const [isOpen, setIsOpen] = useState(false);
   const categoryBtnStyle = `w-full text-left text-lg font-semibold px-3 py-1 my-2 hover:shadow-lg shadow-white hover:bg-[#666A95] rounded-xl transition-all ease-out`;
   const CategoryEnum = Object.freeze({
@@ -126,7 +127,7 @@ export default function Marketplace() {
   return (
     <>
       <div
-        className="z-10 w-full h-[350px] p-8 lg:p-0 text-center flex flex-col justify-center border-b border-blue-100"
+        className="z-10 w-full h-[400px] p-8 lg:p-0 text-center flex flex-col justify-center border-b border-blue-100"
         style={{
           backgroundImage: `url('/images/marketplace/banner2.webp')`,
           backgroundPosition: "center center", // Adjust position of image
@@ -205,6 +206,7 @@ export default function Marketplace() {
               type="text"
               className="px-4 py-3 rounded-r-xl font-semibold w-full bg-white bg-opacity-20 text-white outline-none"
               placeholder="Search for your next fit"
+              onChange={(e) => setSearchBar(e.target.value)}
             />
           </div>
           <section className="w-full grid grid-cols-2 lg:grid-cols-3 gap-10 justify-evenly">
@@ -214,6 +216,7 @@ export default function Marketplace() {
                   ? item.category === selectedCategory
                   : true
               )
+              .filter((item) => item.name.toLowerCase().includes(searchBar))
               .map((item, i) => (
                 <div
                   key={i}

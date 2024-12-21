@@ -115,14 +115,16 @@ export const Form = () => {
   };
 
   return (
-    <div className="w-5/6 md:w-full flex flex-col lg:flex-row rounded-xl bg-white text-black justify-center mt-8">
+    <div className="w-5/6 md:w-full flex flex-col md:flex-row rounded-xl bg-white text-black justify-center mt-8">
       <div className="lg:w-1/2 w-full flex justify-center">
         <Image
           src="/images/stem-with-us/bus.webp"
-          width={500}
-          height={200}
+          width="0"
+          height="0"
           alt="Formulario"
-          className="hidden md:block rounded-tl-lg rounded-bl-lg object-contain max-w-full h-auto opacity-60 lg:opacity-100"
+          sizes="100vw"
+          style={{ objectFit: 'cover' }}
+          className="w-[500px] h-full hidden md:block rounded-tl-lg rounded-bl-lg object-contain max-w-full  opacity-60 md:opacity-100"
         />
       </div>
 

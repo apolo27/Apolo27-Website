@@ -52,13 +52,13 @@ export default function Footer() {
             <h4>Stem With Us</h4>
             <ul>
               <li>
-                <Link href="">Blog</Link>
+                <Link href="/stem-with-us#blogs">Blog</Link>
               </li>
               <li>
-                <Link href="">Events Calendar</Link>
+                <Link href="/stem-with-us#calendar">Events Calendar</Link>
               </li>
               <li>
-                <Link href="">Book a School Visit</Link>
+                <Link href="/stem-with-us#form">Book a School Visit</Link>
               </li>
             </ul>
           </div>
