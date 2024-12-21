@@ -1,5 +1,8 @@
+import SponsorUs from "../../components/sponsor-us/SponsorUs";
 export default function Sponsors() {
-    return (
-        <p>Sponsors</p>
-    )
+  return (
+    <>
+      <SponsorUs />
+    </>
+  );
 }
