@@ -12,7 +12,7 @@ import {
 export default function Footer() {
   return (
     <footer
-      className="flex z-50 p-10 bg-[#0d0f18]"
+      className="flex z-50 p-10 bg-[#0d0f18] border-t-2 border-[#b9efff9f]"
       style={{ position: "relative", zIndex: 10 }}
     >
       <div className="container">
@@ -21,22 +21,19 @@ export default function Footer() {
             <h4>Apolo 27</h4>
             <ul className="">
               <li>
-                <Link href="">Our Shrefry</Link>
+                <Link href="/#timeline">Our Timeline</Link>
               </li>
               <li>
-                <Link href="">Members</Link>
+                <Link href="human-powered-team">Human Powered Team</Link>
               </li>
               <li>
-                <Link href="">Telemetry</Link>
+                <Link href="remote-controlled-team">Remote Controlled Team</Link>
               </li>
               <li>
-                <Link href="">STEM</Link>
+                <Link href="games">STEM Games</Link>
               </li>
               <li>
-                <Link href="">Manufacturing</Link>
-              </li>
-              <li>
-                <Link href="">HERC Simulation</Link>
+                <Link href="marketplace">Marketplace</Link>
               </li>
             </ul>
           </div>
@@ -49,26 +46,19 @@ export default function Footer() {
               <li>
                 <Link href="">Rover</Link>
               </li>
-              <li>
-                <Link href="">Crewmembers</Link>
-              </li>
-              {/* <li><Link href="#environment">Environment</Link></li> */}
-              <li>
-                <Link href="">Sensors</Link>
-              </li>
             </ul>
           </div>
           <div className="footer-col">
             <h4>Stem With Us</h4>
             <ul>
               <li>
-                <Link href="">Blog</Link>
+                <Link href="/stem-with-us#blogs">Blog</Link>
               </li>
               <li>
-                <Link href="">Events Calendar</Link>
+                <Link href="/stem-with-us#calendar">Events Calendar</Link>
               </li>
               <li>
-                <Link href="">Book a School Visit</Link>
+                <Link href="/stem-with-us#form">Book a School Visit</Link>
               </li>
             </ul>
           </div>

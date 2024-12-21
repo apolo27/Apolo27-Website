@@ -12,27 +12,15 @@ import {
   faXTwitter,
 } from '@fortawesome/free-brands-svg-icons';
 
-export default function Marketplace() {
+import EmblaCarousel from '../../components/Carousel/EmblaCarousel';
+
+export default function SocialMedia() {
+  const OPTIONS = {dragFree: true, loop: true, containScroll: false}
   const [platform, setPlatform] = useState('Youtube');
-
-  type Episode = {
-    img: string;
-    title: string;
-    description: string;
-    duration: string;
-    date: Date;
-  };
-
-  type Video = {
-    img: string;
-    title: string;
-    platform: string;
-    color: string;
-  };
 
   const episodes = [
     {
-      img: "/caribestem.png",
+      img: "/images/social-media/caribestem.webp",
       title: "Episode 1",
       description:
         "This is the first episode of the Caribe STEM podcast This is the first episode of the Caribe STEM podcast This is the first episode of the Caribe STEM podcast This is the first episode of the Caribe STEM podcast This is the first episode of the Caribe STEM podcast",
@@ -40,65 +28,68 @@ export default function Marketplace() {
       date: new Date(),
     },
     {
-      img: "/caribestem.png",
+      img: "/images/social-media/caribestem.webp",
       title: "Episode 2",
       description:
         "This is the second episode of the Caribe STEM podcast This is the second episode of the Caribe STEM podcast This is the second episode of the Caribe STEM podcast This is the second episode of the Caribe STEM podcast This is the second episode of the Caribe STEM podcast",
       duration: "30:00",
       date: new Date(),
     },
-  ] as Episode[];
+  ];
 
   const videos = [
     {
-      img: "/caribestem.png",
+      img: "/images/thumbnailExample.webp",
       title: "Video 1",
       platform: "Youtube",
     },
     {
-      img: "/caribestem.png",
+      img: "/images/thumbnailExample.webp",
       title: "Video 2",
       platform: "Youtube",
     },
     {
-      img: "/caribestem.png",
+      img: "/images/thumbnailExample.webp",
       title: "Video 3",
       platform: "Youtube",
     },
+
     {
-      img: "/caribestem.png",
+      img: "/images/thumbnailExample.webp",
       title: "Video 1",
       platform: "Instagram",
     },
     {
-      img: "/caribestem.png",
+      img: "/images/thumbnailExample.webp",
       title: "Video 2",
       platform: "Instagram",
     },
     {
-      img: "/caribestem.png",
+      img: "/images/thumbnailExample.webp",
       title: "Video 3",
       platform: "Instagram",
     },
+
+
     {
-      img: "/caribestem.png",
+      img: "/images/thumbnailExample.webp",
       title: "Video 1",
       platform: "TikTok",
     },
     {
-      img: "/caribestem.png",
+      img: "/images/thumbnailExample.webp",
       title: "Video 2",
       platform: "TikTok",
     },
     {
-      img: "/caribestem.png",
+      img: "/images/thumbnailExample.webp",
       title: "Video 3",
       platform: "TikTok",
     },
-  ] as Video[];
+  ];
 
   return (
-    <div className="bg-apolo-empty-background lg:px-40 px-4 pt-28">
+    <div className="bg-apolo-empty-background lg:px-40 px-4 pt-28 xl:pt-16">
       <div className="mb-20 rounded-full p-4 text-center bg-gradient-to-t from-[#379AE1] to-[#69BF77]">
         <i className="text-3xl md:text-5xl font-bold text-white">
           Social Media
@@ -108,23 +99,24 @@ export default function Marketplace() {
       <div className="flex flex-wrap lg:flex-nowrap">
         <div className="w-full lg:w-1/2 flex justify-center">
           <Image
-            src="/images/caribestem.png"
+            src="/images/social-media/caribestem.webp"
             alt="Instagram"
-            width={300}
-            height={300}
-            className="object-cover"
+            width="0"
+            height="0"
+            sizes='100vw'
+            className="w-[300px] h-[300px] 2xl:w-[400px] 2xl:h-[400px] "
           />
         </div>
         <div className="w-full lg:w-1/2 text-center md:text-left flex flex-col justify-between">
-          <p className="text-[#67E1A8] text-2xl md:text-4xl font-semibold">
+          <p className="text-[#67E1A8] text-2xl md:text-4xl 2xl:text-5xl font-semibold">
             Podcast
           </p>
           <div className="text-4xl md:text-6xl font-extrabold">
-            <span className="bg-clip-text text-transparent bg-gradient-to-t from-[#379AE1] to-[#69BF77]">
+            <span className="bg-clip-text text-transparent bg-gradient-to-t from-[#379AE1] to-[#69BF77] 2xl:text-8xl">
               Caribe STEM
             </span>
           </div>
-          <p className="text-white font-bold">
+          <p className="text-white font-bold 2xl:text-2xl">
             Caribe STEM is a podcast created to share and disseminate STEM
             (science, technology, engineering and mathematics) in the Dominican
             Republic and throughout Latin America. Created by Apolo 27, the
@@ -135,59 +127,26 @@ export default function Marketplace() {
 
       <hr className="my-16" />
 
-      <div className="flex flex-col lg:flex-row justify-between gap-10">
-        <div className="text-center md:text-left">
-          <p className="text-[#DFC86A] text-2xl mb-3">Latest Episodes</p>
+      <div className="flex flex-col lg:flex-row justify-between space-x-10">
+        <div className="text-center md:text-left w-4/6">
+          <p className="text-[#DFC86A] font-medium text-2xl 2xl:text-3xl mb-3">Latest Episodes</p>
           <div className="flex flex-col gap-4 items-center">
-            {episodes.map((episode, i) => (
-              <div
-                key={i}
-                className="flex flex-col lg:flex-row items-center w-full gap-5 bg-gradient-to-r from-[#2A2A2A] to-[#161A2C] p-4 rounded-3xl"
-              >
-                <Image
-                  src={episode.img}
-                  alt="Episode"
-                  width={200}
-                  height={200}
-                  className="w-32 h-32 object-cover"
-                />
-                <div className="flex flex-col gap-4 justify-around md:w-[400px]">
-                  <div className="bg-gradient-to-t from-[#379AE1] to-[#69BF77] bg-clip-text">
-                    <p className="text-2xl md:text-4xl text-transparent">
-                      {episode.title}
-                    </p>
-                  </div>
-                  <p className="text-white font-medium text-sm md:text-base">
-                    {episode.description}
-                  </p>
-                  <div className="flex text-white gap-5 items-center">
-                    <div className="rounded-full bg-[#69BF77]">
-                      <PlayCircleIcon className="h-8 w-8" />
-                    </div>
-                    <p>
-                      <strong>Published:</strong> {episode.date.toDateString()}
-                    </p>
-                    <p>
-                      <strong>Length:</strong> {episode.duration}
-                    </p>
-                  </div>
-                </div>
-              </div>
-            ))}
+
+            <EmblaCarousel slides={episodes} options={OPTIONS} />
           </div>
         </div>
-        <div className="flex flex-col px-10">
-          <p className="text-[#DFC86A] text-2xl mb-3">About our hosts</p>
+        <div className="flex flex-col px-10 z-10 w-2/6">
+          <p className="text-[#DFC86A] text-2xl 2xl:text-3xl mb-3 font-medium">About our hosts</p>
           <div className="flex justify-center">
             <Image
-              src="/images/blankProfile.jpeg"
+              src="/images/blankProfile.webp"
               alt="host"
               width={300}
               height={300}
-              className="object-cover"
+              className="object-cover rounded-t-xl"
             />
           </div>
-          <div className="bg-gradient-to-l from-[#2A2A2A] to-[#161A2C] p-4 rounded-b-3xl text-white flex flex-col gap-2 font-semibold">
+          <div className="bg-gradient-to-l from-[#2A2A2A] to-[#161A2C] p-4 rounded-b-xl text-white flex flex-col gap-2 font-semibold">
             <p>Nombre</p>
             <p>Descripcion</p>
           </div>
@@ -195,7 +154,7 @@ export default function Marketplace() {
       </div>
 
       <div className="mt-20 pb-10">
-        <div className="flex flex-col lg:flex-row lg:justify-between items-center gap-5 mb-5">
+        <div className="flex flex-col lg:flex-row justify-center items-center gap-5 mb-5">
           <button
             className="rounded-full w-42 p-4 text-white text-sm md:text-xl font-bold bg-black w-full max-w-xs"
             onClick={() => setPlatform('TikTok')}
@@ -216,7 +175,7 @@ export default function Marketplace() {
           </button>
         </div>
 
-        <div className="flex flex-wrap gap-4 justify-center lg:justify-between">
+        <div className="flex flex-wrap gap-4 justify-center">
           {videos
             .filter((x) => x.platform === platform)
             .map((video, i) => (
@@ -224,7 +183,7 @@ export default function Marketplace() {
                 <div
                   className="w-[300px] h-[500px] rounded-xl overflow-hidden"
                   style={{
-                    backgroundImage: `url(/images/thumbnailExample.jpg)`,
+                    backgroundImage: `url('/images/social-media/thumbnailExample.webp')`,
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
                   }}

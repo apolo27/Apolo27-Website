@@ -7,8 +7,6 @@ import {
   phoneValidation,
 } from '../../shared/utils/validations';
 import { FormProvider, useForm } from 'react-hook-form';
-import { FormType } from '../../shared/models/form';
-import { Stepper, Step } from 'headless-stepper/components';
 import { useStepper } from 'headless-stepper';
 import React, { useRef } from 'react';
 import { Input } from '../input';
@@ -17,7 +15,7 @@ import { CheckBox } from '../checkBox';
 import emailjs from '@emailjs/browser';
 
 export const Form = () => {
-  const formRef = useRef<HTMLFormElement>(null);
+  const formRef = useRef(null);
 
   const formSchema = yup.object().shape({
     institution: yup.string().required('Institución requerida'),
@@ -38,7 +36,7 @@ export const Form = () => {
     message: yup.string().required('Mensaje requerido'),
   });
 
-  const form = useForm<FormType>({
+  const form = useForm({
     mode: 'onBlur',
     defaultValues: {
       institution: '',
@@ -73,12 +71,12 @@ export const Form = () => {
   const { state, nextStep, prevStep, progressProps, stepsProps, stepperProps } =
     useStepper({ steps });
 
-  const goBack = (e: React.MouseEvent<HTMLButtonElement>) => {
+  const goBack = (e) => {
     e.preventDefault();
     prevStep();
   };
 
-  const goNext = (e: React.MouseEvent<HTMLButtonElement>) => {
+  const goNext = (e) => {
     e.preventDefault();
     if (
       state.currentStep === 0 &&
@@ -99,9 +97,9 @@ export const Form = () => {
   const sendForm = () => {
     emailjs
       .sendForm(
-        process.env.EMAIL_JS_SERVICE as string,
-        process.env.EMAIL_JS_TEMPLATE as string,
-        formRef.current as HTMLFormElement,
+        process.env.EMAIL_JS_SERVICE,
+        process.env.EMAIL_JS_TEMPLATE,
+        formRef.current,
         process.env.EMAIL_JS_USER
       )
       .then(
@@ -117,25 +115,27 @@ export const Form = () => {
   };
 
   return (
-    <div className="flex flex-col lg:flex-row rounded-xl bg-white text-black justify-center mt-8">
+    <div className="w-5/6 md:w-full flex flex-col md:flex-row rounded-xl bg-white text-black justify-center mt-8">
       <div className="lg:w-1/2 w-full flex justify-center">
         <Image
-          src="/images/bus.png"
-          width={400}
-          height={200}
+          src="/images/stem-with-us/bus.webp"
+          width="0"
+          height="0"
           alt="Formulario"
-          className="rounded-tl-lg rounded-bl-lg object-contain max-w-full h-auto opacity-60 lg:opacity-100"
+          sizes="100vw"
+          style={{ objectFit: 'cover' }}
+          className="w-[500px] h-full hidden md:block rounded-tl-lg rounded-bl-lg object-contain max-w-full  opacity-60 md:opacity-100"
         />
       </div>
 
       <FormProvider {...form}>
-        <form ref={formRef} className="lg:w-1/2 w-full flex flex-col gap-5 p-4">
+        <form ref={formRef} className="lg:w-1/2 w-full flex flex-col gap-5 p-8 lg:p-4">
           <Image
-            src="/images/gray-logo.png"
-            height={200}
-            width={75}
+            src="/images/logos/gray-logo.webp"
+            height={100}
+            width={100}
             alt="logo"
-            className="mx-auto opacity-80 lg:opacity-100"
+            className="mx-auto lg:opacity-100"
           />
 
           <div className="flex justify-evenly items-center" {...stepperProps}>
@@ -145,7 +145,7 @@ export const Form = () => {
                   id="circle"
                   className={`rounded-full w-5 h-5 border-double border-2 transition-colors duration-500 ease-in-out ${
                     index <= state.currentStep
-                      ? 'bg-red-500 border-white'
+                      ? 'bg-red-500'
                       : 'bg-gray-200'
                   } ${index <= state.currentStep ? 'delay-50' : ''}`}
                   style={{
@@ -175,7 +175,7 @@ export const Form = () => {
 
           <div>
             {state.currentStep === 0 && (
-              <div className="block">
+              <div className="block space-y-3">
                 <Input
                   placeholder="Nombre de su institución"
                   name={'institution'}
@@ -194,7 +194,7 @@ export const Form = () => {
 
             {state.currentStep === 1 && (
               <div className="block">
-                <div className="flex flex-col h-60 justify-around">
+                <div className="space-y-3 flex flex-col h-60 justify-around">
                   <CheckBox
                     className="text-xl"
                     label="Salón de actividades"
@@ -230,7 +230,7 @@ export const Form = () => {
 
             {state.currentStep === 2 && (
               <div className="block">
-                <div className="flex flex-col h-60 justify-around">
+                <div className="space-y-3 flex flex-col h-60 justify-around">
                   <CheckBox
                     className="text-xl"
                     label="Proyectores"
@@ -271,7 +271,7 @@ export const Form = () => {
 
             {state.currentStep === 3 && (
               <div className="block">
-                <div>
+                <div className='space-y-3 pb-5'>
                   <Input type="date" name="meetingDate" className="text-xl" />
                   <Input
                     type="text"

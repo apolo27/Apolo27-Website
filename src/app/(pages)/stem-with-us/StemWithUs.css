@@ -1,0 +1,527 @@
+.stem-with-us-body{
+  margin-top: 20px;
+  padding-left: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-family: 'Poppins';
+}
+
+.reels {
+  font-family: 'Poppins', sans-serif;
+}
+
+.stem-with-us-container{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background-color:#171A2B;
+  clip-path: path('M0 0L18.1933 210.565C23.6961 274.253 26.4475 306.097 42.9652 330.85C46.4838 336.123 50.404 341.07 54.7342 345.699C75.0613 367.434 105.498 377.405 166.371 397.348C210.077 411.667 257.37 427.22 296.853 440.345C329.151 451.081 345.3 456.449 359.423 470.698C362.423 473.724 365.218 477.011 367.722 480.458C379.514 496.689 383.18 519.484 390.511 565.076C403.897 648.324 446.824 720 554.5 720C630.094 720 718.604 721.151 798.305 722.552C896.139 724.271 945.057 725.131 978.628 752.583C985.606 758.289 992.059 764.856 997.642 771.933C1024.5 805.982 1024.5 855.252 1024.5 953.792V1430.73C1024.5 1549.43 1024.5 1608.78 1056.78 1649.06C1063.52 1657.48 1071.17 1665.13 1079.59 1671.88C1119.88 1704.15 1179.22 1704.15 1297.92 1704.15H1398L1388.56 4102.84H0V0Z');
+}
+
+.stem-with-us section{
+  padding-top: 50px;
+}
+
+.marte-texto{
+  text-shadow: 1px 1px 2px black, 0 0 25px rgb(0, 0, 255), 0 0 5px  rgb(0, 67, 139);;
+}
+
+.calendar_container{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+.calendario{
+  margin-top: 50px;
+}
+
+.eventos{
+  display: flex;
+  justify-content: center;
+  align-items: center;      
+  width: 400px;
+  height: 580px;
+  border: 2px solid #3E4879;
+  background-color: rgba(24, 24, 45, 0.69);
+
+  overflow-y: scroll;
+  border-radius: 10px;
+  padding: 10px;
+  margin-left: 15px;
+
+}
+
+.eventos h2{
+  flex: 0 0 120px;
+}
+
+.eventos::-webkit-scrollbar{
+  display: none;
+}
+
+.eventos:hover::-webkit-scrollbar{
+  display: block;
+}
+
+.calendar_container .card{
+  
+  height: 500px;
+  background-color: red;
+  border-radius: 110px;
+  border: none;
+}
+
+.calendar_container .card-body{
+  height: 500px;
+  background: linear-gradient(45deg, rgb(194,0,7), rgba(182,0,6,0.6));
+  border: none;
+  border-radius: 110px;
+  margin: 15px;
+}
+
+@keyframes popup {
+  0%{
+    transform: scale(1);
+  }
+  50%{
+    transform: scale(1.3);
+  }
+  60%{
+    transform: scale(1.1);
+  }
+  70%{
+    transform: scale(1.2);
+  }
+  80%{
+    transform: scale(1);
+  }
+  90%{
+    transform: scale(1.1);
+  }
+  100%{
+    transform: scale(1);
+  }
+}
+
+.modal-show {
+  animation: popup 0.7s;
+  display: block;
+  position: absolute;
+  bottom: 5px;
+  right: 0px;
+  z-index: 100;
+
+  width: 350px;
+}
+
+.modal-hide {
+  display: none;
+}
+
+.contact-us{
+  margin-top: 50px;
+  position: relative;
+}
+
+.astronautStemIZQ{
+  width: 300px;
+  height: 350px;
+}
+
+.astronautStemDER{
+  display: none;
+}
+
+.recent_videos .carousel{
+  height: 500px;
+}
+
+.recent_videos .carousel-item{
+  height: 500px;
+}
+
+.miniatura{
+  width: 720px;
+  height: 400px;
+  border-radius: 15px;
+  object-fit: cover;
+  filter:brightness(0.7);
+}
+
+.miniatura:hover{
+  cursor: pointer;
+  filter:brightness(1);
+}
+
+.miniatura_overlay{
+  position: absolute;
+  max-width:700px ;
+  bottom: 10px;
+  left: 20%;
+}
+
+section .tutorialsLine-top{
+  width: 85%;
+  margin-left: 8%;
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.tutorials{
+  margin-bottom: 50px;
+  font-family: 'Poppins';
+}
+
+.ver-mas{
+  width: 160px;
+  font-family: 'Poppins';
+  transition: transform 0.3s ease-in-out;
+}
+
+.ver-mas:hover{
+  transform: scale(1.15);
+
+}
+
+section .tutorialsLine-top p{
+  padding-left: 10px;
+  padding-right: 10px;
+  text-decoration: none;
+  font-family: Raleway;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 20px;
+  background: rgba(0, 101, 252, 0.75);
+  box-shadow: 0px 2px 30.7px 0px rgba(0, 100, 250, 0.25), 0px 4px 30.7px 0px rgba(0, 100, 250, 0.25);
+
+}
+
+section .tutorialsLine{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+section .reelsLine{
+  margin-top: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.reel{
+  margin-top: 10px;
+  position: relative;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+  border-radius: 25px;
+  width: 300px;
+  height: 450px;
+  background-size: cover;
+  
+}
+
+.reel:hover{
+  transform: scale(1.15);
+}
+
+.reel_title{
+  font-weight: 700;
+  padding-top: 100%;
+}
+
+
+@-moz-keyframes glow-star {
+  40% { -moz-opacity: 0.3;}
+  90%,100% { -moz-opacity: 1; -moz-transform: scale(1.2);}
+}
+@-webkit-keyframes glow-star {
+  40% { -webkit-opacity: 0.3;}
+  90%,100% { -webkit-opacity: 1; -webkit-transform: scale(1.2);}
+}
+@keyframes glow-star{
+  40% { -webkit-opacity: 0.3; opacity: 0.3;  }
+  90%,100% { -webkit-opacity: 1; opacity: 1; -webkit-transform: scale(1.2); transform: scale(1.2); border-radius: 999999px;}
+}
+
+
+.contact-us .glowing_stars .star{
+  position: absolute;
+  border-radius: 100%;
+  background-color: #fff;
+  width: 4px;
+  height: 4px;
+  opacity: 0.3;
+  will-change: opacity;
+}
+
+.contact-us .glowing_stars .star:nth-child(1){
+  top: 80%;
+  left: 25%;
+  animation: glow-star 2s infinite ease-in-out alternate 1s;
+}
+.contact-us .glowing_stars .star:nth-child(2){
+  top: -20%;
+  left: 40%;
+  animation: glow-star 2s infinite ease-in-out alternate 3s;
+}
+.contact-us .glowing_stars .star:nth-child(3){
+  top: -25%;
+  left: 25%;
+  animation: glow-star 2s infinite ease-in-out alternate 5s;
+}
+.contact-us .glowing_stars .star:nth-child(4){
+  top: 75%;
+  left: 80%;
+  animation: glow-star 2s infinite ease-in-out alternate 7s;
+}
+.contact-us .glowing_stars .star:nth-child(5){
+  top: 90%;
+  left: 50%;
+  animation: glow-star 2s infinite ease-in-out alternate 9s;
+}
+
+.contact-us .glowing_stars .star:nth-child(6){
+  top: 80%;
+  left: 25%;
+  animation: glow-star 2s infinite ease-in-out alternate 1s;
+}
+.contact-us .glowing_stars .star:nth-child(7){
+  top: 20%;
+  left: 40%;
+  animation: glow-star 2s infinite ease-in-out alternate 3s;
+}
+.contact-us .glowing_stars .star:nth-child(8){
+  top: 25%;
+  left: 25%;
+  animation: glow-star 2s infinite ease-in-out alternate 5s;
+}
+.contact-us .glowing_stars .star:nth-child(9){
+  top: 25%;
+  left: 82%;
+  animation: glow-star 2s infinite ease-in-out alternate 7s;
+}
+.contact-us .glowing_stars .star:nth-child(10){
+  top: 46%;
+  left: 37%;
+  animation: glow-star 2s infinite ease-in-out alternate 9s;
+}
+
+.contact-us .glowing_stars .star:nth-child(11){
+  top: 94%;
+  left: 17%;
+  animation: glow-star 2s infinite ease-in-out alternate 1s;
+}
+.contact-us .glowing_stars .star:nth-child(12){
+  top: 26%;
+  left: 48%;
+  animation: glow-star 2s infinite ease-in-out alternate 3s;
+}
+.contact-us .glowing_stars .star:nth-child(13){
+  top: 25%;
+  left: 65%;
+  animation: glow-star 2s infinite ease-in-out alternate 5s;
+}
+.contact-us .glowing_stars .star:nth-child(14){
+  top: 76%;
+  left: 55%;
+  animation: glow-star 2s infinite ease-in-out alternate 7s;
+}
+.contact-us .glowing_stars .star:nth-child(15){
+  top: 100%;
+  left: 60%;
+  animation: glow-star 2s infinite ease-in-out alternate 9s;
+}
+
+.contact-us .glowing_stars .star:nth-child(16){
+  top: 42%;
+  left: 70%;
+  animation: glow-star 2s infinite ease-in-out alternate 1s;
+}
+.contact-us .glowing_stars .star:nth-child(17){
+  top: 72%;
+  left: 40%;
+  animation: glow-star 2s infinite ease-in-out alternate 3s;
+}
+.contact-us .glowing_stars .star:nth-child(18){
+  top: 35%;
+  left: 15%;
+  animation: glow-star 2s infinite ease-in-out alternate 5s;
+}
+.contact-us .glowing_stars .star:nth-child(19){
+  top: 75%;
+  left: 20%;
+  animation: glow-star 2s infinite ease-in-out alternate 7s;
+}
+.contact-us .glowing_stars .star:nth-child(20){
+  top: 10%;
+  left: 30%;
+  animation: glow-star 2s infinite ease-in-out alternate 9s;
+}
+
+
+.contact-us .glowing_stars .star:nth-child(21){
+  top: 90%;
+  left: 80%;
+  animation: glow-star 2s infinite ease-in-out alternate 1s;
+}
+.contact-us .glowing_stars .star:nth-child(22){
+  top: 47%;
+  left: 70%;
+  animation: glow-star 2s infinite ease-in-out alternate 3s;
+}
+.contact-us .glowing_stars .star:nth-child(23){
+  top: 62%;
+  left: 27%;
+  animation: glow-star 2s infinite ease-in-out alternate 5s;
+}
+.contact-us .glowing_stars .star:nth-child(24){
+  top: 65%;
+  left: 70%;
+  animation: glow-star 2s infinite ease-in-out alternate 7s;
+}
+.contact-us .glowing_stars .star:nth-child(25){
+  top: 90%;
+  left: 45%;
+  animation: glow-star 2s infinite ease-in-out alternate 9s;
+}
+
+.contact-us .glowing_stars .star:nth-child(26){
+  top: 35%;
+  left: 5%;
+  animation: glow-star 2s infinite ease-in-out alternate 1s;
+}
+.contact-us .glowing_stars .star:nth-child(27){
+  top: 10%;
+  left: 45%;
+  animation: glow-star 2s infinite ease-in-out alternate 3s;
+}
+.contact-us .glowing_stars .star:nth-child(28){
+  top: 24%;
+  left: 95%;
+  animation: glow-star 2s infinite ease-in-out alternate 5s;
+}
+.contact-us .glowing_stars .star:nth-child(29){
+  top: -22%;
+  left: 85%;
+  animation: glow-star 2s infinite ease-in-out alternate 7s;
+}
+.contact-us .glowing_stars .star:nth-child(30){
+  top: 82%;
+  left: 37%;
+  animation: glow-star 2s infinite ease-in-out alternate 9s;
+}
+
+
+@media screen and (max-width: 1200px) {
+  .contact-us{
+    margin-bottom: 35px;
+  }
+
+  .astronautStemIZQ{
+    display: none;
+  }
+  .astronautStemDER{
+    display: block;
+    width: 50%;
+    height: 50%;
+  }
+
+  .calendario{
+    height: 350px;
+    margin: 0 auto;
+  }
+  
+  .calendar_container{
+    display: block;
+  }
+  
+
+  .eventos{
+    overflow-y:scroll;
+    width: 90%;
+    height: 350px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    border: 2px solid #3E4879;
+  }
+
+  .eventos .card{
+    width: 45%;
+    margin: 10px;
+  }
+
+  .reel:hover{
+    margin-top: 50px;
+    margin-bottom: 40px;
+    transform: scale(1.15);
+  }
+  .miniatura_overlay{
+    left: 12%;
+    max-width:500px;
+  }
+  
+}
+
+@media screen and (max-width: 900px) {
+  .calendario{
+    height: 250px;
+  }
+  .reel{
+    margin-top: 20px;
+  }
+
+  .reel:hover{
+    margin-top: 40px;
+    margin-bottom: 40px;
+    transform: scale(1.15);
+  }
+  
+  .recent_videos .carousel{
+    height: 350px;
+  }
+
+  .miniatura{
+    width: 550px;
+    height: 300px;
+  }
+
+  .miniatura_overlay{
+    position: absolute;
+    left: 12%;
+    max-width:300px;
+  }
+
+}
+
+@media screen and (max-width: 700px) {
+  .eventos{
+    display: block;
+    height: 500px;
+    border: 2px solid #3E4879;
+  }
+
+  .eventos .card{
+    width: 90%;
+  }
+
+  .miniatura{
+    filter:brightness(1);
+  }
+
+}
+
+@media screen and (max-width: 1000px) {
+  .stem-with-us{
+    display: none;
+  }
+}

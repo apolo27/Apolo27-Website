@@ -51,7 +51,6 @@ export const Input = ({
             onBlur: onBlur,
             onChange: (e) => onChange && onChange(e?.target?.value),
           })}
-          autoCapitalize={'on'}
           disabled={disabled}
           maxLength={maxLength}
           type={type}
