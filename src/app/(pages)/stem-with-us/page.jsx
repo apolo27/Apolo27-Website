@@ -5,8 +5,8 @@ import "./MobileStemWithUs.css";
 
 import React, { useState, useEffect } from "react";
 import { Form } from "../../components/form";
-import Slider from "../../components/Slider/Slider";
 import StemPlanet from "../../components/Stem-Planet/StemPlanet";
+import { PlayCircleIcon } from "@heroicons/react/20/solid";
 import { Calendar, momentLocalizer } from "react-big-calendar";
 
 import moment from "moment";
@@ -22,12 +22,16 @@ import { getBlogs } from "./services/FetchBlogs";
 import Image from "next/image";
 import Link from "next/link";
 
+import EmblaCarousel from "../../components/Carousel/EmblaCarousel";
+
 export default function StemWithUs() {
   const [events, setEvents] = useState([]);
   const [eventToShow, setEventToShow] = useState(undefined);
   const [tutorials, setTutorials] = useState([]);
   const [recentVideos, setRecentVideos] = useState([]);
   const [blogs, setBlogs] = useState([]);
+
+  const OPTIONS = { dragFree: true, loop: true, containScroll: false };
 
   const handleSelectedEvent = (event) => {
     setEventToShow(event);
@@ -65,13 +69,11 @@ export default function StemWithUs() {
 
   return (
     <div className="relative flex flex-col items-center justify-between min-h-screen pt-16 pb-16">
-      <div className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-fixed"></div>
-
       <StemPlanet />
 
       <section
         id="blogs"
-        className="mb-10 z-10 w-full h-fit  text-white xl:bg-slate-900 xl:bg-opacity-85 xl:py-10  xl:rounded-r-[35px] xl:overflow-clip 3xl:bg-transparent 3xl:py-0 3xl:mr-0 3xl:rounded-r-none"
+        className="mb-10 z-10 w-full h-fit  text-white lg:bg-slate-900 lg:bg-opacity-85 lg:py-10 3xl:bg-transparent 3xl:py-0 3xl:mr-0 3xl:rounded-r-none"
       >
         <div className="flex justify-center mb-5 bg-teal-50 text-slate-900   bg-opacity-85 p-4 rounded-r-[50px] w-3/5">
           <p className="font-bold text-4xl">Our Recent Blogs</p>
@@ -176,11 +178,57 @@ export default function StemWithUs() {
         </div>
       </section>
 
-      {/* Sección de eventos */}
-      <Slider />
+      {/* <EmblaCarousel options={OPTIONS}>
+        {recentVideos.map((video, i) => (
+          <div
+            key={i}
+            className="embla__slide rounded-3xl justify-center flex z-10 relative w-full h-fit"
+          >
+            <Image 
+            src={video.thumbnail}
+            alt={video.title}
+            width={800}
+            height={400}
+            />
+            <Link href={video.url} className="absolute bottom-0 left-1/2 -translate-x-1/2 bg-white text-3xl text-black px-4 py-2 rounded-lg font-semibold hover:bg-slate-200">
+              <p>Watch</p>
+            </Link>
+            
+          </div>
+        ))}
+      </EmblaCarousel> */}
 
-      {/* Botón para mostrar el formulario en pantallas pequeñas */}
-      <div id="form" className="mt-8 mb-8 relative z-10 flex justify-center">
+      <section className="z-10 flex justify-between gap-20 items-center text-white my-20">
+        <div className="w-96 rounded-r-[175px] rounded-l-xl bg-slate-800 bg-opacity-70 h-full py-20 px-5">
+          <p className="font-bold text-4xl mb-5">
+            Visit our<br></br> <span className="text-red-500">Youtube</span> Channel!
+          </p>
+          <p>Our videos showcase the engineering prowess and dedication that led us to become four-time category winners at HERC. Join us behind the scenes to see our innovative designs and the challenges we overcame. <Link href="https://www.youtube.com/@apolo2730">Subscribe</Link> to stay updated on our latest projects and events.</p>
+        </div>
+        <div className="grid grid-cols-2 grid-rows-2 gap-5">
+          {recentVideos.map((video, i) => (
+            <div key={i} className="w-64 border-2 border-white rounded-2xl hover:cursor-pointer hover:scale-105 transition-all duration-75">
+              <Image
+                src={video.thumbnail}
+                alt={video.title}
+                width={250}
+                height={75}
+                className="rounded-t-2xl"
+              />
+              <p className="font-semibold pb-5 px-5">{video.title}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <div
+        id="form"
+        className="mt-8 mb-8 relative z-10 flex flex-col text-center text-white justify-center"
+      >
+        <p className="text-5xl font-bold">Want to plan a visit?</p>
+        <p className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-b from-violet-400 via-cyan-500 to-red-400">
+          Contact Us Now!
+        </p>
         <Form />
       </div>
     </div>
