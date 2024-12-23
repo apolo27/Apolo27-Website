@@ -21,7 +21,10 @@ const nextConfig = {
             {
                 protocol: 'https',
                 hostname: 'concepto.de',
-                
+            },
+            {
+                protocol: 'https',
+                hostname: 'i.ytimg.com'
             }
         ]
     }
