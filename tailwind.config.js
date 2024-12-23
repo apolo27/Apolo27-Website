@@ -28,6 +28,21 @@ module.exports = {
       '3xl': '1920px',
     },
     extend: {
+      width: {
+        '1/8': '12.5%',
+        '1/11': '9.090909090909091%'
+      },
+      animation: {
+        ["infinite-slider"]: "infiniteSlider 50s linear infinite",
+      },
+      keyframes: {
+        infiniteSlider: {
+          "0%": { transform: "translateX(0)" },
+          "100%": {
+            transform: "translateX(calc(-200px * 11))",
+          },
+        },
+      },
       colors: {
         background: 'var(--background)',
         foreground: 'var(--foreground)',
