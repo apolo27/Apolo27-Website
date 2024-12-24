@@ -22,6 +22,12 @@ export default function RemoteControlledTeam() {
       img: "/images/about-us/rc/Pablo.webp",
     },
     {
+      name: "Pedro Rojas",
+      role: "Funding",
+      career: "Licenciatura en Negocios Internacionales",
+      img: "/images/about-us/rc/PedroRojas.webp",
+    },
+    {
       name: "José Humberto",
       role: "Manufacturing Manager",
       career: "Ingeniería Mecatrónica",
@@ -32,12 +38,6 @@ export default function RemoteControlledTeam() {
       role: "Manufacturing Assistant",
       career: "Ingeniería Mecatrónica",
       img: "/images/about-us/rc/Richard.webp",
-    },
-    {
-      name: "José Neder",
-      role: "Manufacturing Assistant",
-      career: "Ingeniería Mecatrónica",
-      img: "/images/about-us/rc/Neder.webp",
     },
     {
       name: "Sebastian De Leon",
@@ -63,12 +63,7 @@ export default function RemoteControlledTeam() {
       career: "Ingeniería Mecatrónica",
       img: "/images/about-us/rc/Chantal.webp",
     },
-    {
-      name: "Pedro Rojas",
-      role: "Funding",
-      career: "Licenciatura en Negocios Internacionales",
-      img: "/images/about-us/rc/PedroRojas.webp",
-    },
+
   ];
 
   const mentors = [
@@ -100,10 +95,10 @@ export default function RemoteControlledTeam() {
     >
       <div className="w-full flex items-center justify-center mb-10">
         <div className="relative w-fit">
-          <p className="text-5xl 2xl:text-7xl font-bold bg-gradient-to-br from-blue-600 to-cyan-400 text-transparent bg-clip-text pb-10">
+          <p className="text-6xl 2xl:text-7xl font-bold bg-gradient-to-br from-blue-600 to-cyan-400 text-transparent bg-clip-text pb-10">
             Remote Controlled Team
           </p>
-          <Link href="/human-powered-team" className="absolute bottom-0 left-0 flex items-center gap-4 text-white font-medium py-2 px-3 rounded-full bg-gradient-to-br from-red-800 to-violet-700 transition-all ease-in-out hover:animate-pulse hover:scale-105">
+          <Link href="/human-powered-team" className="absolute bottom-0 left-0 flex items-center gap-4 text-white font-medium py-2 px-3 rounded-full bg-gradient-to-br from-red-800 to-violet-700 transition-all ease-in-out hover:scale-105">
             <ArrowLeftIcon className="w-5 h-5" /> HP Division
           </Link>
         </div>
@@ -121,7 +116,7 @@ export default function RemoteControlledTeam() {
         {members.map((member, index) => (
           <div
             key={index}
-            className="w-72 bg-gradient-to-t from-[#172746] to-[#056b82] p-5 rounded-xl position:relative z-10"
+            className="w-[250px] bg-stone-800 border rounded-xl position:relative z-10"
           >
             <Image
               src={member.img}
@@ -130,9 +125,11 @@ export default function RemoteControlledTeam() {
               alt={member.img}
               className="rounded-xl shadow-xl"
             />
-            <p className="text-white font-bold text-xl">{member.name}</p>
-            <p className="text-white font-medium">{member.career}</p>
-            <p className="text-white font-medium">{member.role}</p>
+            <div className="p-5">
+              <p className="text-white font-bold text-xl">{member.name}</p>
+              <p className="text-slate-300 font-medium">{member.career}</p>
+              <p className="font-medium text-cyan-300">{member.role}</p>
+            </div>
           </div>
         ))}
       </div>
@@ -147,20 +144,22 @@ export default function RemoteControlledTeam() {
       </div>{" "}
       <div className="w-full flex flex-wrap justify-evenly gap-20 p-10 lg:p-20">
         {mentors.map((mentor, index) => (
-          <div
-            key={index}
-            className="w-72 bg-gradient-to-br from-[#1d2f49] to-[#20584a] p-5 rounded-xl position:relative z-10"
-          >
-            <Image
-              src={mentor.img}
-              width={250}
-              height={250}
-              alt={mentor.img}
-              className="rounded-xl"
-            />
-            <p className="text-white font-bold">{mentor.name}</p>
-            <p className="text-white font-semibold">{mentor.career}</p>
-          </div>
+                  <div
+                  key={index}
+                  className="w-[250px] bg-stone-800 border rounded-xl position:relative z-10"
+                >
+                  <Image
+                    src={mentor.img}
+                    width={250}
+                    height={250}
+                    alt={mentor.img}
+                    className="rounded-xl shadow-xl"
+                  />
+                  <div className="p-5">
+                    <p className="text-white font-bold text-xl">{mentor.name}</p>
+                    <p className="text-slate-300 font-medium">{mentor.career}</p>
+                  </div>
+                </div>
         ))}
       </div>
     </div>

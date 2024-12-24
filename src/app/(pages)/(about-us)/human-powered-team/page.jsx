@@ -68,24 +68,33 @@ export default function HumanPoweredTeam() {
       career: "Ingeniería Mecatrónica",
       img: "/images/about-us/hp/Nilo.webp",
     },
+
+
     {
       name: "Birgit Sánchez",
       role: "Stem Manager",
       career: "Lic. Biotecnología",
       img: "/images/about-us/hp/Birgit.webp",
     },
+
+
+
     {
       name: "Ángela Stacy",
       role: "Stem assistant",
       career: "Ingeniería de Software",
-      img: "/images/about-us/hp/Ali.webp",
+      img: "/images/about-us/hp/Angela.webp",
     },
+
+
     {
       name: "Lorennis Reyes",
       role: "Stem Assistant",
       career: "Ciencias de Datos",
       img: "/images/about-us/hp/Loren.webp",
     },
+
+
 
     {
       name: "Priscilla Castro",
@@ -135,7 +144,7 @@ export default function HumanPoweredTeam() {
     >
       <div className="w-full flex items-center justify-center mb-10">
         <div className="relative w-fit">
-          <p className="text-5xl 2xl:text-7xl font-bold bg-gradient-to-br from-red-800 to-violet-700 text-transparent bg-clip-text pb-10">
+          <p className="text-6xl 2xl:text-7xl font-bold bg-gradient-to-br from-red-800 to-violet-500 text-transparent bg-clip-text pb-10">
             Human Powered Team
           </p>
           <Link
@@ -160,7 +169,7 @@ export default function HumanPoweredTeam() {
         {members.map((member, index) => (
           <div
             key={index}
-            className="w-72 bg-gradient-to-t from-[#461d17] to-[#330582] p-5 rounded-xl position:relative z-10"
+            className="w-[250px] bg-stone-800 border rounded-xl position:relative z-10"
           >
             <Image
               src={member.img}
@@ -169,10 +178,10 @@ export default function HumanPoweredTeam() {
               alt={member.img}
               className="rounded-xl shadow-xl"
             />
-            <div className="pt-3">
+            <div className="p-5">
               <p className="text-white font-bold text-xl">{member.name}</p>
-              <p className="text-white font-medium">{member.career}</p>
-              <p className="text-white font-medium">{member.role}</p>
+              <p className="text-slate-300 font-medium">{member.career}</p>
+              <p className="font-medium text-rose-400">{member.role}</p>
             </div>
           </div>
         ))}
@@ -189,20 +198,22 @@ export default function HumanPoweredTeam() {
 
       <div className="w-full flex flex-wrap justify-evenly gap-20 p-10 lg:p-20">
         {mentors.map((mentor, index) => (
-          <div
-            key={index}
-            className="w-60 bg-gradient-to-br from-[#1d2f49] to-[#20584a] p-5 rounded-xl position:relative z-10"
-          >
-            <Image
-              src={mentor.img}
-              width={250}
-              height={250}
-              alt={mentor.img}
-              className="rounded-xl"
-            />
-            <p className="text-white font-bold">{mentor.name}</p>
-            <p className="text-white font-semibold">{mentor.career}</p>
-          </div>
+           <div
+           key={index}
+           className="w-[250px] bg-stone-800 border rounded-xl position:relative z-10"
+         >
+           <Image
+             src={mentor.img}
+             width={250}
+             height={250}
+             alt={mentor.img}
+             className="rounded-xl shadow-xl"
+           />
+           <div className="p-5">
+             <p className="text-white font-bold text-xl">{mentor.name}</p>
+             <p className="text-slate-300 font-medium">{mentor.career}</p>
+           </div>
+         </div>
         ))}
       </div>
     </div>

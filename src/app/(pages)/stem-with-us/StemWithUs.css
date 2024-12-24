@@ -36,11 +36,9 @@
   justify-content: center;
   text-align: center;
   position: relative;
+  align-items: center;
 }
-.calendario{
-  margin-top: 50px;
-}
-
+ 
 .eventos{
   display: flex;
   justify-content: center;
@@ -435,10 +433,7 @@ section .reelsLine{
     height: 50%;
   }
 
-  .calendario{
-    height: 350px;
-    margin: 0 auto;
-  }
+
   
   .calendar_container{
     display: block;
@@ -473,9 +468,7 @@ section .reelsLine{
 }
 
 @media screen and (max-width: 900px) {
-  .calendario{
-    height: 250px;
-  }
+
   .reel{
     margin-top: 20px;
   }
