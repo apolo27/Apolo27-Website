@@ -7,6 +7,8 @@ module.exports = {
   ],
   theme: {
     screens: {
+      'xs': '375px',
+      
       'sm': '640px',
       // => @media (min-width: 640px) { ... }
 
@@ -34,6 +36,7 @@ module.exports = {
       },
       animation: {
         ["infinite-slider"]: "infiniteSlider 50s linear infinite",
+        border: 'border 2s linear infinite',
       },
       keyframes: {
         infiniteSlider: {
@@ -42,6 +45,10 @@ module.exports = {
             transform: "translateX(calc(-200px * 11))",
           },
         },
+        border: {
+          to: { '--border-angle': '360deg' },
+        },
+
       },
       colors: {
         background: 'var(--background)',

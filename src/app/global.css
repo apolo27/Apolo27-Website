@@ -11,6 +11,13 @@
   padding: 0;
   margin: 0;
 }
+
+@property --border-angle {
+  inherits: false;
+  initial-value: 0deg;
+  syntax: '<angle>';
+}
+
 .flex-col {
   min-height: auto;
 }

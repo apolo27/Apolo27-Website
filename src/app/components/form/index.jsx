@@ -115,7 +115,7 @@ export const Form = () => {
   };
 
   return (
-    <div className="w-5/6 md:w-full flex flex-col md:flex-row rounded-xl bg-white text-black justify-center mt-8">
+    <div className="w-4/6 xs:w-5/6 lg:w-5/6 md:w-full flex flex-col md:flex-row rounded-xl bg-white text-black justify-center mt-8">
       <div className="lg:w-1/2 w-full flex justify-center">
         <Image
           src="/images/stem-with-us/bus.webp"
