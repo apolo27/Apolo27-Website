@@ -142,8 +142,40 @@ export default function Marketplace() {
           An outer space clothing catalog
         </p>
       </div>
-      <div className="flex flex-col lg:flex-row bg-[#121836]">
-        <div className="w-full flex flex-col lg:w-1/5 text-center items-center lg:items-start lg:text-left text-white px-4 py-2 lg:py-8 lg:border-r-2 border-b-2 lg:border-b-0 border-r-0 border-blue-100">
+      <div className="flex flex-col lg:flex-row bg-[#121836] justify-center items-center w-full h-full">
+        <div className="text-white font-bold text-4xl text-center p-8 lg:p-16 space-y-10">
+          <div className="flex flex-col lg:flex-row justify-center space-x-4">
+            <Image
+              alt="merch1"
+              width={300}
+              height={300}
+              src="/images/marketplace/300.png"
+              className="transition-all opacity-80 filter blur-sm hover:blur-0 hover:opacity-60"
+            />
+            <Image
+              alt="merch2"
+              width={300}
+              height={300}
+              src="/images/marketplace/300.png"
+              className="transition-all opacity-80 filter blur-sm hover:blur-0 hover:opacity-60"
+            />
+            <Image
+              alt="merch3"
+              width={300}
+              height={300}
+              src="/images/marketplace/300.png"
+              className="transition-all opacity-80 filter blur-sm hover:blur-0 hover:opacity-60"
+            />
+          </div>
+          <p>
+            Coming Soon
+            <span className="transition-all animate-bounce duration-75">.</span>
+            <span className="transition-all animate-bounce duration-100">.</span>
+            <span className="transition-all animate-bounce duration-150">.</span>
+          </p>
+        </div>
+
+        {/* <div className="w-full flex flex-col lg:w-1/5 text-center items-center lg:items-start lg:text-left text-white px-4 py-2 lg:py-8 lg:border-r-2 border-b-2 lg:border-b-0 border-r-0 border-blue-100">
           <p className="px-3 text-2xl font-bold">Filter by</p>
           <div className="flex flex-row lg:flex-col">
             {
@@ -193,7 +225,7 @@ export default function Marketplace() {
                 </div>
               ))}
           </section>
-        </div>
+        </div> */}
       </div>
 
       <Dialog

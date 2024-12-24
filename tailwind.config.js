@@ -36,9 +36,14 @@ module.exports = {
       },
       animation: {
         ["infinite-slider"]: "infiniteSlider 50s linear infinite",
+        'infinite-scroll': 'infinite-scroll 12s linear infinite',
         border: 'border 2s linear infinite',
       },
       keyframes: {
+        'infinite-scroll': {
+          from: { transform: 'translateX(10)' },
+          to: { transform: 'translateX(-100%)' },
+        },
         infiniteSlider: {
           "0%": { transform: "translateX(0)" },
           "100%": {

@@ -243,6 +243,13 @@ export default function Home() {
           <p className="absolute font-semibold text-xl md:text-2xl text-left text-white top-16 left-5">
             The team needs your help to win!
           </p>
+          <div className="absolute bottom-0 inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)]">
+            <div className="flex items-center justify-center md:justify-start sm:[&_li]:mx-8 [&_li]:mx-4 [&_img]:max-w-none animate-infinite-scroll">
+              <Image src="/images/sponsors/oro.png" width={180} height={25} alt="sponsor level"/>
+              <Image src="/images/sponsors/plata.png" width={180} height={25} alt="sponsor level"/>
+              <Image src="/images/sponsors/platino.png" width={180} height={25} alt="sponsor level"/>
+            </div>
+          </div>
           <div className="absolute top-1 right-0 bg-[#3b9fc6] rounded-full w-10 h-10 md:w-16 md:h-16  flex items-center justify-center hover:cursor-pointer hover:scale-105 transition-all">
             <ArrowUpIcon className="text-white w-8 h-8 md:w-16 md:h-16  transform rotate-45" />
           </div>
@@ -253,6 +260,7 @@ export default function Home() {
           href="/sponsors"
           className="scale-90 lg:w-[555px] lg:h-[240px] 1xl:scale-100 3xl:scale-110 hidden lg:block absolute right-0 1xl:right-20 3xl:right-60 text-center"
           style={{
+            overflow: "hidden",
             backgroundImage: "url('/images/landing/sponsorus.webp')",
             backgroundRepeat: "no-repeat",
           }}
@@ -261,6 +269,19 @@ export default function Home() {
             <ArrowUpIcon className="text-white w-12 h-12  transform rotate-45" />
           </div>
           <p className="font-bold text-white text-4xl pl-16 pt-3">Sponsor Us</p>
+          <div className="w-11/12 inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)]">
+            <ul className="flex items-center justify-center md:justify-start sm:[&_li]:mx-8 [&_li]:mx-4 [&_img]:max-w-none animate-infinite-scroll">
+              <li><Image src="/images/sponsors/oro.png" width={180} height={25} alt="sponsor level"/></li>
+              <li><Image src="/images/sponsors/plata.png" width={180} height={25} alt="sponsor level"/></li>
+              <li><Image src="/images/sponsors/platino.png" width={180} height={25} alt="sponsor level"/></li>
+            </ul>
+            <ul className="flex items-center justify-center md:justify-start sm:[&_li]:mx-8 [&_li]:mx-4 [&_img]:max-w-none animate-infinite-scroll">
+              <li><Image src="/images/sponsors/oro.png" width={180} height={25} alt="sponsor level"/></li>
+              <li><Image src="/images/sponsors/plata.png" width={180} height={25} alt="sponsor level"/></li>
+              <li><Image src="/images/sponsors/platino.png" width={180} height={25} alt="sponsor level"/></li>
+            </ul>
+
+          </div>
         </Link>
       </section>
 
@@ -458,8 +479,8 @@ export default function Home() {
                   height={300}
                 />
                 <Image
-                  className="absolute scale-x-[-1]"
-                  src="/images/about-us/Anne1.webp"
+                  className="absolute -bottom-10 right-40"
+                  src="/images/about-us/JorgeNoBG.png"
                   alt="Team Lead HP"
                   width={400}
                   height={300}
