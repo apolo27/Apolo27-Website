@@ -238,12 +238,12 @@ export default function Home() {
                       sizes="100vw"
                       className="px-8 md:px-4 w-full h-30"
                     />
-                    <button
+                    {/* <button
                       onClick={() => showTeam(team)}
                       className="bg-gradient-to-br from-cyan-950 to-cyan-800 p-4 rounded-xl font-semibold hover:scale-105 transition-all"
                     >
                       Ver mas
-                    </button>
+                    </button> */}
                   </div>
                 </div>
               </TimelineContent>
@@ -251,11 +251,11 @@ export default function Home() {
           ))}
         </Timeline>
 
-        <TimelineModal
+        {/* <TimelineModal
           isOpen={isOpen}
           onClose={() => setIsOpen(false)}
           team={team}
-        />
+        /> */}
 
         <div className="lg:hidden relative flex flex-wrap justify-around px-8 md:px-0 gap-20">
           <div className="w-[1px] bg-white h-full absolute left-1/2 transform -translate-x-1/2 "></div>
