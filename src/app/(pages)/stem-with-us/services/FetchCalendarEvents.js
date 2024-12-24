@@ -1,7 +1,7 @@
 import request from "superagent";
 import moment from 'moment';
 
-const GOOGLE_CALENDAR_URL = `https://www.googleapis.com/calendar/v3/calendars/${process.env.REACT_APP_CALENDAR_ID}/events?key=${process.env.REACT_APP_API_KEY}`;
+const GOOGLE_CALENDAR_URL = `https://www.googleapis.com/calendar/v3/calendars/${process.env.NEXT_PUBLIC_REACT_APP_CALENDAR_ID}/events?key=${process.env.NEXT_PUBLIC_REACT_APP_API_KEY}`;
 
 export function getEvents(callback) {
   request.get(GOOGLE_CALENDAR_URL).end((err, resp) => {
