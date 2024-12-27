@@ -15,22 +15,17 @@ import TimelineSeparator from "@mui/lab/TimelineSeparator";
 import TimelineConnector from "@mui/lab/TimelineConnector";
 import TimelineContent from "@mui/lab/TimelineContent";
 import TimelineDot from "@mui/lab/TimelineDot";
+import TimelineOppositeContent from "@mui/lab/TimelineOppositeContent";
 import TimelineModal from "./components/TimelineModal/TimelineModal";
-import teams from "./data/teams"; // Importar datos de equipos
-import {
-  Description,
-  Dialog,
-  DialogPanel,
-  DialogTitle,
-  DialogBackdrop,
-} from "@headlessui/react";
+
+import teamsByYear from "./data/teams";
 
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
   const [team, setTeam] = useState(undefined);
   const teamClassName = `opacity-80 hover:opacity-100 transition-all hover:cursor-pointer hover:scale-105`;
   const timelineItem = `max-w-[450px] bg-[#121837] border border-[#666A95] text-white text-center rounded-2xl flex flex-col items-center md:items-start`;
-  const currentTimelineItem = `max-w-[450px] bg-[#121837] border border-[#666A95] text-white text-center rounded-2xl flex flex-col items-center md:items-start shadow-[0px_20px_207px_10px_rgba(165,_39,_255,_0.48)] bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] `;  
+  const currentTimelineItem = `max-w-[450px] bg-[#121837] border border-[#666A95] text-white text-center rounded-2xl flex flex-col items-center md:items-start shadow-[0px_20px_207px_10px_rgba(165,_39,_255,_0.48)] bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] `;
 
   const flipCard = (i) => {
     if (typeof window !== "undefined") {
@@ -79,7 +74,7 @@ export default function Home() {
         </Link>
       </div>
 
-      <section className="bg-[#101321] 2xl:h-[240px] px-5 md:pt-10 3xl:py-20 flex flex-col md:flex-row justify-center items-center md:items-start space-y-5 md:space-y-0 md:pb-56 3xl:pb-72">
+      <section className="bg-[#101321] 2xl:h-[240px] px-5 md:pt-10 3xl:py-20 flex flex-col md:flex-row justify-center items-center md:items-start space-y-5 md:space-y-0 md:pb-20 3xl:pb-72">
         {/* simulation large screen */}
         <Link
           href="/games/Herc-Simulation"
@@ -134,15 +129,74 @@ export default function Home() {
           <p className="absolute font-bold text-3xl md:text-4xl text-white top-5 left-5">
             Sponsor Us!
           </p>
-          <p className="absolute font-semibold text-xl md:text-2xl text-left text-white top-16 left-5">
+          <p className="absolute font-semibold text-lg md:text-2xl text-left text-white top-16 left-5">
             The team needs your help to win!
           </p>
-          <div className="absolute bottom-0 inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)]">
-            <div className="flex items-center justify-center md:justify-start sm:[&_li]:mx-8 [&_li]:mx-4 [&_img]:max-w-none animate-infinite-scroll">
-              <Image src="/images/sponsors/oro.png" width={180} height={25} alt="sponsor level"/>
-              <Image src="/images/sponsors/plata.png" width={180} height={25} alt="sponsor level"/>
-              <Image src="/images/sponsors/platino.png" width={180} height={25} alt="sponsor level"/>
-            </div>
+          <div className="w-11/12 absolute top-14 md:top-16 inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)]">
+            <ul className="flex items-center justify-center md:justify-start sm:[&_li]:mx-8 [&_li]:mx-4 [&_img]:max-w-none animate-infinite-scroll">
+              <li>
+                <Image
+                  src="/images/sponsors/oro.png"
+                  width="0"
+                  height="0"
+                  sizes="100vw"
+                  className="w-36 h-36 md:w-56 md:h-56"
+                  alt="sponsor level"
+                />
+              </li>
+              <li>
+                <Image
+                  src="/images/sponsors/plata.png"
+                  width="0"
+                  height="0"
+                  sizes="100vw"
+                  className="w-36 h-36 md:w-56 md:h-56"
+                  alt="sponsor level"
+                />
+              </li>
+              <li>
+                <Image
+                  src="/images/sponsors/platino.png"
+                  width="0"
+                  height="0"
+                  sizes="100vw"
+                  className="w-36 h-36 md:w-56 md:h-56"
+                  alt="sponsor level"
+                />
+              </li>
+            </ul>
+            <ul className="flex items-center justify-center md:justify-start sm:[&_li]:mx-8 [&_li]:mx-4 [&_img]:max-w-none animate-infinite-scroll">
+              <li>
+                <Image
+                  src="/images/sponsors/oro.png"
+                  width="0"
+                  height="0"
+                  sizes="100vw"
+                  className="w-36 h-36 md:w-56 md:h-56"
+                  alt="sponsor level"
+                />
+              </li>
+              <li>
+                <Image
+                  src="/images/sponsors/plata.png"
+                  width="0"
+                  height="0"
+                  sizes="100vw"
+                  className="w-36 h-36 md:w-56 md:h-56"
+                  alt="sponsor level"
+                />
+              </li>
+              <li>
+                <Image
+                  src="/images/sponsors/platino.png"
+                  width="0"
+                  height="0"
+                  sizes="100vw"
+                  className="w-36 h-36 md:w-56 md:h-56"
+                  alt="sponsor level"
+                />
+              </li>
+            </ul>
           </div>
           <div className="absolute top-1 right-0 bg-[#3b9fc6] rounded-full w-10 h-10 md:w-16 md:h-16  flex items-center justify-center hover:cursor-pointer hover:scale-105 transition-all">
             <ArrowUpIcon className="text-white w-8 h-8 md:w-16 md:h-16  transform rotate-45" />
@@ -165,16 +219,69 @@ export default function Home() {
           <p className="font-bold text-white text-4xl pl-16 pt-3">Sponsor Us</p>
           <div className="w-11/12 inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)]">
             <ul className="flex items-center justify-center md:justify-start sm:[&_li]:mx-8 [&_li]:mx-4 [&_img]:max-w-none animate-infinite-scroll">
-              <li><Image src="/images/sponsors/oro.png" width={180} height={25} alt="sponsor level"/></li>
-              <li><Image src="/images/sponsors/plata.png" width={180} height={25} alt="sponsor level"/></li>
-              <li><Image src="/images/sponsors/platino.png" width={180} height={25} alt="sponsor level"/></li>
+              <li>
+                <Image
+                  src="/images/sponsors/oro.png"
+                  width="0"
+                  height="0"
+                  sizes="100vw"
+                  className="w-36 h-36 md:w-56 md:h-56"
+                  alt="sponsor level"
+                />
+              </li>
+              <li>
+                <Image
+                  src="/images/sponsors/plata.png"
+                  width="0"
+                  height="0"
+                  sizes="100vw"
+                  className="w-36 h-36 md:w-56 md:h-56"
+                  alt="sponsor level"
+                />
+              </li>
+              <li>
+                <Image
+                  src="/images/sponsors/platino.png"
+                  width="0"
+                  height="0"
+                  sizes="100vw"
+                  className="w-36 h-36 md:w-56 md:h-56"
+                  alt="sponsor level"
+                />
+              </li>
             </ul>
             <ul className="flex items-center justify-center md:justify-start sm:[&_li]:mx-8 [&_li]:mx-4 [&_img]:max-w-none animate-infinite-scroll">
-              <li><Image src="/images/sponsors/oro.png" width={180} height={25} alt="sponsor level"/></li>
-              <li><Image src="/images/sponsors/plata.png" width={180} height={25} alt="sponsor level"/></li>
-              <li><Image src="/images/sponsors/platino.png" width={180} height={25} alt="sponsor level"/></li>
+              <li>
+                <Image
+                  src="/images/sponsors/oro.png"
+                  width="0"
+                  height="0"
+                  sizes="100vw"
+                  className="w-36 h-36 md:w-56 md:h-56"
+                  alt="sponsor level"
+                />
+              </li>
+              <li>
+                <Image
+                  src="/images/sponsors/plata.png"
+                  width="0"
+                  height="0"
+                  sizes="100vw"
+                  className="w-36 h-36 md:w-56 md:h-56"
+                  alt="sponsor level"
+                />
+              </li>
+              <li>
+                <Image
+                  src="/images/sponsors/platino.png"
+                  width="0"
+                  height="0"
+                  sizes="100vw"
+                  className="w-36 h-36 md:w-56 md:h-56"
+                  alt="sponsor level"
+                />
+              </li>
             </ul>
-
           </div>
         </Link>
       </section>
@@ -200,38 +307,78 @@ export default function Home() {
           Our Timeline
         </p>
 
-        <Timeline
-          position="alternate-reverse"
-          className="hidden lg:block w-full"
-        >
-          {teams.map((team, i) => (
+        <Timeline position="alternate-reverse" className="hidden lg:block w-full">
+          {teamsByYear.map((yearData, i) => (
             <TimelineItem key={i} className="z-10 ">
+              {yearData.teams.length > 1 && (
+                <TimelineOppositeContent>
+                  <div
+                    className={`
+                      ${
+                        i === teamsByYear.length - 1
+                          ? currentTimelineItem
+                          : timelineItem
+                      }
+                    `}
+                  >
+                    <div className="px-4 flex flex-col md:flex-row items-center w-full justify-evenly bg-gradient-to-b from-cyan-600 to-cyan-900 rounded-t-2xl py-8">
+                      <p className="text-5xl lg:text-6xl font-boldrounded-xl bg-cyan-950/[0.7] rounded-lg p-1">
+                        {yearData?.year}
+                      </p>
+                      <p className="text-2xl text-center md:text-left w-1/2">
+                        {yearData.teams[1]?.title}
+                      </p>
+                    </div>
+                    <div className="p-4 space-y-5">
+                      <p className="text-md md:text-lg text-center md:text-left font-semibold px-8 md:px-4">
+                        {yearData.teams[1]?.description}
+                      </p>
+                      <Image
+                        src={yearData.teams[1]?.image}
+                        alt="Team Image"
+                        width="0"
+                        height="0"
+                        sizes="100vw"
+                        className="px-8 md:px-4 w-full h-30"
+                      />
+                      {/* <button
+                        onClick={() => showTeam(team)}
+                        className="bg-gradient-to-br from-cyan-950 to-cyan-800 p-4 rounded-xl font-semibold hover:scale-105 transition-all"
+                      >
+                        Ver mas
+                      </button> */}
+                    </div>
+                  </div>
+                </TimelineOppositeContent>
+              )}
+
               <TimelineSeparator>
                 <TimelineDot />
                 <TimelineConnector />
               </TimelineSeparator>
+
               <TimelineContent className="3xl:flex 3xl:justify-center">
                 <div
-                  className={
-                    i === teams.length - 1
-                      ? `${currentTimelineItem}`
-                      : `${timelineItem}`
-                  }
+                  className={`${
+                    i === teamsByYear.length - 1
+                      ? currentTimelineItem
+                      : timelineItem
+                  }`}
                 >
                   <div className="px-4 flex flex-col md:flex-row items-center w-full justify-evenly bg-gradient-to-b from-cyan-600 to-cyan-900 rounded-t-2xl py-8">
                     <p className="text-5xl lg:text-6xl font-boldrounded-xl bg-cyan-950/[0.7] rounded-lg p-1">
-                      {team.year}
+                      {yearData.year}
                     </p>
                     <p className="text-2xl text-center md:text-left w-1/2">
-                      {team.title}
+                      {yearData.teams[0].title}
                     </p>
                   </div>
                   <div className="p-4 space-y-5">
                     <p className="text-md md:text-lg text-center md:text-left font-semibold px-8 md:px-4">
-                      {team.description}
+                      {yearData.teams[0].description}
                     </p>
                     <Image
-                      src={team.image}
+                      src={yearData.teams[0].image}
                       alt="Team Image"
                       width="0"
                       height="0"
@@ -258,60 +405,84 @@ export default function Home() {
         /> */}
 
         <div className="lg:hidden relative flex flex-wrap justify-around px-8 md:px-0 gap-20">
-          <div className="w-[1px] bg-white h-full absolute left-1/2 transform -translate-x-1/2 "></div>
-          {teams.map((team, i) => (
+          <div className="w-[1px] bg-white h-full absolute left-1/2 transform -translate-x-1/2"></div>
+          {teamsByYear.map((yearData, i) => (
             <div key={i} className="z-10 thecard" onClick={() => flipCard(i)}>
-              <div
-                className={
-                  i === teams.length - 1
-                    ? `${currentTimelineItem} thefront`
-                    : `${timelineItem} thefront`
-                }
-              >
-                <div className="md:px-4 flex flex-col md:flex-row items-center w-full justify-evenly bg-gradient-to-b from-cyan-600 to-cyan-900 rounded-t-2xl py-4 md:py-8">
-                  <p className="text-5xl lg:text-6xl font-boldrounded-xl bg-cyan-950/[0.7] rounded-lg p-1">
-                    {team.year}
-                  </p>
-                  <p className="text-2xl lg:text-3xl text-center md:text-left w-1/2">
-                    {team.title}
-                  </p>
-                </div>
-                <div className="p-4 space-y-5">
-                  <p className="text-md md:text-lg text-center md:text-left font-semibold px-8 md:px-4">
-                    {team.description}
-                  </p>
-                  <Image
-                    src={team.image}
-                    alt="Team Image"
-                    width="0"
-                    height="0"
-                    sizes="100vw"
-                    className="px-8 pb-8 md:px-4 w-full h-30"
-                  />
-                </div>
-              </div>
-              <div
-                className={
-                  i === teams.length - 1
-                    ? `${currentTimelineItem} theback`
-                    : `${timelineItem} theback`
-                }
-              >
-                <div className="p-4 space-y-5">
-                  <div className="flex justify-evenly">
-                    {team.teamAwards?.map((award, j) => (
-                      <div key={j} className={""}>
-                        <Image
-                          src={"/images/timeline/glass-award.webp"}
-                          alt={award.title}
-                          width={75}
-                          height={50}
-                        />
-                      </div>
-                    ))}
+              {yearData.teams.map((team, j) => (
+                <div
+                  key={j}
+                  className={
+                    i === teamsByYear.length - 1 &&
+                    j === yearData.teams.length - 1
+                      ? `${currentTimelineItem} thefront`
+                      : `${timelineItem} thefront flex`
+                  }
+                >
+                  {/* Front Content */}
+                  <div className="md:px-4 flex flex-col md:flex-row items-center w-full justify-evenly bg-gradient-to-b from-cyan-600 to-cyan-900 rounded-t-2xl py-4 md:py-8">
+                    <p className="text-5xl lg:text-6xl font-bold rounded-xl bg-cyan-950/[0.7] p-1">
+                      {yearData.year}
+                    </p>
+                    <div className="text-center">
+                      <p className="text-xl font-semibold">{team.division}</p>
+                      <p className="text-2xl lg:text-3xl">{team.title}</p>
+                    </div>
+                  </div>
+                  <div className="p-4 space-y-5">
+                    <p className="text-md md:text-lg text-center font-semibold px-8 md:px-4">
+                      {team.description}
+                    </p>
+                    <Image
+                      src={team.image}
+                      alt="Team Image"
+                      width="0"
+                      height="0"
+                      sizes="100vw"
+                      className="px-8 pb-8 md:px-4 w-full h-30"
+                    />
                   </div>
                 </div>
-              </div>
+              ))}
+              {/* Back Content */}
+              {yearData.teams.map((team, j) => (
+                <div
+                  key={`back-${j}`}
+                  className={
+                    i === teamsByYear.length - 1 &&
+                    j === yearData.teams.length - 1
+                      ? `${currentTimelineItem} theback`
+                      : `${timelineItem} theback`
+                  }
+                >
+                  <div className="p-4 space-y-5">
+                    <div className="flex justify-evenly">
+                      {team.teamAwards?.map((award, k) => (
+                        <div key={k}>
+                          <Image
+                            src="/images/timeline/glass-award.webp"
+                            alt={award.title}
+                            width={75}
+                            height={50}
+                          />
+                        </div>
+                      ))}
+                    </div>
+                    {team.badges && (
+                      <div className="flex justify-evenly mt-4">
+                        {team.badges.map((badge, k) => (
+                          <Image
+                            key={k}
+                            src={badge}
+                            alt="Badge"
+                            width={50}
+                            height={50}
+                          />
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                </div>
+              ))}
             </div>
           ))}
         </div>
@@ -320,7 +491,7 @@ export default function Home() {
       <div id="about-us" className="bg-[#101321]">
         <section className="transform space-y-20 pb-20 xl:pb-40">
           <p className="text-center text-white font-bold text-5xl 2xl:text-6xl">
-            APOLO 2025 DIVISIONS
+            APOLO 27&apos;s 2025 DIVISIONS
           </p>
 
           {/* team divisions large screen */}
@@ -373,8 +544,8 @@ export default function Home() {
                   height={300}
                 />
                 <Image
-                  className="absolute -bottom-10 right-40"
-                  src="/images/about-us/JorgeNoBG.png"
+                  className="absolute -bottom-36 right-40"
+                  src="/images/about-us/JorgeCrop.png"
                   alt="Team Lead HP"
                   width={400}
                   height={300}
@@ -416,9 +587,9 @@ export default function Home() {
                 Remote Controlled Constelation
               </p>
               <Image
-                className=" scale-x-[-1]"
-                src="/images/about-us/Anne1.webp"
-                alt="Team Lead HP"
+                className="absolute -bottom-10 right-0"
+                src="/images/about-us/Jorge.png"
+                alt="Team Lead RC"
                 width={520}
                 height={300}
               />
