@@ -1,4 +1,3 @@
-"use client";
 import Image from "next/image";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -10,90 +9,18 @@ import {
   faXTwitter,
 } from "@fortawesome/free-brands-svg-icons";
 
-import EmblaCarousel from "../../components/Carousel/EmblaCarousel";
 import { Tab, TabGroup, TabList, TabPanel, TabPanels } from "@headlessui/react";
 export default function SocialMedia() {
-  const OPTIONS = { dragFree: true, loop: true, containScroll: false };
-
-  const episodes = [
-    {
-      img: "/images/social-media/caribestem.webp",
-      title: "Episode 1",
-      description:
-        "This is the first episode of the Caribe STEM podcast This is the first episode of the Caribe STEM podcast This is the first episode of the Caribe STEM podcast This is the first episode of the Caribe STEM podcast This is the first episode of the Caribe STEM podcast",
-      duration: "30:00",
-      date: new Date(),
-    },
-    {
-      img: "/images/social-media/caribestem.webp",
-      title: "Episode 2",
-      description:
-        "This is the second episode of the Caribe STEM podcast This is the second episode of the Caribe STEM podcast This is the second episode of the Caribe STEM podcast This is the second episode of the Caribe STEM podcast This is the second episode of the Caribe STEM podcast",
-      duration: "30:00",
-      date: new Date(),
-    },
-  ];
-
-  const videos = [
-    {
-      img: "/images/thumbnailExample.webp",
-      title: "Video 1",
-      platform: "Youtube",
-    },
-    {
-      img: "/images/thumbnailExample.webp",
-      title: "Video 2",
-      platform: "Youtube",
-    },
-    {
-      img: "/images/thumbnailExample.webp",
-      title: "Video 3",
-      platform: "Youtube",
-    },
-
-    {
-      img: "/images/thumbnailExample.webp",
-      title: "Video 1",
-      platform: "Instagram",
-    },
-    {
-      img: "/images/thumbnailExample.webp",
-      title: "Video 2",
-      platform: "Instagram",
-    },
-    {
-      img: "/images/thumbnailExample.webp",
-      title: "Video 3",
-      platform: "Instagram",
-    },
-
-    {
-      img: "/images/thumbnailExample.webp",
-      title: "Video 1",
-      platform: "TikTok",
-    },
-    {
-      img: "/images/thumbnailExample.webp",
-      title: "Video 2",
-      platform: "TikTok",
-    },
-    {
-      img: "/images/thumbnailExample.webp",
-      title: "Video 3",
-      platform: "TikTok",
-    },
-  ];
-
   return (
     <div className="bg-apolo-empty-background lg:px-40 px-4 pt-28 xl:pt-16">
-      <div className="mb-20 rounded-full p-4 text-center bg-gradient-to-t from-[#379AE1] to-[#69BF77]">
+      <div className="mb-20 rounded-full p-4 text-center bg-gradient-to-t from-[#379AE1] to-[#69BF77] z-10">
         <i className="text-3xl md:text-5xl font-bold text-white">
           Social Media
         </i>
       </div>
 
       <div className="flex flex-wrap lg:flex-nowrap">
-        <div className="w-full lg:w-1/2 flex justify-center">
+        <div className="w-full lg:w-1/2 flex justify-center z-10">
           <Image
             src="/images/social-media/caribestem.webp"
             alt="Instagram"
@@ -103,16 +30,16 @@ export default function SocialMedia() {
             className="w-[300px] h-[300px] 2xl:w-[400px] 2xl:h-[400px] "
           />
         </div>
-        <div className="w-full lg:w-1/2 text-center md:text-left flex flex-col justify-between">
+        <div className="w-full lg:w-1/2 text-center md:text-left flex flex-col justify-between z-10">
           <p className="text-[#67E1A8] text-2xl md:text-4xl 2xl:text-5xl font-semibold">
             Podcast
           </p>
-          <div className="text-4xl md:text-6xl font-extrabold">
+          <div className="text-4xl md:text-4xl 3xl:text-6xl font-extrabold">
             <span className="bg-clip-text text-transparent bg-gradient-to-t from-[#379AE1] to-[#69BF77] 2xl:text-8xl">
               Caribe STEM
             </span>
           </div>
-          <p className="text-white font-bold 2xl:text-2xl">
+          <p className="text-white font-semibold 2xl:text-2xl">
             Caribe STEM is a podcast created to share and disseminate STEM
             (science, technology, engineering and mathematics) in the Dominican
             Republic and throughout Latin America. Created by Apolo 27, the

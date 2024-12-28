@@ -167,11 +167,11 @@ export default function Marketplace() {
               className="transition-all opacity-80 filter blur-sm hover:blur-0 hover:opacity-60"
             />
           </div>
-          <p>
+          <p className="flex justify-center">
             Coming Soon
-            <span className="transition-all animate-bounce duration-75">.</span>
-            <span className="transition-all animate-bounce duration-100">.</span>
-            <span className="transition-all animate-bounce duration-150">.</span>
+            <span className="block animate-bounce duration-75">.</span>
+            <span className="block animate-bounce duration-100">.</span>
+            <span className="block animate-bounce duration-150">.</span>
           </p>
         </div>
 

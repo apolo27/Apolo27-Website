@@ -23,7 +23,9 @@ export default function Header() {
         className={`${
           pathName === "/"
             ? "bg-[#40D1FF] font-semibold"
-            : pathName === "/marketplace" || pathName === "/stem-with-us"
+            : pathName === "/marketplace" 
+            ? "bg-transparent absolute"
+            : pathName === "/stem-with-us"
             ? "bg-transparent absolute"
             : "bg-gray-800 z-50"
         } w-full font-poppins shadow-md z-50`}
@@ -77,7 +79,7 @@ export default function Header() {
             onClick={toggleSidebar}
             className="lg:hidden focus:outline-none transform transition-transform duration-300 hover:scale-110"
           >
-            <img src="/images/menu.svg" alt="Menu" className="h-8 w-8" />
+            <Image src="/images/menu.svg" alt="Menu" width="0" height="0" sizes="100vw" className="h-8 w-8" />
           </button>
 
           {isSidebarOpen && (
