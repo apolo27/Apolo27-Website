@@ -19,6 +19,7 @@ import TimelineOppositeContent from "@mui/lab/TimelineOppositeContent";
 import TimelineModal from "./components/TimelineModal/TimelineModal";
 
 import teamsByYear from "./data/teams";
+import { teams } from "./data/teams";
 
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
@@ -32,6 +33,12 @@ export default function Home() {
       document.body.querySelectorAll(".thecard")[i].classList.toggle("flipped");
     }
   };
+
+  const flipCardRC = (j) => {
+    if (typeof window !== "undefined") {
+      document.body.querySelectorAll(".thecardRC")[j].classList.toggle("flipped");
+    }
+  }
 
   const showTeam = (team) => {
     setTeam(team);
@@ -307,7 +314,10 @@ export default function Home() {
           Our Timeline
         </p>
 
-        <Timeline position="alternate-reverse" className="hidden lg:block w-full">
+        <Timeline
+          position="alternate-reverse"
+          className="hidden lg:block w-full"
+        >
           {teamsByYear.map((yearData, i) => (
             <TimelineItem key={i} className="z-10 ">
               {yearData.teams.length > 1 && (
@@ -321,11 +331,11 @@ export default function Home() {
                       }
                     `}
                   >
-                    <div className="px-4 flex flex-col md:flex-row items-center w-full justify-evenly bg-gradient-to-b from-cyan-600 to-cyan-900 rounded-t-2xl py-8">
-                      <p className="text-5xl lg:text-6xl font-boldrounded-xl bg-cyan-950/[0.7] rounded-lg p-1">
+                    <div className="gap-4 px-4 flex flex-col md:flex-row items-center w-full justify-evenly bg-gradient-to-b from-cyan-600 to-cyan-900 rounded-t-2xl py-8">
+                      <p className="text-5xl font-boldrounded-xl bg-cyan-950/[0.7] rounded-lg p-1">
                         {yearData?.year}
                       </p>
-                      <p className="text-2xl text-center md:text-left w-1/2">
+                      <p className="text-2xl text-center md:text-left w-5/6">
                         {yearData.teams[1]?.title}
                       </p>
                     </div>
@@ -405,84 +415,129 @@ export default function Home() {
         /> */}
 
         <div className="lg:hidden relative flex flex-wrap justify-around px-8 md:px-0 gap-20">
-          <div className="w-[1px] bg-white h-full absolute left-1/2 transform -translate-x-1/2"></div>
+          <div className="w-[1px] bg-white h-full absolute left-1/2 transform -translate-x-1/2 "></div>
           {teamsByYear.map((yearData, i) => (
-            <div key={i} className="z-10 thecard" onClick={() => flipCard(i)}>
-              {yearData.teams.map((team, j) => (
+            <div key={i} className="flex gap-10">
+              <div className="z-10 thecard" onClick={() => flipCard(i)}>
                 <div
-                  key={j}
                   className={
-                    i === teamsByYear.length - 1 &&
-                    j === yearData.teams.length - 1
+                    i === teamsByYear.length - 1
                       ? `${currentTimelineItem} thefront`
-                      : `${timelineItem} thefront flex`
+                      : `${timelineItem} thefront`
                   }
                 >
-                  {/* Front Content */}
                   <div className="md:px-4 flex flex-col md:flex-row items-center w-full justify-evenly bg-gradient-to-b from-cyan-600 to-cyan-900 rounded-t-2xl py-4 md:py-8">
-                    <p className="text-5xl lg:text-6xl font-bold rounded-xl bg-cyan-950/[0.7] p-1">
+                    <p className="text-5xl lg:text-6xl font-boldrounded-xl bg-cyan-950/[0.7] rounded-lg p-1">
                       {yearData.year}
                     </p>
-                    <div className="text-center">
-                      <p className="text-xl font-semibold">{team.division}</p>
-                      <p className="text-2xl lg:text-3xl">{team.title}</p>
-                    </div>
+                    <p className="text-2xl lg:text-3xl text-center md:text-left w-1/2">
+                      {yearData.teams[0].title}
+                    </p>
                   </div>
                   <div className="p-4 space-y-5">
-                    <p className="text-md md:text-lg text-center font-semibold px-8 md:px-4">
-                      {team.description}
+                    <p className="text-md md:text-lg text-center md:text-left font-semibold px-8 md:px-4">
+                      {yearData.teams[0].description}
                     </p>
+
                     <Image
-                      src={team.image}
+                      src={yearData.teams[0].image}
                       alt="Team Image"
                       width="0"
                       height="0"
                       sizes="100vw"
-                      className="px-8 pb-8 md:px-4 w-full h-30"
+                      className="px-8 pb-8 md:px-4 w-full h-full h-30"
                     />
                   </div>
                 </div>
-              ))}
-              {/* Back Content */}
-              {yearData.teams.map((team, j) => (
                 <div
-                  key={`back-${j}`}
                   className={
-                    i === teamsByYear.length - 1 &&
-                    j === yearData.teams.length - 1
+                    i === teamsByYear.length - 1
                       ? `${currentTimelineItem} theback`
                       : `${timelineItem} theback`
                   }
                 >
                   <div className="p-4 space-y-5">
-                    <div className="flex justify-evenly">
-                      {team.teamAwards?.map((award, k) => (
-                        <div key={k}>
+                    <div className="flex justify-evenly flex-col gap-10">
+                      {yearData.teams[0].teamAwards?.map((award, j) => (
+                        <div
+                          key={j}
+                          className="flex flex-col items-center bg-gradient-to-br from-blue-950 via cyan-900 to-black p-4 bg-opacity-60 border-2 border-white rounded-xl text-white font-medium"
+                        >
                           <Image
-                            src="/images/timeline/glass-award.webp"
                             alt={award.title}
-                            width={75}
-                            height={50}
-                          />
-                        </div>
-                      ))}
-                    </div>
-                    {team.badges && (
-                      <div className="flex justify-evenly mt-4">
-                        {team.badges.map((badge, k) => (
-                          <Image
-                            key={k}
-                            src={badge}
-                            alt="Badge"
+                            src="/images/timeline/glass-award.webp"
                             width={50}
                             height={50}
                           />
-                        ))}
-                      </div>
-                    )}
+                          <p className="font-bold text-lg">{award.title}</p>
+                          <p className="font-medium">{award.description}</p>
+                        </div>
+                      ))}
+                    </div>
                   </div>
                 </div>
-              ))}
+              </div>
+              {yearData.teams.length > 1 && (
+                <div className="z-10 thecard" onClick={() => flipCard(i+1)}>
+                  <div
+                    className={
+                      i === teamsByYear.length - 1
+                        ? `${currentTimelineItem} thefront`
+                        : `${timelineItem} thefront`
+                    }
+                  >
+                    <div className="md:px-4 flex flex-col md:flex-row items-center w-full justify-evenly bg-gradient-to-b from-cyan-600 to-cyan-900 rounded-t-2xl py-4 md:py-8">
+                      <p className="text-5xl lg:text-6xl font-boldrounded-xl bg-cyan-950/[0.7] rounded-lg p-1">
+                        {yearData.year}
+                      </p>
+                      <p className="text-2xl lg:text-3xl text-center md:text-left w-1/2">
+                        {yearData.teams[1]?.title}
+                      </p>
+                    </div>
+                    <div className="p-4 space-y-5">
+                      <p className="text-md md:text-lg text-center md:text-left font-semibold px-8 md:px-4">
+                        {yearData.teams[1]?.description}
+                      </p>
+
+                      <Image
+                        src={yearData.teams[1]?.image}
+                        alt="Team Image"
+                        width="0"
+                        height="0"
+                        sizes="100vw"
+                        className="px-8 pb-8 md:px-4 w-full h-full h-30"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    className={
+                      i === teamsByYear.length - 1
+                        ? `${currentTimelineItem} theback`
+                        : `${timelineItem} theback`
+                    }
+                  >
+                    <div className="p-4 space-y-5">
+                      <div className="flex justify-evenly flex-col gap-10">
+                        {yearData.teams[1]?.teamAwards?.map((award, j) => (
+                          <div
+                            key={j}
+                            className="flex flex-col items-center bg-gradient-to-br from-blue-950 via cyan-900 to-black p-4 bg-opacity-60 border-2 border-white rounded-xl text-white font-medium"
+                          >
+                            <Image
+                              alt={award.title}
+                              src="/images/timeline/glass-award.webp"
+                              width={50}
+                              height={50}
+                            />
+                            <p className="font-bold text-lg">{award.title}</p>
+                            <p className="font-medium">{award.description}</p>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              )}
             </div>
           ))}
         </div>

@@ -101,6 +101,65 @@ const awards = [
   },
 ];
 
+// export const teams = [
+//   {
+//     year: 2019,
+//     title: "THE ORIGIN",
+//     description: `Our journey began in 2019 with a groundbreaking achievement: becoming the first university division team from our country to compete in the NASA Rover Challenge.`,
+//     image: "/images/timeline/2019.webp",
+//     teamAwards: [],
+//   },
+//   {
+//     year: 2020,
+//     title: "PERSEVERANCE IN ADVERSITY",
+//     description: `Despite the challenges of the global pandemic, our resilience shone through. Lessons learned paved the way for our historic "System Safety Award" victory.`,
+//     image: "/images/timeline/2020.webp",
+//     teamAwards: [awards[11]],
+//   },
+//   {
+//     year: 2021,
+//     title: "REVAMP AND REINVENTION",
+//     description: `With a revamped rover, our team reached new levels of expertise and ignited a passion for STEM in our community through innovative efforts.`,
+//     image: "/images/timeline/2021.webp",
+//     teamAwards: [],
+//   },
+//   {
+//     year: 2022,
+//     title: "EXPANDING OUR IMPACT",
+//     description: `2022 marked a turning point with the launch of our interactive "STEM Tour," culminating in winning the prestigious "Engagement Award."`,
+//     image: "/images/timeline/2022.webp",
+//     teamAwards: [awards[3]],
+//   },
+//   {
+//     year: 2023,
+//     title: "A HISTORIC YEAR",
+//     description: `A year of Dominican dominance! Major improvements earned us the "Most Improved" and "Team Spirit" awards, cementing our place in history.`,
+//     image: "/images/timeline/2023.webp",
+//     teamAwards: [awards[19], awards[12]],
+//   },
+//   {
+//     year: 2024,
+//     title: "SETTING THE STANDARD",
+//     description: `Rising from 2023's successes, we reached new heights in 2024. Our hard work earned us the coveted "Overall Award (2nd place)" and the "Spirit Award", showcasing excellence and unity.`,
+//     image: "/images/timeline/2024.webp",
+//     teamAwards: [awards[1], awards[12]],
+//     badges: ["/images/badges/lunar-navigation.webp"],
+//   },
+//   {
+//     year: 2025,
+//     title: "NEW FRONTIERS",
+//     description: `The dawn of the Apolo Division marks a new chapter in 2025. With our sights set high, we're pushing the boundaries of innovation and teamwork.`,
+//     image: "/images/timeline/2024.webp",
+//     teamAwards: [],
+//     badges: [
+//       "/images/badges/innovation.webp",
+//       "/images/badges/stem-engagement.webp",
+//     ],
+    
+//   },
+// ];
+
+
 const teamsByYear = [
   {
     year: 2019,
@@ -182,7 +241,7 @@ const teamsByYear = [
         division: "Human Powered",
         title: "NEW FRONTIERS",
         description: `The dawn of the Apolo Division marks a new chapter in 2025. With our sights set high, we're pushing the boundaries of innovation and teamwork.`,
-        image: "/images/timeline/2019.webp",
+        image: "/images/timeline/2024.webp",
         teamAwards: [],
         badges: [
           "/images/badges/innovation.webp",
@@ -193,11 +252,12 @@ const teamsByYear = [
         division: "Remote Controlled",
         title: "PIONEERING REMOTE CONTROLLED MISSIONS",
         description: `Our RC team embarks on its first year with bold ideas and even bolder engineering.`,
-        image: "/images/timeline/2025-rc.webp",
+        image: "/images/timeline/2024.webp",
         teamAwards: [], // Add any RC awards if applicable
       },
     ],
   },
+
 ];
 
 export default teamsByYear;
