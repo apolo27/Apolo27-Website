@@ -1,23 +1,23 @@
-'use client';
-import { useState, useEffect } from 'react';
-import { usePathname } from 'next/navigation';
-import Provider from './components/Provider/Provider';
-import Wrapper from './components/Wrapper/Wrapper';
-import KeyVisual from './components/KeyVisual/KeyVisual';
-import Earth from './pages/Earth/Earth';
-import { AnimatePresence } from 'framer-motion';
+"use client";
+import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
+import Provider from "./components/Provider/Provider";
+import Wrapper from "./components/Wrapper/Wrapper";
+import KeyVisual from "./components/KeyVisual/KeyVisual";
+import Earth from "./pages/Earth/Earth";
+import { AnimatePresence } from "framer-motion";
 
-import Mars from './pages/Mars/Mars';
-import Mercury from './pages/Mercury/Mercury';
-import Venus from './pages/Venus/Venus';
-import Jupiter from './pages/Jupiter/Jupiter';
-import Saturn from './pages/Saturn/Saturn';
-import Uranus from './pages/Uranus/Uranus';
-import Neptune from './pages/Neptune/Neptune';
+import Mars from "./pages/Mars/Mars";
+import Mercury from "./pages/Mercury/Mercury";
+import Venus from "./pages/Venus/Venus";
+import Jupiter from "./pages/Jupiter/Jupiter";
+import Saturn from "./pages/Saturn/Saturn";
+import Uranus from "./pages/Uranus/Uranus";
+import Neptune from "./pages/Neptune/Neptune";
 
 function SponsorUs() {
   const pathname = usePathname();
-  const [activePlanet, setActivePlanet] = useState('/');
+  const [activePlanet, setActivePlanet] = useState("/");
 
   useEffect(() => {
     setActivePlanet(pathname);
@@ -27,15 +27,17 @@ function SponsorUs() {
     <Provider>
       <Wrapper>
         <AnimatePresence>
-          {pathname === '/earth' && <Earth />}
-          {pathname === '/mars' && <Mars />}
-          {pathname === '/mercury' && <Mercury />}
-          {pathname === '/venus' && <Venus />}
-          {pathname === '/jupiter' && <Jupiter />}
-          {pathname === '/saturn' && <Saturn />}
-          {pathname === '/uranus' && <Uranus />}
-          {pathname === '/neptune' && <Neptune />}
-          {pathname === '/' && <KeyVisual activePlanet={activePlanet} />}
+          {pathname === "/sponsors/earth" && <Earth />}
+          {pathname === "/sponsors/mars" && <Mars />}
+          {pathname === "/sponsors/mercury" && <Mercury />}
+          {pathname === "/sponsors/venus" && <Venus />}
+          {pathname === "/sponsors/jupiter" && <Jupiter />}
+          {pathname === "/sponsors/saturn" && <Saturn />}
+          {pathname === "/sponsors/uranus" && <Uranus />}
+          {pathname === "/sponsors/neptune" && <Neptune />}
+          {pathname === "/sponsors" && (
+            <KeyVisual activePlanet={activePlanet} />
+          )}
         </AnimatePresence>
       </Wrapper>
     </Provider>

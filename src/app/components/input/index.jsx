@@ -6,10 +6,8 @@ import {
   CheckCircleIcon,
   EyeIcon,
   EyeSlashIcon,
-} from "@heroicons/react/24/outline";
+} from "@heroicons/react/solid";
 import { getErrorFromFormState } from "../../shared/utils/getErrorFromFormState";
-
-
 
 export const Input = ({
   label,
@@ -28,8 +26,7 @@ export const Input = ({
   const { register, formState, getValues } = useFormContext();
 
   const hasValue = getValues(name);
-  const hasErrors = getErrorFromFormState(name, formState.errors)
-    ?.message;
+  const hasErrors = getErrorFromFormState(name, formState.errors)?.message;
   const isDirty = getErrorFromFormState(name, formState.dirtyFields);
   const isValid = !hasErrors && isDirty && hasValue;
   const defaultClass = "w-full p-4 h-[48px] border rounded-md bg-[#F7F7F769]";
@@ -45,7 +42,7 @@ export const Input = ({
         </label>
       )}
       <div className="relative block rounded mt-0.5">
-        <input 
+        <input
           id={name}
           {...register(name, {
             onBlur: onBlur,
@@ -68,7 +65,7 @@ export const Input = ({
           </div>
         )}
 
-        {(isValid) && (
+        {isValid && (
           <div
             className={`text-green-3 text-xs items-center flex right-0 top-0 pr-3 bottom-0 absolute pointer-events-none`}
           >

@@ -2,13 +2,10 @@
 import { useState } from "react";
 import Image from "next/image";
 import { Timer } from "./components/Timer";
-import { ArrowUpIcon } from "@heroicons/react/20/solid";
+import ArrowUpIcon from "@heroicons/react/solid";
+import ArrowDownCircleIcon from "@heroicons/react/solid";
+import ArrowRightIcon from "@heroicons/react/solid";
 import Link from "next/link";
-import {
-  ArrowDownCircleIcon,
-  ArrowRightIcon,
-} from "@heroicons/react/24/outline";
-
 import Timeline from "@mui/lab/Timeline";
 import TimelineItem from "@mui/lab/TimelineItem";
 import TimelineSeparator from "@mui/lab/TimelineSeparator";
@@ -33,110 +30,8 @@ export default function Home() {
   const currentTimelineItem = `max-w-[450px] bg-[#121837] border border-[#666A95] text-white text-center rounded-2xl flex flex-col items-center md:items-start shadow-[0px_20px_207px_10px_rgba(165,_39,_255,_0.48)] bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] `;
 
   const awards = [
-    {
-      title: "Overall Winner #1",
-      description:
-        "Awarded to the top overall team. Design reviews, educational STEM engagement, safety, and a successful excursion will all factor into the Overall Winner. ",
-    },
-    {
-      title: "Overall Winner #2",
-      description:
-        "Awarded to the top overall team. Design reviews, educational STEM engagement, safety, and a successful excursion will all factor into the Overall Winner. ",
-    },
-    {
-      title: "Overall Winner #3",
-      description:
-        "Awarded to the top overall team. Design reviews, educational STEM engagement, safety, and a successful excursion will all factor into the Overall Winner. ",
-    },
-    {
-      title: "STEM Engagement Award",
-      description:
-        "Awarded to the team that is determined to have best inspired the study of STEM-related topics in their community to include collaboration with middle school students for the Task Challenge. This team not only presented a high number of activities to a large number of people, but also delivered quality activities to a wide range of audiences.",
-    },
-    {
-      title: "Project Review",
-      description:
-        "Awarded to the team that is deemed to have the best combination of written reviews and formal presentations.",
-    },
-    {
-      title: "Phoenix",
-      description:
-        "Awarded to the team that demonstrates the greatest improvement between Design Review and Operational Readiness Review.",
-    },
-    {
-      title: "Social Media",
-      description:
-        "Awarded to the team that has the most active and creative social media presence throughout the project year.",
-    },
-    {
-      title: "Task Challenge",
-      description:
-        "Awarded to the team that best demonstrates a multi-tool design for the liquid sample retrieval tasks.",
-    },
-    {
-      title: "Featherweight",
-      description:
-        "Awarded to the team that best addressed the ongoing space exploration challenge of weight management, delivering an innovative approach to safe minimization of rover weight. (Only awarded to one team overall.)",
-    },
-    {
-      title: "Ingenuity",
-      description:
-        "Awarded to the team that approaches any complex project or engineering problem in unique and creative ways.",
-    },
-    {
-      title: "Pit Crew",
-      description:
-        "Awarded to the team as judged by the pit crew that best demonstrates resourcefulness, motivation, good sportsmanship, and team spirit in repairing or working on their rover while the teams are in the pit area.",
-    },
-    {
-      title: "System Safety Award",
-      description:
-        "Awarded to the team that best demonstrates a comprehensive approach to system safety as it relates to their vehicle, personnel, and operations. ",
-    },
-    {
-      title: "Team Spirit Award",
-      description:
-        "Awarded to the team that is judged by their peers that display the “Best Team Spirit” during the on-site events.",
-    },
-    {
-      title: "Crash and Burn",
-      description:
-        "Awarded to the team that embraces failure as a learning lesson for future success. (Only awarded to one team overall). ",
-    },
-    {
-      title: "Rookie of the Year",
-      description:
-        "Awarded to the top overall newcomer team. (Same judging criteria as overall award. If rookie team is awarded an overall award, the 2nd place standing rookie team will receive the award, and so forth. Only awarded to one team overall) ",
-    },
-    {
-      title: "Pay It Forward Award",
-      description:
-        "This Artemis Student Challenge (ASC) award is given to the team that best conducts impactful educational engagement events in their community or further. Educational engagement includes instructional, hands-on activities where participants engage in learning a STEM-related concept by actively participating in an activity. Each challenge activity lead will choose the top teams from each challenge for consideration of fnal awardees. ",
-    },
-    {
-      title: "Innovation Award",
-      description:
-        "This Artemis Student Challenge (ASC) award is given to teams that best create new, innovative ideas and/or solutions within the scope of their respective challenge. Ingenuity, creativity, and inventiveness in either technology or non-technology focused ideas are awarded for their original ideas, creating effciency, effective results, and/or solving a problem. Each challenge activity lead will choose the top teams from each challenge for consideration of fnal awardees. ",
-    },
-    {
-      title: "Artemis Educator Award",
-      description:
-        "This Artemis Student Challenge (ASC) award is given to educators/faculty/mentors in each challenge as nominated by student team members. Student team members will recognize their faculty/mentor(s) who inspire learners and motivate them to work hard, achieving more than the team members thought possible. The award acknowledges the time and dedication educators/ faculty/mentors take to be exceptional teachers. Educators/faculty/mentors are noted for their commitment to learning and their valuable efforts for motivating and inspiring others.",
-    },
-    {
-      title: "Other Awards",
-      description:
-        "Other awards will be given based on components of the competition, such as discussions within Design Review and Operational Readiness Review reports or the in-person competition.",
-    },
-    {
-      title: "Most Improved",
-      description:
-        "Awarded to the team that demonstrates the greatest improvement between the two days of the competition.",
-    },
+    // ...array de premios...
   ];
-
-
-  
 
   const flipCard = (i) => {
     if (typeof window !== "undefined") {
@@ -147,6 +42,13 @@ export default function Home() {
   const showTeam = (team) => {
     setTeam(team);
     setIsOpen(true);
+  };
+
+  const scrollToTeamDivisions = () => {
+    const element = document.getElementById("team-divisions");
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   return (
@@ -219,9 +121,7 @@ export default function Home() {
               Completa el formulario para tu Centro Educativo
             </p>
           </div>
-          <div>
-            <ArrowRightIcon className="w-5 h-5 text-white transition-transform hover:translate-x-5" />
-          </div>
+          <div></div>
         </Link>
 
         {/*sponsor us mobile*/}
@@ -268,8 +168,8 @@ export default function Home() {
         <p className="explore-more-text bg-clip-text bg-gradient-to-r from-gray-800 via-white via-50% to-gray-800 text-transparent font-bold text-3xl md:text-4xl 3xl:text-5xl w-full md:w-60 2xl:w-80">
           Explore More About Us
         </p>
-        <div>
-          <ArrowDownCircleIcon className="w-10 3xl:w-20 h-10 3xl:h-20 text-white transition-transform animate-bounce" />
+        <div onClick={scrollToTeamDivisions}>
+          <ArrowDownCircleIcon className="w-10 3xl:w-20 h-10 3xl:h-20 text-white transition-transform animate-bounce cursor-pointer" />
         </div>
       </div>
 
@@ -402,7 +302,7 @@ export default function Home() {
         </div>
       </section>
 
-      <div id="about-us" className="bg-[#101321]">
+      <div id="team-divisions" className="bg-[#101321]">
         <section className="transform space-y-20 pb-20 xl:pb-40">
           <p className="text-center text-white font-bold text-5xl 2xl:text-6xl">
             APOLO 2025 DIVISIONS
@@ -432,6 +332,33 @@ export default function Home() {
                 />
                 <Image
                   className="-ml-40"
+                  src="/images/about-us/Anne1.webp"
+                  alt="Team Lead HP"
+                  width={400}
+                  height={300}
+                />
+              </div>
+            </Link>
+            <Link
+              href="/remote-controlled-team"
+              className={`${teamClassName} drop-shadow-sm h-[600px] rounded-[50px] w-2/5 2xl:w-2/6 text-right pr-5 overflow-hidden relative`}
+              style={{
+                backgroundImage: "url('/images/about-us/blue-galaxy.webp')",
+              }}
+            >
+              <p className="font-bold text-5xl text-white text-right -mb-10 pt-10 w-3/4 ml-32">
+                Remote Controlled Constelation
+              </p>
+              <div className="flex ">
+                <Image
+                  className="absolute -bottom-40 right-0"
+                  src="/images/about-us/Humberto1.webp"
+                  alt="Team Lead RC"
+                  width={200}
+                  height={300}
+                />
+                <Image
+                  className="absolute scale-x-[-1]"
                   src="/images/about-us/Anne1.webp"
                   alt="Team Lead HP"
                   width={400}
