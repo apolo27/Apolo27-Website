@@ -3,7 +3,9 @@ import { useState } from "react";
 import Image from "next/image";
 import { Timer } from "./components/Timer";
 import { ArrowUpIcon } from "@heroicons/react/20/solid";
-import Link from "next/link";
+
+import {Link} from '../../i18n/routing';
+
 import {
   ArrowDownCircleIcon,
   ArrowRightIcon,
@@ -18,8 +20,8 @@ import TimelineDot from "@mui/lab/TimelineDot";
 import TimelineOppositeContent from "@mui/lab/TimelineOppositeContent";
 import TimelineModal from "./components/TimelineModal/TimelineModal";
 
-import teamsByYear from "./data/teams";
-import { teams } from "./data/teams";
+import teamsByYear from './shared/timelinedata/teams';
+import {teams} from './shared/timelinedata/teams';
 
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
@@ -294,7 +296,7 @@ export default function Home() {
       </section>
 
       <div className="hidden md:flex bg-[#101321] text-center flex-col gap-7 items-center justify-center pt-20 md:pt-5">
-        <p className="explore-more-text bg-clip-text bg-gradient-to-r from-gray-800 via-white via-50% to-gray-800 text-transparent font-bold text-3xl md:text-4xl 3xl:text-5xl w-full md:w-60 2xl:w-80">
+        <p className="explore-more-text bg-clip-text bg-gradient-to-r from-gray-800 via-white via-50% to-gray-800 text-transparent font-bold text-3xl md:text-3xl 3xl:text-5xl w-full md:w-60 2xl:w-80">
           Explore More About Us
         </p>
         <div>

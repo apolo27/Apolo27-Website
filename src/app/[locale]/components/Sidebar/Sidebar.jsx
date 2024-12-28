@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import Link from 'next/link';
+import { Link } from '../../../../i18n/routing';
 
 const Sidebar = ({ toggleSidebar, isOpen }) => {
   useEffect(() => {

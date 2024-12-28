@@ -20,7 +20,7 @@ import { getRecentVideos } from "./services/FetchYTVideos";
 import { getLastVideo } from "./services/FetchYTVideos";
 import { getBlogs } from "./services/FetchBlogs";
 import Image from "next/image";
-import Link from "next/link";
+import {Link} from '../../../../i18n/routing';
 
 import EmblaCarousel from "../../components/Carousel/EmblaCarousel";
 import { LinkIcon } from "@heroicons/react/24/outline";

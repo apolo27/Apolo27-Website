@@ -1,5 +1,5 @@
-import Link from "next/link";
 import "./sponsors.css";
+import {Link} from '../../../../i18n/routing';
 import Image from "next/image";
 
 export default function Sponsors() {

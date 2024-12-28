@@ -3,7 +3,7 @@ import {
   ArrowDownOnSquareIcon,
   ArrowLeftIcon,
 } from "@heroicons/react/20/solid";
-import Link from "next/link";
+import {Link} from '../../../../../i18n/routing';
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 import EmblaCarousel from "../../../components/Carousel/EmblaCarousel";
