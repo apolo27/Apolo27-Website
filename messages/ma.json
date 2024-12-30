@@ -1,0 +1,204 @@
+{
+  "HomePage": {
+    "title": "多米尼加共和国大学首个赢得NASA人类探测车挑战赛的团队",
+    "stemVisitTitle": "计划我们的 STEM 访问！",
+    "stemVisitSubtitle": "为您的教育中心填写表格",
+    "exploreMore": "了解更多关于我们的信息",
+    "missionTitle": "阿波罗27号使命",
+    "timelineTitle": "我们的时间轴",
+    "sponsorUsTitle": "赞助我们！",
+    "sponsorUsSubtitle": "团队需要您的帮助才能赢得比赛！",
+    "divisionsTitle": "阿波罗27号2025年的分部",
+    "humanPoweredConstellation": "人力驱动星座",
+    "remoteControlledConstellation": "遥控星座"
+  },
+  "About-us": {
+    "HumanPoweredTeam": {
+      "title": "人力驱动团队",
+      "rcDivision": "遥控部门",
+      "officialMembers": "官方团队成员",
+      "specialMentors": "特别导师",
+      "members": {
+        "advisor": "团队顾问",
+        "teamLeader": "团队负责人",
+        "safetyOfficer": "安全官",
+        "fundingManager": "资金经理",
+        "manufacturingManager": "制造经理",
+        "manufacturingAssistant": "制造助理",
+        "stemManager": "STEM经理",
+        "stemAssistant": "STEM助理",
+        "projectManager": "项目经理",
+        "communityManager": "社区经理"
+      },
+      "RemoteControlledTeam": {
+        "title": "遥控团队",
+        "hpDivision": "人力驱动部门",
+        "officialMembers": "官方团队成员",
+        "specialMentors": "特别导师",
+        "members": {
+          "advisor": "团队顾问",
+          "teamLeader": "团队负责人",
+          "safetyOfficer": "安全官",
+          "funding": "资金",
+          "manufacturingManager": "制造经理",
+          "manufacturingAssistant": "制造助理",
+          "telemetryAssistant": "遥测助理",
+          "stemManager": "STEM经理",
+          "communityManager": "社区经理"
+        }
+      }
+    }
+  },
+  "Games": {
+    "HERCSimulation": {
+      "title": "NASA HERC 模拟",
+      "description": "在这个模拟中，您将体验阿波罗27团队在阿拉巴马州亨茨维尔的比赛。了解我们的探测车将面临的障碍和任务，帮助我们以最短的时间获得第一名！我们相信您的能力！",
+      "playButton": "开始游戏",
+      "downloadButton": "下载"
+    },
+    "MathGame": {
+      "title": "数学神殿",
+      "description": "奔跑、跳跃、解谜！用您的算术技能征服数学神殿。数学挑战在等着您！您能通过您的数学技能逃出神殿吗？",
+      "playButton": "开始游戏",
+      "downloadButton": "下载",
+      "comingSoon": "敬请期待……"
+    },
+    "ScienceGame": {
+      "title": "小炼金术师",
+      "description": "释放您内心的科学家！结合元素发现自然的奥秘。成为元素大师。",
+      "playButton": "开始游戏",
+      "downloadButton": "下载",
+      "comingSoon": "敬请期待……"
+    },
+    "TechnologyGame": {
+      "title": "太空打字英雄",
+      "description": "用您的打字技能保卫银河系！打字快，开火更快！拯救宇宙免受外星入侵者的侵害。",
+      "playButton": "开始游戏",
+      "downloadButton": "下载",
+      "comingSoon": "敬请期待……"
+    },
+    "title": "STEM 游戏",
+    "subtitle": "通过我们的游戏探索 STEM。",
+    "visitButton": "访问",
+    "games": [
+      {
+        "title": "NASA HERC 模拟",
+        "caption": "使用您的设备体验 NASA HERC。"
+      },
+      {
+        "title": "小炼金术师",
+        "caption": "发现围绕我们的元素。"
+      },
+      {
+        "title": "太空打字英雄",
+        "caption": "学习像专业人士一样使用键盘。"
+      },
+      {
+        "title": "数学神殿",
+        "caption": "在神秘的数学神殿中提升您的数学技能。"
+      }
+    ]
+  },
+  "Marketplace": {
+    "banner": {
+      "title": "阿波罗27号",
+      "subtitle": "一个太空服饰目录"
+    },
+    "comingSoon": "敬请期待",
+    "names": {
+      "all": "全部",
+      "tShirt": {
+        "1": "基础白色 T 恤",
+        "2": "图案印花 T 恤",
+        "3": "复古标志 T 恤"
+      },
+      "hoodie": {
+        "1": "舒适版连帽衫",
+        "2": "拉链连帽衫",
+        "3": "加厚连帽衫"
+      },
+      "hats": {
+        "1": "Snapback 棒球帽",
+        "2": "针织帽",
+        "3": "渔夫帽"
+      },
+      "accessories": {
+        "1": "皮带",
+        "2": "太阳镜",
+        "3": "手表"
+      }
+    },
+    "searchPlaceholder": "搜索您的下一套服装",
+    "dialog": {
+      "title": "名称",
+      "description": "产品描述",
+      "closeButton": "关闭"
+    }
+  },
+  "SocialMedia": {
+    "title": "社交媒体",
+    "podcast": {
+      "title": "播客",
+      "name": "Caribe STEM",
+      "description": "Caribe STEM 是一个旨在分享和传播 STEM（科学、技术、工程和数学）的播客，面向多米尼加共和国及整个拉丁美洲。由阿波罗27团队创建，该团队代表 INTEC 参加 NASA HERC 比赛。"
+    },
+    "tabs": {
+      "tiktok": "抖音",
+      "instagram": "Instagram",
+      "youtube": "YouTube"
+    },
+    "video1": {
+      "username": "@apolo27rd",
+      "description": "🎥💸 当 #制造 需要 $$$，但 #融资 不合作时……😂💀 💬 谁有同感？👇",
+      "hashtags": ["#制造", "#融资", "#Apolo27团队", "#请给钱", "#团队问题"],
+      "sound": "♬ 原声 - 💘🐩"
+    },
+    "video2": {
+      "username": "@apolo27rd",
+      "description": "🚀📚 #Apolo27 团队参加了 2024 年多米尼加共和国国际书展！🇩🇴✨ 除了书籍，我们还利用这个绝佳平台分享了我们的使命、价值观以及我们作为一个团队所做的一切。💡🔥 我们与杰出的头脑联系，探索新想法，并展示了 #Apolo27 如何创造影响力。🌟 想了解更多关于我们的工作吗？在评论中留下您的问题！👇🤝 🎥✨ 播放并发现我们如何度过这特别的一天！❤️",
+      "hashtags": [
+        "#Apolo27",
+        "#Apolo27RD",
+        "#创新有目的",
+        "#2024书展",
+        "#构建未来",
+        "#不可阻挡的团队"
+      ],
+      "sound": "♬ 原声 - Apolo 27 RD"
+    },
+    "connect": {
+      "title": "与我们联系！",
+      "subtitle": "关注我们所有的社交媒体"
+    }
+  },
+  "Sponsors": {
+    "title": "赞助我们",
+    "subtitle": "您的支持将帮助我们的国家获得应有的认可。",
+    "buttonText": "赞助我们"
+  },
+  "StemWithUs": {
+    "blogs": {
+      "title": "我们的最新博客",
+      "readMore": "阅读更多"
+    },
+    "calendar": {
+      "title": "阿波罗27号的活动",
+      "event": {
+        "start": "开始时间：",
+        "end": "结束时间：",
+        "follow": "关注"
+      }
+    },
+    "youtube": {
+      "invite": "访问我们的",
+      "channelName": "YouTube 频道！",
+      "description": "我们的视频展示了工程的专业技能和奉献精神，这使我们成为 HERC 的四次类别冠军。加入我们，了解我们的创新设计和我们克服的挑战。",
+      "subscribe": "订阅",
+      "continue": "以随时了解我们的最新项目和活动。"
+    },
+    "form": {
+      "title": "想安排一次访问吗？",
+      "subtitle": "立即联系我们！"
+    }
+  }
+}
