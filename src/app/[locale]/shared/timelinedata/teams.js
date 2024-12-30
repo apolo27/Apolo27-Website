@@ -1,115 +1,94 @@
 const awards = [
   {
-    title: "Overall Winner #1",
-    description:
-      "Awarded to the top overall team. Design reviews, educational STEM engagement, safety, and a successful excursion will all factor into the Overall Winner. ",
+    title: "timeline.awards.overallWinner1.title",
+    description: "timeline.awards.overallWinner1.description",
   },
   {
-    title: "Overall Winner #2",
-    description:
-      "Awarded to the top overall team. Design reviews, educational STEM engagement, safety, and a successful excursion will all factor into the Overall Winner. ",
+    title: "timeline.awards.overallWinner2.title",
+    description: "timeline.awards.overallWinner2.description",
   },
   {
-    title: "Overall Winner #3",
-    description:
-      "Awarded to the top overall team. Design reviews, educational STEM engagement, safety, and a successful excursion will all factor into the Overall Winner. ",
+    title: "timeline.awards.overallWinner3.title",
+    description: "timeline.awards.overallWinner3.description",
   },
   {
-    title: "STEM Engagement Award",
-    description:
-      "Awarded to the team that is determined to have best inspired the study of STEM-related topics in their community to include collaboration with middle school students for the Task Challenge. This team not only presented a high number of activities to a large number of people, but also delivered quality activities to a wide range of audiences.",
+    title: "timeline.awards.stemEngagement.title",
+    description: "timeline.awards.stemEngagement.description",
   },
   {
-    title: "Project Review",
-    description:
-      "Awarded to the team that is deemed to have the best combination of written reviews and formal presentations.",
+    title: "timeline.awards.projectReview.title",
+    description: "timeline.awards.projectReview.description",
   },
   {
-    title: "Phoenix",
-    description:
-      "Awarded to the team that demonstrates the greatest improvement between Design Review and Operational Readiness Review.",
+    title: "timeline.awards.phoenix.title",
+    description: "timeline.awards.phoenix.description",
   },
   {
-    title: "Social Media",
-    description:
-      "Awarded to the team that has the most active and creative social media presence throughout the project year.",
+    title: "timeline.awards.socialMedia.title",
+    description: "timeline.awards.socialMedia.description",
   },
   {
-    title: "Task Challenge",
-    description:
-      "Awarded to the team that best demonstrates a multi-tool design for the liquid sample retrieval tasks.",
+    title: "timeline.awards.taskChallenge.title",
+    description: "timeline.awards.taskChallenge.description",
   },
   {
-    title: "Featherweight",
-    description:
-      "Awarded to the team that best addressed the ongoing space exploration challenge of weight management, delivering an innovative approach to safe minimization of rover weight. (Only awarded to one team overall.)",
+    title: "timeline.awards.featherweight.title",
+    description: "timeline.awards.featherweight.description",
   },
   {
-    title: "Ingenuity",
-    description:
-      "Awarded to the team that approaches any complex project or engineering problem in unique and creative ways.",
+    title: "timeline.awards.ingenuity.title",
+    description: "timeline.awards.ingenuity.description",
   },
   {
-    title: "Pit Crew",
-    description:
-      "Awarded to the team as judged by the pit crew that best demonstrates resourcefulness, motivation, good sportsmanship, and team spirit in repairing or working on their rover while the teams are in the pit area.",
+    title: "timeline.awards.pitCrew.title",
+    description: "timeline.awards.pitCrew.description",
   },
   {
-    title: "System Safety Award",
-    description:
-      "Awarded to the team that best demonstrates a comprehensive approach to system safety as it relates to their vehicle, personnel, and operations. ",
+    title: "timeline.awards.systemSafety.title",
+    description: "timeline.awards.systemSafety.description",
   },
   {
-    title: "Team Spirit Award",
-    description:
-      "Awarded to the team that is judged by their peers that display the “Best Team Spirit” during the on-site events.",
+    title: "timeline.awards.teamSpirit.title",
+    description: "timeline.awards.teamSpirit.description",
   },
   {
-    title: "Crash and Burn",
-    description:
-      "Awarded to the team that embraces failure as a learning lesson for future success. (Only awarded to one team overall). ",
+    title: "timeline.awards.crashAndBurn.title",
+    description: "timeline.awards.crashAndBurn.description",
   },
   {
-    title: "Rookie of the Year",
-    description:
-      "Awarded to the top overall newcomer team. (Same judging criteria as overall award. If rookie team is awarded an overall award, the 2nd place standing rookie team will receive the award, and so forth. Only awarded to one team overall) ",
+    title: "timeline.awards.rookieOfTheYear.title",
+    description: "timeline.awards.rookieOfTheYear.description",
   },
   {
-    title: "Pay It Forward Award",
-    description:
-      "This Artemis Student Challenge (ASC) award is given to the team that best conducts impactful educational engagement events in their community or further. Educational engagement includes instructional, hands-on activities where participants engage in learning a STEM-related concept by actively participating in an activity. Each challenge activity lead will choose the top teams from each challenge for consideration of fnal awardees. ",
+    title: "timeline.awards.payItForward.title",
+    description: "timeline.awards.payItForward.description",
   },
   {
-    title: "Innovation Award",
-    description:
-      "This Artemis Student Challenge (ASC) award is given to teams that best create new, innovative ideas and/or solutions within the scope of their respective challenge. Ingenuity, creativity, and inventiveness in either technology or non-technology focused ideas are awarded for their original ideas, creating effciency, effective results, and/or solving a problem. Each challenge activity lead will choose the top teams from each challenge for consideration of fnal awardees. ",
+    title: "timeline.awards.innovation.title",
+    description: "timeline.awards.innovation.description",
   },
   {
-    title: "Artemis Educator Award",
-    description:
-      "This Artemis Student Challenge (ASC) award is given to educators/faculty/mentors in each challenge as nominated by student team members. Student team members will recognize their faculty/mentor(s) who inspire learners and motivate them to work hard, achieving more than the team members thought possible. The award acknowledges the time and dedication educators/ faculty/mentors take to be exceptional teachers. Educators/faculty/mentors are noted for their commitment to learning and their valuable efforts for motivating and inspiring others.",
+    title: "timeline.awards.artemisEducator.title",
+    description: "timeline.awards.artemisEducator.description",
   },
   {
-    title: "Other Awards",
-    description:
-      "Other awards will be given based on components of the competition, such as discussions within Design Review and Operational Readiness Review reports or the in-person competition.",
+    title: "timeline.awards.otherAwards.title",
+    description: "timeline.awards.otherAwards.description",
   },
   {
-    title: "Most Improved",
-    description:
-      "Awarded to the team that demonstrates the greatest improvement between the two days of the competition.",
+    title: "timeline.awards.mostImproved.title",
+    description: "timeline.awards.mostImproved.description",
   },
 ];
-
 
 const teamsByYear = [
   {
     year: 2019,
     teams: [
       {
-        division: "Human Powered",
-        title: "THE ORIGIN",
-        description: `Our journey began in 2019 with a groundbreaking achievement: becoming the first university division team from our country to compete in the NASA Rover Challenge.`,
+        division: "timeline.teams.2019.division",
+        title: "timeline.teams.2019.title",
+        description: "timeline.teams.2019.description",
         image: "/images/timeline/2019.webp",
         teamAwards: [],
       },
@@ -119,11 +98,11 @@ const teamsByYear = [
     year: 2020,
     teams: [
       {
-        division: "Human Powered",
-        title: "PERSEVERANCE IN ADVERSITY",
-        description: `Despite the challenges of the global pandemic, our resilience shone through. Lessons learned paved the way for our historic "System Safety Award" victory.`,
+        division: "timeline.teams.2020.division",
+        title: "timeline.teams.2020.title",
+        description: "timeline.teams.2020.description",
         image: "/images/timeline/2020.webp",
-        teamAwards: [awards[11]], // System Safety Award
+        teamAwards: ["timeline.awards.systemSafety.title"], // System Safety Award
       },
     ],
   },
@@ -131,9 +110,9 @@ const teamsByYear = [
     year: 2021,
     teams: [
       {
-        division: "Human Powered",
-        title: "REVAMP AND REINVENTION",
-        description: `With a revamped rover, our team reached new levels of expertise and ignited a passion for STEM in our community through innovative efforts.`,
+        division: "timeline.teams.2021.division",
+        title: "timeline.teams.2021.title",
+        description: "timeline.teams.2021.description",
         image: "/images/timeline/2021.webp",
         teamAwards: [],
       },
@@ -143,11 +122,11 @@ const teamsByYear = [
     year: 2022,
     teams: [
       {
-        division: "Human Powered",
-        title: "EXPANDING OUR IMPACT",
-        description: `2022 marked a turning point with the launch of our interactive "STEM Tour," culminating in winning the prestigious "Engagement Award."`,
+        division: "timeline.teams.2022.division",
+        title: "timeline.teams.2022.title",
+        description: "timeline.teams.2022.description",
         image: "/images/timeline/2022.webp",
-        teamAwards: [awards[3]], // STEM Engagement Award
+        teamAwards: ["timeline.awards.stemEngagement.title"], // STEM Engagement Award
       },
     ],
   },
@@ -155,11 +134,14 @@ const teamsByYear = [
     year: 2023,
     teams: [
       {
-        division: "Human Powered",
-        title: "A HISTORIC YEAR",
-        description: `A year of Dominican dominance! Major improvements earned us the "Most Improved" and "Team Spirit" awards, cementing our place in history.`,
+        division: "timeline.teams.2023.division",
+        title: "timeline.teams.2023.title",
+        description: "timeline.teams.2023.description",
         image: "/images/timeline/2023.webp",
-        teamAwards: [awards[19], awards[12]], // Most Improved & Team Spirit
+        teamAwards: [
+          "timeline.awards.mostImproved.title",
+          "timeline.awards.teamSpirit.title",
+        ], // Most Improved & Team Spirit
       },
     ],
   },
@@ -167,11 +149,14 @@ const teamsByYear = [
     year: 2024,
     teams: [
       {
-        division: "Human Powered",
-        title: "SETTING THE STANDARD",
-        description: `Rising from 2023's successes, we reached new heights in 2024. Our hard work earned us the coveted "Overall Award (2nd place)" and the "Spirit Award", showcasing excellence and unity.`,
+        division: "timeline.teams.2024.division",
+        title: "timeline.teams.2024.title",
+        description: "timeline.teams.2024.description",
         image: "/images/timeline/2024.webp",
-        teamAwards: [awards[1], awards[12]], // Overall Winner #2 & Team Spirit
+        teamAwards: [
+          "timeline.awards.overallWinner2.title",
+          "timeline.awards.teamSpirit.title",
+        ], // Overall Winner #2 & Team Spirit
         badges: ["/images/badges/lunar-navigation.webp"],
       },
     ],
@@ -180,9 +165,9 @@ const teamsByYear = [
     year: 2025,
     teams: [
       {
-        division: "Human Powered",
-        title: "NEW FRONTIERS",
-        description: `The dawn of the Apolo Division marks a new chapter in 2025. With our sights set high, we're pushing the boundaries of innovation and teamwork.`,
+        division: "timeline.teams.2025.division",
+        title: "timeline.teams.2025.title",
+        description: "timeline.teams.2025.description",
         image: "/images/timeline/2024.webp",
         teamAwards: [],
         badges: [
@@ -191,15 +176,14 @@ const teamsByYear = [
         ],
       },
       {
-        division: "Remote Controlled",
-        title: "PIONEERING REMOTE CONTROLLED MISSIONS",
-        description: `Our RC team embarks on its first year with bold ideas and even bolder engineering.`,
+        division: "timeline.teams.2025.rcDivision",
+        title: "timeline.teams.2025.rcTitle",
+        description: "timeline.teams.2025.rcDescription",
         image: "/images/timeline/2024.webp",
-        teamAwards: [], // Add any RC awards if applicable
+        teamAwards: [],
       },
     ],
   },
-
 ];
 
 export default teamsByYear;
