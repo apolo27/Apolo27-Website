@@ -1,4 +1,8 @@
 {
+  "LocaleSwitcher": {
+    "label": "Cambiar Idioma",
+    "locale": "{locale, select, es {🇩🇴 Español} en {🇺🇸 Inglés} other {Unknown}}"
+  },
   "HomePage": {
     "title": "Los Primeros Ganadores de la División Universitaria de República Dominicana en el Human Exploration Rover Challenge de la NASA",
     "stemVisitTitle": "¡Programa nuestra visita STEM!",
