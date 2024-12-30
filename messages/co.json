@@ -1,0 +1,204 @@
+{
+  "HomePage": {
+    "title": "NASA의 인간 탐사 로버 챌린지에서 우승한 첫 번째 도미니카 공화국 대학 부문",
+    "stemVisitTitle": "우리의 STEM 방문을 계획하세요!",
+    "stemVisitSubtitle": "귀하의 교육 기관을 위한 양식을 작성하세요",
+    "exploreMore": "우리에 대해 더 알아보기",
+    "missionTitle": "아폴로 27 미션",
+    "timelineTitle": "우리의 타임라인",
+    "sponsorUsTitle": "우리를 후원해주세요!",
+    "sponsorUsSubtitle": "팀이 승리하려면 당신의 도움이 필요합니다!",
+    "divisionsTitle": "아폴로 27의 2025 디비전",
+    "humanPoweredConstellation": "휴먼 파워드 별자리",
+    "remoteControlledConstellation": "원격 제어 별자리"
+  },
+  "About-us": {
+    "HumanPoweredTeam": {
+      "title": "휴먼 파워드 팀",
+      "rcDivision": "RC 디비전",
+      "officialMembers": "공식 팀 멤버",
+      "specialMentors": "특별 멘토",
+      "members": {
+        "advisor": "팀 어드바이저",
+        "teamLeader": "팀 리더",
+        "safetyOfficer": "안전 책임자",
+        "fundingManager": "펀딩 매니저",
+        "manufacturingManager": "제조 매니저",
+        "manufacturingAssistant": "제조 어시스턴트",
+        "stemManager": "STEM 매니저",
+        "stemAssistant": "STEM 어시스턴트",
+        "projectManager": "프로젝트 매니저",
+        "communityManager": "커뮤니티 매니저"
+      },
+      "RemoteControlledTeam": {
+        "title": "원격 제어 팀",
+        "hpDivision": "휴먼 파워드 디비전",
+        "officialMembers": "공식 팀 멤버",
+        "specialMentors": "특별 멘토",
+        "members": {
+          "advisor": "팀 어드바이저",
+          "teamLeader": "팀 리더",
+          "safetyOfficer": "안전 책임자",
+          "funding": "펀딩",
+          "manufacturingManager": "제조 매니저",
+          "manufacturingAssistant": "제조 어시스턴트",
+          "telemetryAssistant": "텔레메트리 어시스턴트",
+          "stemManager": "STEM 매니저",
+          "communityManager": "커뮤니티 매니저"
+        }
+      }
+    }
+  },
+  "Games": {
+    "HERCSimulation": {
+      "title": "NASA HERC 시뮬레이션",
+      "description": "이 시뮬레이션에서 앨라배마주 헌츠빌에서 아폴로 27 팀이 참가하는 경연을 경험해 보세요. 우리의 로버가 직면할 장애물과 과제를 배우고 가장 짧은 시간 안에 1위를 차지하도록 도와주세요! 우리는 당신을 믿습니다!",
+      "playButton": "플레이",
+      "downloadButton": "다운로드"
+    },
+    "MathGame": {
+      "title": "수학 사원",
+      "description": "달리고, 점프하고, 풀어보세요! 당신의 수학적 능력으로 수학 사원을 정복하세요. 수학 과제가 기다리고 있습니다! 수학 실력으로 사원에서 탈출할 수 있나요?",
+      "playButton": "플레이",
+      "downloadButton": "다운로드",
+      "comingSoon": "곧 출시..."
+    },
+    "ScienceGame": {
+      "title": "리틀 연금술",
+      "description": "내면의 과학자를 깨우세요! 요소를 결합하여 자연의 비밀을 발견하세요. 요소의 마스터가 되어보세요.",
+      "playButton": "플레이",
+      "downloadButton": "다운로드",
+      "comingSoon": "곧 출시..."
+    },
+    "TechnologyGame": {
+      "title": "스페이스 타이핑 히어로",
+      "description": "타이핑 실력으로 은하계를 방어하세요! 빠르게 타이핑하고, 더 빠르게 쏘세요! 외계 침입자로부터 우주를 구하세요.",
+      "playButton": "플레이",
+      "downloadButton": "다운로드",
+      "comingSoon": "곧 출시..."
+    },
+    "title": "STEM 게임",
+    "subtitle": "우리의 게임을 통해 STEM을 탐험하세요.",
+    "visitButton": "방문",
+    "games": [
+      {
+        "title": "NASA HERC 시뮬레이션",
+        "caption": "자신의 기기로 NASA HERC를 경험하세요."
+      },
+      {
+        "title": "리틀 연금술",
+        "caption": "우리를 둘러싼 요소를 발견하세요."
+      },
+      {
+        "title": "스페이스 타이핑 히어로",
+        "caption": "프로처럼 키보드를 사용하는 법을 배워보세요."
+      },
+      {
+        "title": "수학 사원",
+        "caption": "신비로운 수학 사원에서 수학 실력을 향상시키세요."
+      }
+    ]
+  },
+  "Marketplace": {
+    "banner": {
+      "title": "아폴로 27",
+      "subtitle": "우주 의류 카탈로그"
+    },
+    "comingSoon": "곧 출시",
+    "names": {
+      "all": "전체",
+      "tShirt": {
+        "1": "기본 화이트 티셔츠",
+        "2": "그래픽 프린트 티셔츠",
+        "3": "빈티지 로고 티셔츠"
+      },
+      "hoodie": {
+        "1": "컴포트 핏 후드",
+        "2": "집업 후드",
+        "3": "헤비급 후드"
+      },
+      "hats": {
+        "1": "스냅백 캡",
+        "2": "비니",
+        "3": "버킷 햇"
+      },
+      "accessories": {
+        "1": "가죽 벨트",
+        "2": "선글라스",
+        "3": "시계"
+      }
+    },
+    "searchPlaceholder": "다음 의상을 검색하세요",
+    "dialog": {
+      "title": "이름",
+      "description": "제품 설명",
+      "closeButton": "닫기"
+    }
+  },
+  "SocialMedia": {
+    "title": "소셜 미디어",
+    "podcast": {
+      "title": "팟캐스트",
+      "name": "카리브 STEM",
+      "description": "카리브 STEM은 STEM(과학, 기술, 공학, 수학)을 도미니카 공화국과 라틴 아메리카 전역에 공유하고 확산하기 위해 만들어진 팟캐스트입니다. NASA HERC 대회에서 INTEC을 대표하는 아폴로 27 팀에 의해 만들어졌습니다."
+    },
+    "tabs": {
+      "tiktok": "틱톡",
+      "instagram": "인스타그램",
+      "youtube": "유튜브"
+    },
+    "video1": {
+      "username": "@apolo27rd",
+      "description": "🎥💸 #제조가 $$$이 필요할 때 #펀딩이 협력하지 않으면... 😂💀 💬 동의하는 사람? 👇",
+      "hashtags": ["#제조", "#펀딩", "#아폴로27팀", "#돈주세요", "#팀문제"],
+      "sound": "♬ 오리지널 사운드 - 💘🐩"
+    },
+    "video2": {
+      "username": "@apolo27rd",
+      "description": "🚀📚 #아폴로27 팀이 2024 도미니카 공화국 국제 도서 박람회에 참가했습니다! 🇩🇴✨ 책 너머로, 우리는 우리의 미션, 가치, 그리고 팀으로서의 모든 작업을 공유하기 위해 이 멋진 플랫폼을 활용했습니다. 💡🔥 뛰어난 아이디어와 연결하고, 새로운 계획을 탐구하며, #아폴로27이 어떻게 영향을 미치는지 보여줍니다. 🌟 우리 작업에 대해 더 알고 싶으세요? 댓글로 질문을 남겨주세요!👇🤝 🎥✨ 플레이를 눌러 이 특별한 날을 경험하세요! ❤️",
+      "hashtags": [
+        "#아폴로27",
+        "#아폴로27RD",
+        "#목적있는혁신",
+        "#2024도서박람회",
+        "#미래구축",
+        "#멈출수없는팀"
+      ],
+      "sound": "♬ 오리지널 사운드 - 아폴로 27 RD"
+    },
+    "connect": {
+      "title": "우리를 팔로우하세요!",
+      "subtitle": "모든 소셜 미디어에서 우리를 팔로우하세요"
+    }
+  },
+  "Sponsors": {
+    "title": "우리를 후원하세요",
+    "subtitle": "당신의 지원이 우리나라에 자격 있는 인정을 가져다줄 것입니다.",
+    "buttonText": "우리를 후원하세요"
+  },
+  "StemWithUs": {
+    "blogs": {
+      "title": "우리의 최근 블로그",
+      "readMore": "더 읽기"
+    },
+    "calendar": {
+      "title": "아폴로 27의 이벤트",
+      "event": {
+        "start": "시작: ",
+        "end": "끝: ",
+        "follow": "팔로우"
+      }
+    },
+    "youtube": {
+      "invite": "우리의",
+      "channelName": "유튜브 채널을 방문하세요!",
+      "description": "우리의 비디오는 엔지니어링 기술과 헌신을 보여주며, 이를 통해 우리는 HERC에서 네 번의 카테고리 우승자가 되었습니다. 최신 프로젝트와 이벤트에 대해 업데이트를 받으려면 구독하세요.",
+      "subscribe": "구독",
+      "continue": "최신 프로젝트와 이벤트를 계속 업데이트 받으세요."
+    },
+    "form": {
+      "title": "방문을 계획하고 싶으신가요?",
+      "subtitle": "지금 저희에게 연락하세요!"
+    }
+  }
+}
