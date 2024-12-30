@@ -1,4 +1,20 @@
 {
+  "LocaleSwitcher": {
+    "label": "言語を変更",
+    "locale": "{locale, select, es {🇩🇴 スペイン語} en {🇺🇸 英語} fr {🇫🇷 フランス語} hi {🇮🇳 ヒンディー語} ja {🇯🇵 日本語} ko {🇰🇷 韓国語} pt {🇵🇹 ポルトガル語} zh {🇨🇳 中国語（マンダリン）} other {不明}}"
+  },
+  "header": {
+    "home": "ホーム",
+    "aboutUs": "私たちについて",
+    "games": "ゲーム",
+    "marketplace": "マーケットプレイス",
+    "stemWithUs": "STEMと一緒に",
+    "socialMedia": "ソーシャルメディア",
+    "sponsors": "スポンサー"
+  },
+  "timer": {
+    "title": "HERCまでの時間: "
+  },
   "HomePage": {
     "title": "NASAのHuman Exploration Rover Challengeで優勝した初のドミニカ共和国大学チーム",
     "stemVisitTitle": "STEM訪問を計画しよう！",
@@ -6,96 +22,256 @@
     "exploreMore": "私たちについてもっと知る",
     "missionTitle": "アポロ27 ミッション",
     "timelineTitle": "私たちのタイムライン",
-    "sponsorUsTitle": "私たちをサポートしてください！",
+    "sponsorUsTitle": "私たちをサポ！",
     "sponsorUsSubtitle": "チームが勝つためにはあなたの助けが必要です！",
     "divisionsTitle": "アポロ27の2025年ディビジョン",
     "humanPoweredConstellation": "ヒューマンパワード コンステレーション",
-    "remoteControlledConstellation": "リモートコントロール コンステレーション"
+    "remoteControlledConstellation": "リモートコントロール コンステレーション",
+    "timeline": {
+      "awards": {
+        "overallWinner1": {
+          "title": "総合優勝者 #1",
+          "description": "トップの総合チームに授与されます。デザインレビュー、STEM教育の関与、安全性、成功した遠足がすべて総合優勝者に影響します。"
+        },
+        "overallWinner2": {
+          "title": "総合優勝者 #2",
+          "description": "トップの総合チームに授与されます。デザインレビュー、STEM教育の関与、安全性、成功した遠足がすべて総合優勝者に影響します。"
+        },
+        "overallWinner3": {
+          "title": "総合優勝者 #3",
+          "description": "トップの総合チームに授与されます。デザインレビュー、STEM教育の関与、安全性、成功した遠足がすべて総合優勝者に影響します。"
+        },
+        "stemEngagement": {
+          "title": "STEM教育の関与賞",
+          "description": "STEM関連のトピックの学習を最も刺激したチームに授与されます。特にタスクチャレンジのために中学生との協力が含まれます。このチームは多くの人々に多数の活動を提供しただけでなく、幅広いオーディエンスに質の高い活動も提供しました。"
+        },
+        "projectReview": {
+          "title": "プロジェクトレビュー",
+          "description": "最も優れた書面レビューと正式なプレゼンテーションの組み合わせを示したチームに授与されます。"
+        },
+        "phoenix": {
+          "title": "フェニックス",
+          "description": "デザインレビューと運用準備レビューの間で最も大きな改善を示したチームに授与されます。"
+        },
+        "socialMedia": {
+          "title": "ソーシャルメディア賞",
+          "description": "プロジェクト年度を通じて最も活発で創造的なソーシャルメディアの存在を示したチームに授与されます。"
+        },
+        "taskChallenge": {
+          "title": "タスクチャレンジ賞",
+          "description": "液体サンプル回収のためのマルチツールデザインを最もよく示したチームに授与されます。"
+        },
+        "featherweight": {
+          "title": "フェザーウェイト",
+          "description": "宇宙探査の課題である重量管理に最も優れた解決策を提供したチームに授与されます。安全にローバーの重量を最小化する革新的なアプローチを示しました。（全体で一チームのみ授与されます）"
+        },
+        "ingenuity": {
+          "title": "独創性賞",
+          "description": "複雑なプロジェクトや工学問題にユニークで創造的な方法で取り組んだチームに授与されます。"
+        },
+        "pitCrew": {
+          "title": "ピットクルー賞",
+          "description": "ピットエリアでローバーの修理や作業をしているチームの中で最もリソースフルでモチベーションがあり、良いスポーツマンシップとチーム精神を示したチームに授与されます。"
+        },
+        "systemSafety": {
+          "title": "システム安全賞",
+          "description": "車両、スタッフ、および運用に関連するシステム安全に最も包括的に取り組んだチームに授与されます。"
+        },
+        "teamSpirit": {
+          "title": "チームスピリット賞",
+          "description": "現地のイベント中に最も「優れたチームスピリット」を示したチームに授与されます。"
+        },
+        "crashAndBurn": {
+          "title": "クラッシュ＆バーン賞",
+          "description": "失敗を学びのレッスンとして受け入れ、将来の成功に繋げるチームに授与されます。（全体で一チームのみ授与されます）"
+        },
+        "rookieOfTheYear": {
+          "title": "ルーキー・オブ・ザ・イヤー",
+          "description": "新しいチームの中で最も優れたチームに授与されます。（総合賞の判断基準に準じます。ルーキーが総合賞を受賞した場合、2位のルーキーが受賞します。最大で一チームに授与されます）"
+        },
+        "payItForward": {
+          "title": "ペイ・イット・フォワード賞",
+          "description": "このアーティミス学生チャレンジ（ASC）賞は、最も影響力のある教育的なイベントをコミュニティで実施したチームに授与されます。教育的な活動には、STEMに関連する概念を学ぶために参加者が積極的に活動に参加するものが含まれます。"
+        },
+        "innovation": {
+          "title": "革新賞",
+          "description": "このアーティミス学生チャレンジ（ASC）賞は、最も新しい革新的なアイデアや解決策を生み出したチームに授与されます。技術的または非技術的なアイデアにおいて創造性、効率、問題解決における独自性を評価します。"
+        },
+        "artemisEducator": {
+          "title": "アーティミス教育者賞",
+          "description": "このアーティミス学生チャレンジ（ASC）賞は、学生チームのメンバーが推薦する教師やメンターに授与されます。学生チームメンバーは、自分たちを刺激し、学ぶ意欲を高めさせ、チームメンバーが予想以上の成果を上げることを促した教育者を認識します。"
+        },
+        "otherAwards": {
+          "title": "その他の賞",
+          "description": "デザインレビューや運用準備レビューのレポート、または実地競技に関連する競技要素に基づいて授与されるその他の賞があります。"
+        },
+        "mostImproved": {
+          "title": "最も改善されたチーム",
+          "description": "競技の2日間で最も大きな改善を示したチームに授与されます。"
+        }
+      },
+      "teams": {
+        "2019": {
+          "division": "人力",
+          "title": "THE ORIGIN",
+          "description": "私たちの旅は2019年に画期的な成果を達成し、我々の国の大学チームとして初めてNASAローバーチャレンジに出場しました。",
+          "image": "/images/timeline/2019.webp",
+          "teamAwards": []
+        },
+        "2020": {
+          "division": "人力",
+          "title": "逆境における忍耐",
+          "description": "グローバルパンデミックの困難にもかかわらず、私たちのレジリエンスが光り輝きました。学んだ教訓が私たちの歴史的な「システム安全賞」の勝利を導きました。",
+          "image": "/images/timeline/2020.webp",
+          "teamAwards": ["systemSafety"]
+        },
+        "2021": {
+          "division": "人力",
+          "title": "再生と再発明",
+          "description": "新しく改良されたローバーを搭載し、私たちのチームは新たな専門知識を身につけ、STEM分野への情熱を地域に広めました。",
+          "image": "/images/timeline/2021.webp",
+          "teamAwards": []
+        },
+        "2022": {
+          "division": "人力",
+          "title": "影響力の拡大",
+          "description": "2022年は、インタラクティブな「STEMツアー」の開始とともに転換点を迎え、名誉ある「エンゲージメント賞」を受賞しました。",
+          "image": "/images/timeline/2022.webp",
+          "teamAwards": ["stemEngagement"]
+        },
+        "2023": {
+          "division": "人力",
+          "title": "歴史的な年",
+          "description": "ドミニカ共和国の支配の年！大きな改善により「最も改善された」と「チームスピリット」の賞を受賞し、私たちの歴史に名を刻みました。",
+          "image": "/images/timeline/2023.webp",
+          "teamAwards": ["mostImproved", "teamSpirit"]
+        },
+        "2024": {
+          "division": "人力",
+          "title": "スタンダードを設定する",
+          "description": "2023年の成功から生まれ、2024年に新たな高みを達成しました。私たちの努力が実を結び、「総合賞（2位）」と「スピリット賞」を獲得し、優秀さと団結を示しました。",
+          "image": "/images/timeline/2024.webp",
+          "teamAwards": ["overallWinner2", "teamSpirit"],
+          "badges": ["/images/badges/lunar-navigation.webp"]
+        },
+        "2025": {
+          "division": "人力",
+          "title": "新たなフロンティア",
+          "description": "アポロ部門の登場により、2025年に新しい章が始まります。私たちは高い目標を掲げ、革新とチームワークの限界を押し広げています。",
+          "teamAwards": [],
+          "badges": [
+            "/images/badges/innovation.webp",
+            "/images/badges/stem-engagement.webp"
+          ],
+          "rcDivision": "リモートコントロール",
+          "rcTitle": "リモートコントロールミッションの先駆者",
+          "rcDescription": "私たちのRCチームは、斬新なアイデアと大胆なエンジニアリングで初年度を迎えます。",
+          "rcTeamAwards": []
+        }
+      }
+    }
   },
   "About-us": {
+    "mechatronics": "メカトロニクス工学",
+    "mechanical": "機械工学",
+    "electronics": "電子工学および通信工学",
+    "computer": "コンピュータ工学",
+    "software": "ソフトウェア工学",
+    "systems": "システム工学",
+    "datascience": "データサイエンス",
+    "aerospace": "航空宇宙工学",
+    "internationalbusiness": "国際ビジネス学士",
+    "biotechnology": "バイオテクノロジー学士",
+    "education": "教育学士",
+    
     "HumanPoweredTeam": {
-      "title": "ヒューマンパワード チーム",
-      "rcDivision": "RC ディビジョン",
+      "title": "人力駆動チーム",
+      "rcDivision": "RC部門",
       "officialMembers": "公式メンバー",
       "specialMentors": "特別メンター",
       "members": {
         "advisor": "チームアドバイザー",
         "teamLeader": "チームリーダー",
-        "safetyOfficer": "安全責任者",
-        "fundingManager": "資金調達マネージャー",
+        "safetyOfficer": "安全担当者",
+        "fundingManager": "資金管理者",
         "manufacturingManager": "製造マネージャー",
         "manufacturingAssistant": "製造アシスタント",
         "stemManager": "STEMマネージャー",
         "stemAssistant": "STEMアシスタント",
         "projectManager": "プロジェクトマネージャー",
         "communityManager": "コミュニティマネージャー"
-      },
-      "RemoteControlledTeam": {
-        "title": "リモートコントロール チーム",
-        "hpDivision": "ヒューマンパワード ディビジョン",
-        "officialMembers": "公式メンバー",
-        "specialMentors": "特別メンター",
-        "members": {
-          "advisor": "チームアドバイザー",
-          "teamLeader": "チームリーダー",
-          "safetyOfficer": "安全責任者",
-          "funding": "資金調達",
-          "manufacturingManager": "製造マネージャー",
-          "manufacturingAssistant": "製造アシスタント",
-          "telemetryAssistant": "テレメトリアシスタント",
-          "stemManager": "STEMマネージャー",
-          "communityManager": "コミュニティマネージャー"
-        }
+      }
+    },
+    "RemoteControlledTeam": {
+      "title": "リモートコントロールチーム",
+      "hpDivision": "HP部門",
+      "officialMembers": "公式メンバー",
+      "specialMentors": "特別メンター",
+      "members": {
+        "advisor": "チームアドバイザー",
+        "teamLeader": "チームリーダー",
+        "safetyOfficer": "安全担当者",
+        "funding": "資金",
+        "manufacturingManager": "製造マネージャー",
+        "manufacturingAssistant": "製造アシスタント",
+        "telemetryAssistant": "テレメトリーアシスタント",
+        "stemManager": "STEMマネージャー",
+        "communityManager": "コミュニティマネージャー"
       }
     }
   },
   "Games": {
+    "Subtitle": "私たちのゲームを通じてSTEMを発見してください。",
     "HERCSimulation": {
       "title": "NASA HERC シミュレーション",
-      "description": "このシミュレーションで、アポロ27チームがアラバマ州ハンツビルで経験する競技に参加してください。ローバーが直面する障害やタスクを学び、最短時間で1位を目指しましょう！このミッションをあなたに託します！",
+      "caption": "あなたのデバイスでNASA HERCを体験してください。",
+      "description": "このシミュレーションでは、チームApolo 27がアラバマ州ハンツビルで参加する競技に没頭できます。私たちのローバーが直面する障害やタスクを学び、最短時間で1位を獲得するのを助けてください！ このミッションをお任せします！",
       "playButton": "プレイ",
       "downloadButton": "ダウンロード"
     },
     "MathGame": {
-      "title": "マス テンプル",
-      "description": "走って、ジャンプして、解いてみてください！算術の腕前でマステンプルを征服してください。数学のチャレンジが待っています！あなたの数学スキルでテンプルから脱出できますか？",
+      "title": "数学の寺院",
+      "caption": "謎めいた数学の寺院で数学スキルを向上させましょう。",
+      "description": "走る、飛ぶ、そして解く！ あなたの算術の腕前で数学の寺院を攻略してください。数学の挑戦が待っています！ あなたの数学スキルで寺院から脱出できますか？",
       "playButton": "プレイ",
       "downloadButton": "ダウンロード",
       "comingSoon": "近日公開..."
     },
     "ScienceGame": {
-      "title": "リトル錬金術",
-      "description": "内なる科学者を解放してください！要素を組み合わせて自然の秘密を発見しましょう。要素のマスターになってください。",
+      "title": "小さな錬金術",
+      "caption": "私たちの周囲の元素を発見しましょう。",
+      "description": "内なる科学者を解き放て！ 元素を組み合わせて自然の秘密を発見してください。元素のマスターになりましょう。",
       "playButton": "プレイ",
       "downloadButton": "ダウンロード",
       "comingSoon": "近日公開..."
     },
     "TechnologyGame": {
-      "title": "スペース タイピング ヒーロー",
-      "description": "タイピングスキルで銀河を守ってください！速くタイピングして、さらに速く撃ちましょう！宇宙をエイリアンの侵略から救いましょう。",
+      "title": "スペースタイピングヒーロー",
+      "caption": "プロのようにキーボードを使う方法を学びましょう。",
+      "description": "タイピングスキルで銀河を守りましょう！ 速くタイピングして、さらに速く撃ちましょう！ 宇宙をエイリアンの侵略者から救いましょう。",
       "playButton": "プレイ",
       "downloadButton": "ダウンロード",
       "comingSoon": "近日公開..."
     },
-    "title": "STEM ゲーム",
-    "subtitle": "ゲームを通じてSTEMを探索しましょう。",
-    "visitButton": "訪問",
+    "title": "STEMゲーム",
+    "subtitle": "私たちのゲームを通じてSTEMを発見してください。",
+    "visitButton": "訪問する",
     "games": [
       {
         "title": "NASA HERC シミュレーション",
-        "caption": "自分のデバイスでNASA HERCを体験してください。"
+        "caption": "あなたのデバイスでNASA HERCを体験してください。"
       },
       {
-        "title": "リトル錬金術",
-        "caption": "私たちを取り囲む要素を発見してください。"
+        "title": "大きな錬金術",
+        "caption": "私たちの周囲の元素を発見しましょう。"
       },
       {
-        "title": "スペース タイピング ヒーロー",
+        "title": "スペースタイピングヒーロー",
         "caption": "プロのようにキーボードを使う方法を学びましょう。"
       },
       {
-        "title": "マス テンプル",
-        "caption": "神秘的なマステンプルで数学スキルを向上させましょう。"
+        "title": "数学の寺院",
+        "caption": "謎めいた数学の寺院で数学スキルを向上させましょう。"
       }
     ]
   },

@@ -22,7 +22,7 @@ export const SelectLanguage = () => {
 
   return (
     <Select
-        className="bg-transparent text-white"
+        className="bg-gray-800 bg-opacity-70 px-3 py-2 rounded-xl text-white 3xl:fixed 3xl:top-8 3xl:right-10 3xl:z-50"
       name="locale"
       aria-label="Locale"
       disabled={isPending}
@@ -30,7 +30,7 @@ export const SelectLanguage = () => {
       onChange={onSelectChange}
     >
       {routing.locales.map((cur)=> (
-        <option key={cur} value={cur} className="text-black">
+        <option key={cur} value={cur} className="text-white">
              {t('locale', {locale: cur})}
         </option>
       ))}

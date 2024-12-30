@@ -1,8 +1,11 @@
 "use client";
 import { ArrowDownOnSquareIcon } from "@heroicons/react/20/solid";
 import { ArrowLeftIcon } from "@heroicons/react/20/solid";
-import { useRouter } from "next/navigation";
+import { useRouter } from "../../../../../i18n/routing";
+import { useTranslations } from "next-intl";
+
 export default function ScienceGame() {
+  const t = useTranslations("Games.ScienceGame");
   const router = useRouter();
 
   return (
@@ -19,24 +22,23 @@ export default function ScienceGame() {
         </p>
       </div>{" "}
       <section className="w-full md:w-1/3 px-5 md:px-0 gap-5 md:gap-0 flex flex-col justify-around text-center md:text-left">
-        <p className="font-bold text-green-500 text-6xl">Little Alchemy</p>
+        <p className="font-bold text-green-500 text-6xl">{t("title")}</p>
         <p className="font-bold text-white text-xl">
-          Unleash your inner scientist! Combine elements to discover the secrets
-          of nature. Become a master of the elements.
+          {t("description")}
         </p>
         <div className="flex gap-5 justify-center md:justify-start">
           <button
             disabled
             className="opacity-30 bg-white px-4 py-3 text-2xl font-bold text-black rounded-xl"
           >
-            Jugar
+            {t("playButton")}
           </button>
           <button
             disabled
             className="opacity-30 bg-white px-4 py-3 text-2xl font-bold text-black rounded-xl flex items-center"
           >
             <ArrowDownOnSquareIcon className="w-8 h-8" />
-            Descargar
+            {t("downloadButton")}
           </button>
         </div>
       </section>

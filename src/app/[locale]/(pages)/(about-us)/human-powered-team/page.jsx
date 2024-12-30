@@ -4,69 +4,71 @@ import {
 } from "@heroicons/react/24/outline";
 import Image from "next/image";
 import {Link} from '../../../../../i18n/routing';
+import { useTranslations } from "next-intl";
 
 export default function HumanPoweredTeam() {
+  const t = useTranslations("About-us");
   const members = [
     {
       name: "José Ezequiel Díaz",
       role: "Team Advisor",
-      career: "Prof. Ing. Mecatrónica",
+      career: "Prof. " + t("mechatronics"),
       img: "/images/about-us/hp/Ezequiel.webp",
     },
     {
       name: "Anne Joaquín",
       role: "Team Leader",
-      career: "Ingeniería Mecatrónica",
+      career: t("mechatronics"),
       img: "/images/about-us/hp/Anne.webp",
     },
     {
       name: "Manuel Guerrero",
       role: "Safety Officer",
-      career: "Ingeniería de Sistemas",
+      career: t("systems"),
       img: "/images/about-us/hp/Mago.webp",
     },
     {
       name: "Camila Tejada",
       role: "Funding Manager",
-      career: "Lic. Negocios Internacionales",
+      career: t("internationalbusiness"),
       img: "/images/about-us/hp/Camila.webp",
     },
     {
       name: "Marko De Los Santos",
       role: "Manufacturing Manager",
-      career: "Ingeniería Mecánica",
+      career: t("mechanical"),
       img: "/images/about-us/hp/Marko.webp",
     },
 
     {
       name: "Angello Ortiz",
       role: "Manufacturing assistant",
-      career: "Ingeniería Mecánica",
+      career: t("mechanical"),
       img: "/images/about-us/hp/Angello.webp",
     },
     {
       name: "Avril Neder",
       role: "Manufacturing Assistant",
-      career: "Ingeniería de Software",
+      career: t("software"),
       img: "/images/about-us/hp/Avril.webp",
     },
 
     {
       name: "Jaileen Lacen",
       role: "Manufacturing Assistant",
-      career: "Ingeniería Mecatrónica",
+      career: t("mechatronics"),
       img: "/images/about-us/hp/Jaileen.webp",
     },
     {
       name: "Keramsi Sánchez",
       role: "Manufacturing Assistant",
-      career: "Ingeniería Mecatrónica",
+      career: t("mechatronics"),
       img: "/images/about-us/hp/Keramsi.webp",
     },
     {
       name: "Nilo Reyes",
       role: "Manufacturing Assistant",
-      career: "Ingeniería Mecatrónica",
+      career: t("mechatronics"),
       img: "/images/about-us/hp/Nilo.webp",
     },
 
@@ -74,7 +76,7 @@ export default function HumanPoweredTeam() {
     {
       name: "Birgit Sánchez",
       role: "Stem Manager",
-      career: "Lic. Biotecnología",
+      career: t("biotechnology"),
       img: "/images/about-us/hp/Birgit.webp",
     },
 
@@ -83,7 +85,7 @@ export default function HumanPoweredTeam() {
     {
       name: "Ángela Stacy",
       role: "Stem assistant",
-      career: "Ingeniería de Software",
+      career: t("education"),
       img: "/images/about-us/hp/Angela.webp",
     },
 
@@ -91,7 +93,7 @@ export default function HumanPoweredTeam() {
     {
       name: "Lorennis Reyes",
       role: "Stem Assistant",
-      career: "Ciencias de Datos",
+      career: t("datascience"),
       img: "/images/about-us/hp/Loren.webp",
     },
 
@@ -100,13 +102,13 @@ export default function HumanPoweredTeam() {
     {
       name: "Priscilla Castro",
       role: "Project Manager",
-      career: "Ingeniería de Software",
+      career: t("software"),
       img: "/images/about-us/hp/Pris.webp",
     },
     {
       name: "Alí Rizvi",
       role: "Community Manager",
-      career: "Ingeniería de Software",
+      career: t("software"),
       img: "/images/about-us/hp/Ali.webp",
     },
   ];
@@ -114,22 +116,22 @@ export default function HumanPoweredTeam() {
   const mentors = [
     {
       name: "Miguel Arredondo",
-      career: "Ing. Mecatrónico",
+      career: t("mechatronics"),
       img: "/images/about-us/hp/Miguel.webp",
     },
     {
       name: "Hilary Mena",
-      career: "Ing. Mecatrónica",
+      career: t("mechatronics"),
       img: "/images/about-us/hp/Hilary.webp",
     },
     {
       name: "Pedro David Disla",
-      career: "Ing. De Software",
+      career: t("software"),
       img: "/images/about-us/hp/David.webp",
     },
     {
       name: "Jorge Colmenares",
-      career: "Ing. Mecanico",
+      career: t("mechanical"),
       img: "/images/about-us/hp/Colme.webp",
     },
   ];
@@ -145,14 +147,14 @@ export default function HumanPoweredTeam() {
     >
       <div className="w-full flex items-center justify-center mb-10">
         <div className="relative w-fit">
-          <p className="text-6xl 2xl:text-7xl font-bold bg-gradient-to-br from-red-800 to-violet-500 text-transparent bg-clip-text pb-10">
-            Human Powered Team
+          <p className="text-6xl 2xl:text-7xl font-bold bg-gradient-to-br from-red-800 to-violet-500 text-transparent bg-clip-text pb-10 mb-5">
+            {t("HumanPoweredTeam.title")}
           </p>
           <Link
             href="/remote-controlled-team"
             className="absolute bottom-0 right-0 flex items-center gap-4 text-white font-medium py-2 px-3 rounded-full bg-gradient-to-br from-blue-500 to-cyan-700 transition-all ease-in-out hover:animate-pulse hover:scale-105"
           >
-            RC Division <ArrowRightIcon className="w-5 h-5" />{" "}
+            {t("HumanPoweredTeam.rcDivision")} <ArrowRightIcon className="w-5 h-5" />{" "}
           </Link>
         </div>
       </div>
@@ -160,7 +162,7 @@ export default function HumanPoweredTeam() {
       <div className="w-full flex  justify-center items-center">
         <div className="flex flex-col  w-fit">
           <p className="text-white text-4xl font-semibold drop-shadow-sm">
-            Official Team Members
+            {t("HumanPoweredTeam.officialMembers")}
           </p>
           <div className="bg-white h-1 w-full"></div>
         </div>
@@ -191,7 +193,7 @@ export default function HumanPoweredTeam() {
       <div className="w-full flex  justify-center items-center">
         <div className="flex flex-col  w-fit">
           <p className="text-white text-4xl font-semibold drop-shadow-sm">
-            Special mentors
+          {t("HumanPoweredTeam.specialMentors")}
           </p>
           <div className="bg-white h-1 w-full"></div>
         </div>

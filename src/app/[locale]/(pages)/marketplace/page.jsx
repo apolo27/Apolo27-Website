@@ -10,7 +10,10 @@ import {
   DialogBackdrop,
 } from "@headlessui/react";
 
+import { useTranslations } from "next-intl";
+
 export default function Marketplace() {
+  const t = useTranslations("Marketplace");
   const [searchBar, setSearchBar] = useState("");
   const [isOpen, setIsOpen] = useState(false);
   const categoryBtnStyle = `w-full text-left text-lg font-semibold px-3 py-1 my-2 hover:shadow-lg shadow-white hover:bg-[#666A95] rounded-xl transition-all ease-out`;
@@ -139,7 +142,7 @@ export default function Marketplace() {
           Apolo 27
         </p>
         <p className="font-bold text-white text-2xl">
-          An outer space clothing catalog
+          {t("banner.subtitle")}
         </p>
       </div>
       <div className="flex flex-col lg:flex-row bg-[#121836] justify-center items-center w-full h-full">

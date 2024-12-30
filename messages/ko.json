@@ -1,0 +1,380 @@
+{
+  "LocaleSwitcher": {
+    "label": "언어 변경",
+    "locale": "{locale, select, es {🇩🇴 스페인어} en {🇺🇸 영어} fr {🇫🇷 프랑스어} hi {🇮🇳 힌디어} ja {🇯🇵 일본어} ko {🇰🇷 한국어} pt {🇵🇹 포르투갈어} zh {🇨🇳 중국어(만다린)} other {알 수 없음}}"
+  },
+  "header": {
+    "home": "홈",
+    "aboutUs": "우리에 대해",
+    "games": "게임",
+    "marketplace": "마켓플레이스",
+    "stemWithUs": "우리와 함께 STEM",
+    "socialMedia": "소셜 미디어",
+    "sponsors": "후원사"
+  },
+  "timer": {
+    "title": "HERC까지 남은 시간: "
+  },
+  "HomePage": {
+    "title": "NASA의 인간 탐사 로버 챌린지에서 우승한 첫 번째 도미니카 공화국 대학 부문",
+    "stemVisitTitle": "우리의 STEM 방문을 계획하세요!",
+    "stemVisitSubtitle": "귀하의 교육 기관을 위한 양식을 작성하세요",
+    "exploreMore": "우리에 대해 더 알아보기",
+    "missionTitle": "아폴로 27 미션",
+    "timelineTitle": "우리의 타임라인",
+    "sponsorUsTitle": "우리를 지원",
+    "sponsorUsSubtitle": "팀이 승리하려면 당신의 도움이 필요합니다!",
+    "divisionsTitle": "아폴로 27의 2025 디비전",
+    "humanPoweredConstellation": "휴먼 파워드 별자리",
+    "remoteControlledConstellation": "원격 제어 별자리",
+    "timeline": {
+      "awards": {
+        "overallWinner1": {
+          "title": "종합 우승자 #1",
+          "description": "전체적으로 가장 뛰어난 팀에게 수여됩니다. 디자인 리뷰, STEM 교육 참여, 안전성, 성공적인 원정 등 여러 요소가 종합 우승자를 결정합니다."
+        },
+        "overallWinner2": {
+          "title": "종합 우승자 #2",
+          "description": "전체적으로 가장 뛰어난 팀에게 수여됩니다. 디자인 리뷰, STEM 교육 참여, 안전성, 성공적인 원정 등 여러 요소가 종합 우승자를 결정합니다."
+        },
+        "overallWinner3": {
+          "title": "종합 우승자 #3",
+          "description": "전체적으로 가장 뛰어난 팀에게 수여됩니다. 디자인 리뷰, STEM 교육 참여, 안전성, 성공적인 원정 등 여러 요소가 종합 우승자를 결정합니다."
+        },
+        "stemEngagement": {
+          "title": "STEM 참여 상",
+          "description": "지역사회에서 STEM 관련 주제의 학습을 가장 잘 촉진한 팀에게 수여됩니다. 특히 중학생들과의 협력이 포함된 과제 도전이 중요합니다. 이 팀은 많은 사람들에게 다수의 활동을 제공했을 뿐만 아니라 다양한 오디언스를 대상으로 질 높은 활동을 진행했습니다."
+        },
+        "projectReview": {
+          "title": "프로젝트 리뷰",
+          "description": "서면 리뷰와 공식 발표를 잘 결합한 팀에게 수여됩니다."
+        },
+        "phoenix": {
+          "title": "피닉스 상",
+          "description": "디자인 리뷰와 운영 준비 리뷰 사이에서 가장 큰 개선을 보여준 팀에게 수여됩니다."
+        },
+        "socialMedia": {
+          "title": "소셜 미디어 상",
+          "description": "프로젝트 연도 동안 가장 활발하고 창의적인 소셜 미디어 존재감을 보여준 팀에게 수여됩니다."
+        },
+        "taskChallenge": {
+          "title": "과제 도전 상",
+          "description": "액체 샘플 회수 작업을 위한 다기능 도구 설계를 가장 잘 보여준 팀에게 수여됩니다."
+        },
+        "featherweight": {
+          "title": "페더웨이트",
+          "description": "우주 탐사에서 중요한 문제인 무게 관리에 대해 가장 혁신적인 접근을 보여준 팀에게 수여됩니다. (전체에서 한 팀에게만 수여됩니다.)"
+        },
+        "ingenuity": {
+          "title": "창의성 상",
+          "description": "복잡한 프로젝트나 공학 문제를 독특하고 창의적인 방법으로 해결한 팀에게 수여됩니다."
+        },
+        "pitCrew": {
+          "title": "피트 크루 상",
+          "description": "피트 구역에서 로버를 수리하거나 작업하는 팀 중 가장 자원봉사적이고 동기부여가 되며 스포츠맨십과 팀 정신을 잘 보여준 팀에게 수여됩니다."
+        },
+        "systemSafety": {
+          "title": "시스템 안전 상",
+          "description": "차량, 인원 및 운영에 관련된 시스템 안전에 대해 가장 포괄적인 접근을 보여준 팀에게 수여됩니다."
+        },
+        "teamSpirit": {
+          "title": "팀 정신 상",
+          "description": "현장 이벤트에서 가장 ‘최고의 팀 정신’을 보여준 팀에게 수여됩니다."
+        },
+        "crashAndBurn": {
+          "title": "크래시 앤 번",
+          "description": "실패를 배우는 기회로 받아들이고 미래의 성공을 위한 교훈으로 삼은 팀에게 수여됩니다. (전체에서 한 팀에게만 수여됩니다.)"
+        },
+        "rookieOfTheYear": {
+          "title": "올해의 신인 상",
+          "description": "최고의 신인 팀에게 수여됩니다. (종합 상과 동일한 심사 기준이 적용됩니다. 신인 팀이 종합 상을 수상하면 2위 신인 팀이 수상하게 됩니다. 한 팀에게만 수여됩니다.)"
+        },
+        "payItForward": {
+          "title": "페이 잇 포워드 상",
+          "description": "이 Artemis 학생 챌린지(ASC) 상은 가장 영향력 있는 교육 참여 이벤트를 지역사회에서 실시한 팀에게 수여됩니다. 교육 참여에는 STEM 관련 개념을 학습하는 활동에 참가자가 능동적으로 참여하는 교육 활동이 포함됩니다."
+        },
+        "innovation": {
+          "title": "혁신 상",
+          "description": "이 Artemis 학생 챌린지(ASC) 상은 해당 도전 과제의 범위 내에서 새로운 혁신적인 아이디어와 솔루션을 창출한 팀에게 수여됩니다. 기술 또는 비기술적인 아이디어에서 창의성, 효율성 및 문제 해결을 위한 독창적인 아이디어가 평가됩니다."
+        },
+        "artemisEducator": {
+          "title": "Artemis 교육자 상",
+          "description": "이 Artemis 학생 챌린지(ASC) 상은 학생 팀 멤버가 추천하는 교사 및 멘토에게 수여됩니다. 학생 팀 멤버는 학습자들에게 영감을 주고 그들이 예상보다 더 많은 성과를 얻도록 동기를 부여한 교사나 멘토를 인정합니다."
+        },
+        "otherAwards": {
+          "title": "기타 상",
+          "description": "디자인 리뷰 및 운영 준비 리뷰 보고서 또는 현장 대회와 같은 대회의 구성 요소를 기반으로 다른 상이 수여될 수 있습니다."
+        },
+        "mostImproved": {
+          "title": "가장 개선된 팀",
+          "description": "대회 이틀 동안 가장 큰 개선을 보여준 팀에게 수여됩니다."
+        }
+      },
+      "teams": {
+        "2019": {
+          "division": "인력",
+          "title": "THE ORIGIN",
+          "description": "우리는 2019년, 우리 나라의 첫 번째 대학 팀으로 NASA 로버 챌린지에 참가하며 놀라운 성과를 이루었습니다.",
+          "image": "/images/timeline/2019.webp",
+          "teamAwards": []
+        },
+        "2020": {
+          "division": "인력",
+          "title": "역경 속의 인내",
+          "description": "세계적인 팬데믹의 도전 속에서도 우리의 회복력이 빛을 발했습니다. 얻은 교훈은 역사적인 ‘시스템 안전 상’ 승리로 이어졌습니다.",
+          "image": "/images/timeline/2020.webp",
+          "teamAwards": ["systemSafety"]
+        },
+        "2021": {
+          "division": "인력",
+          "title": "개선과 재창조",
+          "description": "개선된 로버와 함께, 우리의 팀은 새로운 수준의 전문성을 달성하고 지역사회를 통해 STEM에 대한 열정을 불러일으켰습니다.",
+          "image": "/images/timeline/2021.webp",
+          "teamAwards": []
+        },
+        "2022": {
+          "division": "인력",
+          "title": "영향력 확장",
+          "description": "2022년은 인터랙티브한 ‘STEM 투어’를 시작하며 전환점을 맞이했고, 그 결과 ‘참여 상’을 수상했습니다.",
+          "image": "/images/timeline/2022.webp",
+          "teamAwards": ["stemEngagement"]
+        },
+        "2023": {
+          "division": "인력",
+          "title": "역사적인 해",
+          "description": "도미니카 공화국의 지배의 해! 큰 개선을 통해 ‘가장 개선된’ 팀과 ‘팀 정신’ 상을 수상하며 역사를 새로 썼습니다.",
+          "image": "/images/timeline/2023.webp",
+          "teamAwards": ["mostImproved", "teamSpirit"]
+        },
+        "2024": {
+          "division": "인력",
+          "title": "기준 설정",
+          "description": "2023년의 성공을 바탕으로 2024년 새로운 고지를 달성했습니다. 우리의 노력은 ‘종합 상 (2위)’과 ‘스피리트 상’을 수상하며, 우수성과 단합을 보여주었습니다.",
+          "image": "/images/timeline/2024.webp",
+          "teamAwards": ["overallWinner2", "teamSpirit"],
+          "badges": ["/images/badges/lunar-navigation.webp"]
+        },
+        "2025": {
+          "division": "인력",
+          "title": "새로운 영역",
+          "description": "아폴로 부서의 시작으로 2025년 새로운 장이 열립니다. 우리는 높은 목표를 설정하고 혁신과 팀워크의 경계를 넓혀가고 있습니다.",
+          "teamAwards": [],
+          "badges": [
+            "/images/badges/innovation.webp",
+            "/images/badges/stem-engagement.webp"
+          ],
+          "rcDivision": "리모컨",
+          "rcTitle": "리모컨 미션의 선도자",
+          "rcDescription": "우리의 RC 팀은 대담한 아이디어와 과감한 엔지니어링으로 첫 해를 맞이합니다.",
+          "rcTeamAwards": []
+        }
+      }
+    }
+  },
+  "About-us": {
+    "mechatronics": "메카트로닉스 공학",
+    "mechanical": "기계 공학",
+    "electronics": "전자 공학 및 통신 공학",
+    "computer": "컴퓨터 공학",
+    "software": "소프트웨어 공학",
+    "systems": "시스템 공학",
+    "datascience": "데이터 과학",
+    "aerospace": "항공 우주 공학",
+    "internationalbusiness": "국제 비즈니스 학사",
+    "biotechnology": "생명 공학 학사",
+    "education": "교육학 학사",
+
+    "HumanPoweredTeam": {
+      "title": "인간 구동 팀",
+      "rcDivision": "RC 부문",
+      "officialMembers": "공식 팀원",
+      "specialMentors": "특별 멘토",
+      "members": {
+        "advisor": "팀 고문",
+        "teamLeader": "팀 리더",
+        "safetyOfficer": "안전 담당자",
+        "fundingManager": "재정 관리자",
+        "manufacturingManager": "제조 관리자",
+        "manufacturingAssistant": "제조 보조",
+        "stemManager": "STEM 관리자",
+        "stemAssistant": "STEM 보조",
+        "projectManager": "프로젝트 관리자",
+        "communityManager": "커뮤니티 관리자"
+      }
+    },
+    "RemoteControlledTeam": {
+      "title": "원격 제어 팀",
+      "hpDivision": "HP 부문",
+      "officialMembers": "공식 팀원",
+      "specialMentors": "특별 멘토",
+      "members": {
+        "advisor": "팀 고문",
+        "teamLeader": "팀 리더",
+        "safetyOfficer": "안전 담당자",
+        "funding": "재정",
+        "manufacturingManager": "제조 관리자",
+        "manufacturingAssistant": "제조 보조",
+        "telemetryAssistant": "텔레메트리 보조",
+        "stemManager": "STEM 관리자",
+        "communityManager": "커뮤니티 관리자"
+      }
+    }
+  },
+  "Games": {
+    "Subtitle": "우리의 게임을 통해 STEM을 발견하세요.",
+    "HERCSimulation": {
+      "title": "NASA HERC 시뮬레이션",
+      "caption": "당신의 기기에서 NASA HERC를 경험하세요.",
+      "description": "이 시뮬레이션에서, 당신은 팀 아폴로 27이 앨라배마주 헌츠빌에서 직면할 경쟁을 경험할 수 있습니다. 우리의 로버가 맞닥뜨릴 장애물과 과제를 배우고 가장 짧은 시간 안에 1위를 차지하도록 도와주세요! 이 임무는 당신에게 달려 있습니다!",
+      "playButton": "플레이",
+      "downloadButton": "다운로드"
+    },
+    "MathGame": {
+      "title": "수학 사원",
+      "caption": "신비로운 수학 사원에서 수학 실력을 향상시키세요.",
+      "description": "달리고, 점프하고, 풀어보세요! 당신의 산술 실력으로 수학 사원을 정복하세요. 수학 도전이 기다리고 있습니다! 당신의 수학 실력으로 사원을 탈출할 수 있나요?",
+      "playButton": "플레이",
+      "downloadButton": "다운로드",
+      "comingSoon": "곧 출시 예정..."
+    },
+    "ScienceGame": {
+      "title": "작은 연금술",
+      "caption": "우리 주변의 원소를 발견하세요.",
+      "description": "내면의 과학자를 해방시키세요! 원소를 결합하여 자연의 비밀을 발견하세요. 원소의 대가가 되어보세요.",
+      "playButton": "플레이",
+      "downloadButton": "다운로드",
+      "comingSoon": "곧 출시 예정..."
+    },
+    "TechnologyGame": {
+      "title": "스페이스 타이핑 히어로",
+      "caption": "전문가처럼 키보드를 사용하는 법을 배워보세요.",
+      "description": "당신의 타이핑 실력으로 은하계를 방어하세요! 빠르게 타이핑하고 더 빠르게 쏘세요! 외계 침략자로부터 우주를 구하세요.",
+      "playButton": "플레이",
+      "downloadButton": "다운로드",
+      "comingSoon": "곧 출시 예정..."
+    },
+    "title": "STEM 게임",
+    "subtitle": "우리의 게임을 통해 STEM을 발견하세요.",
+    "visitButton": "방문",
+    "games": [
+      {
+        "title": "NASA HERC 시뮬레이션",
+        "caption": "당신의 기기에서 NASA HERC를 경험하세요."
+      },
+      {
+        "title": "대연금술",
+        "caption": "우리 주변의 원소를 발견하세요."
+      },
+      {
+        "title": "스페이스 타이핑 히어로",
+        "caption": "전문가처럼 키보드를 사용하는 법을 배워보세요."
+      },
+      {
+        "title": "수학 사원",
+        "caption": "신비로운 수학 사원에서 수학 실력을 향상시키세요."
+      }
+    ]
+  },
+  "Marketplace": {
+    "banner": {
+      "title": "아폴로 27",
+      "subtitle": "우주 의류 카탈로그"
+    },
+    "comingSoon": "곧 출시",
+    "names": {
+      "all": "전체",
+      "tShirt": {
+        "1": "기본 화이트 티셔츠",
+        "2": "그래픽 프린트 티셔츠",
+        "3": "빈티지 로고 티셔츠"
+      },
+      "hoodie": {
+        "1": "컴포트 핏 후드",
+        "2": "집업 후드",
+        "3": "헤비급 후드"
+      },
+      "hats": {
+        "1": "스냅백 캡",
+        "2": "비니",
+        "3": "버킷 햇"
+      },
+      "accessories": {
+        "1": "가죽 벨트",
+        "2": "선글라스",
+        "3": "시계"
+      }
+    },
+    "searchPlaceholder": "다음 의상을 검색하세요",
+    "dialog": {
+      "title": "이름",
+      "description": "제품 설명",
+      "closeButton": "닫기"
+    }
+  },
+  "SocialMedia": {
+    "title": "소셜 미디어",
+    "podcast": {
+      "title": "팟캐스트",
+      "name": "카리브 STEM",
+      "description": "카리브 STEM은 STEM(과학, 기술, 공학, 수학)을 도미니카 공화국과 라틴 아메리카 전역에 공유하고 확산하기 위해 만들어진 팟캐스트입니다. NASA HERC 대회에서 INTEC을 대표하는 아폴로 27 팀에 의해 만들어졌습니다."
+    },
+    "tabs": {
+      "tiktok": "틱톡",
+      "instagram": "인스타그램",
+      "youtube": "유튜브"
+    },
+    "video1": {
+      "username": "@apolo27rd",
+      "description": "🎥💸 #제조가 $$$이 필요할 때 #펀딩이 협력하지 않으면... 😂💀 💬 동의하는 사람? 👇",
+      "hashtags": ["#제조", "#펀딩", "#아폴로27팀", "#돈주세요", "#팀문제"],
+      "sound": "♬ 오리지널 사운드 - 💘🐩"
+    },
+    "video2": {
+      "username": "@apolo27rd",
+      "description": "🚀📚 #아폴로27 팀이 2024 도미니카 공화국 국제 도서 박람회에 참가했습니다! 🇩🇴✨ 책 너머로, 우리는 우리의 미션, 가치, 그리고 팀으로서의 모든 작업을 공유하기 위해 이 멋진 플랫폼을 활용했습니다. 💡🔥 뛰어난 아이디어와 연결하고, 새로운 계획을 탐구하며, #아폴로27이 어떻게 영향을 미치는지 보여줍니다. 🌟 우리 작업에 대해 더 알고 싶으세요? 댓글로 질문을 남겨주세요!👇🤝 🎥✨ 플레이를 눌러 이 특별한 날을 경험하세요! ❤️",
+      "hashtags": [
+        "#아폴로27",
+        "#아폴로27RD",
+        "#목적있는혁신",
+        "#2024도서박람회",
+        "#미래구축",
+        "#멈출수없는팀"
+      ],
+      "sound": "♬ 오리지널 사운드 - 아폴로 27 RD"
+    },
+    "connect": {
+      "title": "우리를 팔로우하세요!",
+      "subtitle": "모든 소셜 미디어에서 우리를 팔로우하세요"
+    }
+  },
+  "Sponsors": {
+    "title": "우리를 후원하세요",
+    "subtitle": "당신의 지원이 우리나라에 자격 있는 인정을 가져다줄 것입니다.",
+    "buttonText": "우리를 후원하세요"
+  },
+  "StemWithUs": {
+    "blogs": {
+      "title": "우리의 최근 블로그",
+      "readMore": "더 읽기"
+    },
+    "calendar": {
+      "title": "아폴로 27의 이벤트",
+      "event": {
+        "start": "시작: ",
+        "end": "끝: ",
+        "follow": "팔로우"
+      }
+    },
+    "youtube": {
+      "invite": "우리의",
+      "channelName": "유튜브 채널을 방문하세요!",
+      "description": "우리의 비디오는 엔지니어링 기술과 헌신을 보여주며, 이를 통해 우리는 HERC에서 네 번의 카테고리 우승자가 되었습니다. 최신 프로젝트와 이벤트에 대해 업데이트를 받으려면 구독하세요.",
+      "subscribe": "구독",
+      "continue": "최신 프로젝트와 이벤트를 계속 업데이트 받으세요."
+    },
+    "form": {
+      "title": "방문을 계획하고 싶으신가요?",
+      "subtitle": "지금 저희에게 연락하세요!"
+    }
+  }
+}
