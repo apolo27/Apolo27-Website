@@ -1,4 +1,8 @@
 {
+    "LocaleSwitcher": {
+        "label": "Cambiar Idioma",
+        "locale": "{locale, select, es {🇩🇴 Español} en {🇺🇸 Inglés} other {Unknown}}"
+    },
     "HomePage": {
         "title": "La primera division universitaria de la República Dominicana ganadora en el NASA Human Exploration Rover Challenge"
     },

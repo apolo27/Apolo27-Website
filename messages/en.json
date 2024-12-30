@@ -1,4 +1,8 @@
 {
+    "LocaleSwitcher": {
+        "label": "Change language",
+        "locale": "{locale, select, es {🇩🇴 Spanish} en {🇺🇸 English} other {Unknown}}"
+    },
     "HomePage": {
         "title": "The First Dominican Republic University Division Winners at NASA's Human Exploration Rover Challenge"
     }
