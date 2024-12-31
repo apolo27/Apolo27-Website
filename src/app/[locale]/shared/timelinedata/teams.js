@@ -168,7 +168,7 @@ const teamsByYear = [
         division: "timeline.teams.2025.division",
         title: "timeline.teams.2025.title",
         description: "timeline.teams.2025.description",
-        image: "/images/timeline/2024.webp",
+        image: "/images/timeline/2025-hp.webp",
         teamAwards: [],
         badges: [
           "/images/badges/innovation.webp",
@@ -179,7 +179,7 @@ const teamsByYear = [
         division: "timeline.teams.2025.rcDivision",
         title: "timeline.teams.2025.rcTitle",
         description: "timeline.teams.2025.rcDescription",
-        image: "/images/timeline/2024.webp",
+        image: "/images/timeline/2025-rc.webp",
         teamAwards: [],
       },
     ],
