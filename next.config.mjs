@@ -7,6 +7,8 @@ const withNextIntl = createNextIntlPlugin();
 const nextConfig = {
     compiler: {
         styledComponents: true,
+        output: "export",
+        basePath: "/nextjs-github-pages",
     },
     images: {
         remotePatterns: [
