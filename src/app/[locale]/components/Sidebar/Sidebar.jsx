@@ -46,7 +46,7 @@ const Sidebar = ({ toggleSidebar, isOpen }) => {
             { icon: <BuildingStorefrontIcon className="w-5 h-5 inline-block" />, href: "/marketplace", label: t("marketplace") },
           ].map((item, i) => (
             <li key={i} className="relative">
-              <Link href={item.href} className="">
+              <Link onClick={() => toggleSidebar()} href={item.href} className="">
                 <span className="block bg-blue-600 text-white py-3 px-6 rounded-lg shadow-md transition-transform duration-300 transform hover:scale-105 hover:bg-blue-700 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
                   {item.icon} {item.label}
                 </span>

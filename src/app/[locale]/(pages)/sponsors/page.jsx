@@ -55,8 +55,8 @@ export default function Sponsors() {
   return (
     <div className="z-10 text-center space-y-10 h-screen">
       <div className="titleArea text-white">
-        <h1 className="sponsorsPage-title font-bold">{t("title")}</h1>
-        <h3 className="sponsorsPage-text font-semibold">
+        <h1 className="font-bold text-5xl sm:text-7xl md:text-8xl lg:text-7xl">{t("title")}</h1>
+        <h3 className="mx-10 text-xl sm:text-6xl md:text-7xl lg:text-6xl font-semibold">
           {t("subtitle")}
         </h3>
       </div>

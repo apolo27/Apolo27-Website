@@ -184,7 +184,7 @@
     "internationalbusiness": "Licence en Affaires Internationales",
     "biotechnology": "Licence en Biotechnologie",
     "education": "Licence en Éducation",
-    
+
     "HumanPoweredTeam": {
       "title": "Équipe Propulsée par Humains",
       "rcDivision": "Division RC",
@@ -239,7 +239,7 @@
       "comingSoon": "Bientôt disponible..."
     },
     "ScienceGame": {
-      "title": "Petite Alchimie",
+      "french": "Laboratoire de Sciences",
       "caption": "Découvrez les éléments qui nous entourent.",
       "description": "Libérez le scientifique qui est en vous ! Combinez des éléments pour découvrir les secrets de la nature. Devenez un maître des éléments.",
       "playButton": "Jouer",
