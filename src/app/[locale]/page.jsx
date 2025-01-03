@@ -21,7 +21,7 @@ import TimelineOppositeContent from "@mui/lab/TimelineOppositeContent";
 
 import { useTranslations } from "next-intl";
 
-import  teamsByYear  from "./shared/timelinedata/teams";
+import teamsByYear from "./shared/timelinedata/teams";
 
 export default function Home() {
   const t = useTranslations("HomePage");
@@ -31,8 +31,6 @@ export default function Home() {
   const teamClassName = `opacity-80 hover:opacity-100 transition-all hover:cursor-pointer hover:scale-105`;
   const timelineItem = `max-w-[450px] bg-[#121837] border border-[#666A95] text-white text-center rounded-2xl flex flex-col items-center md:items-start`;
   const currentTimelineItem = `max-w-[450px] bg-[#121837] border border-[#666A95] text-white text-center rounded-2xl flex flex-col items-center md:items-start shadow-[0px_20px_207px_10px_rgba(165,_39,_255,_0.48)] bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] `;
-
-
 
   const flipCard = (i) => {
     if (typeof window !== "undefined") {
@@ -317,37 +315,82 @@ export default function Home() {
           {t("timelineTitle")}
         </p>
 
-        <Timeline
-          position="alternate-reverse"
-          className="big-timeline  w-full"
-        >
-          {teamsByYear.map((yearData, i) => (
-            <TimelineItem key={i} className="z-10 ">
-              {yearData.teams.length > 1 && (
-                <TimelineOppositeContent className="3xl:flex 3xl:justify-center">
-                  <div
-                    className={`
+        <div className="big-timeline">
+          <Timeline
+            position="alternate-reverse"
+            className="w-full"
+          >
+            {teamsByYear.map((yearData, i) => (
+              <TimelineItem key={i} className="z-10 ">
+                {yearData.teams.length > 1 && (
+                  <TimelineOppositeContent className="3xl:flex 3xl:justify-center">
+                    <div
+                      className={`
                       ${
                         i === teamsByYear.length - 1
                           ? currentTimelineItem
                           : timelineItem
                       }
                     `}
+                    >
+                      <div className="gap-4 px-4 flex flex-col md:flex-row items-center w-full justify-evenly bg-gradient-to-b from-cyan-600 to-cyan-900 rounded-t-2xl py-8">
+                        <p className="text-5xl font-boldrounded-xl bg-cyan-950/[0.7] rounded-lg p-1">
+                          {yearData?.year}
+                        </p>
+                        <p className="text-2xl text-center md:text-left w-5/6">
+                          {t(yearData.teams[1]?.title)}
+                        </p>
+                      </div>
+                      <div className="p-4 space-y-5">
+                        <p className="text-md md:text-lg text-center md:text-left font-semibold px-8 md:px-4">
+                          {t(yearData.teams[1]?.description)}
+                        </p>
+                        <Image
+                          src={yearData.teams[1]?.image}
+                          alt="Team Image"
+                          width="0"
+                          height="0"
+                          sizes="100vw"
+                          className="px-8 md:px-4 w-full h-30"
+                        />
+                        {/* <button
+                        onClick={() => showTeam(team)}
+                        className="bg-gradient-to-br from-cyan-950 to-cyan-800 p-4 rounded-xl font-semibold hover:scale-105 transition-all"
+                      >
+                        Ver mas
+                      </button> */}
+                      </div>
+                    </div>
+                  </TimelineOppositeContent>
+                )}
+
+                <TimelineSeparator>
+                  <TimelineDot />
+                  <TimelineConnector />
+                </TimelineSeparator>
+
+                <TimelineContent className="3xl:flex 3xl:justify-center">
+                  <div
+                    className={`${
+                      i === teamsByYear.length - 1
+                        ? currentTimelineItem
+                        : timelineItem
+                    }`}
                   >
-                    <div className="gap-4 px-4 flex flex-col md:flex-row items-center w-full justify-evenly bg-gradient-to-b from-cyan-600 to-cyan-900 rounded-t-2xl py-8">
-                      <p className="text-5xl font-boldrounded-xl bg-cyan-950/[0.7] rounded-lg p-1">
-                        {yearData?.year}
+                    <div className="px-4 flex flex-col md:flex-row items-center w-full justify-evenly bg-gradient-to-b from-cyan-600 to-cyan-900 rounded-t-2xl py-8">
+                      <p className="text-5xl lg:text-6xl font-boldrounded-xl bg-cyan-950/[0.7] rounded-lg p-1">
+                        {yearData.year}
                       </p>
-                      <p className="text-2xl text-center md:text-left w-5/6">
-                        {t(yearData.teams[1]?.title)}
+                      <p className="text-2xl text-center md:text-left w-1/2">
+                        {t(yearData.teams[0].title)}
                       </p>
                     </div>
                     <div className="p-4 space-y-5">
                       <p className="text-md md:text-lg text-center md:text-left font-semibold px-8 md:px-4">
-                        {t(yearData.teams[1]?.description)}
+                        {t(yearData.teams[0].description)}
                       </p>
                       <Image
-                        src={yearData.teams[1]?.image}
+                        src={yearData.teams[0].image}
                         alt="Team Image"
                         width="0"
                         height="0"
@@ -355,61 +398,18 @@ export default function Home() {
                         className="px-8 md:px-4 w-full h-30"
                       />
                       {/* <button
-                        onClick={() => showTeam(team)}
-                        className="bg-gradient-to-br from-cyan-950 to-cyan-800 p-4 rounded-xl font-semibold hover:scale-105 transition-all"
-                      >
-                        Ver mas
-                      </button> */}
-                    </div>
-                  </div>
-                </TimelineOppositeContent>
-              )}
-
-              <TimelineSeparator>
-                <TimelineDot />
-                <TimelineConnector />
-              </TimelineSeparator>
-
-              <TimelineContent className="3xl:flex 3xl:justify-center">
-                <div
-                  className={`${
-                    i === teamsByYear.length - 1
-                      ? currentTimelineItem
-                      : timelineItem
-                  }`}
-                >
-                  <div className="px-4 flex flex-col md:flex-row items-center w-full justify-evenly bg-gradient-to-b from-cyan-600 to-cyan-900 rounded-t-2xl py-8">
-                    <p className="text-5xl lg:text-6xl font-boldrounded-xl bg-cyan-950/[0.7] rounded-lg p-1">
-                      {yearData.year}
-                    </p>
-                    <p className="text-2xl text-center md:text-left w-1/2">
-                      {t(yearData.teams[0].title)}
-                    </p>
-                  </div>
-                  <div className="p-4 space-y-5">
-                    <p className="text-md md:text-lg text-center md:text-left font-semibold px-8 md:px-4">
-                      {t(yearData.teams[0].description)}
-                    </p>
-                    <Image
-                      src={yearData.teams[0].image}
-                      alt="Team Image"
-                      width="0"
-                      height="0"
-                      sizes="100vw"
-                      className="px-8 md:px-4 w-full h-30"
-                    />
-                    {/* <button
                       onClick={() => showTeam(team)}
                       className="bg-gradient-to-br from-cyan-950 to-cyan-800 p-4 rounded-xl font-semibold hover:scale-105 transition-all"
                     >
                       Ver mas
                     </button> */}
+                    </div>
                   </div>
-                </div>
-              </TimelineContent>
-            </TimelineItem>
-          ))}
-        </Timeline>
+                </TimelineContent>
+              </TimelineItem>
+            ))}
+          </Timeline>
+        </div>
 
         {/* <TimelineModal
           isOpen={isOpen}
@@ -420,7 +420,12 @@ export default function Home() {
         <div className="mobile-timeline lg:hidden relative flex flex-wrap justify-around px-8 md:px-0 gap-20">
           <div className="w-[1px] bg-white h-full absolute left-1/2 transform -translate-x-1/2 "></div>
           {teamsByYear.map((yearData, i) => (
-            <div key={i} className={`flex flex-col gap-5 ${yearData.teams.length > 1 ? "bg-black p-5 rounded-2xl" : ""}`}>
+            <div
+              key={i}
+              className={`flex flex-col gap-5 ${
+                yearData.teams.length > 1 ? "bg-black p-5 rounded-2xl" : ""
+              }`}
+            >
               <div className="z-10 thecard" onClick={() => flipCard(i)}>
                 <div
                   className={
@@ -527,7 +532,7 @@ export default function Home() {
                             className="flex flex-col items-center bg-gradient-to-br from-blue-950 via cyan-900 to-black p-4 bg-opacity-60 border-2 border-white rounded-xl text-white font-medium"
                           >
                             <Image
-                              alt={award.title? award.title : "award"}
+                              alt={award.title ? award.title : "award"}
                               src="/images/timeline/glass-award.webp"
                               width={50}
                               height={50}
