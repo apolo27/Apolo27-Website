@@ -45,7 +45,7 @@ export const Chatbot = ({ isSidebarOpen }) => {
     generationConfig: {
       temperature: 0.8,
       topP: 0.95,
-      topK: 64,
+      topK: 40,
       maxOutputTokens: 8192,
       responseMimeType: 'text/plain',
     },
@@ -82,7 +82,6 @@ export const Chatbot = ({ isSidebarOpen }) => {
     setParsedMessages((prevMessages) => [...prevMessages, `<p>${prompt}</p>`]);
 
     await AskApolito(prompt);
-    console.log(chat.getHistory())
 
     reset();
   };

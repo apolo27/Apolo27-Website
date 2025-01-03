@@ -8,14 +8,16 @@ import {
   faInstagram,
   faXTwitter,
 } from "@fortawesome/free-brands-svg-icons";
+import { useTranslations } from "next-intl";
 
 import { Tab, TabGroup, TabList, TabPanel, TabPanels } from "@headlessui/react";
 export default function SocialMedia() {
+  const t = useTranslations("SocialMedia");
   return (
     <div className="bg-apolo-empty-background lg:px-40 px-4 pt-28 xl:pt-16">
       <div className="mb-20 rounded-full p-4 text-center bg-gradient-to-t from-[#379AE1] to-[#69BF77] z-10">
         <i className="text-3xl md:text-5xl font-bold text-white">
-          Social Media
+          {t("title")}
         </i>
       </div>
 
@@ -32,7 +34,7 @@ export default function SocialMedia() {
         </div>
         <div className="w-full lg:w-1/2 text-center md:text-left flex flex-col justify-between z-10">
           <p className="text-[#67E1A8] text-2xl md:text-4xl 2xl:text-5xl font-semibold">
-            Podcast
+            {t("podcast.title")}
           </p>
           <div className="text-4xl md:text-4xl 3xl:text-6xl font-extrabold">
             <span className="bg-clip-text text-transparent bg-gradient-to-t from-[#379AE1] to-[#69BF77] 2xl:text-8xl">
@@ -40,16 +42,13 @@ export default function SocialMedia() {
             </span>
           </div>
           <p className="text-white font-semibold 2xl:text-2xl">
-            Caribe STEM is a podcast created to share and disseminate STEM
-            (science, technology, engineering and mathematics) in the Dominican
-            Republic and throughout Latin America. Created by Apolo 27, the
-            university team representing INTEC in the NASA HERC competition.
+            {t("podcast.description")}
           </p>
         </div>
       </div>
 
       <hr className="my-16" />
-{/* 
+      {/* 
       <div className="flex flex-col lg:flex-row justify-between space-x-10">
         <div className="text-center md:text-left w-4/6">
           <p className="text-[#DFC86A] font-medium text-2xl 2xl:text-3xl mb-3">
@@ -314,8 +313,26 @@ export default function SocialMedia() {
           </TabPanel>
           <TabPanel className="flex gap-4 justify-center">
             <div className="flex justify-center gap-4">
-            <iframe width="320" height="525" src="https://www.youtube.com/embed/OGz4aQKsJmM" title="Apolo 27 | Expo STEM: Las Carreras del Hoy y el Mañana #ciencia #aprendizajedivertido #tecnologia" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            <iframe width="320" height="525" src="https://www.youtube.com/embed/017Eo5GvwQg" title="Apolo 27 | Expo STEM: Las Carreras del Hoy y el Mañana #ciencia #aprendizajedivertido #tecnologia" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              <iframe
+                width="320"
+                height="525"
+                src="https://www.youtube.com/embed/OGz4aQKsJmM"
+                title="Apolo 27 | Expo STEM: Las Carreras del Hoy y el Mañana #ciencia #aprendizajedivertido #tecnologia"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+              <iframe
+                width="320"
+                height="525"
+                src="https://www.youtube.com/embed/017Eo5GvwQg"
+                title="Apolo 27 | Expo STEM: Las Carreras del Hoy y el Mañana #ciencia #aprendizajedivertido #tecnologia"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
             </div>
           </TabPanel>
         </TabPanels>
@@ -332,10 +349,10 @@ export default function SocialMedia() {
             />
           </div>
           <span className=" text-4xl md:text-6xl font-extrabold bg-clip-text text-transparent bg-gradient-to-t from-[#379AE1] to-[#69BF77]">
-            Connect with us!
+            {t("connect.title")}
           </span>
           <p className="font-semibold text-white text-lg md:text-xl w-3/4">
-            FOLLOW US ON ALL OUR SOCIAL MEDIA
+            {t("connect.subtitle")}
           </p>
         </div>
 
@@ -343,27 +360,27 @@ export default function SocialMedia() {
           <FontAwesomeIcon
             className="hover:cursor-pointer hover:scale-110"
             icon={faTiktok}
-            size="2xl"
+            size="xl"
           />
           <FontAwesomeIcon
             className="hover:cursor-pointer hover:scale-110"
             icon={faInstagram}
-            size="2xl"
+            size="xl"
           />
           <FontAwesomeIcon
             className="hover:cursor-pointer hover:scale-110"
             icon={faFacebook}
-            size="2xl"
+            size="xl"
           />
           <FontAwesomeIcon
             className="hover:cursor-pointer hover:scale-110"
             icon={faXTwitter}
-            size="2xl"
+            size="xl"
           />
           <FontAwesomeIcon
             className="hover:cursor-pointer hover:scale-110"
             icon={faYoutube}
-            size="2xl"
+            size="xl"
           />
         </div>
       </div>

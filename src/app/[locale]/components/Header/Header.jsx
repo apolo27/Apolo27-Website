@@ -3,7 +3,8 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { Link } from "../../../../i18n/routing";
 import Sidebar from "../Sidebar/Sidebar";
-import { usePathname } from "next/navigation";
+import { usePathname } from "../../../../i18n/routing";
+import {SelectLanguage} from "../SelectLanguage/SelectLanguage";
 
 export default function Header() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -74,6 +75,8 @@ export default function Header() {
               ))}
             </ul>
           </div>
+
+          <SelectLanguage />
 
           <button
             onClick={toggleSidebar}
