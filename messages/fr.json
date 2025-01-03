@@ -4,6 +4,7 @@
     "locale": "{locale, select, es {🇩🇴 Espagnol} en {🇺🇸 Anglais} fr {🇫🇷 Français} hi {🇮🇳 Indien} ja {🇯🇵 Japonais} ko {🇰🇷 Coréen} pt {🇵🇹 Portugais} zh {🇨🇳 Mandarin} other {Inconnu}}"
   },
   "header": {
+    "close": "Fermer",
     "home": "Accueil",
     "aboutUs": "À propos de nous",
     "games": "Jeux",

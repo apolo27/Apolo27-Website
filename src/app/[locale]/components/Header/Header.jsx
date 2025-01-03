@@ -4,9 +4,11 @@ import Image from "next/image";
 import { Link } from "../../../../i18n/routing";
 import Sidebar from "../Sidebar/Sidebar";
 import { usePathname } from "../../../../i18n/routing";
-import {SelectLanguage} from "../SelectLanguage/SelectLanguage";
+import { SelectLanguage } from "../SelectLanguage/SelectLanguage";
+import { useTranslations } from "next-intl";
 
 export default function Header() {
+  const t = useTranslations("header");
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const pathName = usePathname();
 
@@ -24,7 +26,7 @@ export default function Header() {
         className={`${
           pathName === "/"
             ? "bg-[#40D1FF] font-semibold"
-            : pathName === "/marketplace" 
+            : pathName === "/marketplace"
             ? "bg-transparent absolute"
             : pathName === "/stem-with-us"
             ? "bg-transparent absolute"
@@ -47,13 +49,13 @@ export default function Header() {
           <div className="flex-grow">
             <ul className="hidden lg:flex justify-center space-x-8 text-white">
               {[
-                { href: "/", label: "Home" },
-                { href: "/#about-us", label: "About us"},
-                { href: "/stem-with-us", label: "Stem With Us" },
-                { href: "/sponsors", label: "Become a Sponsor" },
-                { href: "/games", label: "Games" },
-                { href: "/social-media", label: "Social Media" },
-                { href: "/marketplace", label: "Marketplace" },
+                { href: "/", label: t("home") },
+                { href: "/#about-us", label: t("aboutUs") },
+                { href: "/stem-with-us", label: t("stemWithUs") },
+                { href: "/sponsors", label: t("sponsors") },
+                { href: "/games", label: t("games") },
+                { href: "/social-media", label: t("socialMedia") },
+                { href: "/marketplace", label: t("marketplace") },
               ].map((item, i) => (
                 <li key={i} className="relative">
                   <Link
@@ -82,7 +84,14 @@ export default function Header() {
             onClick={toggleSidebar}
             className="lg:hidden focus:outline-none transform transition-transform duration-300 hover:scale-110"
           >
-            <Image src="/images/menu.svg" alt="Menu" width="0" height="0" sizes="100vw" className="h-8 w-8" />
+            <Image
+              src="/images/menu.svg"
+              alt="Menu"
+              width="0"
+              height="0"
+              sizes="100vw"
+              className="h-8 w-8"
+            />
           </button>
 
           {isSidebarOpen && (

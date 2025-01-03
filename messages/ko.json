@@ -4,6 +4,7 @@
     "locale": "{locale, select, es {🇩🇴 스페인어} en {🇺🇸 영어} fr {🇫🇷 프랑스어} hi {🇮🇳 힌디어} ja {🇯🇵 일본어} ko {🇰🇷 한국어} pt {🇵🇹 포르투갈어} zh {🇨🇳 중국어(만다린)} other {알 수 없음}}"
   },
   "header": {
+    "close": "닫기",
     "home": "홈",
     "aboutUs": "우리에 대해",
     "games": "게임",

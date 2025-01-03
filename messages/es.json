@@ -4,6 +4,7 @@
     "locale": "{locale, select, es {🇩🇴 Español} en {🇺🇸 Inglés} fr {🇫🇷 Francés} hi {🇮🇳 Indio} ja {🇯🇵 Japonés} ko {🇰🇷 Coreano} pt {🇵🇹 Portugués} zh { 🇨🇳 Mandarín } other {Unknown}}"
   },
   "header": {
+    "close": "Cerrar",
     "home": "Inicio",
     "aboutUs": "Sobre Nosotros",
     "games": "Juegos",
@@ -16,7 +17,7 @@
     "title": "TIEMPO PARA HERC: "
   },
   "HomePage": {
-    "title": "Los Primeros Ganadores de la División Universitaria de República Dominicana en el Human Exploration Rover Challenge de la NASA",
+    "title": "Los Primeros Ganadores de la División Universitaria de Rep. Dom. en el Human Exploration Rover Challenge de la NASA",
     "stemVisitTitle": "¡Programa nuestra visita STEM!",
     "stemVisitSubtitle": "Completa el formulario para tu centro educativo",
     "exploreMore": "Descubre más sobre nosotros",

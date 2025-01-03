@@ -55,12 +55,12 @@ export default function Home() {
     <>
       <div className="text-center h-fit  space-y-8 lg:space-y-20 2xl:space-y-10 bg-gradient-to-t from-[#101321] to-[#40D1FF] px-5 md:px-40 flex flex-col items-center pt-5">
         <Timer />
-        <p className="mt-4 font-bold text-4xl lg:text-5xl 3xl:text-6xl w-full lg:w-5/6 text-transparent bg-clip-text bg-gradient-to-b from-white to-gray-500">
+        <p className="mt-4 font-bold text-3xl xs:text-4xl lg:text-5xl 3xl:text-6xl w-full lg:w-5/6 text-transparent bg-clip-text bg-gradient-to-b from-white to-gray-500">
           {t("title")}
         </p>
         <Link
           href="/stem-with-us"
-          className="flex lg:hidden transition-all border border-1 border-[#424B5B] bg-black/[0.8] w-full  md:w-[520px] py-2 h-fit  rounded-full  items-center justify-evenly hover:cursor-pointer hover:scale-105 "
+          className="flex lg:hidden transition-all border border-1 border-[#424B5B] bg-black/[0.8] w-full  md:w-[520px] pl-2 py-2 h-fit  rounded-2xl  items-center justify-evenly hover:cursor-pointer hover:scale-105 "
         >
           <Image
             src={"/images/icons/formIcon.webp"}
@@ -68,7 +68,7 @@ export default function Home() {
             width="0"
             height="0"
             sizes="100vw"
-            className="w-9 h-9 md:w-12 md:h-12"
+            className="hidden sm:block w-9 h-9 md:w-12 md:h-12"
           />
           <div className="text-left">
             <p className="font-semibold text-white md:text-lg">
@@ -135,7 +135,7 @@ export default function Home() {
           <p className="absolute font-bold text-3xl md:text-4xl text-white top-5 left-5">
             {t("sponsorUsTitle")}
           </p>
-          <p className="absolute font-semibold text-lg md:text-2xl text-left text-white top-16 left-5">
+          <p className="absolute font-semibold text-lg md:text-2xl text-left text-white top-16 left-5 w-5/6">
             {t("sponsorUsSubtitle")}
           </p>
           <div className="hidden xm:inline-flex w-11/12 absolute top-14 xm:top-20 flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)]">
@@ -316,10 +316,7 @@ export default function Home() {
         </p>
 
         <div className="big-timeline">
-          <Timeline
-            position="alternate-reverse"
-            className="w-full"
-          >
+          <Timeline position="alternate-reverse" className="w-full">
             {teamsByYear.map((yearData, i) => (
               <TimelineItem key={i} className="z-10 ">
                 {yearData.teams.length > 1 && (
@@ -417,13 +414,13 @@ export default function Home() {
           team={team}
         /> */}
 
-        <div className="mobile-timeline lg:hidden relative flex flex-wrap justify-around px-8 md:px-0 gap-20">
+        <div className="mobile-timeline lg:hidden relative flex flex-wrap justify-around xs:px-8 md:px-0 gap-20">
           <div className="w-[1px] bg-white h-full absolute left-1/2 transform -translate-x-1/2 "></div>
           {teamsByYear.map((yearData, i) => (
             <div
               key={i}
               className={`flex flex-col gap-5 ${
-                yearData.teams.length > 1 ? "bg-black p-5 rounded-2xl" : ""
+                yearData.teams.length > 1 ? "bg-black p-2 xs:p-5 rounded-2xl" : ""
               }`}
             >
               <div className="z-10 thecard" onClick={() => flipCard(i)}>
@@ -438,23 +435,24 @@ export default function Home() {
                     <p className="text-5xl lg:text-6xl font-boldrounded-xl bg-cyan-950/[0.7] rounded-lg p-1">
                       {yearData.year}
                     </p>
-                    <p className="text-2xl lg:text-3xl text-center md:text-left w-1/2">
+                    <p className="text-2xl lg:text-3xl text-center md:text-left w-3/4 xs:w-1/2">
                       {t(yearData.teams[0].title)}
                     </p>
                   </div>
                   <div className="p-4 space-y-5">
-                    <p className="text-md md:text-lg text-center md:text-left font-semibold px-8 md:px-4">
+                    <p className="text-md md:text-lg text-center md:text-left font-semibold xs:px-8 md:px-4">
                       {t(yearData.teams[0].description)}
                     </p>
-
-                    <Image
-                      src={yearData.teams[0].image}
-                      alt="Team Image"
-                      width="0"
-                      height="0"
-                      sizes="100vw"
-                      className="px-8 pb-8 md:px-4 w-full h-full h-30"
-                    />
+                    <div className="rounded-2xl overflow-hidden">
+                      <Image
+                        src={yearData.teams[0].image}
+                        alt="Team Image"
+                        width="0"
+                        height="0"
+                        sizes="100vw"
+                        className="xs:px-8 xs:pb-8 md:px-4 w-full h-full "
+                      />
+                    </div>
                   </div>
                 </div>
                 <div

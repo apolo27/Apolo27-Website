@@ -4,6 +4,7 @@
     "locale": "{locale, select, es {🇩🇴 西班牙语} en {🇺🇸 英语} fr {🇫🇷 法语} hi {🇮🇳 印地语} ja {🇯🇵 日语} ko {🇰🇷 韩语} pt {🇵🇹 葡萄牙语} zh {🇨🇳 普通话} other {未知}}"
   },
   "header": {
+    "close": "关闭",
     "home": "首页",
     "aboutUs": "关于我们",
     "games": "游戏",
