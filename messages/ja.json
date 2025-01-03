@@ -1,0 +1,210 @@
+{
+  "HomePage": {
+    "title": "NASAのHuman Exploration Rover Challengeで優勝した初のドミニカ共和国大学チーム",
+    "stemVisitTitle": "STEM訪問を計画しよう！",
+    "stemVisitSubtitle": "教育機関向けフォームに記入してください",
+    "exploreMore": "私たちについてもっと知る",
+    "missionTitle": "アポロ27 ミッション",
+    "timelineTitle": "私たちのタイムライン",
+    "sponsorUsTitle": "私たちをサポートしてください！",
+    "sponsorUsSubtitle": "チームが勝つためにはあなたの助けが必要です！",
+    "divisionsTitle": "アポロ27の2025年ディビジョン",
+    "humanPoweredConstellation": "ヒューマンパワード コンステレーション",
+    "remoteControlledConstellation": "リモートコントロール コンステレーション"
+  },
+  "About-us": {
+    "HumanPoweredTeam": {
+      "title": "ヒューマンパワード チーム",
+      "rcDivision": "RC ディビジョン",
+      "officialMembers": "公式メンバー",
+      "specialMentors": "特別メンター",
+      "members": {
+        "advisor": "チームアドバイザー",
+        "teamLeader": "チームリーダー",
+        "safetyOfficer": "安全責任者",
+        "fundingManager": "資金調達マネージャー",
+        "manufacturingManager": "製造マネージャー",
+        "manufacturingAssistant": "製造アシスタント",
+        "stemManager": "STEMマネージャー",
+        "stemAssistant": "STEMアシスタント",
+        "projectManager": "プロジェクトマネージャー",
+        "communityManager": "コミュニティマネージャー"
+      },
+      "RemoteControlledTeam": {
+        "title": "リモートコントロール チーム",
+        "hpDivision": "ヒューマンパワード ディビジョン",
+        "officialMembers": "公式メンバー",
+        "specialMentors": "特別メンター",
+        "members": {
+          "advisor": "チームアドバイザー",
+          "teamLeader": "チームリーダー",
+          "safetyOfficer": "安全責任者",
+          "funding": "資金調達",
+          "manufacturingManager": "製造マネージャー",
+          "manufacturingAssistant": "製造アシスタント",
+          "telemetryAssistant": "テレメトリアシスタント",
+          "stemManager": "STEMマネージャー",
+          "communityManager": "コミュニティマネージャー"
+        }
+      }
+    }
+  },
+  "Games": {
+    "HERCSimulation": {
+      "title": "NASA HERC シミュレーション",
+      "description": "このシミュレーションで、アポロ27チームがアラバマ州ハンツビルで経験する競技に参加してください。ローバーが直面する障害やタスクを学び、最短時間で1位を目指しましょう！このミッションをあなたに託します！",
+      "playButton": "プレイ",
+      "downloadButton": "ダウンロード"
+    },
+    "MathGame": {
+      "title": "マス テンプル",
+      "description": "走って、ジャンプして、解いてみてください！算術の腕前でマステンプルを征服してください。数学のチャレンジが待っています！あなたの数学スキルでテンプルから脱出できますか？",
+      "playButton": "プレイ",
+      "downloadButton": "ダウンロード",
+      "comingSoon": "近日公開..."
+    },
+    "ScienceGame": {
+      "title": "リトル錬金術",
+      "description": "内なる科学者を解放してください！要素を組み合わせて自然の秘密を発見しましょう。要素のマスターになってください。",
+      "playButton": "プレイ",
+      "downloadButton": "ダウンロード",
+      "comingSoon": "近日公開..."
+    },
+    "TechnologyGame": {
+      "title": "スペース タイピング ヒーロー",
+      "description": "タイピングスキルで銀河を守ってください！速くタイピングして、さらに速く撃ちましょう！宇宙をエイリアンの侵略から救いましょう。",
+      "playButton": "プレイ",
+      "downloadButton": "ダウンロード",
+      "comingSoon": "近日公開..."
+    },
+    "title": "STEM ゲーム",
+    "subtitle": "ゲームを通じてSTEMを探索しましょう。",
+    "visitButton": "訪問",
+    "games": [
+      {
+        "title": "NASA HERC シミュレーション",
+        "caption": "自分のデバイスでNASA HERCを体験してください。"
+      },
+      {
+        "title": "リトル錬金術",
+        "caption": "私たちを取り囲む要素を発見してください。"
+      },
+      {
+        "title": "スペース タイピング ヒーロー",
+        "caption": "プロのようにキーボードを使う方法を学びましょう。"
+      },
+      {
+        "title": "マス テンプル",
+        "caption": "神秘的なマステンプルで数学スキルを向上させましょう。"
+      }
+    ]
+  },
+  "Marketplace": {
+    "banner": {
+      "title": "アポロ 27",
+      "subtitle": "宇宙衣料品カタログ"
+    },
+    "comingSoon": "近日公開",
+    "names": {
+      "all": "すべて",
+      "tShirt": {
+        "1": "ベーシックホワイトTシャツ",
+        "2": "グラフィックプリントTシャツ",
+        "3": "ヴィンテージロゴTシャツ"
+      },
+      "hoodie": {
+        "1": "コンフォートフィットフーディー",
+        "2": "ジップアップフーディー",
+        "3": "ヘビーウェイトフーディー"
+      },
+      "hats": {
+        "1": "スナップバックキャップ",
+        "2": "ビーニー",
+        "3": "バケットハット"
+      },
+      "accessories": {
+        "1": "レザーベルト",
+        "2": "サングラス",
+        "3": "腕時計"
+      }
+    },
+    "searchPlaceholder": "次の衣装を検索",
+    "dialog": {
+      "title": "名前",
+      "description": "製品説明",
+      "closeButton": "閉じる"
+    }
+  },
+  "SocialMedia": {
+    "title": "ソーシャルメディア",
+    "podcast": {
+      "title": "ポッドキャスト",
+      "name": "カリブSTEM",
+      "description": "カリブSTEMは、ドミニカ共和国およびラテンアメリカ全体でSTEM（科学、技術、工学、数学）を共有し普及させるために作成されたポッドキャストです。NASA HERCコンテストでINTECを代表するアポロ27チームによって作成されました。"
+    },
+    "tabs": {
+      "tiktok": "TikTok",
+      "instagram": "Instagram",
+      "youtube": "YouTube"
+    },
+    "video1": {
+      "username": "@apolo27rd",
+      "description": "🎥💸 #製造が$$$を必要としていても、#資金調達が協力しない場合... 😂💀 💬 誰がこれに共感しますか？ 👇",
+      "hashtags": [
+        "#製造",
+        "#資金調達",
+        "#アポロ27チーム",
+        "#お金ください",
+        "#チーム問題"
+      ],
+      "sound": "♬ オリジナルサウンド - 💘🐩"
+    },
+    "video2": {
+      "username": "@apolo27rd",
+      "description": "🚀📚 #アポロ27チームは2024年ドミニカ共和国国際ブックフェアに参加しました！ 🇩🇴✨ 書籍を超えて、私たちはこの素晴らしいプラットフォームを活用し、私たちの使命、価値観、チームとして行うすべてを共有しました。 💡🔥 素晴らしいアイデアとつながり、新しい計画を探索し、#アポロ27がどのように影響を与えているかを示します。 🌟 私たちの作業についてもっと知りたいですか？ コメントで質問を残してください！👇🤝 🎥✨ 再生して、この特別な日を体験してください！ ❤️",
+      "hashtags": [
+        "#アポロ27",
+        "#アポロ27RD",
+        "#目的ある革新",
+        "#2024ブックフェア",
+        "#未来を築く",
+        "#止まらないチーム"
+      ],
+      "sound": "♬ オリジナルサウンド - アポロ 27 RD"
+    },
+    "connect": {
+      "title": "フォローしてください！",
+      "subtitle": "すべてのソーシャルメディアで私たちをフォローしてください"
+    }
+  },
+  "Sponsors": {
+    "title": "スポンサーをお願いします",
+    "subtitle": "あなたの支援が私たちの国に正当な認知をもたらします。",
+    "buttonText": "スポンサーをお願いします"
+  },
+  "StemWithUs": {
+    "blogs": {
+      "title": "最近のブログ",
+      "readMore": "もっと読む"
+    },
+    "calendar": {
+      "title": "アポロ27のイベント",
+      "event": {
+        "start": "開始: ",
+        "end": "終了: ",
+        "follow": "フォロー"
+      }
+    },
+    "youtube": {
+      "invite": "私たちの",
+      "channelName": "YouTubeチャンネルを訪問してください！",
+      "description": "私たちのビデオは、HERCで4回のカテゴリー優勝者となるに至ったエンジニアリング技術と献身を示しています。最新のプロジェクトやイベントについて更新を受け取るには購読してください。",
+      "subscribe": "購読",
+      "continue": "最新のプロジェクトやイベントに関する更新を受け取るために。"
+    },
+    "form": {
+      "title": "訪問を計画したいですか？",
+      "subtitle": "今すぐご連絡ください！"
+    }
+  }
+}

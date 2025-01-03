@@ -1,0 +1,210 @@
+{
+  "HomePage": {
+    "title": "Los Primeros Ganadores de la División Universitaria de República Dominicana en el Human Exploration Rover Challenge de la NASA",
+    "stemVisitTitle": "¡Programa nuestra visita STEM!",
+    "stemVisitSubtitle": "Completa el formulario para tu centro educativo",
+    "exploreMore": "Descubre más sobre nosotros",
+    "missionTitle": "MISIÓN APOLO 27",
+    "timelineTitle": "Nuestra Cronología",
+    "sponsorUsTitle": "¡Patrocínanos!",
+    "sponsorUsSubtitle": "¡El equipo necesita tu ayuda para ganar!",
+    "divisionsTitle": "DIVISIONES DE APOLO 27 EN 2025",
+    "humanPoweredConstellation": "Constelación Propulsada por Humanos",
+    "remoteControlledConstellation": "Constelación Controlada Remotamente"
+  },
+  "About-us": {
+    "HumanPoweredTeam": {
+      "title": "Equipo Propulsado por Humanos",
+      "rcDivision": "División RC",
+      "officialMembers": "Miembros Oficiales del Equipo",
+      "specialMentors": "Mentores Especiales",
+      "members": {
+        "advisor": "Asesor del Equipo",
+        "teamLeader": "Líder del Equipo",
+        "safetyOfficer": "Oficial de Seguridad",
+        "fundingManager": "Gerente de Finanzas",
+        "manufacturingManager": "Gerente de Fabricación",
+        "manufacturingAssistant": "Asistente de Fabricación",
+        "stemManager": "Gerente de STEM",
+        "stemAssistant": "Asistente de STEM",
+        "projectManager": "Gerente de Proyecto",
+        "communityManager": "Gerente de Comunidad"
+      },
+      "RemoteControlledTeam": {
+        "title": "Equipo Controlado Remotamente",
+        "hpDivision": "División HP",
+        "officialMembers": "Miembros Oficiales del Equipo",
+        "specialMentors": "Mentores Especiales",
+        "members": {
+          "advisor": "Asesor del Equipo",
+          "teamLeader": "Líder del Equipo",
+          "safetyOfficer": "Oficial de Seguridad",
+          "funding": "Finanzas",
+          "manufacturingManager": "Gerente de Fabricación",
+          "manufacturingAssistant": "Asistente de Fabricación",
+          "telemetryAssistant": "Asistente de Telemetría",
+          "stemManager": "Gerente de STEM",
+          "communityManager": "Gerente de Comunidad"
+        }
+      }
+    }
+  },
+  "Games": {
+    "HERCSimulation": {
+      "title": "Simulación NASA HERC",
+      "description": "En esta simulación, vivirás la competencia que enfrentará el equipo Apolo 27 en Huntsville, Alabama. Aprende los obstáculos y tareas que enfrentará nuestro Rover y ayúdanos a ganar en el menor tiempo posible. ¡Confiamos en ti para esta misión!",
+      "playButton": "Jugar",
+      "downloadButton": "Descargar"
+    },
+    "MathGame": {
+      "title": "Templo Matemático",
+      "description": "¡Corre, salta y resuelve! Conquista el Templo Matemático con tu destreza aritmética. Los desafíos matemáticos te esperan. ¿Podrás escapar del templo con tus habilidades matemáticas?",
+      "playButton": "Jugar",
+      "downloadButton": "Descargar",
+      "comingSoon": "Próximamente..."
+    },
+    "ScienceGame": {
+      "title": "Pequeña Alquimia",
+      "description": "¡Libera a tu científico interior! Combina elementos para descubrir los secretos de la naturaleza. Conviértete en un maestro de los elementos.",
+      "playButton": "Jugar",
+      "downloadButton": "Descargar",
+      "comingSoon": "Próximamente..."
+    },
+    "TechnologyGame": {
+      "title": "Héroe de Escritura Espacial",
+      "description": "¡Defiende la galaxia con tus habilidades de escritura! Escribe rápido, dispara más rápido. Salva el universo de los invasores alienígenas.",
+      "playButton": "Jugar",
+      "downloadButton": "Descargar",
+      "comingSoon": "Próximamente..."
+    },
+    "title": "JUEGOS STEM",
+    "subtitle": "Descubre STEM a través de nuestros juegos.",
+    "visitButton": "Visitar",
+    "games": [
+      {
+        "title": "Simulación NASA HERC",
+        "caption": "Experimenta el NASA HERC con tu propio dispositivo."
+      },
+      {
+        "title": "Pequeña Alquimia",
+        "caption": "Descubre los elementos que nos rodean."
+      },
+      {
+        "title": "Héroe de Escritura Espacial",
+        "caption": "Aprende a usar tu teclado como un profesional."
+      },
+      {
+        "title": "Templo Matemático",
+        "caption": "Mejora tus habilidades matemáticas en el misterioso Templo Matemático."
+      }
+    ]
+  },
+  "Marketplace": {
+    "banner": {
+      "title": "Apolo 27",
+      "subtitle": "Un catálogo de ropa del espacio exterior"
+    },
+    "comingSoon": "Próximamente",
+    "names": {
+      "all": "Todos",
+      "tShirt": {
+        "1": "Camiseta blanca básica",
+        "2": "Camiseta con estampado gráfico",
+        "3": "Camiseta con logo vintage"
+      },
+      "hoodie": {
+        "1": "Sudadera cómoda",
+        "2": "Sudadera con cremallera",
+        "3": "Sudadera pesada"
+      },
+      "hats": {
+        "1": "Gorra Snapback",
+        "2": "Gorro de lana",
+        "3": "Sombrero tipo bucket"
+      },
+      "accessories": {
+        "1": "Cinturón de cuero",
+        "2": "Gafas de sol",
+        "3": "Reloj"
+      }
+    },
+    "searchPlaceholder": "Busca tu próximo estilo",
+    "dialog": {
+      "title": "NOMBRE",
+      "description": "Descripción del producto",
+      "closeButton": "Cerrar"
+    }
+  },
+  "SocialMedia": {
+    "title": "Redes Sociales",
+    "podcast": {
+      "title": "Podcast",
+      "name": "Caribe STEM",
+      "description": "Caribe STEM es un podcast creado para compartir y difundir STEM (ciencia, tecnología, ingeniería y matemáticas) en la República Dominicana y en toda América Latina. Creado por Apolo 27, el equipo universitario que representa al INTEC en la competencia NASA HERC."
+    },
+    "tabs": {
+      "tiktok": "Tiktok",
+      "instagram": "Instagram",
+      "youtube": "Youtube"
+    },
+    "video1": {
+      "username": "@apolo27rd",
+      "description": "🎥💸 Cuando #Manufactura necesita $$$ y #Financiamiento no coopera... 😂💀 💬 ¿A quién más le pasa esto? 👇",
+      "hashtags": [
+        "#Manufactura",
+        "#Financiamiento",
+        "#TeamApolo27",
+        "#DineroPorFavor",
+        "#ProblemasDeEquipo"
+      ],
+      "sound": "♬ sonido original - 💘🐩"
+    },
+    "video2": {
+      "username": "@apolo27rd",
+      "description": "🚀📚 ¡El equipo #Apolo27 estuvo presente en la Feria Internacional del Libro 2024 en la República Dominicana! 🇩🇴✨ Más allá de los libros, aprovechamos esta increíble plataforma para compartir nuestra misión, valores y todo lo que hacemos como equipo. 💡🔥 Conectamos con mentes brillantes, exploramos nuevas ideas y mostramos cómo #Apolo27 está marcando la diferencia. 🌟 ¿Quieres saber más sobre nuestro trabajo? ¡Déjanos tus preguntas en los comentarios! 👇🤝 🎥✨ ¡Dale play y descubre cómo vivimos este día tan especial! ❤️",
+      "hashtags": [
+        "#Apolo27",
+        "#Apolo27RD",
+        "#InnovaciónConPropósito",
+        "#FeriaDelLibro2024",
+        "#ConstruyendoFuturo",
+        "#EquipoImparable"
+      ],
+      "sound": "♬ sonido original - Apolo 27 RD"
+    },
+    "connect": {
+      "title": "¡Conéctate con nosotros!",
+      "subtitle": "SÍGUENOS EN TODAS NUESTRAS REDES SOCIALES"
+    }
+  },
+  "Sponsors": {
+    "title": "Patrocínanos",
+    "subtitle": "Tu apoyo nos ayudará a obtener el reconocimiento que nuestro país merece.",
+    "buttonText": "Patrocínanos"
+  },
+  "StemWithUs": {
+    "blogs": {
+      "title": "Nuestros Blogs Recientes",
+      "readMore": "Leer Más"
+    },
+    "calendar": {
+      "title": "Eventos de Apolo 27",
+      "event": {
+        "start": "Inicio:",
+        "end": "Fin:",
+        "follow": "Seguir"
+      }
+    },
+    "youtube": {
+      "invite": "Visita nuestro",
+      "channelName": "Canal de Youtube",
+      "description": "Nuestros videos muestran la destreza y dedicación que nos llevó a ganar cuatro veces en las categorías de HERC. Acompáñanos detrás de escena para ver nuestros diseños innovadores y los desafíos que superamos.",
+      "subscribe": "Suscríbete",
+      "continue": "para estar al día con nuestros últimos proyectos y eventos."
+    },
+    "form": {
+      "title": "¿Quieres planear una visita?",
+      "subtitle": "¡Contáctanos ahora!"
+    }
+  }
+}

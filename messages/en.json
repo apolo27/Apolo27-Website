@@ -1,0 +1,210 @@
+{
+  "HomePage": {
+    "title": "The First Dominican Republic University Division Winners at NASA's Human Exploration Rover Challenge",
+    "stemVisitTitle": "Program our visit STEM!",
+    "stemVisitSubtitle": "Complete the form for your Educational Center",
+    "exploreMore": "Explore More About Us",
+    "missionTitle": "MISSION APOLO 27",
+    "timelineTitle": "Our Timeline",
+    "sponsorUsTitle": "Sponsor Us!",
+    "sponsorUsSubtitle": "The team needs your help to win!",
+    "divisionsTitle": "APOLO 27's 2025 DIVISIONS",
+    "humanPoweredConstellation": "Human Powered Constellation",
+    "remoteControlledConstellation": "Remote Controlled Constellation"
+  },
+  "About-us": {
+    "HumanPoweredTeam": {
+      "title": "Human Powered Team",
+      "rcDivision": "RC Division",
+      "officialMembers": "Official Team Members",
+      "specialMentors": "Special Mentors",
+      "members": {
+        "advisor": "Team Advisor",
+        "teamLeader": "Team Leader",
+        "safetyOfficer": "Safety Officer",
+        "fundingManager": "Funding Manager",
+        "manufacturingManager": "Manufacturing Manager",
+        "manufacturingAssistant": "Manufacturing Assistant",
+        "stemManager": "Stem Manager",
+        "stemAssistant": "Stem Assistant",
+        "projectManager": "Project Manager",
+        "communityManager": "Community Manager"
+      },
+      "RemoteControlledTeam": {
+        "title": "Remote Controlled Team",
+        "hpDivision": "HP Division",
+        "officialMembers": "Official Team Members",
+        "specialMentors": "Special Mentors",
+        "members": {
+          "advisor": "Team Advisor",
+          "teamLeader": "Team Leader",
+          "safetyOfficer": "Safety Officer",
+          "funding": "Funding",
+          "manufacturingManager": "Manufacturing Manager",
+          "manufacturingAssistant": "Manufacturing Assistant",
+          "telemetryAssistant": "Telemetry Assistant",
+          "stemManager": "STEM Manager",
+          "communityManager": "Community Manager"
+        }
+      }
+    }
+  },
+  "Games": {
+    "HERCSimulation": {
+      "title": "NASA HERC Simulation",
+      "description": "On this Simulation, you will indulge into the competition team Apolo 27 will go through in Huntsville, Alabama. Learn the obstacles and tasks our Rover will face and help us get first in the shortest time possible! We trust you on this mission!",
+      "playButton": "Play",
+      "downloadButton": "Download"
+    },
+    "MathGame": {
+      "title": "Math Temple",
+      "description": "Run, jump, and solve! Conquer the Math Temple with your arithmetic prowess. Math challenges await! Can you escape the temple with your math skills?",
+      "playButton": "Play",
+      "downloadButton": "Download",
+      "comingSoon": "Coming Soon..."
+    },
+    "ScienceGame": {
+      "title": "Little Alchemy",
+      "description": "Unleash your inner scientist! Combine elements to discover the secrets of nature. Become a master of the elements.",
+      "playButton": "Play",
+      "downloadButton": "Download",
+      "comingSoon": "Coming Soon..."
+    },
+    "TechnologyGame": {
+      "title": "Space Typing Hero",
+      "description": "Defend the galaxy with your typing skills! Type fast, shoot faster! Save the universe from alien invaders.",
+      "playButton": "Play",
+      "downloadButton": "Download",
+      "comingSoon": "Coming Soon..."
+    },
+    "title": "STEM GAMES",
+    "subtitle": "Discover STEM through our games.",
+    "visitButton": "Visit",
+    "games": [
+      {
+        "title": "NASA HERC Simulation",
+        "caption": "Experience the NASA HERC with your own device."
+      },
+      {
+        "title": "Big Alchemy",
+        "caption": "Discover the elements that surround us."
+      },
+      {
+        "title": "Space Typing Hero",
+        "caption": "Learn to use your keyboard like a pro."
+      },
+      {
+        "title": "Math Temple",
+        "caption": "Improve your math skills in the mysterious Math Temple."
+      }
+    ]
+  },
+  "Marketplace": {
+    "banner": {
+      "title": "Apolo 27",
+      "subtitle": "An outer space clothing catalog"
+    },
+    "comingSoon": "Coming Soon",
+    "names": {
+      "all": "All",
+      "tShirt": {
+        "1": "Basic White T-Shirt",
+        "2": "Graphic Print T-Shirt",
+        "3": "Vintage Logo T-Shirt"
+      },
+      "hoodie": {
+        "1": "Comfort Fit Hoodie",
+        "2": "Zip-Up Hoodie",
+        "3": "Heavyweight Hoodie"
+      },
+      "hats": {
+        "1": "Snapback Cap",
+        "2": "Beanie",
+        "3": "Bucket Hat"
+      },
+      "accessories": {
+        "1": "Leather Belt",
+        "2": "Sunglasses",
+        "3": "Watch"
+      }
+    },
+    "searchPlaceholder": "Search for your next fit",
+    "dialog": {
+      "title": "NAME",
+      "description": "Product description",
+      "closeButton": "Close"
+    }
+  },
+  "SocialMedia": {
+    "title": "Social Media",
+    "podcast": {
+      "title": "Podcast",
+      "name": "Caribe STEM",
+      "description": "Caribe STEM is a podcast created to share and disseminate STEM (science, technology, engineering, and mathematics) in the Dominican Republic and throughout Latin America. Created by Apolo 27, the university team representing INTEC in the NASA HERC competition."
+    },
+    "tabs": {
+      "tiktok": "Tiktok",
+      "instagram": "Instagram",
+      "youtube": "Youtube"
+    },
+    "video1": {
+      "username": "@apolo27rd",
+      "description": "🎥💸 When #Manufacturing needs $$$ and #Funding doesn't cooperate... 😂💀 💬 Who else can relate? 👇",
+      "hashtags": [
+        "#Manufacturing",
+        "#Funding",
+        "#TeamApolo27",
+        "#MoneyPlease",
+        "#TeamIssues"
+      ],
+      "sound": "♬ original sound - 💘🐩"
+    },
+    "video2": {
+      "username": "@apolo27rd",
+      "description": "🚀📚 The #Apolo27 team was present at the 2024 International Book Fair in the Dominican Republic! 🇩🇴✨ Beyond books, we took advantage of this incredible platform to share our mission, values, and everything we do as a team. 💡🔥 We connected with brilliant minds, explored new ideas, and showcased how #Apolo27 is making a difference. 🌟 Want to know more about our work? Leave your questions in the comments! 👇🤝 🎥✨ Hit play and discover how we experienced this special day! ❤️",
+      "hashtags": [
+        "#Apolo27",
+        "#Apolo27RD",
+        "#InnovationWithPurpose",
+        "#BookFair2024",
+        "#BuildingFuture",
+        "#UnstoppableTeam"
+      ],
+      "sound": "♬ original sound - Apolo 27 RD"
+    },
+    "connect": {
+      "title": "Connect with us!",
+      "subtitle": "FOLLOW US ON ALL OUR SOCIAL MEDIA"
+    }
+  },
+  "Sponsors": {
+    "title": "Sponsor Us",
+    "subtitle": "Your support will help us get our country the recognition it deserves.",
+    "buttonText": "Sponsor Us"
+  },
+  "StemWithUs": {
+    "blogs": {
+      "title": "Our Recent Blogs",
+      "readMore": "Read More"
+    },
+    "calendar": {
+      "title": "Apolo 27's Events",
+      "event": {
+        "start": "Starts:",
+        "end": "Ends:",
+        "follow": "Follow"
+      }
+    },
+    "youtube": {
+      "invite": "Visit our",
+      "channelName": "Youtube Channel!",
+      "description": "Our videos showcase the engineering prowess and dedication that led us to become four-time category winners at HERC. Join us behind the scenes to see our innovative designs and the challenges we overcame.",
+      "subscribe": "Subscribe",
+      "continue": "to stay updated on our latest projects and events."
+    },
+    "form": {
+      "title": "Want to plan a visit?",
+      "subtitle": "Contact Us Now!"
+    }
+  }
+}
