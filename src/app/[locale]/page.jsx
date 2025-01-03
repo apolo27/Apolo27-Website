@@ -319,7 +319,7 @@ export default function Home() {
 
         <Timeline
           position="alternate-reverse"
-          className="hidden lg:block w-full"
+          className="big-timeline  w-full"
         >
           {teamsByYear.map((yearData, i) => (
             <TimelineItem key={i} className="z-10 ">
@@ -417,7 +417,7 @@ export default function Home() {
           team={team}
         /> */}
 
-        <div className="lg:hidden relative flex flex-wrap justify-around px-8 md:px-0 gap-20">
+        <div className="mobile-timeline lg:hidden relative flex flex-wrap justify-around px-8 md:px-0 gap-20">
           <div className="w-[1px] bg-white h-full absolute left-1/2 transform -translate-x-1/2 "></div>
           {teamsByYear.map((yearData, i) => (
             <div key={i} className={`flex flex-col gap-5 ${yearData.teams.length > 1 ? "bg-black p-5 rounded-2xl" : ""}`}>
@@ -434,12 +434,12 @@ export default function Home() {
                       {yearData.year}
                     </p>
                     <p className="text-2xl lg:text-3xl text-center md:text-left w-1/2">
-                      {yearData.teams[0].title}
+                      {t(yearData.teams[0].title)}
                     </p>
                   </div>
                   <div className="p-4 space-y-5">
                     <p className="text-md md:text-lg text-center md:text-left font-semibold px-8 md:px-4">
-                      {yearData.teams[0].description}
+                      {t(yearData.teams[0].description)}
                     </p>
 
                     <Image
@@ -494,12 +494,12 @@ export default function Home() {
                         {yearData.year}
                       </p>
                       <p className="text-2xl lg:text-3xl text-center md:text-left w-1/2">
-                        {yearData.teams[1]?.title}
+                        {t(yearData.teams[1]?.title)}
                       </p>
                     </div>
                     <div className="p-4 space-y-5">
                       <p className="text-md md:text-lg text-center md:text-left font-semibold px-8 md:px-4">
-                        {yearData.teams[1]?.description}
+                        {t(yearData.teams[1]?.description)}
                       </p>
 
                       <Image

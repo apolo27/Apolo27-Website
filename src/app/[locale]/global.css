@@ -110,3 +110,21 @@
   text-align: center;
   transform: rotateY(180deg);
 }
+
+
+.big-timeline{
+  display: none;
+}
+
+.mobile-timeline{
+  display: flex;
+}
+
+@media (min-width: 1024px) {
+  .big-timeline {
+    display: block;
+  }
+  .mobile-timeline{
+    display: none;
+  }
+}
