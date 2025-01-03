@@ -62,13 +62,15 @@ export default function Home() {
         </p>
         <Link
           href="/stem-with-us"
-          className="flex lg:hidden transition-all border border-1 border-[#424B5B] bg-black/[0.8] w-5/6  md:w-[520px] py-2 h-fit  rounded-full  items-center justify-evenly hover:cursor-pointer hover:scale-105 "
+          className="flex lg:hidden transition-all border border-1 border-[#424B5B] bg-black/[0.8] w-full  md:w-[520px] py-2 h-fit  rounded-full  items-center justify-evenly hover:cursor-pointer hover:scale-105 "
         >
           <Image
             src={"/images/icons/formIcon.webp"}
             alt="form icon"
-            width={36}
-            height={36}
+            width="0"
+            height="0"
+            sizes="100vw"
+            className="w-9 h-9 md:w-12 md:h-12"
           />
           <div className="text-left">
             <p className="font-semibold text-white md:text-lg">
@@ -122,15 +124,15 @@ export default function Home() {
         {/*sponsor us mobile*/}
         <Link
           href="/sponsors"
-          className="lg:hidden relative w-5/6 md:w-4/6 h-auto"
+          className="lg:hidden relative w-full md:w-4/6 h-auto"
         >
           <Image
             src={"/images/landing/sponsorus-rectangle.webp"}
-            alt="Simulation"
+            alt="Sponsor us"
             width="0"
             height="0"
             sizes="100vw"
-            className="w-full h-full relative"
+            className="w-full h-full relative "
           />
           <p className="absolute font-bold text-3xl md:text-4xl text-white top-5 left-5">
             {t("sponsorUsTitle")}
@@ -138,7 +140,7 @@ export default function Home() {
           <p className="absolute font-semibold text-lg md:text-2xl text-left text-white top-16 left-5">
             {t("sponsorUsSubtitle")}
           </p>
-          <div className="w-11/12 absolute top-14 md:top-16 inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)]">
+          <div className="hidden xm:inline-flex w-11/12 absolute top-14 xm:top-20 flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)]">
             <ul className="flex items-center justify-center md:justify-start sm:[&_li]:mx-8 [&_li]:mx-4 [&_img]:max-w-none animate-infinite-scroll">
               <li>
                 <Image
@@ -146,7 +148,7 @@ export default function Home() {
                   width="0"
                   height="0"
                   sizes="100vw"
-                  className="w-36 h-36 md:w-56 md:h-56"
+                  className="w-36 h-36 sm:w-56 sm:h-56"
                   alt="sponsor level"
                 />
               </li>
@@ -156,7 +158,7 @@ export default function Home() {
                   width="0"
                   height="0"
                   sizes="100vw"
-                  className="w-36 h-36 md:w-56 md:h-56"
+                  className="w-36 h-36 sm:w-56 sm:h-56"
                   alt="sponsor level"
                 />
               </li>
@@ -166,7 +168,7 @@ export default function Home() {
                   width="0"
                   height="0"
                   sizes="100vw"
-                  className="w-36 h-36 md:w-56 md:h-56"
+                  className="w-36 h-36 sm:w-56 sm:h-56"
                   alt="sponsor level"
                 />
               </li>
@@ -178,7 +180,7 @@ export default function Home() {
                   width="0"
                   height="0"
                   sizes="100vw"
-                  className="w-36 h-36 md:w-56 md:h-56"
+                  className="w-36 h-36 sm:w-56 sm:h-56"
                   alt="sponsor level"
                 />
               </li>
@@ -188,7 +190,7 @@ export default function Home() {
                   width="0"
                   height="0"
                   sizes="100vw"
-                  className="w-36 h-36 md:w-56 md:h-56"
+                  className="w-36 h-36 sm:w-56 sm:h-56"
                   alt="sponsor level"
                 />
               </li>
@@ -418,7 +420,7 @@ export default function Home() {
         <div className="lg:hidden relative flex flex-wrap justify-around px-8 md:px-0 gap-20">
           <div className="w-[1px] bg-white h-full absolute left-1/2 transform -translate-x-1/2 "></div>
           {teamsByYear.map((yearData, i) => (
-            <div key={i} className="flex gap-10">
+            <div key={i} className={`flex flex-col gap-5 ${yearData.teams.length > 1 ? "bg-black p-5 rounded-2xl" : ""}`}>
               <div className="z-10 thecard" onClick={() => flipCard(i)}>
                 <div
                   className={
