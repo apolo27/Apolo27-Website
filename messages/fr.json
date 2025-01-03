@@ -1,4 +1,20 @@
 {
+  "LocaleSwitcher": {
+    "label": "Changer la langue",
+    "locale": "{locale, select, es {🇩🇴 Espagnol} en {🇺🇸 Anglais} fr {🇫🇷 Français} hi {🇮🇳 Indien} ja {🇯🇵 Japonais} ko {🇰🇷 Coréen} pt {🇵🇹 Portugais} zh {🇨🇳 Mandarin} other {Inconnu}}"
+  },
+  "header": {
+    "home": "Accueil",
+    "aboutUs": "À propos de nous",
+    "games": "Jeux",
+    "marketplace": "Boutique",
+    "stemWithUs": "STEM avec nous",
+    "socialMedia": "Réseaux Sociaux",
+    "sponsors": "Parrainez-nous"
+  },
+  "timer": {
+    "title": "TEMPS RESTANT JUSQU'À HERC : "
+  },
   "HomePage": {
     "title": "Les premiers gagnants universitaires de la République Dominicaine au NASA Human Exploration Rover Challenge",
     "stemVisitTitle": "Programmez notre visite STEM !",
@@ -10,83 +26,243 @@
     "sponsorUsSubtitle": "L'équipe a besoin de votre aide pour gagner !",
     "divisionsTitle": "DIVISIONS D’APOLO 27 EN 2025",
     "humanPoweredConstellation": "Constellation Propulsée par l'Humain",
-    "remoteControlledConstellation": "Constellation Télécommandée"
-  },
-  "About-us": {
-    "HumanPoweredTeam": {
-      "title": "Équipe Propulsée par l'Humain",
-      "rcDivision": "Division RC",
-      "officialMembers": "Membres Officiels",
-      "specialMentors": "Mentors Spéciaux",
-      "members": {
-        "advisor": "Conseiller de l'Équipe",
-        "teamLeader": "Chef d'Équipe",
-        "safetyOfficer": "Officier de Sécurité",
-        "fundingManager": "Gestionnaire de Financement",
-        "manufacturingManager": "Responsable de Fabrication",
-        "manufacturingAssistant": "Assistant de Fabrication",
-        "stemManager": "Responsable STEM",
-        "stemAssistant": "Assistant STEM",
-        "projectManager": "Gestionnaire de Projet",
-        "communityManager": "Gestionnaire de Communauté"
+    "remoteControlledConstellation": "Constellation Télécommandée",
+    "timeline": {
+      "awards": {
+        "overallWinner1": {
+          "title": "Gagnant global #1",
+          "description": "Décerné à l'équipe globale la mieux classée. Les critiques de conception, l'engagement STEM éducatif, la sécurité et une excursion réussie détermineront le Gagnant global."
+        },
+        "overallWinner2": {
+          "title": "Gagnant global #2",
+          "description": "Décerné à l'équipe globale la mieux classée. Les critiques de conception, l'engagement STEM éducatif, la sécurité et une excursion réussie détermineront le Gagnant global."
+        },
+        "overallWinner3": {
+          "title": "Gagnant global #3",
+          "description": "Décerné à l'équipe globale la mieux classée. Les critiques de conception, l'engagement STEM éducatif, la sécurité et une excursion réussie détermineront le Gagnant global."
+        },
+        "stemEngagement": {
+          "title": "Prix de l'engagement STEM",
+          "description": "Décerné à l'équipe qui a le mieux inspiré l'étude des sujets liés aux STEM dans leur communauté, y compris la collaboration avec les élèves du collège pour le défi des tâches. Cette équipe a non seulement présenté un grand nombre d'activités à un large public, mais elle a également livré des activités de qualité à un large éventail de personnes."
+        },
+        "projectReview": {
+          "title": "Examen de projet",
+          "description": "Décerné à l'équipe jugée avoir la meilleure combinaison d'avis écrits et de présentations formelles."
+        },
+        "phoenix": {
+          "title": "Phoenix",
+          "description": "Décerné à l'équipe qui a démontré la plus grande amélioration entre la révision de la conception et la révision de la préparation opérationnelle."
+        },
+        "socialMedia": {
+          "title": "Médias sociaux",
+          "description": "Décerné à l'équipe qui a la présence la plus active et créative sur les médias sociaux tout au long de l'année du projet."
+        },
+        "taskChallenge": {
+          "title": "Défi de tâche",
+          "description": "Décerné à l'équipe qui a démontré le meilleur design multi-outils pour les tâches de récupération d'échantillons liquides."
+        },
+        "featherweight": {
+          "title": "Poids plume",
+          "description": "Décerné à l'équipe qui a le mieux abordé le défi continu de l'exploration spatiale en matière de gestion du poids, en offrant une approche innovante pour minimiser en toute sécurité le poids du rover. (Attribué à une seule équipe)."
+        },
+        "ingenuity": {
+          "title": "Ingéniosité",
+          "description": "Décerné à l'équipe qui aborde tout projet ou problème d'ingénierie complexe de manière unique et créative."
+        },
+        "pitCrew": {
+          "title": "Équipe de garage",
+          "description": "Décerné à l'équipe jugée par l'équipe de garage qui démontre le mieux la débrouillardise, la motivation, le fair-play et l'esprit d'équipe en réparant ou en travaillant sur leur rover pendant que les équipes sont dans la zone de garage."
+        },
+        "systemSafety": {
+          "title": "Prix de la sécurité des systèmes",
+          "description": "Décerné à l'équipe qui démontre la meilleure approche globale de la sécurité des systèmes en ce qui concerne leur véhicule, leur personnel et leurs opérations."
+        },
+        "teamSpirit": {
+          "title": "Prix de l'esprit d'équipe",
+          "description": "Décerné à l'équipe jugée par ses pairs comme ayant le meilleur esprit d'équipe lors des événements sur site."
+        },
+        "crashAndBurn": {
+          "title": "Crash et Brûlure",
+          "description": "Décerné à l'équipe qui embrasse l'échec comme une leçon d'apprentissage pour le succès futur. (Attribué à une seule équipe)."
+        },
+        "rookieOfTheYear": {
+          "title": "Débutant de l'année",
+          "description": "Décerné à l'équipe la plus performante parmi les nouvelles équipes. (Les mêmes critères de jugement que pour le prix global). Si l'équipe débutante remporte un prix global, l'équipe débutante classée 2e recevra le prix, et ainsi de suite. (Attribué à une seule équipe)."
+        },
+        "payItForward": {
+          "title": "Prix Pay It Forward",
+          "description": "Ce prix Artemis Student Challenge (ASC) est décerné à l'équipe qui mène les événements d'engagement éducatif les plus impactants dans leur communauté ou au-delà. L'engagement éducatif comprend des activités pratiques où les participants s'engagent à apprendre un concept lié aux STEM en participant activement à une activité."
+        },
+        "innovation": {
+          "title": "Prix de l'innovation",
+          "description": "Ce prix Artemis Student Challenge (ASC) est décerné aux équipes qui créent les meilleures idées ou solutions nouvelles et innovantes dans le cadre de leur défi respectif. L'ingéniosité, la créativité et l'inventivité dans les idées technologiques ou non technologiques sont récompensées pour leurs idées originales, leur efficacité, leurs résultats efficaces et/ou leur résolution de problèmes."
+        },
+        "artemisEducator": {
+          "title": "Prix de l'éducateur Artemis",
+          "description": "Ce prix Artemis Student Challenge (ASC) est décerné aux éducateurs/facultés/mentors dans chaque défi, nominés par les membres de l'équipe étudiante. Les membres de l'équipe étudiante reconnaîtront leurs facultés/mentors qui inspirent les apprenants et les motivent à travailler dur, accomplissant plus que ce qu'ils pensaient possible."
+        },
+        "otherAwards": {
+          "title": "Autres prix",
+          "description": "D'autres prix seront décernés en fonction des composants de la compétition, tels que les discussions dans les rapports de révision de la conception et de préparation opérationnelle ou la compétition en personne."
+        },
+        "mostImproved": {
+          "title": "L'équipe la plus améliorée",
+          "description": "Décerné à l'équipe qui démontre la plus grande amélioration entre les deux jours de la compétition."
+        }
       },
-      "RemoteControlledTeam": {
-        "title": "Équipe Télécommandée",
-        "hpDivision": "Division HP",
-        "officialMembers": "Membres Officiels",
-        "specialMentors": "Mentors Spéciaux",
-        "members": {
-          "advisor": "Conseiller de l'Équipe",
-          "teamLeader": "Chef d'Équipe",
-          "safetyOfficer": "Officier de Sécurité",
-          "funding": "Financement",
-          "manufacturingManager": "Responsable de Fabrication",
-          "manufacturingAssistant": "Assistant de Fabrication",
-          "telemetryAssistant": "Assistant de Télémétrie",
-          "stemManager": "Responsable STEM",
-          "communityManager": "Gestionnaire de Communauté"
+      "teams": {
+        "2019": {
+          "division": "Propulsé par l'homme",
+          "title": "L'ORIGINE",
+          "description": "Notre aventure a commencé en 2019 avec un accomplissement révolutionnaire : devenir la première équipe de la division universitaire de notre pays à participer au NASA Rover Challenge.",
+          "image": "/images/timeline/2019.webp",
+          "teamAwards": []
+        },
+        "2020": {
+          "division": "Propulsé par l'homme",
+          "title": "PERSEVERANCE DANS L'ADVERSITÉ",
+          "description": "Malgré les défis de la pandémie mondiale, notre résilience s'est manifestée. Les leçons apprises ont pavé la voie à notre victoire historique 'Prix de la sécurité des systèmes'.",
+          "image": "/images/timeline/2020.webp",
+          "teamAwards": ["systemSafety"]
+        },
+        "2021": {
+          "division": "Propulsé par l'homme",
+          "title": "RESTRUCTURATION ET RÉINVENTION",
+          "description": "Avec un rover remanié, notre équipe a atteint de nouveaux niveaux d'expertise et a enflammé une passion pour les STEM dans notre communauté par des efforts innovants.",
+          "image": "/images/timeline/2021.webp",
+          "teamAwards": []
+        },
+        "2022": {
+          "division": "Propulsé par l'homme",
+          "title": "ÉTENDRE NOTRE IMPACT",
+          "description": "2022 a marqué un tournant avec le lancement de notre 'STEM Tour' interactif, culminant avec la victoire du prestigieux 'Prix de l'engagement'.",
+          "image": "/images/timeline/2022.webp",
+          "teamAwards": ["stemEngagement"]
+        },
+        "2023": {
+          "division": "Propulsé par l'homme",
+          "title": "UNE ANNÉE HISTORIQUE",
+          "description": "Une année de domination dominicaine ! Les améliorations majeures nous ont valu les prix 'L'équipe la plus améliorée' et 'L'esprit d'équipe', ancrant notre place dans l'histoire.",
+          "image": "/images/timeline/2023.webp",
+          "teamAwards": ["mostImproved", "teamSpirit"]
+        },
+        "2024": {
+          "division": "Propulsé par l'homme",
+          "title": "ÉTABLIR LA RÉFÉRENCE",
+          "description": "Fort de nos succès de 2023, nous avons atteint de nouveaux sommets en 2024. Notre travail acharné nous a valu le convoité 'Prix global (2e place)' et le 'Prix de l'esprit', illustrant l'excellence et l'unité.",
+          "image": "/images/timeline/2024.webp",
+          "teamAwards": ["overallWinner2", "teamSpirit"],
+          "badges": ["/images/badges/lunar-navigation.webp"]
+        },
+        "2025": {
+          "division": "Propulsé par l'homme",
+          "title": "NOUVELLES FRONTIÈRES",
+          "description": "L'aube de la division Apolo marque un nouveau chapitre en 2025. Nos ambitions sont élevées, et nous repoussons les limites de l'innovation et du travail d'équipe.",
+          "teamAwards": [],
+          "badges": [
+            "/images/badges/innovation.webp",
+            "/images/badges/stem-engagement.webp"
+          ],
+          "rcDivision": "Contrôlé à distance",
+          "rcTitle": "PIONNIER DES MISSIONS À DISTANCE",
+          "rcDescription": "Notre équipe RC entame sa première année avec des idées audacieuses et des ingénieries encore plus audacieuses.",
+          "rcTeamAwards": []
         }
       }
     }
   },
+  "About-us": {
+    "mechatronics": "Génie Mécatronique",
+    "mechanical": "Génie Mécanique",
+    "electronics": "Génie Électronique et des Communications",
+    "computer": "Génie en Informatique",
+    "software": "Génie Logiciel",
+    "systems": "Génie des Systèmes",
+    "datascience": "Science des Données",
+    "aerospace": "Génie Aérospatial",
+    "internationalbusiness": "Licence en Affaires Internationales",
+    "biotechnology": "Licence en Biotechnologie",
+    "education": "Licence en Éducation",
+    
+    "HumanPoweredTeam": {
+      "title": "Équipe Propulsée par Humains",
+      "rcDivision": "Division RC",
+      "officialMembers": "Membres Officiels de l'Équipe",
+      "specialMentors": "Mentors Spéciaux",
+      "members": {
+        "advisor": "Conseiller de l'Équipe",
+        "teamLeader": "Chef de l'Équipe",
+        "safetyOfficer": "Officier de Sécurité",
+        "fundingManager": "Responsable des Finances",
+        "manufacturingManager": "Responsable de Fabrication",
+        "manufacturingAssistant": "Assistant de Fabrication",
+        "stemManager": "Responsable STEM",
+        "stemAssistant": "Assistant STEM",
+        "projectManager": "Responsable de Projet",
+        "communityManager": "Responsable Communautaire"
+      }
+    },
+    "RemoteControlledTeam": {
+      "title": "Équipe Télécommandée",
+      "hpDivision": "Division HP",
+      "officialMembers": "Membres Officiels de l'Équipe",
+      "specialMentors": "Mentors Spéciaux",
+      "members": {
+        "advisor": "Conseiller de l'Équipe",
+        "teamLeader": "Chef de l'Équipe",
+        "safetyOfficer": "Officier de Sécurité",
+        "funding": "Finance",
+        "manufacturingManager": "Responsable de Fabrication",
+        "manufacturingAssistant": "Assistant de Fabrication",
+        "telemetryAssistant": "Assistant de Télémétrie",
+        "stemManager": "Responsable STEM",
+        "communityManager": "Responsable Communautaire"
+      }
+    }
+  },
   "Games": {
+    "Subtitle": "Découvrez les STEM à travers nos jeux.",
     "HERCSimulation": {
       "title": "Simulation NASA HERC",
-      "description": "Dans cette simulation, vous participerez à la compétition que l'équipe Apolo 27 vivra à Huntsville, Alabama. Découvrez les obstacles et les tâches que notre Rover affrontera et aidez-nous à terminer en premier dans le temps le plus court possible ! Nous comptons sur vous pour cette mission !",
+      "caption": "Vivez l'expérience du NASA HERC sur votre propre appareil.",
+      "description": "Dans cette simulation, vous vous plongerez dans la compétition à laquelle l'équipe Apolo 27 participera à Huntsville, Alabama. Découvrez les obstacles et les tâches que notre Rover devra affronter et aidez-nous à obtenir la première place dans le temps le plus court possible ! Nous comptons sur vous pour cette mission !",
       "playButton": "Jouer",
       "downloadButton": "Télécharger"
     },
     "MathGame": {
       "title": "Temple des Mathématiques",
-      "description": "Courez, sautez et résolvez ! Conquérez le Temple des Mathématiques avec vos compétences arithmétiques. Des défis mathématiques vous attendent ! Pouvez-vous échapper au temple grâce à vos compétences en mathématiques ?",
+      "caption": "Améliorez vos compétences en mathématiques dans le mystérieux Temple des Mathématiques.",
+      "description": "Courez, sautez et résolvez ! Conquérez le Temple des Mathématiques avec vos prouesses arithmétiques. Les défis mathématiques vous attendent ! Pouvez-vous sortir du temple grâce à vos compétences en mathématiques ?",
       "playButton": "Jouer",
       "downloadButton": "Télécharger",
       "comingSoon": "Bientôt disponible..."
     },
     "ScienceGame": {
-      "title": "Petit Alchimiste",
-      "description": "Libérez le scientifique en vous ! Combinez des éléments pour découvrir les secrets de la nature. Devenez un maître des éléments.",
+      "title": "Petite Alchimie",
+      "caption": "Découvrez les éléments qui nous entourent.",
+      "description": "Libérez le scientifique qui est en vous ! Combinez des éléments pour découvrir les secrets de la nature. Devenez un maître des éléments.",
       "playButton": "Jouer",
       "downloadButton": "Télécharger",
       "comingSoon": "Bientôt disponible..."
     },
     "TechnologyGame": {
       "title": "Héros de la Dactylographie Spatiale",
+      "caption": "Apprenez à utiliser votre clavier comme un pro.",
       "description": "Défendez la galaxie avec vos compétences en dactylographie ! Tapez vite, tirez encore plus vite ! Sauvez l'univers des envahisseurs extraterrestres.",
       "playButton": "Jouer",
       "downloadButton": "Télécharger",
       "comingSoon": "Bientôt disponible..."
     },
     "title": "JEUX STEM",
-    "subtitle": "Découvrez le STEM à travers nos jeux.",
-    "visitButton": "Visitez",
+    "subtitle": "Découvrez les STEM à travers nos jeux.",
+    "visitButton": "Visiter",
     "games": [
       {
         "title": "Simulation NASA HERC",
-        "caption": "Découvrez la NASA HERC avec votre propre appareil."
+        "caption": "Vivez l'expérience du NASA HERC sur votre propre appareil."
       },
       {
-        "title": "Petit Alchimiste",
+        "title": "Grande Alchimie",
         "caption": "Découvrez les éléments qui nous entourent."
       },
       {
@@ -95,7 +271,7 @@
       },
       {
         "title": "Temple des Mathématiques",
-        "caption": "Améliorez vos compétences mathématiques dans le mystérieux Temple des Mathématiques."
+        "caption": "Améliorez vos compétences en mathématiques dans le mystérieux Temple des Mathématiques."
       }
     ]
   },

@@ -3,11 +3,14 @@ import {
   ArrowDownOnSquareIcon,
   ArrowLeftIcon,
 } from "@heroicons/react/20/solid";
-import {Link} from '../../../../../i18n/routing';
-import { useRouter } from "next/navigation";
+import { Link } from "../../../../../i18n/routing";
+import { useRouter } from "../../../../../i18n/routing";
 import Image from "next/image";
 import EmblaCarousel from "../../../components/Carousel/EmblaCarousel";
+import { useTranslations } from "next-intl";
+
 export default function HERCSimulation() {
+  const t = useTranslations("Games.HERCSimulation");
   const OPTIONS = { dragFree: true, loop: true, containScroll: false };
   const router = useRouter();
   return (
@@ -61,27 +64,24 @@ export default function HERCSimulation() {
       </EmblaCarousel>
       <section className="w-full md:w-1/3 px-5 md:px-0 gap-5 md:gap-0 flex flex-col justify-around text-center md:text-left">
         <p className="font-bold text-white lg:text-4xl 2xl:text-6xl">
-          NASA HERC Simulation
+          {t("title")}
         </p>
         <p className="font-bold text-white lg:text-lg 2xl:text-xl">
-          On this Simulation, you will indulge into the competition team Apolo
-          27 will go through in Huntsville, Alabama. Learn the obstacles and
-          tasks our Rover will face and help us get first in the shortest time
-          possible! We trust you on this mission!
+          {t("description")}
         </p>
         <div className="flex gap-5 justify-center md:justify-start">
           <Link
             href="https://ctrl-sebastian.itch.io/rover-simulation"
             className="bg-white px-4 py-3 text-2xl font-bold text-black rounded-xl"
           >
-            Jugar
+            {t("playButton")}
           </Link>
           <button
             disabled
             className="opacity-30 bg-white px-4 py-3 text-2xl font-bold text-black rounded-xl flex items-center"
           >
             <ArrowDownOnSquareIcon className="w-8 h-8" />
-            Descargar
+            {t("downloadButton")}
           </button>
         </div>
       </section>

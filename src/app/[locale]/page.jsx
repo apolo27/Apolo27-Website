@@ -4,7 +4,7 @@ import Image from "next/image";
 import { Timer } from "./components/Timer";
 import { ArrowUpIcon } from "@heroicons/react/20/solid";
 
-import {Link} from '../../i18n/routing';
+import { Link } from "../../i18n/routing";
 
 import {
   ArrowDownCircleIcon,
@@ -18,17 +18,21 @@ import TimelineConnector from "@mui/lab/TimelineConnector";
 import TimelineContent from "@mui/lab/TimelineContent";
 import TimelineDot from "@mui/lab/TimelineDot";
 import TimelineOppositeContent from "@mui/lab/TimelineOppositeContent";
-import TimelineModal from "./components/TimelineModal/TimelineModal";
 
-import teamsByYear from './shared/timelinedata/teams';
-import {teams} from './shared/timelinedata/teams';
+import { useTranslations } from "next-intl";
+
+import  teamsByYear  from "./shared/timelinedata/teams";
 
 export default function Home() {
+  const t = useTranslations("HomePage");
+
   const [isOpen, setIsOpen] = useState(false);
   const [team, setTeam] = useState(undefined);
   const teamClassName = `opacity-80 hover:opacity-100 transition-all hover:cursor-pointer hover:scale-105`;
   const timelineItem = `max-w-[450px] bg-[#121837] border border-[#666A95] text-white text-center rounded-2xl flex flex-col items-center md:items-start`;
   const currentTimelineItem = `max-w-[450px] bg-[#121837] border border-[#666A95] text-white text-center rounded-2xl flex flex-col items-center md:items-start shadow-[0px_20px_207px_10px_rgba(165,_39,_255,_0.48)] bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] `;
+
+
 
   const flipCard = (i) => {
     if (typeof window !== "undefined") {
@@ -38,9 +42,11 @@ export default function Home() {
 
   const flipCardRC = (j) => {
     if (typeof window !== "undefined") {
-      document.body.querySelectorAll(".thecardRC")[j].classList.toggle("flipped");
+      document.body
+        .querySelectorAll(".thecardRC")
+        [j].classList.toggle("flipped");
     }
-  }
+  };
 
   const showTeam = (team) => {
     setTeam(team);
@@ -52,8 +58,7 @@ export default function Home() {
       <div className="text-center h-fit  space-y-8 lg:space-y-20 2xl:space-y-10 bg-gradient-to-t from-[#101321] to-[#40D1FF] px-5 md:px-40 flex flex-col items-center pt-5">
         <Timer />
         <p className="mt-4 font-bold text-4xl lg:text-5xl 3xl:text-6xl w-full lg:w-5/6 text-transparent bg-clip-text bg-gradient-to-b from-white to-gray-500">
-          The First Dominican Republic University Division Winners at
-          NASA&apos;s Human Exploration Rover Challenge
+          {t("title")}
         </p>
         <Link
           href="/stem-with-us"
@@ -67,14 +72,10 @@ export default function Home() {
           />
           <div className="text-left">
             <p className="font-semibold text-white md:text-lg">
-              Programa nuestra visita <span className="text-green-300">S</span>
-              <span className="text-blue-300">T</span>
-              <span className="text-red-300">E</span>
-              <span className="text-purple-300">M</span>
-              <span className="text-white">!</span>
+              {t("stemVisitTitle")}
             </p>
             <p className="text-gray-100 text-xs md:text-normal">
-              Completa el formulario para tu Centro Educativo
+              {t("stemVisitSubtitle")}
             </p>
           </div>
           <div>
@@ -83,7 +84,7 @@ export default function Home() {
         </Link>
       </div>
 
-      <section className="bg-[#101321] 2xl:h-[240px] px-5 md:pt-10 3xl:py-20 flex flex-col md:flex-row justify-center items-center md:items-start space-y-5 md:space-y-0 md:pb-20 3xl:pb-72">
+      <section className="bg-[#101321] 2xl:h-[240px] px-5 md:pt-10 3xl:py-20 flex flex-col md:flex-row justify-center items-center md:items-start space-y-5 md:space-y-0 ">
         {/* simulation large screen */}
         <Link
           href="/games/Herc-Simulation"
@@ -107,14 +108,10 @@ export default function Home() {
           />
           <div className="text-left">
             <p className="font-semibold text-white md:text-lg">
-              Programa nuestra visita <span className="text-green-300">S</span>
-              <span className="text-blue-300">T</span>
-              <span className="text-red-300">E</span>
-              <span className="text-purple-300">M</span>
-              <span className="text-white">!</span>
+              {t("stemVisitTitle")}
             </p>
             <p className="text-gray-100 text-xs md:text-normal">
-              Completa el formulario para tu Centro Educativo
+              {t("stemVisitSubtitle")}
             </p>
           </div>
           <div>
@@ -136,10 +133,10 @@ export default function Home() {
             className="w-full h-full relative"
           />
           <p className="absolute font-bold text-3xl md:text-4xl text-white top-5 left-5">
-            Sponsor Us!
+            {t("sponsorUsTitle")}
           </p>
           <p className="absolute font-semibold text-lg md:text-2xl text-left text-white top-16 left-5">
-            The team needs your help to win!
+            {t("sponsorUsSubtitle")}
           </p>
           <div className="w-11/12 absolute top-14 md:top-16 inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)]">
             <ul className="flex items-center justify-center md:justify-start sm:[&_li]:mx-8 [&_li]:mx-4 [&_img]:max-w-none animate-infinite-scroll">
@@ -225,7 +222,9 @@ export default function Home() {
           <div className="absolute top-0 right-5 bg-[#3b9fc6] rounded-full w-16 h-16 flex items-center justify-center hover:cursor-pointer hover:scale-105 transition-all">
             <ArrowUpIcon className="text-white w-12 h-12  transform rotate-45" />
           </div>
-          <p className="font-bold text-white text-4xl pl-16 pt-3">Sponsor Us</p>
+          <p className="font-bold text-white text-4xl pl-16 pt-3 ">
+            {t("sponsorUsTitle")}
+          </p>
           <div className="w-11/12 inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)]">
             <ul className="flex items-center justify-center md:justify-start sm:[&_li]:mx-8 [&_li]:mx-4 [&_img]:max-w-none animate-infinite-scroll">
               <li>
@@ -295,9 +294,9 @@ export default function Home() {
         </Link>
       </section>
 
-      <div className="hidden md:flex bg-[#101321] text-center flex-col gap-7 items-center justify-center pt-20 md:pt-5">
-        <p className="explore-more-text bg-clip-text bg-gradient-to-r from-gray-800 via-white via-50% to-gray-800 text-transparent font-bold text-3xl md:text-3xl 3xl:text-5xl w-full md:w-60 2xl:w-80">
-          Explore More About Us
+      <div className="hidden md:flex bg-[#101321] text-center flex-col gap-7 items-center justify-center pt-20 md:pt-5 2xl:pt-0">
+        <p className="explore-more-text bg-clip-text bg-gradient-to-r from-gray-800 via-white via-50% to-gray-800 text-transparent font-bold text-3xl md:text-3xl 3xl:text-4xl w-full md:w-60 2xl:w-96 md:pt-40 2xl:pt-20">
+          {t("exploreMore")}
         </p>
         <div>
           <ArrowDownCircleIcon className="w-10 3xl:w-20 h-10 3xl:h-20 text-white transition-transform animate-bounce" />
@@ -309,11 +308,11 @@ export default function Home() {
         className=" bg-[#101321] justify-between w-full space-y-10 pt-20 px-5 lg:px-40 2xl:px-60 pb-40"
       >
         <p className="text-center outlined-title text-[#101321] text-7xl font-extrabold w-full ">
-          MISSION APOLO 27
+          {t("missionTitle")}
         </p>
 
         <p className="text-center outlined-subtitle text-[#101321] text-5xl font-extrabold w-full ">
-          Our Timeline
+          {t("timelineTitle")}
         </p>
 
         <Timeline
@@ -323,7 +322,7 @@ export default function Home() {
           {teamsByYear.map((yearData, i) => (
             <TimelineItem key={i} className="z-10 ">
               {yearData.teams.length > 1 && (
-                <TimelineOppositeContent>
+                <TimelineOppositeContent className="3xl:flex 3xl:justify-center">
                   <div
                     className={`
                       ${
@@ -338,12 +337,12 @@ export default function Home() {
                         {yearData?.year}
                       </p>
                       <p className="text-2xl text-center md:text-left w-5/6">
-                        {yearData.teams[1]?.title}
+                        {t(yearData.teams[1]?.title)}
                       </p>
                     </div>
                     <div className="p-4 space-y-5">
                       <p className="text-md md:text-lg text-center md:text-left font-semibold px-8 md:px-4">
-                        {yearData.teams[1]?.description}
+                        {t(yearData.teams[1]?.description)}
                       </p>
                       <Image
                         src={yearData.teams[1]?.image}
@@ -382,12 +381,12 @@ export default function Home() {
                       {yearData.year}
                     </p>
                     <p className="text-2xl text-center md:text-left w-1/2">
-                      {yearData.teams[0].title}
+                      {t(yearData.teams[0].title)}
                     </p>
                   </div>
                   <div className="p-4 space-y-5">
                     <p className="text-md md:text-lg text-center md:text-left font-semibold px-8 md:px-4">
-                      {yearData.teams[0].description}
+                      {t(yearData.teams[0].description)}
                     </p>
                     <Image
                       src={yearData.teams[0].image}
@@ -466,7 +465,7 @@ export default function Home() {
                           className="flex flex-col items-center bg-gradient-to-br from-blue-950 via cyan-900 to-black p-4 bg-opacity-60 border-2 border-white rounded-xl text-white font-medium"
                         >
                           <Image
-                            alt={award.title}
+                            alt={award.title ? award.title : "award"}
                             src="/images/timeline/glass-award.webp"
                             width={50}
                             height={50}
@@ -480,7 +479,7 @@ export default function Home() {
                 </div>
               </div>
               {yearData.teams.length > 1 && (
-                <div className="z-10 thecard" onClick={() => flipCard(i+1)}>
+                <div className="z-10 thecard" onClick={() => flipCard(i + 1)}>
                   <div
                     className={
                       i === teamsByYear.length - 1
@@ -526,7 +525,7 @@ export default function Home() {
                             className="flex flex-col items-center bg-gradient-to-br from-blue-950 via cyan-900 to-black p-4 bg-opacity-60 border-2 border-white rounded-xl text-white font-medium"
                           >
                             <Image
-                              alt={award.title}
+                              alt={award.title? award.title : "award"}
                               src="/images/timeline/glass-award.webp"
                               width={50}
                               height={50}
@@ -548,7 +547,7 @@ export default function Home() {
       <div id="about-us" className="bg-[#101321]">
         <section className="transform space-y-20 pb-20 xl:pb-40">
           <p className="text-center text-white font-bold text-5xl 2xl:text-6xl">
-            APOLO 27&apos;s 2025 DIVISIONS
+            {t("divisionsTitle")}
           </p>
 
           {/* team divisions large screen */}
@@ -561,8 +560,8 @@ export default function Home() {
                 backgroundImage: "url('/images/about-us/red-galaxy.webp')",
               }}
             >
-              <p className="font-bold text-5xl w-1/3 text-white text-left -mb-10 pl-5 pt-10">
-                Human Powered Constelation
+              <p className="font-bold text-5xl w-1/3 text-white text-left -mb-10 pl-5 pt-10 2xl:w-3/5">
+                {t("humanPoweredConstellation")}
               </p>
 
               <div className="flex">
@@ -589,8 +588,8 @@ export default function Home() {
                 backgroundImage: "url('/images/about-us/blue-galaxy.webp')",
               }}
             >
-              <p className="font-bold text-5xl text-white text-right -mb-10 pt-10 w-3/4 ml-32">
-                Remote Controlled Constelation
+              <p className="font-bold text-5xl text-white text-right -mb-10 pt-10 w-3/4  ml-32 3xl:w-3/5 3xl:ml-60">
+                {t("remoteControlledConstellation")}
               </p>
               <div className="flex ">
                 <Image

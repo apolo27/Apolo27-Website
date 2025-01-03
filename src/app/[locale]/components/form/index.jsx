@@ -14,7 +14,10 @@ import { ArrowLeftIcon, ArrowRightIcon } from '@heroicons/react/16/solid';
 import { CheckBox } from '../checkBox';
 import emailjs from '@emailjs/browser';
 
+import { useTranslations } from 'next-intl';
+
 export const Form = () => {
+  const t = useTranslations('StemWithUs');
   const formRef = useRef(null);
 
   const formSchema = yup.object().shape({

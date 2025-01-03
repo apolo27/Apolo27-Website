@@ -1,0 +1,380 @@
+{
+  "LocaleSwitcher": {
+    "label": "更改语言",
+    "locale": "{locale, select, es {🇩🇴 西班牙语} en {🇺🇸 英语} fr {🇫🇷 法语} hi {🇮🇳 印地语} ja {🇯🇵 日语} ko {🇰🇷 韩语} pt {🇵🇹 葡萄牙语} zh {🇨🇳 普通话} other {未知}}"
+  },
+  "header": {
+    "home": "首页",
+    "aboutUs": "关于我们",
+    "games": "游戏",
+    "marketplace": "市场",
+    "stemWithUs": "与我们一起 STEM",
+    "socialMedia": "社交媒体",
+    "sponsors": "赞助商"
+  },
+  "timer": {
+    "title": "距离 HERC 的时间: "
+  },
+  "HomePage": {
+    "title": "多米尼加共和国大学首个赢得NASA人类探测车挑战赛的团队",
+    "stemVisitTitle": "计划我们的 STEM 访问！",
+    "stemVisitSubtitle": "为您的教育中心填写表格",
+    "exploreMore": "了解更多关于我们的信息",
+    "missionTitle": "阿波罗27号使命",
+    "timelineTitle": "我们的时间轴",
+    "sponsorUsTitle": "赞助我们！",
+    "sponsorUsSubtitle": "团队需要您的帮助才能赢得比赛！",
+    "divisionsTitle": "阿波罗27号2025年的分部",
+    "humanPoweredConstellation": "人力驱动星座",
+    "remoteControlledConstellation": "遥控星座",
+    "timeline": {
+      "awards": {
+        "overallWinner1": {
+          "title": "总冠军 #1",
+          "description": "授予表现最为突出的团队。设计评审、STEM教育参与、安全性和成功的远足将共同决定总冠军。"
+        },
+        "overallWinner2": {
+          "title": "总冠军 #2",
+          "description": "授予表现最为突出的团队。设计评审、STEM教育参与、安全性和成功的远足将共同决定总冠军。"
+        },
+        "overallWinner3": {
+          "title": "总冠军 #3",
+          "description": "授予表现最为突出的团队。设计评审、STEM教育参与、安全性和成功的远足将共同决定总冠军。"
+        },
+        "stemEngagement": {
+          "title": "STEM 参与奖",
+          "description": "授予最能激发社区成员学习 STEM 相关主题的团队，包括与中学生合作参与任务挑战。该团队不仅向大量观众展示了大量活动，还为广泛的受众提供了高质量的活动。"
+        },
+        "projectReview": {
+          "title": "项目评审奖",
+          "description": "授予最优秀的书面评审和正式展示相结合的团队。"
+        },
+        "phoenix": {
+          "title": "凤凰奖",
+          "description": "授予在设计评审和操作准备评审之间改进最多的团队。"
+        },
+        "socialMedia": {
+          "title": "社交媒体奖",
+          "description": "授予整个项目年度中社交媒体表现最为活跃且富有创意的团队。"
+        },
+        "taskChallenge": {
+          "title": "任务挑战奖",
+          "description": "授予最能展示多工具设计以完成液体样本回收任务的团队。"
+        },
+        "featherweight": {
+          "title": "轻量奖",
+          "description": "授予在太空探索中最佳解决重量管理问题的团队，提供创新的方式来确保探测车重量的最小化。 (仅授予一个团队。)"
+        },
+        "ingenuity": {
+          "title": "创新奖",
+          "description": "授予在处理复杂项目或工程问题时，采用独特且富有创意方式的团队。"
+        },
+        "pitCrew": {
+          "title": "维修团队奖",
+          "description": "根据维修区评判，授予在修理或操作其探测车时展示出最佳资源fulness、动机、运动员精神和团队合作精神的团队。"
+        },
+        "systemSafety": {
+          "title": "系统安全奖",
+          "description": "授予在其车辆、人员和操作的系统安全方面表现最为全面的团队。"
+        },
+        "teamSpirit": {
+          "title": "团队精神奖",
+          "description": "根据同行评审，授予在现场活动中展现“最佳团队精神”的团队。"
+        },
+        "crashAndBurn": {
+          "title": "崩溃与重生奖",
+          "description": "授予以失败为未来成功的学习经验的团队。 (仅授予一个团队。)"
+        },
+        "rookieOfTheYear": {
+          "title": "年度新秀奖",
+          "description": "授予表现最优秀的全新人团队。 (与总奖的评选标准相同。如果一支新秀团队获得了总奖，第二名的新秀团队将获得该奖项，依此类推。仅授予一个团队。)"
+        },
+        "payItForward": {
+          "title": "传递正能量奖",
+          "description": "该阿尔忒弥斯学生挑战（ASC）奖项授予在其社区或更远地区，开展了有影响力的教育参与活动的团队。教育参与包括教学和实践活动，参与者通过积极参与活动学习 STEM 相关概念。"
+        },
+        "innovation": {
+          "title": "创新奖",
+          "description": "该阿尔忒弥斯学生挑战（ASC）奖项授予在各自挑战范围内创造新的创新思路和解决方案的团队。无论是技术创新还是非技术创新，创意、创造力和发明性都将在团队的原创性、效率和解决问题的能力中得到表彰。"
+        },
+        "artemisEducator": {
+          "title": "阿尔忒弥斯教育者奖",
+          "description": "该阿尔忒弥斯学生挑战（ASC）奖项授予每个挑战中由学生团队成员提名的教育工作者/教师/导师。学生团队成员将认可他们的教师或导师，他们激励学生学习并推动学生达到他们认为不可能完成的目标。"
+        },
+        "otherAwards": {
+          "title": "其他奖项",
+          "description": "其他奖项将根据比赛的组成部分进行评定，例如设计评审、操作准备评审报告或现场比赛中的讨论。"
+        },
+        "mostImproved": {
+          "title": "进步最多奖",
+          "description": "授予在比赛两天中展示最大进步的团队。"
+        }
+      },
+      "teams": {
+        "2019": {
+          "division": "人力驱动",
+          "title": "THE ORIGIN",
+          "description": "我们的旅程始于2019年，取得了开创性的成就：成为我们国家第一支参加NASA探测车挑战赛的大学团队。",
+          "image": "/images/timeline/2019.webp",
+          "teamAwards": []
+        },
+        "2020": {
+          "division": "人力驱动",
+          "title": "逆境中的坚韧",
+          "description": "尽管全球大流行带来诸多挑战，但我们的韧性脱颖而出。通过这段经历，我们成功获得了历史性的“系统安全奖”。",
+          "image": "/images/timeline/2020.webp",
+          "teamAwards": ["systemSafety"]
+        },
+        "2021": {
+          "division": "人力驱动",
+          "title": "改造与重塑",
+          "description": "凭借一辆改造后的探测车，我们的团队达到了新的专业水平，并通过创新的努力激发了社区对STEM的热情。",
+          "image": "/images/timeline/2021.webp",
+          "teamAwards": []
+        },
+        "2022": {
+          "division": "人力驱动",
+          "title": "扩大影响力",
+          "description": "2022年，我们推出了互动“STEM之旅”，最终赢得了备受尊敬的“参与奖”。",
+          "image": "/images/timeline/2022.webp",
+          "teamAwards": ["stemEngagement"]
+        },
+        "2023": {
+          "division": "人力驱动",
+          "title": "历史性的一年",
+          "description": "一个多米尼加统治的年份！重大进步为我们赢得了“进步最多奖”和“团队精神奖”，永载史册。",
+          "image": "/images/timeline/2023.webp",
+          "teamAwards": ["mostImproved", "teamSpirit"]
+        },
+        "2024": {
+          "division": "人力驱动",
+          "title": "树立标杆",
+          "description": "从2023年的成功中汲取动力，我们在2024年达到了新的高度。我们的努力为我们赢得了备受青睐的“总奖（第二名）”和“团队精神奖”，展现了卓越和团结。",
+          "image": "/images/timeline/2024.webp",
+          "teamAwards": ["overallWinner2", "teamSpirit"],
+          "badges": ["/images/badges/lunar-navigation.webp"]
+        },
+        "2025": {
+          "division": "人力驱动",
+          "title": "新前沿",
+          "description": "阿波罗分部的诞生标志着2025年新篇章的开启。我们将目光投向更远的未来，突破创新和团队合作的边界。",
+          "teamAwards": [],
+          "badges": [
+            "/images/badges/innovation.webp",
+            "/images/badges/stem-engagement.webp"
+          ],
+          "rcDivision": "遥控",
+          "rcTitle": "开创遥控任务",
+          "rcDescription": "我们的RC团队开始了他们的第一年, 充满大胆的想法和更大胆的工程。",
+          "rcTeamAwards": []
+        }
+      }
+    }
+  },
+  "About-us": {
+    "mechatronics": "机电工程",
+    "mechanical": "机械工程",
+    "electronics": "电子与通信工程",
+    "computer": "计算机工程",
+    "software": "软件工程",
+    "systems": "系统工程",
+    "datascience": "数据科学",
+    "aerospace": "航空航天工程",
+    "internationalbusiness": "国际商务学士",
+    "biotechnology": "生物技术学士",
+    "education": "教育学士",
+
+    "HumanPoweredTeam": {
+      "title": "人力驱动团队",
+      "rcDivision": "RC 部门",
+      "officialMembers": "团队官方成员",
+      "specialMentors": "特别导师",
+      "members": {
+        "advisor": "团队顾问",
+        "teamLeader": "团队领导",
+        "safetyOfficer": "安全官",
+        "fundingManager": "资金经理",
+        "manufacturingManager": "制造经理",
+        "manufacturingAssistant": "制造助理",
+        "stemManager": "STEM 经理",
+        "stemAssistant": "STEM 助理",
+        "projectManager": "项目经理",
+        "communityManager": "社区经理"
+      }
+    },
+    "RemoteControlledTeam": {
+      "title": "远程控制团队",
+      "hpDivision": "HP 部门",
+      "officialMembers": "团队官方成员",
+      "specialMentors": "特别导师",
+      "members": {
+        "advisor": "团队顾问",
+        "teamLeader": "团队领导",
+        "safetyOfficer": "安全官",
+        "funding": "资金",
+        "manufacturingManager": "制造经理",
+        "manufacturingAssistant": "制造助理",
+        "telemetryAssistant": "遥测助理",
+        "stemManager": "STEM 经理",
+        "communityManager": "社区经理"
+      }
+    }
+  },
+  "Games": {
+    "Subtitle": "通过我们的游戏探索STEM。",
+    "HERCSimulation": {
+      "title": "NASA HERC 模拟",
+      "caption": "在您的设备上体验 NASA HERC。",
+      "description": "在这个模拟中，您将参与阿波罗27团队在阿拉巴马州亨茨维尔面临的比赛。了解我们的探测车将面临的障碍和任务，并帮助我们以最短时间获得第一名！ 我们相信您能完成这项任务！",
+      "playButton": "玩",
+      "downloadButton": "下载"
+    },
+    "MathGame": {
+      "title": "数学神殿",
+      "caption": "在神秘的数学神殿中提高数学技能。",
+      "description": "跑、跳、解谜！用您的算术技能征服数学神殿。数学挑战等待着您！您能用数学技能逃离神殿吗？",
+      "playButton": "玩",
+      "downloadButton": "下载",
+      "comingSoon": "即将推出..."
+    },
+    "ScienceGame": {
+      "title": "小炼金术",
+      "caption": "发现我们周围的元素。",
+      "description": "释放您内心的科学家！结合元素，探索自然的秘密。成为元素大师。",
+      "playButton": "玩",
+      "downloadButton": "下载",
+      "comingSoon": "即将推出..."
+    },
+    "TechnologyGame": {
+      "title": "太空打字英雄",
+      "caption": "学习像专业人士一样使用键盘。",
+      "description": "用您的打字技能保卫银河！打字快，射击更快！拯救宇宙免受外星入侵者的侵害。",
+      "playButton": "玩",
+      "downloadButton": "下载",
+      "comingSoon": "即将推出..."
+    },
+    "title": "STEM游戏",
+    "subtitle": "通过我们的游戏探索STEM。",
+    "visitButton": "访问",
+    "games": [
+      {
+        "title": "NASA HERC 模拟",
+        "caption": "在您的设备上体验 NASA HERC。"
+      },
+      {
+        "title": "大炼金术",
+        "caption": "发现我们周围的元素。"
+      },
+      {
+        "title": "太空打字英雄",
+        "caption": "学习像专业人士一样使用键盘。"
+      },
+      {
+        "title": "数学神殿",
+        "caption": "在神秘的数学神殿中提高数学技能。"
+      }
+    ]
+  },
+  "Marketplace": {
+    "banner": {
+      "title": "阿波罗27号",
+      "subtitle": "一个太空服饰目录"
+    },
+    "comingSoon": "敬请期待",
+    "names": {
+      "all": "全部",
+      "tShirt": {
+        "1": "基础白色 T 恤",
+        "2": "图案印花 T 恤",
+        "3": "复古标志 T 恤"
+      },
+      "hoodie": {
+        "1": "舒适版连帽衫",
+        "2": "拉链连帽衫",
+        "3": "加厚连帽衫"
+      },
+      "hats": {
+        "1": "Snapback 棒球帽",
+        "2": "针织帽",
+        "3": "渔夫帽"
+      },
+      "accessories": {
+        "1": "皮带",
+        "2": "太阳镜",
+        "3": "手表"
+      }
+    },
+    "searchPlaceholder": "搜索您的下一套服装",
+    "dialog": {
+      "title": "名称",
+      "description": "产品描述",
+      "closeButton": "关闭"
+    }
+  },
+  "SocialMedia": {
+    "title": "社交媒体",
+    "podcast": {
+      "title": "播客",
+      "name": "Caribe STEM",
+      "description": "Caribe STEM 是一个旨在分享和传播 STEM（科学、技术、工程和数学）的播客，面向多米尼加共和国及整个拉丁美洲。由阿波罗27团队创建，该团队代表 INTEC 参加 NASA HERC 比赛。"
+    },
+    "tabs": {
+      "tiktok": "抖音",
+      "instagram": "Instagram",
+      "youtube": "YouTube"
+    },
+    "video1": {
+      "username": "@apolo27rd",
+      "description": "🎥💸 当 #制造 需要 $$$，但 #融资 不合作时……😂💀 💬 谁有同感？👇",
+      "hashtags": ["#制造", "#融资", "#Apolo27团队", "#请给钱", "#团队问题"],
+      "sound": "♬ 原声 - 💘🐩"
+    },
+    "video2": {
+      "username": "@apolo27rd",
+      "description": "🚀📚 #Apolo27 团队参加了 2024 年多米尼加共和国国际书展！🇩🇴✨ 除了书籍，我们还利用这个绝佳平台分享了我们的使命、价值观以及我们作为一个团队所做的一切。💡🔥 我们与杰出的头脑联系，探索新想法，并展示了 #Apolo27 如何创造影响力。🌟 想了解更多关于我们的工作吗？在评论中留下您的问题！👇🤝 🎥✨ 播放并发现我们如何度过这特别的一天！❤️",
+      "hashtags": [
+        "#Apolo27",
+        "#Apolo27RD",
+        "#创新有目的",
+        "#2024书展",
+        "#构建未来",
+        "#不可阻挡的团队"
+      ],
+      "sound": "♬ 原声 - Apolo 27 RD"
+    },
+    "connect": {
+      "title": "与我们联系！",
+      "subtitle": "关注我们所有的社交媒体"
+    }
+  },
+  "Sponsors": {
+    "title": "赞助我们",
+    "subtitle": "您的支持将帮助我们的国家获得应有的认可。",
+    "buttonText": "赞助我们"
+  },
+  "StemWithUs": {
+    "blogs": {
+      "title": "我们的最新博客",
+      "readMore": "阅读更多"
+    },
+    "calendar": {
+      "title": "阿波罗27号的活动",
+      "event": {
+        "start": "开始时间：",
+        "end": "结束时间：",
+        "follow": "关注"
+      }
+    },
+    "youtube": {
+      "invite": "访问我们的",
+      "channelName": "YouTube 频道！",
+      "description": "我们的视频展示了工程的专业技能和奉献精神，这使我们成为 HERC 的四次类别冠军。加入我们，了解我们的创新设计和我们克服的挑战。",
+      "subscribe": "订阅",
+      "continue": "以随时了解我们的最新项目和活动。"
+    },
+    "form": {
+      "title": "想安排一次访问吗？",
+      "subtitle": "立即联系我们！"
+    }
+  }
+}
