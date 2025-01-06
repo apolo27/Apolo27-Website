@@ -9,12 +9,12 @@ export const Timer = () => {
       <p className="text-xs xs:text-md md:text-lg bg-clip-text text-transparent bg-gradient-to-t  font-semibold from-[#87e496] via-[#60bee4] via-72% to-[#37afff]">
         {t("title")}
       </p>
-      <span className="text-md xs:text-xl lg:text-3xl bg-clip-text text-transparent bg-gradient-to-t  font-semibold from-[#87e496] via-[#60bee4] via-72% to-[#37afff]">
-        <NumberFlow value={days} format={{ notation: "compact" }} />d{" "}
-        <NumberFlow value={hours} format={{ notation: "compact" }} />h{" "}
-        <NumberFlow value={minutes} format={{ notation: "compact" }} />m{" "}
-        <NumberFlow value={seconds} format={{ notation: "compact" }} />s
-      </span>
+      <p className="text-md xs:text-xl lg:text-3xl font-semibold timer-text">
+        {days}<span className="font-bold">d</span>{" "}
+        {hours}<span className="font-bold">h</span>{" "}
+        {minutes}<span className="font-bold">m</span>{" "}
+        {seconds}<span className="font-bold">s</span>
+      </p>
     </div>
   );
 };

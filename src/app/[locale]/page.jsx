@@ -318,7 +318,7 @@ export default function Home() {
         <div className="big-timeline">
           <Timeline position="alternate-reverse" className="w-full">
             {teamsByYear.map((yearData, i) => (
-              <TimelineItem key={i} className="z-10 ">
+              <TimelineItem key={i} className="z-10 mt-5">
                 {yearData.teams.length > 1 && (
                   <TimelineOppositeContent className="3xl:flex 3xl:justify-center">
                     <div
@@ -342,14 +342,16 @@ export default function Home() {
                         <p className="text-md md:text-lg text-center md:text-left font-semibold px-8 md:px-4">
                           {t(yearData.teams[1]?.description)}
                         </p>
-                        <Image
-                          src={yearData.teams[1]?.image}
-                          alt="Team Image"
-                          width="0"
-                          height="0"
-                          sizes="100vw"
-                          className="px-8 md:px-4 w-full h-30"
-                        />
+                        <div className="rounded-2xl overflow-hidden">
+                          <Image
+                            src={yearData.teams[1]?.image}
+                            alt="Team Image"
+                            width="0"
+                            height="0"
+                            sizes="100vw"
+                            className="px-8 md:px-4 w-full h-30 rounded-2xl"
+                          />
+                        </div>
                         {/* <button
                         onClick={() => showTeam(team)}
                         className="bg-gradient-to-br from-cyan-950 to-cyan-800 p-4 rounded-xl font-semibold hover:scale-105 transition-all"
@@ -386,14 +388,16 @@ export default function Home() {
                       <p className="text-md md:text-lg text-center md:text-left font-semibold px-8 md:px-4">
                         {t(yearData.teams[0].description)}
                       </p>
+                      <div className="rounded-2xl overflow-hidden">
                       <Image
                         src={yearData.teams[0].image}
                         alt="Team Image"
                         width="0"
                         height="0"
                         sizes="100vw"
-                        className="px-8 md:px-4 w-full h-30"
+                        className="px-8 md:px-4 w-full h-30 rounded-2xl"
                       />
+                      </div>
                       {/* <button
                       onClick={() => showTeam(team)}
                       className="bg-gradient-to-br from-cyan-950 to-cyan-800 p-4 rounded-xl font-semibold hover:scale-105 transition-all"
@@ -420,7 +424,9 @@ export default function Home() {
             <div
               key={i}
               className={`flex flex-col gap-5 ${
-                yearData.teams.length > 1 ? "bg-black p-2 xs:p-5 rounded-2xl" : ""
+                yearData.teams.length > 1
+                  ? "bg-black p-2 xs:p-5 rounded-2xl"
+                  : ""
               }`}
             >
               <div className="z-10 thecard" onClick={() => flipCard(i)}>
@@ -431,15 +437,15 @@ export default function Home() {
                       : `${timelineItem} thefront`
                   }
                 >
-                  <div className="md:px-4 flex flex-col md:flex-row items-center w-full justify-evenly bg-gradient-to-b from-cyan-600 to-cyan-900 rounded-t-2xl py-4 md:py-8">
+                  <div className="md:px-4 flex flex-col xm:flex-row md:flex-row items-center w-full justify-evenly bg-gradient-to-b from-cyan-600 to-cyan-900 rounded-t-2xl py-4 md:py-8">
                     <p className="text-5xl lg:text-6xl font-boldrounded-xl bg-cyan-950/[0.7] rounded-lg p-1">
                       {yearData.year}
                     </p>
-                    <p className="text-2xl lg:text-3xl text-center md:text-left w-3/4 xs:w-1/2">
+                    <p className="text-2xl lg:text-3xl text-center xm:text-left w-3/4 xs:w-1/2">
                       {t(yearData.teams[0].title)}
                     </p>
                   </div>
-                  <div className="p-4 space-y-5">
+                  <div className="py-2 space-y-5">
                     <p className="text-md md:text-lg text-center md:text-left font-semibold xs:px-8 md:px-4">
                       {t(yearData.teams[0].description)}
                     </p>
@@ -504,7 +510,7 @@ export default function Home() {
                       <p className="text-md md:text-lg text-center md:text-left font-semibold px-8 md:px-4">
                         {t(yearData.teams[1]?.description)}
                       </p>
-
+                      <div className="rounded-2xl overflow-hidden">
                       <Image
                         src={yearData.teams[1]?.image}
                         alt="Team Image"
@@ -513,6 +519,7 @@ export default function Home() {
                         sizes="100vw"
                         className="px-8 pb-8 md:px-4 w-full h-full h-30"
                       />
+                      </div>
                     </div>
                   </div>
                   <div
@@ -551,7 +558,7 @@ export default function Home() {
 
       <div id="about-us" className="bg-[#101321]">
         <section className="transform space-y-20 pb-20 xl:pb-40">
-          <p className="text-center text-white font-bold text-5xl 2xl:text-6xl">
+          <p className="text-center text-white font-bold px-10 text-3xl md:text-5xl 2xl:text-6xl">
             {t("divisionsTitle")}
           </p>
 
@@ -560,59 +567,66 @@ export default function Home() {
           <div className="hidden lg:flex w-full justify-evenly">
             <Link
               href="/human-powered-team"
-              className={`${teamClassName} drop-shadow-sm rounded-[50px] h-[600px] w-2/5 2xl:w-2/6 overflow-hidden relative `}
+              className={`${teamClassName} drop-shadow-sm h-fit space-y-2 rounded-[50px] w-2/5 2xl:w-2/6 overflow-hidden relative `}
               style={{
                 backgroundImage: "url('/images/about-us/red-galaxy.webp')",
               }}
             >
-              <p className="font-bold text-5xl w-1/3 text-white text-left -mb-10 pl-5 pt-10 2xl:w-3/5">
+              <p className="font-extrabold text-4xl text-white text-left pl-5 pt-10 max-h-[184px]">
                 {t("humanPoweredConstellation")}
               </p>
-
-              <div className="flex">
-                <Image
-                  className="mt-20"
-                  src="/images/about-us/Marko1.webp"
-                  alt="Team Lead HP"
-                  width={200}
-                  height={300}
-                />
-                <Image
-                  className="-ml-40"
-                  src="/images/about-us/Anne1.webp"
-                  alt="Team Lead HP"
-                  width={400}
-                  height={300}
-                />
-              </div>
+              <hr></hr>
+              <Image
+                src="/images/timeline/2025-hp.webp"
+                alt="Team Lead HP"
+                width="0"
+                height="0"
+                sizes="100vw"
+                style={{objectFit: "contain"}}
+                className="w-full "
+              />
             </Link>
             <Link
-              href="/remote-controlled-team"
-              className={`${teamClassName} drop-shadow-sm h-[600px] rounded-[50px] w-2/5 2xl:w-2/6 text-right pr-5 overflow-hidden relative`}
+              href="/human-powered-team"
+              className={`${teamClassName} drop-shadow-sm h-fit space-y-2 rounded-[50px] w-2/5 2xl:w-2/6 overflow-hidden relative `}
               style={{
                 backgroundImage: "url('/images/about-us/blue-galaxy.webp')",
               }}
             >
-              <p className="font-bold text-5xl text-white text-right -mb-10 pt-10 w-3/4  ml-32 3xl:w-3/5 3xl:ml-60">
+              <p className="font-extrabold text-4xl text-white text-right pt-10 w-3/4 pr-5 ml-32 2xl:w-3/5 2xl:ml-60 max-h-[184px]">
+              {t("remoteControlledConstellation")}
+              </p>
+                <hr></hr>
+              <Image
+                src="/images/timeline/2025-rc.webp"
+                alt="Team Lead HP"
+                width="0"
+                height="0"
+                sizes="100vw"
+                style={{objectFit: "contain"}}
+                className="w-full "
+              />
+            </Link>
+            {/* <Link
+              href="/remote-controlled-team"
+              className={`${teamClassName} drop-shadow-sm h-[600px] rounded-[50px] w-2/5 2xl:w-2/6 overflow-hidden relative`}
+              style={{
+                backgroundImage: "url('/images/about-us/blue-galaxy.webp')",
+              }}
+            >
+              <p className="font-bold text-5xl text-white text-right pt-10 w-3/4 pr-5 ml-32 3xl:w-3/5 3xl:ml-60">
                 {t("remoteControlledConstellation")}
               </p>
-              <div className="flex ">
-                <Image
-                  className="absolute -bottom-40 right-0"
-                  src="/images/about-us/Humberto1.webp"
-                  alt="Team Lead HP"
-                  width={200}
-                  height={300}
-                />
-                <Image
-                  className="absolute -bottom-36 right-40"
-                  src="/images/about-us/JorgeCrop.png"
-                  alt="Team Lead HP"
-                  width={400}
-                  height={300}
-                />
-              </div>
-            </Link>
+              <Image
+                src="/images/timeline/2025-rc.webp"
+                alt="Team Lead HP"
+                width="0"
+                height="0"
+                sizes="100vw"
+                style={{objectFit: "contain"}}
+                className="w-full"
+              />
+            </Link> */}
           </div>
 
           {/* team divisions mobile */}
@@ -625,12 +639,12 @@ export default function Home() {
               }}
             >
               {" "}
-              <p className="font-bold text-3xl sm:text-4xl text-white text-left pl-5">
-                Human <br></br> Powered Constelation
+              <p className="font-bold text-3xl sm:text-4xl text-white text-left pl-5 mb-5">
+                Human <br></br> Powered Team
               </p>
               <Image
                 className=""
-                src="/images/about-us/Anne1.webp"
+                src="/images/timeline/2025-hp.webp"
                 alt="Team Lead HP"
                 width={520}
                 height={300}
@@ -644,12 +658,12 @@ export default function Home() {
                 backgroundImage: "url('/images/about-us/blue-galaxy.webp')",
               }}
             >
-              <p className="font-bold text-3xl sm:text-4xl text-white text-right pr-5">
-                Remote Controlled Constelation
+              <p className="font-bold text-3xl sm:text-4xl text-white px-5 mb-5">
+                Remote Controlled Team
               </p>
               <Image
-                className="absolute -bottom-10 right-0"
-                src="/images/about-us/Jorge.png"
+                className="absolute  right-0"
+                src="/images/timeline/2025-rc.webp"
                 alt="Team Lead RC"
                 width={520}
                 height={300}
