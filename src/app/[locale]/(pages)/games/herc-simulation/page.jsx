@@ -17,13 +17,13 @@ export default function HERCSimulation() {
     <div className="text-center py-20 2xl:py-48 flex flex-col md:flex-row w-full md:px-28 md:space-x-5 relative">
       <button
         onClick={() => router.back()}
-        className="p-2 rounded-xl top-20 left-36 absolute text-black bg-white hover:bg-slate-100 hover:pointer"
+        className="p-2 rounded-xl top-5 left-10 md:top-20 md:left-36 lg:top-5 lg:left-36 xl:left-36 2xl:top-32 absolute text-black bg-white hover:bg-slate-100 hover:pointer"
       >
         <ArrowLeftIcon className=" w-8 h-8" />
       </button>
       <EmblaCarousel
         options={OPTIONS}
-        className="w-5/6 flex items-center self-center md:px-0 md:w-2/3 h-[200px] md:h-[500px] rounded-2xl mb-10 md:mb-0"
+        className="w-5/6 flex items-center self-center md:px-0 md:w-2/3 h-fit rounded-2xl mb-10 md:mb-0"
       >
         <Image
           className="w-full h-full embla__slide"
