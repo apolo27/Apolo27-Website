@@ -16,9 +16,9 @@ export default function SocialMedia() {
   return (
     <div className="bg-apolo-empty-background lg:px-40 px-4 pt-28 xl:pt-16">
       <div className="mb-20 rounded-full p-4 text-center bg-gradient-to-t from-[#379AE1] to-[#69BF77] z-10">
-        <i className="text-3xl md:text-5xl font-bold text-white">
+        <p className="text-3xl md:text-5xl font-bold text-white">
           {t("title")}
-        </i>
+        </p>
       </div>
 
       <div className="flex flex-wrap lg:flex-nowrap">
@@ -129,7 +129,10 @@ export default function SocialMedia() {
         </TabList>
         <TabPanels>
           <TabPanel className="flex gap-4 justify-center">
-            <blockquote
+            <div className="bg-gray-800 text-white text-center w-[300px] h-[500px]">TIKTOK VIDEO</div>
+            <div className="bg-gray-800 text-white text-center w-[300px] h-[500px]">TIKTOK VIDEO</div>
+            <div className="bg-gray-800 text-white text-center w-[300px] h-[500px]">TIKTOK VIDEO</div>
+            {/* <blockquote
               className="tiktok-embed"
               cite="https://www.tiktok.com/@apolo27rd/video/7451602179384691974"
               data-video-id="7451602179384691974"
@@ -306,10 +309,13 @@ export default function SocialMedia() {
                 </a>{" "}
               </section>{" "}
             </blockquote>{" "}
-            <script async src="https://www.tiktok.com/embed.js"></script>
+            <script async src="https://www.tiktok.com/embed.js"></script> */}
           </TabPanel>
           <TabPanel className="flex gap-4 justify-center">
-            <p>Contenido</p>
+          <div className="bg-gray-800 text-white text-center w-[300px] h-[500px]">INSTAGRAM VIDEO</div>
+            <div className="bg-gray-800 text-white text-center w-[300px] h-[500px]">INSTAGRAM VIDEO</div>
+            <div className="bg-gray-800 text-white text-center w-[300px] h-[500px]">INSTAGRAM VIDEO</div>
+
           </TabPanel>
           <TabPanel className="flex gap-4 justify-center">
             <div className="flex justify-center gap-4">

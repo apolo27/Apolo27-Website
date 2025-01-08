@@ -55,7 +55,7 @@ export default function Home() {
     <>
       <div className="text-center h-fit  space-y-8 lg:space-y-20 2xl:space-y-10 bg-gradient-to-t from-[#101321] to-[#40D1FF] px-5 md:px-40 flex flex-col items-center pt-5">
         <Timer />
-        <p className="mt-4 font-bold text-3xl xs:text-4xl lg:text-5xl 3xl:text-6xl w-full lg:w-5/6 text-transparent bg-clip-text bg-gradient-to-b from-white to-gray-500">
+        <p className="mt-4 font-bold text-xl xs:text-3xl lg:text-5xl 3xl:text-6xl w-full lg:w-5/6 text-transparent bg-clip-text bg-gradient-to-b from-white to-gray-500">
           {t("title")}
         </p>
         <Link
@@ -294,8 +294,8 @@ export default function Home() {
         </Link>
       </section>
 
-      <div className="hidden md:flex bg-[#101321] text-center flex-col gap-7 items-center justify-center pt-20 md:pt-5 2xl:pt-0">
-        <p className="explore-more-text bg-clip-text bg-gradient-to-r from-gray-800 via-white via-50% to-gray-800 text-transparent font-bold text-3xl md:text-3xl 3xl:text-4xl w-full md:w-60 2xl:w-96 md:pt-40 2xl:pt-20">
+      <div className="flex bg-[#101321] text-center flex-col gap-3 md:gap-7 items-center justify-center pt-5 md:pt-10 2xl:pt-0">
+        <p className="explore-more-text bg-clip-text bg-gradient-to-r from-gray-800 via-white via-50% to-gray-800 text-transparent font-bold text-xl md:text-3xl 3xl:text-4xl w-1/2 md:w-60 2xl:w-96 lg:pt-40 2xl:pt-20">
           {t("exploreMore")}
         </p>
         <div>
@@ -320,7 +320,7 @@ export default function Home() {
             {teamsByYear.map((yearData, i) => (
               <TimelineItem key={i} className="z-10 mt-5">
                 {yearData.teams.length > 1 && (
-                  <TimelineOppositeContent className="3xl:flex 3xl:justify-center">
+                  <TimelineOppositeContent className="2xl:flex 2xl:justify-center">
                     <div
                       className={`
                       ${
@@ -368,7 +368,7 @@ export default function Home() {
                   <TimelineConnector />
                 </TimelineSeparator>
 
-                <TimelineContent className="3xl:flex 3xl:justify-center">
+                <TimelineContent className="2xl:flex 2xl:justify-center">
                   <div
                     className={`${
                       i === teamsByYear.length - 1
