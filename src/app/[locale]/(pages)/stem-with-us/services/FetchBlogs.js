@@ -1,8 +1,9 @@
 
 import request from "superagent";
 import moment from 'moment';
+import { hash } from "crypto";
 
-const BLOGGER_URL = "https://www.googleapis.com/blogger/v3/blogs/4816302503592460113/posts?key=AIzaSyARD4hXPEU2klOLmJPjPDHP_tE6x7fzNOA"
+const BLOGGER_URL = `https://www.googleapis.com/blogger/v3/blogs/4816302503592460113/posts?key=AIzaSyARD4hXPEU2klOLmJPjPDHP_tE6x7fzNOA`;
 
 export function getBlogs(callback) {
   request.get(BLOGGER_URL).end((err, resp) => {
@@ -10,11 +11,12 @@ export function getBlogs(callback) {
       const blogs = [];
       let parser = new DOMParser();
       
-      JSON.parse(resp.text).items.map(blog => {
+      JSON.parse(resp.text).items.map((blog, i) => {
           let doc = parser.parseFromString(blog.content, "text/html");
           let text = blog.title.split("|")
           return blogs.push({
             blogURL: blog.url,
+            id: i,
             theme: text[0].trim(),
             title: text[1].trim(),
             author: blog.author.displayName,

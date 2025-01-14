@@ -21,6 +21,7 @@ import { Link } from "../../../../i18n/routing";
 import { LinkIcon } from "@heroicons/react/24/outline";
 
 import { useTranslations } from "next-intl";
+import { ArrowRightIcon } from "@heroicons/react/20/solid";
 
 export default function StemWithUs() {
   const t = useTranslations("StemWithUs");
@@ -82,8 +83,15 @@ export default function StemWithUs() {
         id="blogs"
         className="mb-10 z-10 w-full h-fit  text-white md:bg-slate-900 md:bg-opacity-85 md:py-10 3xl:bg-transparent 3xl:py-0 3xl:mr-0 3xl:rounded-r-none"
       >
+        <div className="flex gap-10">
+
         <div className="flex justify-center mb-5 bg-teal-50 text-slate-900   bg-opacity-85 p-4 rounded-r-[50px] w-3/5">
           <p className="font-bold text-4xl">{t("blogs.title")}</p>
+        </div>
+        <Link href="/blog" className="bg-teal-50 text-slate-900 bg-opacity-85 p-4 rounded-[50px] w-fit h-fit flex items-center gap-5 group">
+          <p className="font-bold text-2xl">See more</p>
+          <ArrowRightIcon className="h-10 w-10 inline-block group-hover:animate-bounceX" />
+        </Link>
         </div>
         <div className="flex flex-col items-center md:flex-row justify-center gap-5">
           {blogs.slice(0, 3).map((blog, i) => {

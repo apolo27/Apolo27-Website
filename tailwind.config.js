@@ -40,6 +40,7 @@ module.exports = {
         ["infinite-slider"]: "infiniteSlider 50s linear infinite",
         'infinite-scroll': 'infinite-scroll 12s linear infinite',
         border: 'border 2s linear infinite',
+        bounceX: 'bounceX 1s infinite',
       },
       keyframes: {
         'infinite-scroll': {
@@ -54,6 +55,10 @@ module.exports = {
         },
         border: {
           to: { '--border-angle': '360deg' },
+        },
+        bounceX: {
+          '0%, 100%': { transform: 'translateX(0)' },
+          '50%': { transform: 'translateX(-25%)' },
         },
 
       },
