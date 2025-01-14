@@ -1,5 +1,7 @@
 export async function generateStaticParams() {
-  const posts = await fetch("https://jsonplaceholder.typicode.com/posts").then((res) => res.json());
+  const posts = await fetch("https://jsonplaceholder.typicode.com/posts").then(
+    (res) => res.json()
+  );
 
   return posts.map((post) => ({
     id: post.id,
@@ -8,5 +10,9 @@ export async function generateStaticParams() {
 
 export default async function Page({ params }) {
   const id = (await params).id;
-  return <div>My Post: {id}</div>;
+  return (
+    <div>
+      <p className="text-white">My Post: {id}</p>
+    </div>
+  );
 }
