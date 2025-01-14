@@ -19,7 +19,8 @@ export default function BlogsPage() {
         <ul className='grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 justify-center justify-items-center'>
           {blogs.slice(0,3).map((blog, i) => (
             <li key={i} className='p-4 text-black rounded-xl w-fit bg-sky-950 hover:border-2 hover:border-transparent hover:animate-border'>
-              <Link href={`/blog/${blog.id}`} className='space-y-2'>
+              <Link href={`/blog/${blog.id}`} className='space-y-2 relative '>
+                <div className='bg-white border-2 border-black w-8 h-8 rounded-full absolute -top-5 -left-5 flex items-center justify-center'>{blog.id+1}</div>
                 <Image src={blog.imgURL} alt='blog' width="0"
                   height="0"
                   sizes="100vw"

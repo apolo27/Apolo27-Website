@@ -30,7 +30,9 @@ export function getBlogs(callback) {
       const storedBlogsString = sessionStorage.getItem('blogs');
       const storedBlogsArray = JSON.parse(storedBlogsString);
 
-      callback(storedBlogsArray)
+      if (callback) {
+        callback(storedBlogsArray)
+      }
     }
   });
 }
