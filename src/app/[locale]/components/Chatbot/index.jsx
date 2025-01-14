@@ -60,8 +60,21 @@ export const Chatbot = ({ isSidebarOpen }) => {
       },
     ],
     history: [
+      {
+        role: "user",
+        parts: [{ text: "Hello" }],
+      },
+      {
+        role: "model",
+        parts: [{ text: "Great to meet you. What would you like to know?" }],
+      },
     ],
   });
+
+  async function get_chat_history() {
+    const chat_history = await chat.getHistory();
+    console.log(chat_history);
+  }
 
   async function AskApolito(prompt) {
     const result = await chat.sendMessage(prompt);
@@ -73,6 +86,8 @@ export const Chatbot = ({ isSidebarOpen }) => {
       ...prevMessages,
       processedMessage.toString(),
     ]);
+    get_chat_history();
+
   }
 
   const sendPrompt = async (values, event) => {
