@@ -62,7 +62,7 @@ export default function Blog({ id }) {
         </div>
       </div>
       <div className="md:col-span-1">
-        <p className="text-white">other blogs</p>
+        {/* <p className="text-white">other blogs</p> */}
       </div>
     </div>
   );
