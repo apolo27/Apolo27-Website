@@ -1,18 +1,15 @@
+import Blog from "./PageComponent";
+
 export async function generateStaticParams() {
-  const posts = await fetch("https://jsonplaceholder.typicode.com/posts").then(
+  const blogs = await fetch("https://jsonplaceholder.typicode.com/posts").then(
     (res) => res.json()
   );
 
-  return posts.map((post) => ({
-    id: post.id,
+  return blogs.map((blog) => ({
+    id: blog.id,
   }));
 }
 
-export default async function Page({ params }) {
-  const id = (await params).id;
-  return (
-    <div>
-      <p className="text-white">My Post: {id}</p>
-    </div>
-  );
+export default function Page({ params }) {
+  return <Blog params={params} />;
 }
