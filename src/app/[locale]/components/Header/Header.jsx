@@ -47,7 +47,7 @@ export default function Header() {
           </div>
 
           <div className="flex-grow">
-            <ul className="hidden lg:flex justify-center space-x-8 text-white">
+            <ul className="hidden xl:flex justify-center space-x-8 text-white">
               {[
                 { href: "/", label: t("home") },
                 { href: "/#about-us", label: t("aboutUs") },
@@ -82,7 +82,7 @@ export default function Header() {
 
           <button
             onClick={toggleSidebar}
-            className="lg:hidden focus:outline-none transform transition-transform duration-300 hover:scale-110"
+            className="xl:hidden focus:outline-none transform transition-transform duration-300 hover:scale-110 ml-10"
           >
             <Image
               src="/images/menu.svg"

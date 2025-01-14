@@ -100,10 +100,10 @@ export const Form = () => {
   const sendForm = () => {
     emailjs
       .sendForm(
-        process.env.EMAIL_JS_SERVICE,
-        process.env.EMAIL_JS_TEMPLATE,
+        process.env.NEXT_PUBLIC_EMAIL_JS_SERVICE,
+        process.env.NEXT_PUBLIC_EMAIL_JS_TEMPLATE,
         formRef.current,
-        process.env.EMAIL_JS_USER
+        process.env.NEXT_PUBLIC_EMAIL_JS_USER
       )
       .then(
         (result) => {
