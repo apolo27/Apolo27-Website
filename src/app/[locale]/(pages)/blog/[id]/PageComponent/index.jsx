@@ -1,5 +1,5 @@
 "use client";
-import { useRouter } from "../../../../../../i18n/routing";
+import { Link, useRouter } from "../../../../../../i18n/routing";
 import { ArrowLeftIcon } from "@heroicons/react/20/solid";
 import { useState, useEffect } from "react";
 import { getBlogs } from "../../../stem-with-us/services/FetchBlogs";
@@ -9,6 +9,7 @@ import { Skeleton } from "@mui/material";
 export default function Blog({ id }) {
   const router = useRouter();
   const [blog, setBlog] = useState({});
+  const [otherBlogs, setOtherBlogs] = useState([]);
   useEffect(() => {
     if (sessionStorage.getItem("blogs") === null) {
       getBlogs();
@@ -19,12 +20,7 @@ export default function Blog({ id }) {
       )
     );
 
-    console.log(
-      "blog: ",
-      JSON.parse(sessionStorage.getItem("blogs")).find(
-        (x) => x.id === parseInt(id)
-      )
-    );
+    setOtherBlogs(JSON.parse(sessionStorage.getItem("blogs")).filter((x) => x.id !== parseInt(id)))
   }, [id]);
 
   return (
@@ -78,7 +74,26 @@ export default function Blog({ id }) {
         </div>
       </div>
       <div className="md:col-span-1">
-        {/* <p className="text-white">other blogs</p> */}
+        <p className="text-white font-semibold text-xl px-4">You might be interested in...</p>
+        <ul className="text-white space-y-10 mt-10 mx-5">
+
+        {
+          otherBlogs.map((otherBlog, i) => {
+            return (
+              <Link key={i} className="flex items-center gap-5 bg-cyan-950 p-4 rounded-xl ">
+                <Image 
+                  src={otherBlog.imgURL}
+                  alt={`${otherBlog.title} image`}
+                  width={100}
+                  height={100}
+                  className="rounded-xl"
+                  />
+                  <p className="font-semibold">{otherBlog.title}</p>
+              </Link>
+            )
+          })
+        }
+        </ul>
       </div>
     </div>
   );
