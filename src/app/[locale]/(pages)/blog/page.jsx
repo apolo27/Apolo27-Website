@@ -20,10 +20,10 @@ export default function BlogsPage() {
         <p className='text-white text-5xl font-bold text-center w-full '>Apolo Blog</p>
         <div className='flex justify-center my-10'>
 
-        <div className='bg-gradient-to-br from-cyan-500 via-blue-800 bg-cyan-700 flex w-1/2 justify-center items-center gap-10 text-white text-center font-semibold rounded-full  z-50 px-10'>
-          <NewspaperIcon width={150} height={150} />
-            <p>Delve into our blogs and learn about the STEM, new technologies, updates on space exploration and read about curious scientific and engineering topics</p>
-          <NewspaperIcon width={150} height={150} />
+        <div className='bg-gradient-to-br from-cyan-500 via-blue-800 bg-cyan-700 flex lg:w-1/2 justify-center items-center gap-10 text-white text-center font-semibold rounded-3xl  z-50 px-10 py-4'>
+          <NewspaperIcon className="hidden md:block w-20 h-20"/>
+          <p>Delve into our blogs and learn about the STEM, new technologies, updates on space exploration and read about curious scientific and engineering topics</p>
+          <NewspaperIcon className="hidden md:block w-20 h-20"/>
         </div>
         </div>
         <ul className='grid grid-cols-1 gap-4 xl:gap-10 sm:grid-cols-2 md:grid-cols-3 justify-center justify-items-center'>
