@@ -33,6 +33,10 @@ const nextConfig = {
             {
                 protocol: 'https',
                 hostname: 'blogger.googleusercontent.com'
+            },
+            {
+                protocol: 'https',
+                hostname: 'fotografias.larazon.es'
             }
         ]
     }
