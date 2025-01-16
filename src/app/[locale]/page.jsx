@@ -55,12 +55,12 @@ export default function Home() {
     <>
       <div className="text-center h-fit  space-y-8 lg:space-y-20 2xl:space-y-10 bg-gradient-to-t from-[#101321] to-[#40D1FF] px-5 md:px-40 flex flex-col items-center pt-5">
         <Timer />
-        <p className="mt-4 font-bold text-xl xs:text-3xl lg:text-5xl 3xl:text-6xl w-full lg:w-5/6 text-transparent bg-clip-text bg-gradient-to-b from-white to-gray-500">
+        <p className="mt-4 font-bold text-xl xs:text-3xl lg:text-5xl 3xl:text-6xl w-full sm:w-5/6 md:w-5/6  text-transparent bg-clip-text bg-gradient-to-b from-white to-gray-500">
           {t("title")}
         </p>
         <Link
           href="/stem-with-us"
-          className="flex lg:hidden transition-all border border-1 border-[#424B5B] bg-black/[0.8] w-full  md:w-[520px] pl-2 py-2 h-fit  rounded-2xl  items-center justify-evenly hover:cursor-pointer hover:scale-105 "
+          className="flex lg:hidden transition-all border border-1 border-[#424B5B] bg-black/[0.8] w-full sm:w-5/6 md:w-4/6 pl-2 py-2 h-fit  rounded-2xl  items-center justify-evenly hover:cursor-pointer hover:scale-105 "
         >
           <Image
             src={"/images/icons/formIcon.webp"}
@@ -122,7 +122,7 @@ export default function Home() {
         {/*sponsor us mobile*/}
         <Link
           href="/sponsors"
-          className="lg:hidden relative w-full md:w-4/6 h-auto"
+          className="lg:hidden relative w-full sm:w-5/6 md:w-4/6 h-auto"
         >
           <Image
             src={"/images/landing/sponsorus-rectangle.webp"}
@@ -146,7 +146,7 @@ export default function Home() {
                   width="0"
                   height="0"
                   sizes="100vw"
-                  className="w-36 h-36 sm:w-56 sm:h-56"
+                  className="w-36 h-36 xm:w-52 xm:h-52"
                   alt="sponsor level"
                 />
               </li>
@@ -156,7 +156,7 @@ export default function Home() {
                   width="0"
                   height="0"
                   sizes="100vw"
-                  className="w-36 h-36 sm:w-56 sm:h-56"
+                  className="w-36 h-36 xm:w-52 xm:h-52"
                   alt="sponsor level"
                 />
               </li>
@@ -166,19 +166,19 @@ export default function Home() {
                   width="0"
                   height="0"
                   sizes="100vw"
-                  className="w-36 h-36 sm:w-56 sm:h-56"
+                  className="w-36 h-36 xm:w-52 xm:h-52"
                   alt="sponsor level"
                 />
               </li>
             </ul>
-            <ul className="flex items-center justify-center md:justify-start sm:[&_li]:mx-8 [&_li]:mx-4 [&_img]:max-w-none animate-infinite-scroll">
+            <ul className="flex items-center justify-center md:justify-start xm:[&_li]:mx-8 [&_li]:mx-4 [&_img]:max-w-none animate-infinite-scroll">
               <li>
                 <Image
                   src="/images/sponsors/oro.png"
                   width="0"
                   height="0"
                   sizes="100vw"
-                  className="w-36 h-36 sm:w-56 sm:h-56"
+                  className="w-36 h-36 xm:w-52 xm:h-52"
                   alt="sponsor level"
                 />
               </li>
@@ -188,7 +188,7 @@ export default function Home() {
                   width="0"
                   height="0"
                   sizes="100vw"
-                  className="w-36 h-36 sm:w-56 sm:h-56"
+                  className="w-36 h-36 xm:w-52 xm:h-52"
                   alt="sponsor level"
                 />
               </li>
@@ -198,7 +198,7 @@ export default function Home() {
                   width="0"
                   height="0"
                   sizes="100vw"
-                  className="w-36 h-36 md:w-56 md:h-56"
+                  className="w-36 h-36 md:w-52 md:h-52"
                   alt="sponsor level"
                 />
               </li>
