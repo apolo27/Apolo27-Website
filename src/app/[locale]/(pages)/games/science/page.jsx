@@ -3,36 +3,33 @@ import { ArrowDownOnSquareIcon } from "@heroicons/react/20/solid";
 import { ArrowLeftIcon } from "@heroicons/react/20/solid";
 import { useRouter } from "../../../../../i18n/routing";
 import { useTranslations } from "next-intl";
+import Link from "next/link";
 
 export default function ScienceGame() {
   const t = useTranslations("Games.ScienceGame");
   const router = useRouter();
 
   return (
-    <div className="relative text-center py-20 2xl:py-48 flex flex-col md:flex-row w-full md:px-40 md:space-x-5">
-      <button
-        onClick={() => router.back()}
-        className="p-2 rounded-xl top-3 left-10 md:top-5 3xl:top-32 md:left-44 absolute text-black bg-white hover:bg-slate-100 hover:pointer"
-      >
-        <ArrowLeftIcon className=" w-8 h-8" />
-      </button>
-      <div className="z-10 flex justify-center items-center w-5/6 self-center text-center md:px-0 md:w-2/3 h-[200px] md:h-[500px] bg-gray-200 rounded-2xl mb-10 md:mb-0">
+    <div className="flex-col my-20 justify-center items-center">
+      <p className="text-center font-bold text-green-500 text-6xl mb-10">
+        {t("title")}
+      </p>
+      <div className="w-2/3 bg-gray-200 rounded-2xl z-10 flex justify-center items-center self-center text-center h-96 mb-10">
         <p className="text-slate-700 text-3xl lg:text-6xl font-bold">
           Coming Soon...
         </p>
-      </div>{" "}
-      <section className="w-full md:w-1/3 px-5 md:px-0 gap-5 md:gap-0 flex flex-col justify-around text-center md:text-left">
-        <p className="font-bold text-green-500 text-6xl">{t("title")}</p>
-        <p className="font-bold text-white text-xl">
+      </div>
+      <section className="flex flex-col gap-5 items-center">
+        <p className="font-bold text-white text-xl w-2/3 text-center">
           {t("description")}
         </p>
-        <div className="flex gap-5 justify-center md:justify-start">
-          <button
-            disabled
-            className="opacity-30 bg-white px-4 py-3 text-2xl font-bold text-black rounded-xl"
+        <div className="flex gap-5">
+          <Link
+            href="https://ctrl-sebastian.itch.io/space-typing-hero"
+            className=" bg-white px-4 py-3 text-2xl font-bold text-black rounded-xl"
           >
             {t("playButton")}
-          </button>
+          </Link>
           <button
             disabled
             className="opacity-30 bg-white px-4 py-3 text-2xl font-bold text-black rounded-xl flex items-center"
@@ -41,6 +38,14 @@ export default function ScienceGame() {
             {t("downloadButton")}
           </button>
         </div>
+        <button
+          onClick={() => router.back()}
+          className="z-50 gap-5 text-lg text-white font-semibold bg-gradient-to-br from-cyan-800 to-violet-700 flex rounded-xl items-center px-4 py-3"
+        >
+          {" "}
+          <ArrowLeftIcon className="w-8 h-8" />
+          Other Games{" "}
+        </button>
       </section>
     </div>
   );

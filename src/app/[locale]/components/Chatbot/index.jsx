@@ -178,9 +178,9 @@ export const Chatbot = ({ isSidebarOpen }) => {
       }`}
     >
       <div className="relative">
-        <button
+        <div
           onClick={() => setOpen(!open)}
-          className={`w-16 h-16 rounded-full lg:rounded-none lg:rounded-t-lg lg:w-full lg:h-12 flex justify-between items-center bg-gradient-to-r from-blue-500 to-indigo-600 transition-all duration-300 px-4 ${
+          className={`hover:cursor-pointer w-16 h-16 rounded-full lg:rounded-none lg:rounded-t-lg lg:w-full lg:h-12 flex justify-between items-center bg-gradient-to-r from-blue-500 to-indigo-600 transition-all duration-300 px-4 ${
             open ? `rounded-none rounded-t-lg w-full h-12` : ``
           }`}
         >
@@ -198,7 +198,7 @@ export const Chatbot = ({ isSidebarOpen }) => {
               <TrashIcon className="h-5 w-5" />
             </button>
           )}
-        </button>
+        </div>
       </div>
 
       <div

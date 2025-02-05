@@ -18,19 +18,19 @@ export default function Games() {
       isPublished: true,
     },
     {
+      title: t("TechnologyGame.title"),
+      caption: t("TechnologyGame.caption"),
+      image: "/images/games/technology/ss3.png",
+      link: "/games/technology",
+      color: "#067DD3",
+      isPublished: true,
+    },
+    {
       title: t("ScienceGame.title"),
       caption: t("ScienceGame.caption"),
       image: "/images/games/bigalchemy.png",
       link: "/games/science",
       color: "#28A53C",
-      isPublished: false,
-    },
-    {
-      title: t("TechnologyGame.title"),
-      caption: t("TechnologyGame.caption"),
-      image: "/images/games/typinghero.png",
-      link: "/games/technology",
-      color: "#067DD3",
       isPublished: false,
     },
     {
@@ -96,7 +96,7 @@ export default function Games() {
                   sizes="100vw"
                   style={{ objectFit: "cover" }}
                   className={`w-[500px] h-[200px] md:w-[400px] md:h-[500px] ${
-                    !game.isPublished ? "filter blur-lg" : ""
+                    !game.isPublished ? "filter blur-md" : ""
                   }`}
                 />
               </div>
