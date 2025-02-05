@@ -587,7 +587,7 @@ export default function Home() {
               />
             </Link>
             <Link
-              href="/human-powered-team"
+              href="/remote-controlled-team"
               className={`${teamClassName} drop-shadow-sm h-fit space-y-2 rounded-[50px] w-2/5 2xl:w-2/6 overflow-hidden relative `}
               style={{
                 backgroundImage: "url('/images/about-us/blue-galaxy.webp')",
