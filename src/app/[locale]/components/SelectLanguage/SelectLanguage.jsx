@@ -22,7 +22,7 @@ export const SelectLanguage = () => {
 
   return (
     <Select
-        className="bg-gray-800 bg-opacity-70 px-3 py-2 rounded-xl text-white 3xl:fixed 3xl:top-8 3xl:right-10 3xl:z-50"
+        className="bg-gray-800 bg-opacity-70 mx-3 md:mx-0 px-3 py-2 rounded-xl text-white 3xl:fixed 3xl:top-8 3xl:right-10 3xl:z-50"
       name="locale"
       aria-label="Locale"
       disabled={isPending}

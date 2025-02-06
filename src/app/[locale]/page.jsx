@@ -21,7 +21,7 @@ import TimelineOppositeContent from "@mui/lab/TimelineOppositeContent";
 
 import { useTranslations } from "next-intl";
 
-import  teamsByYear  from "./shared/timelinedata/teams";
+import teamsByYear from "./shared/timelinedata/teams";
 
 export default function Home() {
   const t = useTranslations("HomePage");
@@ -31,8 +31,6 @@ export default function Home() {
   const teamClassName = `opacity-80 hover:opacity-100 transition-all hover:cursor-pointer hover:scale-105`;
   const timelineItem = `max-w-[450px] bg-[#121837] border border-[#666A95] text-white text-center rounded-2xl flex flex-col items-center md:items-start`;
   const currentTimelineItem = `max-w-[450px] bg-[#121837] border border-[#666A95] text-white text-center rounded-2xl flex flex-col items-center md:items-start shadow-[0px_20px_207px_10px_rgba(165,_39,_255,_0.48)] bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] `;
-
-
 
   const flipCard = (i) => {
     if (typeof window !== "undefined") {
@@ -57,18 +55,20 @@ export default function Home() {
     <>
       <div className="text-center h-fit  space-y-8 lg:space-y-20 2xl:space-y-10 bg-gradient-to-t from-[#101321] to-[#40D1FF] px-5 md:px-40 flex flex-col items-center pt-5">
         <Timer />
-        <p className="mt-4 font-bold text-4xl lg:text-5xl 3xl:text-6xl w-full lg:w-5/6 text-transparent bg-clip-text bg-gradient-to-b from-white to-gray-500">
+        <p className="mt-4 font-bold text-xl xs:text-3xl lg:text-5xl 3xl:text-6xl w-full sm:w-5/6 md:w-5/6  text-transparent bg-clip-text bg-gradient-to-b from-white to-gray-500">
           {t("title")}
         </p>
         <Link
           href="/stem-with-us"
-          className="flex lg:hidden transition-all border border-1 border-[#424B5B] bg-black/[0.8] w-5/6  md:w-[520px] py-2 h-fit  rounded-full  items-center justify-evenly hover:cursor-pointer hover:scale-105 "
+          className="flex lg:hidden transition-all border border-1 border-[#424B5B] bg-black/[0.8] w-full sm:w-5/6 md:w-4/6 pl-2 py-2 h-fit  rounded-2xl  items-center justify-evenly hover:cursor-pointer hover:scale-105 "
         >
           <Image
             src={"/images/icons/formIcon.webp"}
             alt="form icon"
-            width={36}
-            height={36}
+            width="0"
+            height="0"
+            sizes="100vw"
+            className="hidden sm:block w-9 h-9 md:w-12 md:h-12"
           />
           <div className="text-left">
             <p className="font-semibold text-white md:text-lg">
@@ -122,23 +122,23 @@ export default function Home() {
         {/*sponsor us mobile*/}
         <Link
           href="/sponsors"
-          className="lg:hidden relative w-5/6 md:w-4/6 h-auto"
+          className="lg:hidden relative w-full sm:w-5/6 md:w-4/6 h-auto"
         >
           <Image
             src={"/images/landing/sponsorus-rectangle.webp"}
-            alt="Simulation"
+            alt="Sponsor us"
             width="0"
             height="0"
             sizes="100vw"
-            className="w-full h-full relative"
+            className="w-full h-full relative "
           />
           <p className="absolute font-bold text-3xl md:text-4xl text-white top-5 left-5">
             {t("sponsorUsTitle")}
           </p>
-          <p className="absolute font-semibold text-lg md:text-2xl text-left text-white top-16 left-5">
+          <p className="absolute font-semibold text-lg md:text-2xl text-left text-white top-16 left-5 w-5/6">
             {t("sponsorUsSubtitle")}
           </p>
-          <div className="w-11/12 absolute top-14 md:top-16 inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)]">
+          <div className="hidden xm:inline-flex w-11/12 absolute top-14 xm:top-20 flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-200px),transparent_100%)]">
             <ul className="flex items-center justify-center md:justify-start sm:[&_li]:mx-8 [&_li]:mx-4 [&_img]:max-w-none animate-infinite-scroll">
               <li>
                 <Image
@@ -146,7 +146,7 @@ export default function Home() {
                   width="0"
                   height="0"
                   sizes="100vw"
-                  className="w-36 h-36 md:w-56 md:h-56"
+                  className="w-36 h-36 xm:w-52 xm:h-52"
                   alt="sponsor level"
                 />
               </li>
@@ -156,7 +156,7 @@ export default function Home() {
                   width="0"
                   height="0"
                   sizes="100vw"
-                  className="w-36 h-36 md:w-56 md:h-56"
+                  className="w-36 h-36 xm:w-52 xm:h-52"
                   alt="sponsor level"
                 />
               </li>
@@ -166,19 +166,19 @@ export default function Home() {
                   width="0"
                   height="0"
                   sizes="100vw"
-                  className="w-36 h-36 md:w-56 md:h-56"
+                  className="w-36 h-36 xm:w-52 xm:h-52"
                   alt="sponsor level"
                 />
               </li>
             </ul>
-            <ul className="flex items-center justify-center md:justify-start sm:[&_li]:mx-8 [&_li]:mx-4 [&_img]:max-w-none animate-infinite-scroll">
+            <ul className="flex items-center justify-center md:justify-start xm:[&_li]:mx-8 [&_li]:mx-4 [&_img]:max-w-none animate-infinite-scroll">
               <li>
                 <Image
                   src="/images/sponsors/oro.png"
                   width="0"
                   height="0"
                   sizes="100vw"
-                  className="w-36 h-36 md:w-56 md:h-56"
+                  className="w-36 h-36 xm:w-52 xm:h-52"
                   alt="sponsor level"
                 />
               </li>
@@ -188,7 +188,7 @@ export default function Home() {
                   width="0"
                   height="0"
                   sizes="100vw"
-                  className="w-36 h-36 md:w-56 md:h-56"
+                  className="w-36 h-36 xm:w-52 xm:h-52"
                   alt="sponsor level"
                 />
               </li>
@@ -198,7 +198,7 @@ export default function Home() {
                   width="0"
                   height="0"
                   sizes="100vw"
-                  className="w-36 h-36 md:w-56 md:h-56"
+                  className="w-36 h-36 md:w-52 md:h-52"
                   alt="sponsor level"
                 />
               </li>
@@ -294,13 +294,130 @@ export default function Home() {
         </Link>
       </section>
 
-      <div className="hidden md:flex bg-[#101321] text-center flex-col gap-7 items-center justify-center pt-20 md:pt-5 2xl:pt-0">
-        <p className="explore-more-text bg-clip-text bg-gradient-to-r from-gray-800 via-white via-50% to-gray-800 text-transparent font-bold text-3xl md:text-3xl 3xl:text-4xl w-full md:w-60 2xl:w-96 md:pt-40 2xl:pt-20">
+      <div className="flex bg-[#101321] text-center flex-col gap-3 md:gap-7 items-center justify-center pt-5 md:pt-10 2xl:pt-0">
+        <p className="explore-more-text bg-clip-text bg-gradient-to-r from-gray-800 via-white via-50% to-gray-800 text-transparent font-bold text-xl md:text-3xl 3xl:text-4xl w-1/2 md:w-60 2xl:w-96 lg:pt-40 2xl:pt-20">
           {t("exploreMore")}
         </p>
         <div>
           <ArrowDownCircleIcon className="w-10 3xl:w-20 h-10 3xl:h-20 text-white transition-transform animate-bounce" />
         </div>
+      </div>
+
+      <div id="about-us" className="bg-[#101321] py-10">
+        <section className="transform space-y-20 ">
+          <p className="text-center text-white font-bold px-10 text-3xl md:text-5xl 2xl:text-6xl">
+            {t("divisionsTitle")}
+          </p>
+
+          {/* team divisions large screen */}
+
+          <div className="hidden lg:flex w-full justify-evenly">
+            <Link
+              href="/human-powered-team"
+              className={`${teamClassName} drop-shadow-sm h-fit space-y-2 rounded-[50px] w-2/5 2xl:w-2/6 overflow-hidden relative `}
+              style={{
+                backgroundImage: "url('/images/about-us/red-galaxy.webp')",
+              }}
+            >
+              <p className="font-extrabold text-4xl text-white text-left pl-5 pt-10 max-h-[184px]">
+                {t("humanPoweredConstellation")}
+              </p>
+              <hr></hr>
+              <Image
+                src="/images/timeline/2025-hp.webp"
+                alt="Team Lead HP"
+                width="0"
+                height="0"
+                sizes="100vw"
+                style={{objectFit: "contain"}}
+                className="w-full "
+              />
+            </Link>
+            <Link
+              href="/remote-controlled-team"
+              className={`${teamClassName} drop-shadow-sm h-fit space-y-2 rounded-[50px] w-2/5 2xl:w-2/6 overflow-hidden relative `}
+              style={{
+                backgroundImage: "url('/images/about-us/blue-galaxy.webp')",
+              }}
+            >
+              <p className="font-extrabold text-4xl text-white text-right pt-10 w-3/4 pr-5 ml-32 2xl:w-3/5 2xl:ml-60 max-h-[184px]">
+              {t("remoteControlledConstellation")}
+              </p>
+                <hr></hr>
+              <Image
+                src="/images/timeline/2025-rc.webp"
+                alt="Team Lead HP"
+                width="0"
+                height="0"
+                sizes="100vw"
+                style={{objectFit: "contain"}}
+                className="w-full "
+              />
+            </Link>
+            {/* <Link
+              href="/remote-controlled-team"
+              className={`${teamClassName} drop-shadow-sm h-[600px] rounded-[50px] w-2/5 2xl:w-2/6 overflow-hidden relative`}
+              style={{
+                backgroundImage: "url('/images/about-us/blue-galaxy.webp')",
+              }}
+            >
+              <p className="font-bold text-5xl text-white text-right pt-10 w-3/4 pr-5 ml-32 3xl:w-3/5 3xl:ml-60">
+                {t("remoteControlledConstellation")}
+              </p>
+              <Image
+                src="/images/timeline/2025-rc.webp"
+                alt="Team Lead HP"
+                width="0"
+                height="0"
+                sizes="100vw"
+                style={{objectFit: "contain"}}
+                className="w-full"
+              />
+            </Link> */}
+          </div>
+
+          {/* team divisions mobile */}
+          <div className="flex lg:hidden justify-between gap-5 ">
+            <Link
+              href="/human-powered-team"
+              className={`${teamClassName} w-1/2 rounded-br-[100px] rounded-tr-[100px] overflow-hidden relative pt-10`}
+              style={{
+                backgroundImage: "url('/images/about-us/red-galaxy.webp')",
+              }}
+            >
+              {" "}
+              <p className="font-bold text-3xl sm:text-4xl text-white text-left pl-5 mb-5">
+                Human <br></br> Powered Team
+              </p>
+              <Image
+                className=""
+                src="/images/timeline/2025-hp.webp"
+                alt="Team Lead HP"
+                width={520}
+                height={300}
+              />
+            </Link>
+
+            <Link
+              href="/remote-controlled-team"
+              className={`${teamClassName} w-1/2 rounded-bl-[100px] rounded-tl-[100px] text-right overflow-hidden relative pt-10`}
+              style={{
+                backgroundImage: "url('/images/about-us/blue-galaxy.webp')",
+              }}
+            >
+              <p className="font-bold text-3xl sm:text-4xl text-white px-5 mb-5">
+                Remote Controlled Team
+              </p>
+              <Image
+                className="absolute  right-0"
+                src="/images/timeline/2025-rc.webp"
+                alt="Team Lead RC"
+                width={520}
+                height={300}
+              />
+            </Link>
+          </div>
+        </section>
       </div>
 
       <section
@@ -315,99 +432,102 @@ export default function Home() {
           {t("timelineTitle")}
         </p>
 
-        <Timeline
-          position="alternate-reverse"
-          className="hidden lg:block w-full"
-        >
-          {teamsByYear.map((yearData, i) => (
-            <TimelineItem key={i} className="z-10 ">
-              {yearData.teams.length > 1 && (
-                <TimelineOppositeContent className="3xl:flex 3xl:justify-center">
-                  <div
-                    className={`
+        <div className="big-timeline">
+          <Timeline position="alternate-reverse" className="w-full">
+            {teamsByYear.map((yearData, i) => (
+              <TimelineItem key={i} className="z-10 mt-5">
+                {yearData.teams.length > 1 && (
+                  <TimelineOppositeContent className="2xl:flex 2xl:justify-center">
+                    <div
+                      className={`
                       ${
                         i === teamsByYear.length - 1
                           ? currentTimelineItem
                           : timelineItem
                       }
                     `}
-                  >
-                    <div className="gap-4 px-4 flex flex-col md:flex-row items-center w-full justify-evenly bg-gradient-to-b from-cyan-600 to-cyan-900 rounded-t-2xl py-8">
-                      <p className="text-5xl font-boldrounded-xl bg-cyan-950/[0.7] rounded-lg p-1">
-                        {yearData?.year}
-                      </p>
-                      <p className="text-2xl text-center md:text-left w-5/6">
-                        {t(yearData.teams[1]?.title)}
-                      </p>
-                    </div>
-                    <div className="p-4 space-y-5">
-                      <p className="text-md md:text-lg text-center md:text-left font-semibold px-8 md:px-4">
-                        {t(yearData.teams[1]?.description)}
-                      </p>
-                      <Image
-                        src={yearData.teams[1]?.image}
-                        alt="Team Image"
-                        width="0"
-                        height="0"
-                        sizes="100vw"
-                        className="px-8 md:px-4 w-full h-30"
-                      />
-                      {/* <button
+                    >
+                      <div className="gap-4 px-4 flex flex-col md:flex-row items-center w-full justify-evenly bg-gradient-to-b from-cyan-600 to-cyan-900 rounded-t-2xl py-8">
+                        <p className="text-5xl font-boldrounded-xl bg-cyan-950/[0.7] rounded-lg p-1">
+                          {yearData?.year}
+                        </p>
+                        <p className="text-2xl text-center md:text-left w-5/6">
+                          {t(yearData.teams[1]?.title)}
+                        </p>
+                      </div>
+                      <div className="p-4 space-y-5">
+                        <p className="text-md md:text-lg text-center md:text-left font-semibold px-8 md:px-4">
+                          {t(yearData.teams[1]?.description)}
+                        </p>
+                        <div className="rounded-2xl overflow-hidden">
+                          <Image
+                            src={yearData.teams[1]?.image}
+                            alt="Team Image"
+                            width="0"
+                            height="0"
+                            sizes="100vw"
+                            className="px-8 md:px-4 w-full h-30 rounded-2xl"
+                          />
+                        </div>
+                        {/* <button
                         onClick={() => showTeam(team)}
                         className="bg-gradient-to-br from-cyan-950 to-cyan-800 p-4 rounded-xl font-semibold hover:scale-105 transition-all"
                       >
                         Ver mas
                       </button> */}
+                      </div>
                     </div>
-                  </div>
-                </TimelineOppositeContent>
-              )}
+                  </TimelineOppositeContent>
+                )}
 
-              <TimelineSeparator>
-                <TimelineDot />
-                <TimelineConnector />
-              </TimelineSeparator>
+                <TimelineSeparator>
+                  <TimelineDot />
+                  <TimelineConnector />
+                </TimelineSeparator>
 
-              <TimelineContent className="3xl:flex 3xl:justify-center">
-                <div
-                  className={`${
-                    i === teamsByYear.length - 1
-                      ? currentTimelineItem
-                      : timelineItem
-                  }`}
-                >
-                  <div className="px-4 flex flex-col md:flex-row items-center w-full justify-evenly bg-gradient-to-b from-cyan-600 to-cyan-900 rounded-t-2xl py-8">
-                    <p className="text-5xl lg:text-6xl font-boldrounded-xl bg-cyan-950/[0.7] rounded-lg p-1">
-                      {yearData.year}
-                    </p>
-                    <p className="text-2xl text-center md:text-left w-1/2">
-                      {t(yearData.teams[0].title)}
-                    </p>
-                  </div>
-                  <div className="p-4 space-y-5">
-                    <p className="text-md md:text-lg text-center md:text-left font-semibold px-8 md:px-4">
-                      {t(yearData.teams[0].description)}
-                    </p>
-                    <Image
-                      src={yearData.teams[0].image}
-                      alt="Team Image"
-                      width="0"
-                      height="0"
-                      sizes="100vw"
-                      className="px-8 md:px-4 w-full h-30"
-                    />
-                    {/* <button
+                <TimelineContent className="2xl:flex 2xl:justify-center">
+                  <div
+                    className={`${
+                      i === teamsByYear.length - 1
+                        ? currentTimelineItem
+                        : timelineItem
+                    }`}
+                  >
+                    <div className="px-4 flex flex-col md:flex-row items-center w-full justify-evenly bg-gradient-to-b from-cyan-600 to-cyan-900 rounded-t-2xl py-8">
+                      <p className="text-5xl lg:text-6xl font-boldrounded-xl bg-cyan-950/[0.7] rounded-lg p-1">
+                        {yearData.year}
+                      </p>
+                      <p className="text-2xl text-center md:text-left w-1/2">
+                        {t(yearData.teams[0].title)}
+                      </p>
+                    </div>
+                    <div className="p-4 space-y-5">
+                      <p className="text-md md:text-lg text-center md:text-left font-semibold px-8 md:px-4">
+                        {t(yearData.teams[0].description)}
+                      </p>
+                      <div className="rounded-2xl overflow-hidden">
+                      <Image
+                        src={yearData.teams[0].image}
+                        alt="Team Image"
+                        width="0"
+                        height="0"
+                        sizes="100vw"
+                        className="px-8 md:px-4 w-full h-30 rounded-2xl"
+                      />
+                      </div>
+                      {/* <button
                       onClick={() => showTeam(team)}
                       className="bg-gradient-to-br from-cyan-950 to-cyan-800 p-4 rounded-xl font-semibold hover:scale-105 transition-all"
                     >
                       Ver mas
                     </button> */}
+                    </div>
                   </div>
-                </div>
-              </TimelineContent>
-            </TimelineItem>
-          ))}
-        </Timeline>
+                </TimelineContent>
+              </TimelineItem>
+            ))}
+          </Timeline>
+        </div>
 
         {/* <TimelineModal
           isOpen={isOpen}
@@ -415,10 +535,17 @@ export default function Home() {
           team={team}
         /> */}
 
-        <div className="lg:hidden relative flex flex-wrap justify-around px-8 md:px-0 gap-20">
+        <div className="mobile-timeline lg:hidden relative flex flex-wrap justify-around xs:px-8 md:px-0 gap-20">
           <div className="w-[1px] bg-white h-full absolute left-1/2 transform -translate-x-1/2 "></div>
           {teamsByYear.map((yearData, i) => (
-            <div key={i} className="flex gap-10">
+            <div
+              key={i}
+              className={`flex flex-col gap-5 ${
+                yearData.teams.length > 1
+                  ? "bg-black p-2 xs:p-5 rounded-2xl"
+                  : ""
+              }`}
+            >
               <div className="z-10 thecard" onClick={() => flipCard(i)}>
                 <div
                   className={
@@ -427,27 +554,28 @@ export default function Home() {
                       : `${timelineItem} thefront`
                   }
                 >
-                  <div className="md:px-4 flex flex-col md:flex-row items-center w-full justify-evenly bg-gradient-to-b from-cyan-600 to-cyan-900 rounded-t-2xl py-4 md:py-8">
+                  <div className="md:px-4 flex flex-col xm:flex-row md:flex-row items-center w-full justify-evenly bg-gradient-to-b from-cyan-600 to-cyan-900 rounded-t-2xl py-4 md:py-8">
                     <p className="text-5xl lg:text-6xl font-boldrounded-xl bg-cyan-950/[0.7] rounded-lg p-1">
                       {yearData.year}
                     </p>
-                    <p className="text-2xl lg:text-3xl text-center md:text-left w-1/2">
-                      {yearData.teams[0].title}
+                    <p className="text-2xl lg:text-3xl text-center xm:text-left w-3/4 xs:w-1/2">
+                      {t(yearData.teams[0].title)}
                     </p>
                   </div>
-                  <div className="p-4 space-y-5">
-                    <p className="text-md md:text-lg text-center md:text-left font-semibold px-8 md:px-4">
-                      {yearData.teams[0].description}
+                  <div className="py-2 space-y-5">
+                    <p className="text-md md:text-lg text-center md:text-left font-semibold xs:px-8 md:px-4">
+                      {t(yearData.teams[0].description)}
                     </p>
-
-                    <Image
-                      src={yearData.teams[0].image}
-                      alt="Team Image"
-                      width="0"
-                      height="0"
-                      sizes="100vw"
-                      className="px-8 pb-8 md:px-4 w-full h-full h-30"
-                    />
+                    <div className="rounded-2xl overflow-hidden">
+                      <Image
+                        src={yearData.teams[0].image}
+                        alt="Team Image"
+                        width="0"
+                        height="0"
+                        sizes="100vw"
+                        className="xs:px-8 xs:pb-8 md:px-4 w-full h-full "
+                      />
+                    </div>
                   </div>
                 </div>
                 <div
@@ -492,14 +620,14 @@ export default function Home() {
                         {yearData.year}
                       </p>
                       <p className="text-2xl lg:text-3xl text-center md:text-left w-1/2">
-                        {yearData.teams[1]?.title}
+                        {t(yearData.teams[1]?.title)}
                       </p>
                     </div>
                     <div className="p-4 space-y-5">
                       <p className="text-md md:text-lg text-center md:text-left font-semibold px-8 md:px-4">
-                        {yearData.teams[1]?.description}
+                        {t(yearData.teams[1]?.description)}
                       </p>
-
+                      <div className="rounded-2xl overflow-hidden">
                       <Image
                         src={yearData.teams[1]?.image}
                         alt="Team Image"
@@ -508,6 +636,7 @@ export default function Home() {
                         sizes="100vw"
                         className="px-8 pb-8 md:px-4 w-full h-full h-30"
                       />
+                      </div>
                     </div>
                   </div>
                   <div
@@ -525,7 +654,7 @@ export default function Home() {
                             className="flex flex-col items-center bg-gradient-to-br from-blue-950 via cyan-900 to-black p-4 bg-opacity-60 border-2 border-white rounded-xl text-white font-medium"
                           >
                             <Image
-                              alt={award.title? award.title : "award"}
+                              alt={award.title ? award.title : "award"}
                               src="/images/timeline/glass-award.webp"
                               width={50}
                               height={50}
@@ -543,116 +672,6 @@ export default function Home() {
           ))}
         </div>
       </section>
-
-      <div id="about-us" className="bg-[#101321]">
-        <section className="transform space-y-20 pb-20 xl:pb-40">
-          <p className="text-center text-white font-bold text-5xl 2xl:text-6xl">
-            {t("divisionsTitle")}
-          </p>
-
-          {/* team divisions large screen */}
-
-          <div className="hidden lg:flex w-full justify-evenly">
-            <Link
-              href="/human-powered-team"
-              className={`${teamClassName} drop-shadow-sm rounded-[50px] h-[600px] w-2/5 2xl:w-2/6 overflow-hidden relative `}
-              style={{
-                backgroundImage: "url('/images/about-us/red-galaxy.webp')",
-              }}
-            >
-              <p className="font-bold text-5xl w-1/3 text-white text-left -mb-10 pl-5 pt-10 2xl:w-3/5">
-                {t("humanPoweredConstellation")}
-              </p>
-
-              <div className="flex">
-                <Image
-                  className="mt-20"
-                  src="/images/about-us/Marko1.webp"
-                  alt="Team Lead HP"
-                  width={200}
-                  height={300}
-                />
-                <Image
-                  className="-ml-40"
-                  src="/images/about-us/Anne1.webp"
-                  alt="Team Lead HP"
-                  width={400}
-                  height={300}
-                />
-              </div>
-            </Link>
-            <Link
-              href="/remote-controlled-team"
-              className={`${teamClassName} drop-shadow-sm h-[600px] rounded-[50px] w-2/5 2xl:w-2/6 text-right pr-5 overflow-hidden relative`}
-              style={{
-                backgroundImage: "url('/images/about-us/blue-galaxy.webp')",
-              }}
-            >
-              <p className="font-bold text-5xl text-white text-right -mb-10 pt-10 w-3/4  ml-32 3xl:w-3/5 3xl:ml-60">
-                {t("remoteControlledConstellation")}
-              </p>
-              <div className="flex ">
-                <Image
-                  className="absolute -bottom-40 right-0"
-                  src="/images/about-us/Humberto1.webp"
-                  alt="Team Lead HP"
-                  width={200}
-                  height={300}
-                />
-                <Image
-                  className="absolute -bottom-36 right-40"
-                  src="/images/about-us/JorgeCrop.png"
-                  alt="Team Lead HP"
-                  width={400}
-                  height={300}
-                />
-              </div>
-            </Link>
-          </div>
-
-          {/* team divisions mobile */}
-          <div className="flex lg:hidden justify-between gap-5 ">
-            <Link
-              href="/human-powered-team"
-              className={`${teamClassName} w-1/2 rounded-br-[100px] rounded-tr-[100px] overflow-hidden relative pt-10`}
-              style={{
-                backgroundImage: "url('/images/about-us/red-galaxy.webp')",
-              }}
-            >
-              {" "}
-              <p className="font-bold text-3xl sm:text-4xl text-white text-left pl-5">
-                Human <br></br> Powered Constelation
-              </p>
-              <Image
-                className=""
-                src="/images/about-us/Anne1.webp"
-                alt="Team Lead HP"
-                width={520}
-                height={300}
-              />
-            </Link>
-
-            <Link
-              href="/remote-controlled-team"
-              className={`${teamClassName} w-1/2 rounded-bl-[100px] rounded-tl-[100px] text-right overflow-hidden relative pt-10`}
-              style={{
-                backgroundImage: "url('/images/about-us/blue-galaxy.webp')",
-              }}
-            >
-              <p className="font-bold text-3xl sm:text-4xl text-white text-right pr-5">
-                Remote Controlled Constelation
-              </p>
-              <Image
-                className="absolute -bottom-10 right-0"
-                src="/images/about-us/Jorge.png"
-                alt="Team Lead RC"
-                width={520}
-                height={300}
-              />
-            </Link>
-          </div>
-        </section>
-      </div>
     </>
   );
 }

@@ -1,30 +1,30 @@
-'use client';
-import Image from 'next/image';
-import * as yup from 'yup';
-import { yupResolver } from '@hookform/resolvers/yup';
+"use client";
+import Image from "next/image";
+import * as yup from "yup";
+import { yupResolver } from "@hookform/resolvers/yup";
 import {
   emailValidation,
   phoneValidation,
-} from '../../shared/utils/validations';
-import { FormProvider, useForm } from 'react-hook-form';
-import { useStepper } from 'headless-stepper';
-import React, { useRef } from 'react';
-import { Input } from '../input';
-import { ArrowLeftIcon, ArrowRightIcon } from '@heroicons/react/16/solid';
-import { CheckBox } from '../checkBox';
-import emailjs from '@emailjs/browser';
+} from "../../shared/utils/validations";
+import { FormProvider, useForm } from "react-hook-form";
+import { useStepper } from "headless-stepper";
+import React, { useRef } from "react";
+import { Input } from "../input";
+import { ArrowLeftIcon, ArrowRightIcon } from "@heroicons/react/16/solid";
+import { CheckBox } from "../checkBox";
+import emailjs from "@emailjs/browser";
 
-import { useTranslations } from 'next-intl';
+import { useTranslations } from "next-intl";
 
 export const Form = () => {
-  const t = useTranslations('StemWithUs');
+  const t = useTranslations("StemWithUs");
   const formRef = useRef(null);
 
   const formSchema = yup.object().shape({
-    institution: yup.string().required('Institución requerida'),
+    institution: yup.string().required("Institución requerida"),
     email: emailValidation,
     phoneNumber: phoneValidation,
-    location: yup.string().required('Ubicación requerida'),
+    location: yup.string().required("Ubicación requerida"),
 
     activitiesRoom: yup.boolean(),
     indoorMeetings: yup.boolean(),
@@ -35,17 +35,17 @@ export const Form = () => {
     speakers: yup.boolean(),
     microphones: yup.boolean(),
 
-    meetingDate: yup.date().required('Fecha de reunión requerida'),
-    message: yup.string().required('Mensaje requerido'),
+    meetingDate: yup.date().required("Fecha de reunión requerida"),
+    message: yup.string().required("Mensaje requerido"),
   });
 
   const form = useForm({
-    mode: 'onBlur',
+    mode: "onBlur",
     defaultValues: {
-      institution: '',
-      email: '',
-      phoneNumber: '',
-      location: '',
+      institution: "",
+      email: "",
+      phoneNumber: "",
+      location: "",
       activitiesRoom: false,
       indoorMeetings: false,
       laboratories: false,
@@ -54,7 +54,7 @@ export const Form = () => {
       speakers: false,
       microphones: false,
       meetingDate: new Date(),
-      message: '',
+      message: "",
     },
     resolver: yupResolver(formSchema),
   });
@@ -63,10 +63,10 @@ export const Form = () => {
 
   const steps = React.useMemo(
     () => [
-      { label: 'Step 1' },
-      { label: 'Step 2' },
-      { label: 'Step 3' },
-      { label: 'Step 4' },
+      { label: "Step 1" },
+      { label: "Step 2" },
+      { label: "Step 3" },
+      { label: "Step 4" },
     ],
     []
   );
@@ -83,15 +83,15 @@ export const Form = () => {
     e.preventDefault();
     if (
       state.currentStep === 0 &&
-      (form.getValues().institution === '' ||
-        form.getValues().email === '' ||
-        form.getValues().phoneNumber === '' ||
-        form.getValues().location === '')
+      (form.getValues().institution === "" ||
+        form.getValues().email === "" ||
+        form.getValues().phoneNumber === "" ||
+        form.getValues().location === "")
     ) {
-      form.setError('institution', { message: 'Campo requerido' });
-      form.setError('email', { message: 'Campo requerido' });
-      form.setError('phoneNumber', { message: 'Campo requerido' });
-      form.setError('location', { message: 'Campo requerido' });
+      form.setError("institution", { message: "Campo requerido" });
+      form.setError("email", { message: "Campo requerido" });
+      form.setError("phoneNumber", { message: "Campo requerido" });
+      form.setError("location", { message: "Campo requerido" });
       return;
     }
     nextStep();
@@ -100,25 +100,25 @@ export const Form = () => {
   const sendForm = () => {
     emailjs
       .sendForm(
-        process.env.EMAIL_JS_SERVICE,
-        process.env.EMAIL_JS_TEMPLATE,
+        process.env.NEXT_PUBLIC_EMAIL_JS_SERVICE,
+        process.env.NEXT_PUBLIC_EMAIL_JS_TEMPLATE,
         formRef.current,
-        process.env.EMAIL_JS_USER
+        process.env.NEXT_PUBLIC_EMAIL_JS_USER
       )
       .then(
         (result) => {
-          alert('Formulario enviado correctamente');
+          alert("Formulario enviado correctamente");
           reset();
           state.currentStep = 0;
         },
         (error) => {
-          alert('Error al enviar el formulario: ' + error.text);
+          alert("Error al enviar el formulario: " + error.text);
         }
       );
   };
 
   return (
-    <div className="w-4/6 xs:w-5/6 lg:w-5/6 md:w-full flex flex-col md:flex-row rounded-xl bg-white text-black justify-center mt-8">
+    <div className="w-9/12 xs:w-5/6 lg:w-5/6 md:w-full flex flex-col md:flex-row rounded-xl bg-white text-black justify-center mt-8">
       <div className="lg:w-1/2 w-full flex justify-center">
         <Image
           src="/images/stem-with-us/bus.webp"
@@ -126,13 +126,16 @@ export const Form = () => {
           height="0"
           alt="Formulario"
           sizes="100vw"
-          style={{ objectFit: 'cover' }}
+          style={{ objectFit: "cover" }}
           className="w-[500px] h-full hidden md:block rounded-tl-lg rounded-bl-lg object-contain max-w-full  opacity-60 md:opacity-100"
         />
       </div>
 
       <FormProvider {...form}>
-        <form ref={formRef} className="lg:w-1/2 w-full flex flex-col gap-5 p-8 lg:p-4">
+        <form
+          ref={formRef}
+          className="lg:w-1/2 w-full flex flex-col gap-5 p-8 lg:p-4"
+        >
           <Image
             src="/images/logos/gray-logo.webp"
             height={100}
@@ -147,10 +150,8 @@ export const Form = () => {
                 <div
                   id="circle"
                   className={`rounded-full w-5 h-5 border-double border-2 transition-colors duration-500 ease-in-out ${
-                    index <= state.currentStep
-                      ? 'bg-red-500'
-                      : 'bg-gray-200'
-                  } ${index <= state.currentStep ? 'delay-50' : ''}`}
+                    index <= state.currentStep ? "bg-red-500" : "bg-gray-200"
+                  } ${index <= state.currentStep ? "delay-50" : ""}`}
                   style={{
                     opacity: steps[index].disabled ? 0.6 : 1,
                   }}
@@ -160,8 +161,8 @@ export const Form = () => {
                     id="line"
                     className={`h-1 w-24 transition-colors duration-500 ease-in-out ${
                       index + 1 <= state.currentStep
-                        ? 'bg-red-500'
-                        : 'bg-gray-200'
+                        ? "bg-red-500"
+                        : "bg-gray-200"
                     }`}
                   ></div>
                 )}
@@ -181,7 +182,7 @@ export const Form = () => {
               <div className="block space-y-3">
                 <Input
                   placeholder="Nombre de su institución"
-                  name={'institution'}
+                  name={"institution"}
                 />
                 <Input placeholder="Correo electrónico" name="email" />
                 <Input placeholder="Número de teléfono" name="phoneNumber" />
@@ -201,17 +202,17 @@ export const Form = () => {
                   <CheckBox
                     className="text-xl"
                     label="Salón de actividades"
-                    name={'activitiesRoom'}
+                    name={"activitiesRoom"}
                   />
                   <CheckBox
                     className="text-xl"
                     label="Reuniones bajo techo"
-                    name={'indoorMeetings'}
+                    name={"indoorMeetings"}
                   />
                   <CheckBox
                     className="text-xl"
                     label="Laboratorios"
-                    name={'laboratories'}
+                    name={"laboratories"}
                   />
                 </div>
                 <div className="mt-10 flex gap-4 items-center justify-center">
@@ -237,22 +238,22 @@ export const Form = () => {
                   <CheckBox
                     className="text-xl"
                     label="Proyectores"
-                    name={'proyectors'}
+                    name={"proyectors"}
                   />
                   <CheckBox
                     className="text-xl"
                     label="Pantallas"
-                    name={'screens'}
+                    name={"screens"}
                   />
                   <CheckBox
                     className="text-xl"
                     label="Parlantes"
-                    name={'speakers'}
+                    name={"speakers"}
                   />
                   <CheckBox
                     className="text-xl"
                     label="Micrófonos"
-                    name={'microphones'}
+                    name={"microphones"}
                   />
                 </div>
                 <div className="flex gap-4 items-center justify-center">
@@ -274,7 +275,7 @@ export const Form = () => {
 
             {state.currentStep === 3 && (
               <div className="block">
-                <div className='space-y-3 pb-5'>
+                <div className="space-y-3 pb-5">
                   <Input type="date" name="meetingDate" className="text-xl" />
                   <Input
                     type="text"

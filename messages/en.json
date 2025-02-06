@@ -4,13 +4,14 @@
     "locale": "{locale, select, es {🇩🇴 Spanish} en {🇺🇸 English} fr {🇫🇷 French} hi {🇮🇳 Hindi} ja {🇯🇵 Japanese} ko {🇰🇷 Korean} pt {🇵🇹 Portuguese} zh { 🇨🇳 Mandarin } other {Unknown}}"
   },
   "header": {
+    "close": "Close",
     "home": "Home",
     "aboutUs": "About Us",
     "games": "Games",
     "marketplace": "Marketplace",
     "stemWithUs": "STEM With Us",
     "socialMedia": "Social Media",
-    "sponsors": "Sponsors"
+    "sponsors": "Become a sponsor"
   },
   "timer": {
     "title": "TIME UNTIL HERC: "
@@ -184,7 +185,7 @@
     "internationalbusiness": "Bachelor's in International Business",
     "biotechnology": "Bachelor's in Biotechnology",
     "education": "Bachelor's in Education",
-    
+
     "HumanPoweredTeam": {
       "title": "Human Powered Team",
       "rcDivision": "RC Division",
@@ -239,7 +240,7 @@
       "comingSoon": "Coming Soon..."
     },
     "ScienceGame": {
-      "title": "Unknown Elements",
+      "title": "Science Lab",
       "caption": "Discover the elements that surround us.",
       "description": "Unleash your inner scientist! Combine elements to discover the secrets of nature. Become a master of the elements.",
       "playButton": "Play",
@@ -383,7 +384,6 @@
     "form": {
       "title": "Want to plan a visit?",
       "subtitle": "Contact Us Now!"
-      
     }
   }
 }

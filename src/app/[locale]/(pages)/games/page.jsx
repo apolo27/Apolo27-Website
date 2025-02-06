@@ -18,19 +18,19 @@ export default function Games() {
       isPublished: true,
     },
     {
+      title: t("TechnologyGame.title"),
+      caption: t("TechnologyGame.caption"),
+      image: "/images/games/technology/ss3.png",
+      link: "/games/technology",
+      color: "#067DD3",
+      isPublished: true,
+    },
+    {
       title: t("ScienceGame.title"),
       caption: t("ScienceGame.caption"),
       image: "/images/games/bigalchemy.png",
       link: "/games/science",
       color: "#28A53C",
-      isPublished: false,
-    },
-    {
-      title: t("TechnologyGame.title"),
-      caption: t("TechnologyGame.caption"),
-      image: "/images/games/typinghero.png",
-      link: "/games/technology",
-      color: "#067DD3",
       isPublished: false,
     },
     {
@@ -44,7 +44,7 @@ export default function Games() {
   ];
   return (
     <div className="text-center space-y-10 pt-10 pb-20">
-      <h1 className="font-extrabold text-white text-6xl stem-games-title">
+      <h1 className="font-extrabold text-white text-4xl sm:text-6xl stem-games-title">
         <Link href="/stem-with-us" className="relative group">
           <span className="text-green-500">S</span>
           <span className="text-blue-500">T</span>
@@ -55,7 +55,7 @@ export default function Games() {
         </Link>
         &nbsp;GAMES
       </h1>
-      <p className="font-semibold text-white text-2xl stem-games-title">
+      <p className="font-semibold text-white text-xl sm:text-2xl stem-games-title">
         {t("Subtitle")}
       </p>
       <div className="text-white w-full text-center flex flex-col justify-center items-center space-y-10 xl:space-y-20">
@@ -95,8 +95,8 @@ export default function Games() {
                   height="0"
                   sizes="100vw"
                   style={{ objectFit: "cover" }}
-                  className={`w-[400px] h-[500px] ${
-                    !game.isPublished ? "filter blur-lg" : ""
+                  className={`w-[500px] h-[200px] md:w-[400px] md:h-[500px] ${
+                    !game.isPublished ? "filter blur-md" : ""
                   }`}
                 />
               </div>

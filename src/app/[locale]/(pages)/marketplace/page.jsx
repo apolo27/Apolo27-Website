@@ -1,7 +1,6 @@
-"use client";
-import { useState } from "react";
-import Image from "next/image";
-import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
+//import { useState } from "react";
+//import Image from "next/image";
+//import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 import {
   Description,
   Dialog,
@@ -14,8 +13,8 @@ import { useTranslations } from "next-intl";
 
 export default function Marketplace() {
   const t = useTranslations("Marketplace");
-  const [searchBar, setSearchBar] = useState("");
-  const [isOpen, setIsOpen] = useState(false);
+  //const [searchBar, setSearchBar] = useState("");
+  //const [isOpen, setIsOpen] = useState(false);
   const categoryBtnStyle = `w-full text-left text-lg font-semibold px-3 py-1 my-2 hover:shadow-lg shadow-white hover:bg-[#666A95] rounded-xl transition-all ease-out`;
   const CategoryEnum = Object.freeze({
     T_SHIRT: "T-Shirt",
@@ -25,8 +24,8 @@ export default function Marketplace() {
     ALL: "All",
   });
 
-  const [selectedCategory, setSelectedCategory] = useState(CategoryEnum.ALL);
-  const [selectedProduct, setSelectedProduct] = useState();
+  //const [selectedCategory, setSelectedCategory] = useState(CategoryEnum.ALL);
+  //const [selectedProduct, setSelectedProduct] = useState();
 
   const items = [
     // T-Shirts
@@ -122,10 +121,10 @@ export default function Marketplace() {
     },
   ];
 
-  const selectProduct = (product) => {
-    setSelectedProduct(product);
-    setIsOpen(true);
-  };
+  // const selectProduct = (product) => {
+  //   setSelectedProduct(product);
+  //   setIsOpen(true);
+  // };
 
   return (
     <>
@@ -141,13 +140,11 @@ export default function Marketplace() {
         <p className="font-extrabold text-white text-7xl lg:text-8xl pb-2">
           Apolo 27
         </p>
-        <p className="font-bold text-white text-2xl">
-          {t("banner.subtitle")}
-        </p>
+        <p className="font-bold text-white text-2xl">{t("banner.subtitle")}</p>
       </div>
-      <div className="flex flex-col lg:flex-row bg-[#121836] justify-center items-center w-full h-full">
+      <div className="flex flex-col lg:flex-row bg-[#121836] justify-center items-center w-full h-full h-screen">
         <div className="text-white font-bold text-4xl text-center p-8 lg:p-16 space-y-10">
-          <div className="flex flex-col lg:flex-row justify-center space-x-4">
+          {/* <div className="flex flex-col lg:flex-row justify-center space-x-4">
             <Image
               alt="merch1"
               width={300}
@@ -169,7 +166,7 @@ export default function Marketplace() {
               src="/images/marketplace/300.png"
               className="transition-all opacity-80 filter blur-sm hover:blur-0 hover:opacity-60"
             />
-          </div>
+          </div> */}
           <p className="flex justify-center">
             Coming Soon
             <span className="block animate-bounce duration-75">.</span>
@@ -231,7 +228,7 @@ export default function Marketplace() {
         </div> */}
       </div>
 
-      <Dialog
+      {/* <Dialog
         open={isOpen}
         onClose={() => setIsOpen(false)}
         className="relative z-50"
@@ -246,7 +243,7 @@ export default function Marketplace() {
             </div>
           </DialogPanel>
         </div>
-      </Dialog>
+      </Dialog> */}
     </>
   );
 }

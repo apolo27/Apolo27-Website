@@ -4,6 +4,7 @@
     "locale": "{locale, select, es {🇩🇴 Espanhol} en {🇺🇸 Inglês} fr {🇫🇷 Francês} hi {🇮🇳 Hindi} ja {🇯🇵 Japonês} ko {🇰🇷 Coreano} pt {🇵🇹 Português} zh {🇨🇳 Mandarim} other {Desconhecido}}"
   },
   "header": {
+    "close": "Fechar",
     "home": "Início",
     "aboutUs": "Sobre nós",
     "games": "Jogos",
@@ -238,7 +239,7 @@
       "comingSoon": "Em breve..."
     },
     "ScienceGame": {
-      "title": "Pequena Alquimia",
+      "portuguese": "Laboratório de Ciências",
       "caption": "Descubra os elementos que nos rodeiam.",
       "description": "Liberte o cientista que há em você! Combine elementos para descobrir os segredos da natureza. Torne-se um mestre dos elementos.",
       "playButton": "Jogar",

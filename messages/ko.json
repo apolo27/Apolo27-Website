@@ -4,6 +4,7 @@
     "locale": "{locale, select, es {🇩🇴 스페인어} en {🇺🇸 영어} fr {🇫🇷 프랑스어} hi {🇮🇳 힌디어} ja {🇯🇵 일본어} ko {🇰🇷 한국어} pt {🇵🇹 포르투갈어} zh {🇨🇳 중국어(만다린)} other {알 수 없음}}"
   },
   "header": {
+    "close": "닫기",
     "home": "홈",
     "aboutUs": "우리에 대해",
     "games": "게임",
@@ -238,7 +239,7 @@
       "comingSoon": "곧 출시 예정..."
     },
     "ScienceGame": {
-      "title": "작은 연금술",
+      "korean": "과학 실험실",
       "caption": "우리 주변의 원소를 발견하세요.",
       "description": "내면의 과학자를 해방시키세요! 원소를 결합하여 자연의 비밀을 발견하세요. 원소의 대가가 되어보세요.",
       "playButton": "플레이",

@@ -4,6 +4,7 @@
     "locale": "{locale, select, es {🇩🇴 西班牙语} en {🇺🇸 英语} fr {🇫🇷 法语} hi {🇮🇳 印地语} ja {🇯🇵 日语} ko {🇰🇷 韩语} pt {🇵🇹 葡萄牙语} zh {🇨🇳 普通话} other {未知}}"
   },
   "header": {
+    "close": "关闭",
     "home": "首页",
     "aboutUs": "关于我们",
     "games": "游戏",
@@ -238,7 +239,7 @@
       "comingSoon": "即将推出..."
     },
     "ScienceGame": {
-      "title": "小炼金术",
+      "mandarin": "科学实验室",
       "caption": "发现我们周围的元素。",
       "description": "释放您内心的科学家！结合元素，探索自然的秘密。成为元素大师。",
       "playButton": "玩",

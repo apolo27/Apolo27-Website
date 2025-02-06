@@ -21,6 +21,7 @@ import { Link } from "../../../../i18n/routing";
 import { LinkIcon } from "@heroicons/react/24/outline";
 
 import { useTranslations } from "next-intl";
+import { ArrowRightIcon } from "@heroicons/react/20/solid";
 
 export default function StemWithUs() {
   const t = useTranslations("StemWithUs");
@@ -55,7 +56,7 @@ export default function StemWithUs() {
 
   return (
     <div className="relative flex flex-col items-center justify-between min-h-screen pt-16 pb-16">
-      <div className="flex flex-col md:flex-row items-center justify-center md:space-x-12 space-y-8 md:space-y-0 relative z-10 text-center md:text-left mb-8 mt-10">
+      <div className="flex flex-col md:flex-row items-center justify-center md:space-x-12 relative z-10 text-center md:text-left mb-8 mt-10">
         <Image
           src="/images/stem-with-us/Planet.webp"
           alt="Planet"
@@ -82,8 +83,15 @@ export default function StemWithUs() {
         id="blogs"
         className="mb-10 z-10 w-full h-fit  text-white md:bg-slate-900 md:bg-opacity-85 md:py-10 3xl:bg-transparent 3xl:py-0 3xl:mr-0 3xl:rounded-r-none"
       >
+        <div className="flex gap-10">
+
         <div className="flex justify-center mb-5 bg-teal-50 text-slate-900   bg-opacity-85 p-4 rounded-r-[50px] w-3/5">
           <p className="font-bold text-4xl">{t("blogs.title")}</p>
+        </div>
+        <Link href="/blog" className="bg-teal-50 text-slate-900 bg-opacity-85 p-4 rounded-[50px] w-fit h-fit flex items-center gap-5 group">
+          <p className="font-bold text-2xl">See more</p>
+          <ArrowRightIcon className="h-10 w-10 inline-block group-hover:animate-bounceX" />
+        </Link>
         </div>
         <div className="flex flex-col items-center md:flex-row justify-center gap-5">
           {blogs.slice(0, 3).map((blog, i) => {
@@ -205,12 +213,13 @@ export default function StemWithUs() {
             {t("youtube.continue")}
           </p>
         </div>
-        <div className="grid grid-cols-2 grid-rows-2 gap-5 mx-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 grid-rows-2 gap-5 mx-8">
           {recentVideos.map((video, i) => (
             <div
               key={i}
-              className="w-fit md:w-64 rounded-2xl hover:cursor-pointer hover:scale-105 transition-all duration-75 hover:[background:linear-gradient(45deg,#080b11,theme(colors.slate.800)_50%,#172033)_padding-box,conic-gradient(from_var(--border-angle),theme(colors.slate.600/.48)_80%,_theme(colors.indigo.500)_86%,_theme(colors.indigo.300)_90%,_theme(colors.indigo.500)_94%,_theme(colors.slate.600/.48))_border-box] border-2 border-transparent animate-border"
+              className="relative w-fit md:w-64 rounded-2xl hover:cursor-pointer hover:scale-105 transition-all duration-75 [background:linear-gradient(45deg,#080b11,theme(colors.slate.800)_50%,#172033)_padding-box,conic-gradient(from_var(--border-angle),theme(colors.slate.600/.48)_80%,_theme(colors.indigo.500)_86%,_theme(colors.indigo.300)_90%,_theme(colors.indigo.500)_94%,_theme(colors.slate.600/.48))_border-box] md:hover:[background:linear-gradient(45deg,#080b11,theme(colors.slate.800)_50%,#172033)_padding-box,conic-gradient(from_var(--border-angle),theme(colors.slate.600/.48)_80%,_theme(colors.indigo.500)_86%,_theme(colors.indigo.300)_90%,_theme(colors.indigo.500)_94%,_theme(colors.slate.600/.48))_border-box] border-2 border-transparent animate-border"
             >
+              <p className="md:hidden absolute -top-2 -left-2 text-black bg-white font-bold rounded-full px-3 py-1 z-10 animate-pulse">{ i + 1 }</p>
               <Image
                 src={video.thumbnail}
                 alt={video.title}
@@ -232,8 +241,8 @@ export default function StemWithUs() {
         id="form"
         className="mt-8 mb-8 relative z-10 flex flex-col text-center text-white justify-center items-center"
       >
-        <p className="text-4xl lg:text-5xl font-bold">{t("form.title")}</p>
-        <p className="text-3xl lg:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-b from-violet-400 via-cyan-500 to-red-400">
+        <p className="text-3xl xs:text-4xl lg:text-5xl font-bold">{t("form.title")}</p>
+        <p className="text-2xl xs:text-3xl lg:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-b from-violet-400 via-cyan-500 to-red-400">
           {t("form.subtitle")}
         </p>
         <Form />

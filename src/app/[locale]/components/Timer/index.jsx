@@ -6,15 +6,15 @@ export const Timer = () => {
   const { days, hours, minutes, seconds } = useTimer("2025-05-17T07:00:00");
   return (
     <div className="w-fit px-5 py-2 rounded-full bg-black/[0.6] border border-1 border-white/[0.6] flex items-center gap-4  ">
-      <p className="text-xl bg-clip-text text-transparent bg-gradient-to-t  font-semibold from-[#69bf77] via-[#3b9fc6] via-72% to-[#3099e0]">
+      <p className="text-xs xs:text-md md:text-lg bg-clip-text text-transparent bg-gradient-to-t  font-semibold from-[#87e496] via-[#60bee4] via-72% to-[#37afff]">
         {t("title")}
       </p>
-      <span className="text-2xl lg:text-3xl bg-clip-text text-transparent bg-gradient-to-t  font-semibold from-[#69bf77] via-[#3b9fc6] via-72% to-[#3099e0]">
-        <NumberFlow value={days} format={{ notation: "compact" }} />d{" "}
-        <NumberFlow value={hours} format={{ notation: "compact" }} />h{" "}
-        <NumberFlow value={minutes} format={{ notation: "compact" }} />m{" "}
-        <NumberFlow value={seconds} format={{ notation: "compact" }} />s
-      </span>
+      <p className="text-md xs:text-xl lg:text-3xl font-semibold timer-text">
+        {days}<span className="font-bold">d</span>{" "}
+        {hours}<span className="font-bold">h</span>{" "}
+        {minutes}<span className="font-bold">m</span>{" "}
+        {seconds}<span className="font-bold">s</span>
+      </p>
     </div>
   );
 };

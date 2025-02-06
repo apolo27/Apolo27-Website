@@ -4,6 +4,7 @@
     "locale": "{locale, select, es {🇩🇴 スペイン語} en {🇺🇸 英語} fr {🇫🇷 フランス語} hi {🇮🇳 ヒンディー語} ja {🇯🇵 日本語} ko {🇰🇷 韓国語} pt {🇵🇹 ポルトガル語} zh {🇨🇳 中国語（マンダリン）} other {不明}}"
   },
   "header": {
+    "close": "閉じる",
     "home": "ホーム",
     "aboutUs": "私たちについて",
     "games": "ゲーム",
@@ -238,7 +239,7 @@
       "comingSoon": "近日公開..."
     },
     "ScienceGame": {
-      "title": "小さな錬金術",
+      "japanese": "サイエンスラボ",
       "caption": "私たちの周囲の元素を発見しましょう。",
       "description": "内なる科学者を解き放て！ 元素を組み合わせて自然の秘密を発見してください。元素のマスターになりましょう。",
       "playButton": "プレイ",
