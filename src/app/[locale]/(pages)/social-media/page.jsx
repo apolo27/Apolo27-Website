@@ -239,10 +239,10 @@ export default function SocialMedia() {
 
   return (
     <>
-      {/* <div className="bg-apolo-empty-background lg:px-40 px-4 pt-28 xl:pt-16">
+      <div className="bg-apolo-empty-background lg:px-40 px-4 pt-28 xl:pt-16">
         <div className="mb-20 rounded-full p-4 text-center bg-gradient-to-t from-[#379AE1] to-[#69BF77] z-10">
           <p className="text-3xl md:text-5xl font-bold text-white">
-            {t('title')}
+            {t("title")}
           </p>
         </div>
 
@@ -259,7 +259,7 @@ export default function SocialMedia() {
           </div>
           <div className="w-full lg:w-1/2 text-center md:text-left flex flex-col justify-between z-10">
             <p className="text-[#67E1A8] text-2xl md:text-4xl 2xl:text-5xl font-semibold">
-              {t('podcast.title')}
+              {t("podcast.title")}
             </p>
             <div className="text-4xl md:text-4xl 3xl:text-6xl font-extrabold">
               <span className="bg-clip-text text-transparent bg-gradient-to-t from-[#379AE1] to-[#69BF77] 2xl:text-8xl">
@@ -267,7 +267,7 @@ export default function SocialMedia() {
               </span>
             </div>
             <p className="text-white font-semibold 2xl:text-2xl">
-              {t('podcast.description')}
+              {t("podcast.description")}
             </p>
           </div>
         </div>
@@ -320,12 +320,11 @@ export default function SocialMedia() {
 
         <div className="mt-10 pb-20 flex flex-col text-center items-center gap-10">
           <div className="flex flex-col items-center gap-4">
-
             <span className="text-4xl md:text-6xl font-extrabold bg-clip-text text-transparent bg-gradient-to-t from-[#379AE1] to-[#69BF77]">
-              {t('connect.title')}
+              {t("connect.title")}
             </span>
             <p className="font-semibold text-white text-lg md:text-xl w-3/4">
-              {t('connect.subtitle')}
+              {t("connect.subtitle")}
             </p>
           </div>
 
@@ -372,8 +371,9 @@ export default function SocialMedia() {
             </a>
           </div>
         </div>
-      </div> */}
-      <div className="bg-apolo-empty-background lg:px-40 py-10">
+      </div>
+
+      {/* <div className="bg-apolo-empty-background lg:px-40 py-10">
         <p className="text-3xl md:text-5xl text-center font-bold text-white">
           {t("title")}
         </p>
@@ -389,9 +389,9 @@ export default function SocialMedia() {
           <p className="text-4xl text-center font-bold bg-gradient-to-br from-red-700 to-violet-400 text-transparent bg-clip-text">
             HP division social media
           </p>
-          <div className="flex flex-row justify-between items-center">
-            <div className="space-y-5">
-              <div className="space-y-2 bg-red-400 p-5 h-fit rounded-xl font-medium z-50 w-[300px]">
+          <div className="grid grid-cols-8">
+            <div className="space-y-5 col-span-2">
+              <div className="space-y-2 bg-red-400 p-5 h-fit rounded-xl font-medium z-50">
                 <p className="font-bold text-2xl">Topics</p>
                 <ul className="space-y-2 text-lg">
                   <li>• Mechanics</li>
@@ -445,9 +445,8 @@ export default function SocialMedia() {
                 </a>
               </div>
             </div>
-            <EmblaCarousel
+            <EmblaCarousel className="w-1/2 col-span-6 flex items-center self-center h-fit rounded-2xl"
               options={OPTIONS}
-              className="w-1/2 flex items-center self-center h-fit rounded-2xl"
             >
               <Image
                 className="w-full h-full embla__slide"
@@ -592,7 +591,7 @@ export default function SocialMedia() {
             </EmblaCarousel>
           </div>
         </section>
-      </div>
+      </div> */}
     </>
   );
 }
