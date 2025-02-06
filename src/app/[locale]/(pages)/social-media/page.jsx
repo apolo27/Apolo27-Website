@@ -1,3 +1,7 @@
+"use client";
+
+{
+  /*
 import Image from "next/image";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -49,7 +53,7 @@ export default function SocialMedia() {
       </div>
 
       <hr className="my-16" />
-{/* 
+      {/* 
       <div className="flex flex-col lg:flex-row justify-between space-x-10">
         <div className="text-center md:text-left w-4/6">
           <p className="text-[#DFC86A] font-medium text-2xl 2xl:text-3xl mb-3">
@@ -114,7 +118,7 @@ export default function SocialMedia() {
             <p>Descripcion</p>
           </div>
         </div>
-      </div> */}
+      </div> 
 
       <TabGroup className="mt-20 pb-10 z-10">
         <TabList className="flex flex-col lg:flex-row justify-center items-center gap-5 mb-5">
@@ -134,61 +138,53 @@ export default function SocialMedia() {
               className="tiktok-embed"
               cite="https://www.tiktok.com/@apolo27rd/video/7451602179384691974"
               data-video-id="7451602179384691974"
-              style={{ maxWidth: 605, minWidth: 325 }}
-            >
+              style={{ maxWidth: 605, minWidth: 325 }}>
               {" "}
               <section>
                 {" "}
                 <a
                   target="_blank"
                   title="@apolo27rd"
-                  href="https://www.tiktok.com/@apolo27rd?refer=embed"
-                >
+                  href="https://www.tiktok.com/@apolo27rd?refer=embed">
                   @apolo27rd
                 </a>{" "}
                 🎥💸 Cuando{" "}
                 <a
                   title="manufactura"
                   target="_blank"
-                  href="https://www.tiktok.com/tag/manufactura?refer=embed"
-                >
+                  href="https://www.tiktok.com/tag/manufactura?refer=embed">
                   #Manufactura
                 </a>{" "}
                 necesita $$$ y{" "}
                 <a
                   title="funding"
                   target="_blank"
-                  href="https://www.tiktok.com/tag/funding?refer=embed"
-                >
+                  href="https://www.tiktok.com/tag/funding?refer=embed">
                   #Funding
                 </a>{" "}
                 no coopera... 😂💀 💬 ¿A quién más le pasa esto? 👇{" "}
                 <a
                   title="teamapolo27"
                   target="_blank"
-                  href="https://www.tiktok.com/tag/teamapolo27?refer=embed"
-                >
+                  href="https://www.tiktok.com/tag/teamapolo27?refer=embed">
                   #TeamApolo27
                 </a>{" "}
                 <a
                   title="dineroporfavor"
                   target="_blank"
-                  href="https://www.tiktok.com/tag/dineroporfavor?refer=embed"
-                >
+                  href="https://www.tiktok.com/tag/dineroporfavor?refer=embed">
                   #DineroPorFavor
                 </a>{" "}
                 <a
                   title="cosasdeequipos"
                   target="_blank"
-                  href="https://www.tiktok.com/tag/cosasdeequipos?refer=embed"
-                >
+                  href="https://www.tiktok.com/tag/cosasdeequipos?refer=embed">
                   #CosasDeEquipos
                 </a>{" "}
                 <a
                   target="_blank"
                   title="♬ sonido original - 💘🐩"
-                  href="https://www.tiktok.com/music/sonido-original-7437180412940192567?refer=embed"
-                >
+                  href="https://www.tiktok.com/music/sonido-original-7437180412940192567?refer=embed">
                   ♬ sonido original - 💘🐩
                 </a>{" "}
               </section>{" "}
@@ -198,24 +194,21 @@ export default function SocialMedia() {
               className="tiktok-embed"
               cite="https://www.tiktok.com/@apolo27rd/video/7451273044825214213"
               data-video-id="7451273044825214213"
-              style={{ maxWidth: 605, minWidth: 325 }}
-            >
+              style={{ maxWidth: 605, minWidth: 325 }}>
               {" "}
               <section>
                 {" "}
                 <a
                   target="_blank"
                   title="@apolo27rd"
-                  href="https://www.tiktok.com/@apolo27rd?refer=embed"
-                >
+                  href="https://www.tiktok.com/@apolo27rd?refer=embed">
                   @apolo27rd
                 </a>{" "}
                 🚀📚 ¡El equipo de{" "}
                 <a
                   title="apolo27"
                   target="_blank"
-                  href="https://www.tiktok.com/tag/apolo27?refer=embed"
-                >
+                  href="https://www.tiktok.com/tag/apolo27?refer=embed">
                   #Apolo27
                 </a>{" "}
                 dijo presente en la Feria Internacional del Libro 2024 en
@@ -226,8 +219,7 @@ export default function SocialMedia() {
                 <a
                   title="apolo27"
                   target="_blank"
-                  href="https://www.tiktok.com/tag/apolo27?refer=embed"
-                >
+                  href="https://www.tiktok.com/tag/apolo27?refer=embed">
                   #Apolo27
                 </a>{" "}
                 está marcando la diferencia. 🌟 ¿Te gustaría saber más sobre
@@ -237,43 +229,37 @@ export default function SocialMedia() {
                 <a
                   title="apolo27rd"
                   target="_blank"
-                  href="https://www.tiktok.com/tag/apolo27rd?refer=embed"
-                >
+                  href="https://www.tiktok.com/tag/apolo27rd?refer=embed">
                   #Apolo27RD
                 </a>{" "}
                 <a
                   title="innovaciónconpropósito"
                   target="_blank"
-                  href="https://www.tiktok.com/tag/innovaci%C3%B3nconprop%C3%B3sito?refer=embed"
-                >
+                  href="https://www.tiktok.com/tag/innovaci%C3%B3nconprop%C3%B3sito?refer=embed">
                   #InnovaciónConPropósito
                 </a>{" "}
                 <a
                   title="feriadellibro2024"
                   target="_blank"
-                  href="https://www.tiktok.com/tag/feriadellibro2024?refer=embed"
-                >
+                  href="https://www.tiktok.com/tag/feriadellibro2024?refer=embed">
                   #FeriaDelLibro2024
                 </a>{" "}
                 <a
                   title="construyendofuturo"
                   target="_blank"
-                  href="https://www.tiktok.com/tag/construyendofuturo?refer=embed"
-                >
+                  href="https://www.tiktok.com/tag/construyendofuturo?refer=embed">
                   #ConstruyendoFuturo
                 </a>{" "}
                 <a
                   title="equipoimparable"
                   target="_blank"
-                  href="https://www.tiktok.com/tag/equipoimparable?refer=embed"
-                >
+                  href="https://www.tiktok.com/tag/equipoimparable?refer=embed">
                   #EquipoImparable
                 </a>{" "}
                 <a
                   target="_blank"
                   title="♬ sonido original  - Apolo 27 RD"
-                  href="https://www.tiktok.com/music/sonido-original-Apolo-27-RD-7451273087745542918?refer=embed"
-                >
+                  href="https://www.tiktok.com/music/sonido-original-Apolo-27-RD-7451273087745542918?refer=embed">
                   ♬ sonido original - Apolo 27 RD
                 </a>{" "}
               </section>{" "}
@@ -283,16 +269,14 @@ export default function SocialMedia() {
               className="tiktok-embed"
               cite="https://www.tiktok.com/@apolo27rd/video/7451236221482765573"
               data-video-id="7451236221482765573"
-              style={{ maxWidth: 605, minWidth: 325 }}
-            >
+              style={{ maxWidth: 605, minWidth: 325 }}>
               {" "}
               <section>
                 {" "}
                 <a
                   target="_blank"
                   title="@apolo27rd"
-                  href="https://www.tiktok.com/@apolo27rd?refer=embed"
-                >
+                  href="https://www.tiktok.com/@apolo27rd?refer=embed">
                   @apolo27rd
                 </a>{" "}
                 <p>
@@ -301,8 +285,7 @@ export default function SocialMedia() {
                 <a
                   target="_blank"
                   title="♬ Alana Hughes - LANA"
-                  href="https://www.tiktok.com/music/Alana-Hughes-7141796735709416238?refer=embed"
-                >
+                  href="https://www.tiktok.com/music/Alana-Hughes-7141796735709416238?refer=embed">
                   ♬ Alana Hughes - LANA
                 </a>{" "}
               </section>{" "}
@@ -314,8 +297,24 @@ export default function SocialMedia() {
           </TabPanel>
           <TabPanel className="flex gap-4 justify-center">
             <div className="flex justify-center gap-4">
-            <iframe width="320" height="525" src="https://www.youtube.com/embed/OGz4aQKsJmM" title="Apolo 27 | Expo STEM: Las Carreras del Hoy y el Mañana #ciencia #aprendizajedivertido #tecnologia" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            <iframe width="320" height="525" src="https://www.youtube.com/embed/017Eo5GvwQg" title="Apolo 27 | Expo STEM: Las Carreras del Hoy y el Mañana #ciencia #aprendizajedivertido #tecnologia" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+              <iframe
+                width="320"
+                height="525"
+                src="https://www.youtube.com/embed/OGz4aQKsJmM"
+                title="Apolo 27 | Expo STEM: Las Carreras del Hoy y el Mañana #ciencia #aprendizajedivertido #tecnologia"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen></iframe>
+              <iframe
+                width="320"
+                height="525"
+                src="https://www.youtube.com/embed/017Eo5GvwQg"
+                title="Apolo 27 | Expo STEM: Las Carreras del Hoy y el Mañana #ciencia #aprendizajedivertido #tecnologia"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen></iframe>
             </div>
           </TabPanel>
         </TabPanels>
@@ -367,6 +366,46 @@ export default function SocialMedia() {
           />
         </div>
       </div>
+    </div>
+  );
+}
+*/
+}
+import React, { useEffect, useRef } from "react";
+
+export default function SocialMedia() {
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    // This will help debug any loading issues
+    if (videoRef.current) {
+      videoRef.current.addEventListener("error", (e) => {
+        console.error("Video error:", videoRef.current.error);
+      });
+    }
+  }, []);
+
+  return (
+    <div className="min-h-screen flex flex-row bg-gradient-to-r from-slate-900 to-black text-white">
+      <div className="w-20 lg:w-48 flex items-center justify-center px-2 py-4"></div>
+      <video
+        ref={videoRef}
+        width="600"
+        controls
+        autoPlay={false}
+        loop
+        onError={(e) => console.error("Video error event:", e)}>
+        {/* Try both paths to see which one works */}
+        <source
+          src="/videos/social-media/Apolo-27-3d.mp4"
+          type="video/mp4"
+          onError={(e) => console.error("Source error:", e)}
+        />
+        <p>
+          Tu navegador no soporta la reproducción de video. Error code:{" "}
+          {videoRef.current?.error?.code}
+        </p>
+      </video>
     </div>
   );
 }
