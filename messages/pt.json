@@ -1,0 +1,387 @@
+{
+  "LocaleSwitcher": {
+    "label": "Mudar idioma",
+    "locale": "{locale, select, es {🇩🇴 Espanhol} en {🇺🇸 Inglês} fr {🇫🇷 Francês} hi {🇮🇳 Hindi} ja {🇯🇵 Japonês} ko {🇰🇷 Coreano} pt {🇵🇹 Português} zh {🇨🇳 Mandarim} other {Desconhecido}}"
+  },
+  "header": {
+    "close": "Fechar",
+    "home": "Início",
+    "aboutUs": "Sobre nós",
+    "games": "Jogos",
+    "marketplace": "Loja",
+    "stemWithUs": "STEM Conosco",
+    "socialMedia": "Redes Sociais",
+    "sponsors": "Patrocinadores"
+  },
+  "timer": {
+    "title": "TEMPO ATÉ HERC: "
+  },
+  "HomePage": {
+    "title": "Os Primeiros Vencedores Universitários da República Dominicana no Human Exploration Rover Challenge da NASA",
+    "stemVisitTitle": "Agende nossa visita STEM!",
+    "stemVisitSubtitle": "Complete o formulário para seu centro educacional",
+    "exploreMore": "Saiba mais sobre nós",
+    "missionTitle": "MISSÃO APOLO 27",
+    "timelineTitle": "Nossa Linha do Tempo",
+    "sponsorUsTitle": "Patrocine-nos!",
+    "sponsorUsSubtitle": "A equipe precisa da sua ajuda para vencer!",
+    "divisionsTitle": "DIVISÕES 2025 DA APOLO 27",
+    "humanPoweredConstellation": "Constelação Movida a Energia Humana",
+    "remoteControlledConstellation": "Constelação Controlada Remotamente",
+    "timeline": {
+      "awards": {
+        "overallWinner1": {
+          "title": "Vencedor Geral #1",
+          "description": "Premiado para a equipe geral mais bem classificada. As análises de design, o envolvimento educacional em STEM, a segurança e uma excursão bem-sucedida serão fatores determinantes para o Vencedor Geral."
+        },
+        "overallWinner2": {
+          "title": "Vencedor Geral #2",
+          "description": "Premiado para a equipe geral mais bem classificada. As análises de design, o envolvimento educacional em STEM, a segurança e uma excursão bem-sucedida serão fatores determinantes para o Vencedor Geral."
+        },
+        "overallWinner3": {
+          "title": "Vencedor Geral #3",
+          "description": "Premiado para a equipe geral mais bem classificada. As análises de design, o envolvimento educacional em STEM, a segurança e uma excursão bem-sucedida serão fatores determinantes para o Vencedor Geral."
+        },
+        "stemEngagement": {
+          "title": "Prêmio de Engajamento STEM",
+          "description": "Premiado para a equipe que melhor inspirou o estudo de tópicos relacionados ao STEM em sua comunidade, incluindo colaboração com alunos do ensino fundamental para o Desafio de Tarefas. Esta equipe não apenas apresentou um número alto de atividades para muitas pessoas, mas também entregou atividades de qualidade para uma ampla gama de públicos."
+        },
+        "projectReview": {
+          "title": "Revisão do Projeto",
+          "description": "Premiado para a equipe que teve a melhor combinação de revisões escritas e apresentações formais."
+        },
+        "phoenix": {
+          "title": "Phoenix",
+          "description": "Premiado para a equipe que demonstrou a maior melhoria entre a Revisão de Design e a Revisão de Prontidão Operacional."
+        },
+        "socialMedia": {
+          "title": "Prêmio de Mídias Sociais",
+          "description": "Premiado para a equipe com a presença mais ativa e criativa nas redes sociais ao longo do ano do projeto."
+        },
+        "taskChallenge": {
+          "title": "Desafio de Tarefa",
+          "description": "Premiado para a equipe que melhor demonstrou um design de múltiplas ferramentas para as tarefas de coleta de amostras líquidas."
+        },
+        "featherweight": {
+          "title": "Featherweight",
+          "description": "Premiado para a equipe que melhor abordou o desafio contínuo da exploração espacial de gestão de peso, entregando uma abordagem inovadora para a minimização segura do peso do rover. (Premiado para apenas uma equipe no geral.)"
+        },
+        "ingenuity": {
+          "title": "Prêmio de Criatividade",
+          "description": "Premiado para a equipe que abordou qualquer projeto complexo ou problema de engenharia de maneira única e criativa."
+        },
+        "pitCrew": {
+          "title": "Pit Crew",
+          "description": "Premiado para a equipe, conforme julgamento da equipe de pit, que demonstrou melhor recurso, motivação, esportividade e espírito de equipe ao reparar ou trabalhar no rover enquanto as equipes estão na área de pit."
+        },
+        "systemSafety": {
+          "title": "Prêmio de Segurança do Sistema",
+          "description": "Premiado para a equipe que demonstrou a melhor abordagem abrangente de segurança do sistema, conforme relacionado ao veículo, pessoal e operações."
+        },
+        "teamSpirit": {
+          "title": "Prêmio de Espírito de Equipe",
+          "description": "Premiado para a equipe, conforme julgamento de seus pares, que demonstrou o ‘Melhor Espírito de Equipe’ durante os eventos no local."
+        },
+        "crashAndBurn": {
+          "title": "Crash and Burn",
+          "description": "Premiado para a equipe que abraçou a falha como uma lição de aprendizagem para o sucesso futuro. (Premiado para apenas uma equipe no geral.)"
+        },
+        "rookieOfTheYear": {
+          "title": "Novato do Ano",
+          "description": "Premiado para a melhor equipe novata. (Mesmos critérios de julgamento do prêmio geral. Se uma equipe novata for premiada com um prêmio geral, a equipe novata em segundo lugar receberá o prêmio, e assim por diante. Premiado para apenas uma equipe no geral.)"
+        },
+        "payItForward": {
+          "title": "Prêmio Pay It Forward",
+          "description": "Este prêmio do Artemis Student Challenge (ASC) é concedido à equipe que melhor conduziu eventos educacionais impactantes em sua comunidade ou além. O engajamento educacional inclui atividades instrutivas e práticas, onde os participantes se envolvem no aprendizado de um conceito relacionado ao STEM por meio da participação ativa em uma atividade."
+        },
+        "innovation": {
+          "title": "Prêmio de Inovação",
+          "description": "Este prêmio do Artemis Student Challenge (ASC) é concedido às equipes que melhor criaram novas ideias ou soluções inovadoras dentro do escopo de seus respectivos desafios. Criatividade, inventividade e engenhosidade em ideias tecnológicas ou não tecnológicas são premiadas por suas ideias originais, criando eficiência, resultados eficazes ou solucionando um problema."
+        },
+        "artemisEducator": {
+          "title": "Prêmio Artemis Educador",
+          "description": "Este prêmio do Artemis Student Challenge (ASC) é concedido a educadores, professores ou mentores de cada desafio, conforme indicado pelos membros da equipe estudantil. Os membros da equipe reconhecem seus professores ou mentores que inspiram os alunos e os motivam a trabalhar duro, alcançando mais do que os membros da equipe pensaram ser possível."
+        },
+        "otherAwards": {
+          "title": "Outros Prêmios",
+          "description": "Outros prêmios serão concedidos com base em componentes da competição, como discussões dentro de relatórios de Revisão de Design e Revisão de Prontidão Operacional ou na competição presencial."
+        },
+        "mostImproved": {
+          "title": "Equipe Mais Melhorada",
+          "description": "Premiado para a equipe que demonstrou a maior melhoria entre os dois dias da competição."
+        }
+      },
+      "teams": {
+        "2019": {
+          "division": "Movido a Energia Humana",
+          "title": "THE ORIGIN",
+          "description": "Nossa jornada começou em 2019 com uma realização inovadora: tornar-se a primeira equipe da divisão universitária de nosso país a competir no NASA Rover Challenge.",
+          "image": "/images/timeline/2019.webp",
+          "teamAwards": []
+        },
+        "2020": {
+          "division": "Movido a Energia Humana",
+          "title": "PERSEVERANÇA NA ADVERSIDADE",
+          "description": "Apesar dos desafios da pandemia global, nossa resiliência brilhou. As lições aprendidas pavimentaram o caminho para nossa vitória histórica no ‘Prêmio de Segurança do Sistema’.",
+          "image": "/images/timeline/2020.webp",
+          "teamAwards": ["systemSafety"]
+        },
+        "2021": {
+          "division": "Movido a Energia Humana",
+          "title": "REVAMP E REINVENÇÃO",
+          "description": "Com um rover renovado, nossa equipe alcançou novos níveis de experiência e despertou uma paixão por STEM em nossa comunidade através de esforços inovadores.",
+          "image": "/images/timeline/2021.webp",
+          "teamAwards": []
+        },
+        "2022": {
+          "division": "Movido a Energia Humana",
+          "title": "EXPANDINDO NOSSO IMPACTO",
+          "description": "2022 marcou um ponto de virada com o lançamento de nosso ‘STEM Tour’ interativo, culminando na vitória do prestigiado ‘Prêmio de Engajamento’.",
+          "image": "/images/timeline/2022.webp",
+          "teamAwards": ["stemEngagement"]
+        },
+        "2023": {
+          "division": "Movido a Energia Humana",
+          "title": "UM ANO HISTÓRICO",
+          "description": "Um ano de domínio dominicano! Grandes melhorias nos renderam os prêmios de ‘Equipe Mais Melhorada’ e ‘Espírito de Equipe’, consolidando nosso lugar na história.",
+          "image": "/images/timeline/2023.webp",
+          "teamAwards": ["mostImproved", "teamSpirit"]
+        },
+        "2024": {
+          "division": "Movido a Energia Humana",
+          "title": "ESTABELECENDO O PADRÃO",
+          "description": "Subindo a partir dos sucessos de 2023, atingimos novas alturas em 2024. Nosso trabalho árduo nos rendeu o cobiçado ‘Prêmio Geral (2º lugar)’ e o ‘Prêmio Espírito’, mostrando excelência e unidade.",
+          "image": "/images/timeline/2024.webp",
+          "teamAwards": ["overallWinner2", "teamSpirit"],
+          "badges": ["/images/badges/lunar-navigation.webp"]
+        },
+        "2025": {
+          "division": "Movido a Energia Humana",
+          "title": "NOVAS FRONTEIRAS",
+          "description": "O início da Divisão Apolo marca um novo capítulo em 2025. Com nossos olhos voltados para o alto, estamos ultrapassando os limites da inovação e do trabalho em equipe.",
+          "teamAwards": [],
+          "badges": [
+            "/images/badges/innovation.webp",
+            "/images/badges/stem-engagement.webp"
+          ],
+          "rcDivision": "Controle Remoto",
+          "rcTitle": "PIONEIRISMO EM MISSÕES DE CONTROLE REMOTO",
+          "rcDescription": "Nossa equipe de RC inicia seu primeiro ano com ideias ousadas e engenharia ainda mais ousada.",
+          "rcTeamAwards": []
+        }
+      }
+    }
+  },
+  "About-us": {
+    "mechatronics": "Engenharia Mecatrônica",
+    "mechanical": "Engenharia Mecânica",
+    "electronics": "Engenharia Eletrônica e de Comunicações",
+    "computer": "Engenharia da Computação",
+    "software": "Engenharia de Software",
+    "systems": "Engenharia de Sistemas",
+    "datascience": "Ciência de Dados",
+    "aerospace": "Engenharia Aeroespacial",
+    "internationalbusiness": "Licenciatura em Negócios Internacionais",
+    "biotechnology": "Licenciatura em Biotecnologia",
+    "education": "Licenciatura em Educação",
+    
+    "HumanPoweredTeam": {
+      "title": "Equipe Movida por Humanos",
+      "rcDivision": "Divisão RC",
+      "officialMembers": "Membros Oficiais da Equipe",
+      "specialMentors": "Mentores Especiais",
+      "members": {
+        "advisor": "Consultor da Equipe",
+        "teamLeader": "Líder da Equipe",
+        "safetyOfficer": "Oficial de Segurança",
+        "fundingManager": "Gerente de Finanças",
+        "manufacturingManager": "Gerente de Fabricação",
+        "manufacturingAssistant": "Assistente de Fabricação",
+        "stemManager": "Gerente de STEM",
+        "stemAssistant": "Assistente de STEM",
+        "projectManager": "Gerente de Projetos",
+        "communityManager": "Gerente de Comunidade"
+      }
+    },
+    "RemoteControlledTeam": {
+      "title": "Equipe Controlada Remotamente",
+      "hpDivision": "Divisão HP",
+      "officialMembers": "Membros Oficiais da Equipe",
+      "specialMentors": "Mentores Especiais",
+      "members": {
+        "advisor": "Consultor da Equipe",
+        "teamLeader": "Líder da Equipe",
+        "safetyOfficer": "Oficial de Segurança",
+        "funding": "Finanças",
+        "manufacturingManager": "Gerente de Fabricação",
+        "manufacturingAssistant": "Assistente de Fabricação",
+        "telemetryAssistant": "Assistente de Telemetria",
+        "stemManager": "Gerente de STEM",
+        "communityManager": "Gerente de Comunidade"
+      }
+    }
+  },
+  "Games": {
+    "Subtitle": "Descubra STEM através dos nossos jogos.",
+    "HERCSimulation": {
+      "title": "Simulação NASA HERC",
+      "caption": "Experimente o NASA HERC no seu dispositivo.",
+      "description": "Nesta simulação, você participará da competição que a equipe Apolo 27 enfrentará em Huntsville, Alabama. Aprenda os obstáculos e tarefas que nosso Rover enfrentará e nos ajude a conquistar o primeiro lugar no menor tempo possível! Confiamos em você nesta missão!",
+      "playButton": "Jogar",
+      "downloadButton": "Baixar"
+    },
+    "MathGame": {
+      "title": "Templo da Matemática",
+      "caption": "Melhore suas habilidades matemáticas no misterioso Templo da Matemática.",
+      "description": "Corra, salte e resolva! Conquiste o Templo da Matemática com suas habilidades aritméticas. Desafios matemáticos esperam por você! Você consegue escapar do templo com suas habilidades matemáticas?",
+      "playButton": "Jogar",
+      "downloadButton": "Baixar",
+      "comingSoon": "Em breve..."
+    },
+    "ScienceGame": {
+      "portuguese": "Laboratório de Ciências",
+      "caption": "Descubra os elementos que nos rodeiam.",
+      "description": "Liberte o cientista que há em você! Combine elementos para descobrir os segredos da natureza. Torne-se um mestre dos elementos.",
+      "playButton": "Jogar",
+      "downloadButton": "Baixar",
+      "comingSoon": "Em breve..."
+    },
+    "TechnologyGame": {
+      "title": "Herói da Digitação Espacial",
+      "caption": "Aprenda a usar seu teclado como um profissional.",
+      "description": "Defenda a galáxia com suas habilidades de digitação! Digite rápido, atire mais rápido ainda! Salve o universo de invasores alienígenas.",
+      "playButton": "Jogar",
+      "downloadButton": "Baixar",
+      "comingSoon": "Em breve..."
+    },
+    "title": "Jogos STEM",
+    "subtitle": "Descubra STEM através dos nossos jogos.",
+    "visitButton": "Visitar",
+    "games": [
+      {
+        "title": "Simulação NASA HERC",
+        "caption": "Experimente o NASA HERC no seu dispositivo."
+      },
+      {
+        "title": "Grande Alquimia",
+        "caption": "Descubra os elementos que nos rodeiam."
+      },
+      {
+        "title": "Herói da Digitação Espacial",
+        "caption": "Aprenda a usar seu teclado como um profissional."
+      },
+      {
+        "title": "Templo da Matemática",
+        "caption": "Melhore suas habilidades matemáticas no misterioso Templo da Matemática."
+      }
+    ]
+  },
+  "Marketplace": {
+    "banner": {
+      "title": "Apolo 27",
+      "subtitle": "Um catálogo de roupas espaciais"
+    },
+    "comingSoon": "Em Breve",
+    "names": {
+      "all": "Todos",
+      "tShirt": {
+        "1": "Camiseta Branca Básica",
+        "2": "Camiseta com Estampa Gráfica",
+        "3": "Camiseta com Logotipo Vintage"
+      },
+      "hoodie": {
+        "1": "Moletom Confortável",
+        "2": "Moletom com Zíper",
+        "3": "Moletom Pesado"
+      },
+      "hats": {
+        "1": "Boné Snapback",
+        "2": "Touca",
+        "3": "Chapéu Bucket"
+      },
+      "accessories": {
+        "1": "Cinto de Couro",
+        "2": "Óculos de Sol",
+        "3": "Relógio"
+      }
+    },
+    "searchPlaceholder": "Procure pelo seu próximo visual",
+    "dialog": {
+      "title": "NOME",
+      "description": "Descrição do Produto",
+      "closeButton": "Fechar"
+    }
+  },
+  "SocialMedia": {
+    "title": "Redes Sociais",
+    "podcast": {
+      "title": "Podcast",
+      "name": "Caribe STEM",
+      "description": "Caribe STEM é um podcast criado para compartilhar e divulgar STEM (ciência, tecnologia, engenharia e matemática) na República Dominicana e em toda a América Latina. Criado pela Apolo 27, a equipe universitária que representa o INTEC na competição NASA HERC."
+    },
+    "tabs": {
+      "tiktok": "TikTok",
+      "instagram": "Instagram",
+      "youtube": "YouTube"
+    },
+    "video1": {
+      "username": "@apolo27rd",
+      "description": "🎥💸 Quando a #Fabricação precisa de $$$ e o #Financiamento não coopera... 😂💀 💬 Quem mais pode se identificar? 👇",
+      "hashtags": [
+        "#Fabricação",
+        "#Financiamento",
+        "#EquipeApolo27",
+        "#DinheiroPorFavor",
+        "#ProblemasDeEquipe"
+      ],
+      "sound": "♬ som original - 💘🐩"
+    },
+    "video2": {
+      "username": "@apolo27rd",
+      "description": "🚀📚 A equipe #Apolo27 marcou presença na Feira Internacional do Livro 2024 na República Dominicana! 🇩🇴✨ Além dos livros, aproveitamos esta incrível plataforma para compartilhar nossa missão, valores e tudo o que fazemos como equipe. 💡🔥 Conectamos com mentes brilhantes, exploramos novas ideias e mostramos como #Apolo27 está fazendo a diferença. 🌟 Quer saber mais sobre nosso trabalho? Deixe suas perguntas nos comentários! 👇🤝 🎥✨ Aperte o play e descubra como vivemos este dia especial! ❤️",
+      "hashtags": [
+        "#Apolo27",
+        "#Apolo27RD",
+        "#InovaçãoComPropósito",
+        "#FeiraDoLivro2024",
+        "#ConstruindoFuturo",
+        "#EquipeImparável"
+      ],
+      "sound": "♬ som original - Apolo 27 RD"
+    },
+    "connect": {
+      "title": "Conecte-se conosco!",
+      "subtitle": "SIGA-NOS EM TODAS AS NOSSAS REDES SOCIAIS"
+    }
+  },
+  "Sponsors": {
+    "title": "Patrocine-nos",
+    "subtitle": "Seu apoio ajudará nosso país a obter o reconhecimento que merece.",
+    "buttonText": "Patrocine-nos"
+  },
+  "StemWithUs": {
+    "blogs": {
+      "title": "Nossos Blogs Recentes",
+      "readMore": "Leia Mais"
+    },
+    "calendar": {
+      "title": "Eventos da Apolo 27",
+      "event": {
+        "start": "Início:",
+        "end": "Fim:",
+        "follow": "Seguir"
+      }
+    },
+    "youtube": {
+      "invite": "Visite nosso",
+      "channelName": "Canal no YouTube!",
+      "description": "Nossos vídeos mostram a competência em engenharia e dedicação que nos levaram a nos tornar vencedores de categorias por quatro vezes no HERC. Junte-se a nós nos bastidores para ver nossos designs inovadores e os desafios que superamos.",
+      "subscribe": "Inscreva-se",
+      "continue": "para se manter atualizado sobre nossos últimos projetos e eventos."
+    },
+    "form": {
+      "title": "Quer planejar uma visita?",
+      "subtitle": "Entre em contato agora!"
+    }
+  }
+}

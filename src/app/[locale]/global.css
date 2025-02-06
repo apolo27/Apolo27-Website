@@ -44,6 +44,13 @@
   opacity: 0.7;
 }
 
+.timer-text{
+  background: linear-gradient(to top, #87e496, #60bee4 72%, #37afff);
+                -webkit-background-clip: text;
+                background-clip: text;
+                color: transparent;
+}
+
 .swiper-wrapper {
   width: 100%;
   height: max-content !important;
@@ -109,4 +116,22 @@
 
   text-align: center;
   transform: rotateY(180deg);
+}
+
+
+.big-timeline{
+  display: none;
+}
+
+.mobile-timeline{
+  display: flex;
+}
+
+@media (min-width: 1024px) {
+  .big-timeline {
+    display: block;
+  }
+  .mobile-timeline{
+    display: none;
+  }
 }

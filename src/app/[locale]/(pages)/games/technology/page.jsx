@@ -1,29 +1,82 @@
 "use client";
-import { ArrowDownOnSquareIcon } from "@heroicons/react/20/solid";
-import ArrowLeftIcon from "@heroicons/react/20/solid";
-import { useRouter } from "next/navigation";
+import {
+  ArrowDownOnSquareIcon,
+  ArrowLeftIcon,
+} from "@heroicons/react/20/solid";
+import { Link } from "../../../../../i18n/routing";
+import { useTranslations } from "next-intl";
+import Image from "next/image";
+import EmblaCarousel from "../../../components/Carousel/EmblaCarousel";
 
 export default function TechnologyGame() {
-  const router = useRouter();
+  const t = useTranslations("Games.TechnologyGame");
+  const OPTIONS = { dragFree: true, loop: true, containScroll: false };
   return (
-    <div className="relative text-center py-20 flex flex-col md:flex-row w-full md:px-40 md:space-x-5">
-      
-      <div className="z-10 flex justify-center items-center w-5/6 self-center text-center md:px-0 md:w-2/3 h-[200px] md:h-[500px] bg-gray-200 rounded-2xl mb-10 md:mb-0">
-        <p className="text-slate-700 text-3xl lg:text-7xl font-bold">Coming Soon...</p>
-      </div>      <section className="w-full md:w-1/3 px-5 md:px-0 gap-5 md:gap-0 flex flex-col justify-around text-center md:text-left">
-        <p className="font-bold text-ble-400 text-6xl">Space Typing Hero</p>
-        <p className="font-bold text-white text-xl">
-        Defend the galaxy with your typing skills! Type fast, shoot faster! Save the universe from alien invaders.
-        </p>
-        <div className="flex gap-5 justify-center md:justify-start">
-          <button disabled className="opacity-30 bg-white px-4 py-3 text-2xl font-bold text-black rounded-xl">
-            Jugar
-          </button>
-          <button disabled className="opacity-30 bg-white px-4 py-3 text-2xl font-bold text-black rounded-xl flex items-center">
+    <div className="flex-col my-20">
+      <p className="text-center font-bold text-blue-500 text-6xl mb-10">{t("title")}</p>
+      <EmblaCarousel
+        options={OPTIONS}
+        className="w-1/2 flex items-center self-center h-fit rounded-2xl"
+      >
+        <Image
+          className="w-full h-full embla__slide"
+          src="/images/games/technology/ss1.png"
+          alt="customization"
+          width={0}
+          height={0}
+          sizes="100vw"
+          style={{ objectFit: "cover" }}
+        />
+        <Image
+          className="w-full h-full embla__slide"
+          src="/images/games/technology/ss2.png"
+          alt="customization"
+          width={0}
+          height={0}
+          sizes="100vw"
+          style={{ objectFit: "cover" }}
+        />
+        <Image
+          className="w-full h-full embla__slide"
+          src="/images/games/technology/ss3.png"
+          alt="customization"
+          width={0}
+          height={0}
+          sizes="100vw"
+          style={{ objectFit: "cover" }}
+        />
+        <Image
+          className="w-full h-full embla__slide"
+          src="/images/games/technology/ss4.png"
+          alt="customization"
+          width={0}
+          height={0}
+          sizes="100vw"
+          style={{ objectFit: "cover" }}
+        />
+      </EmblaCarousel>
+      <section className="flex flex-col gap-5 items-center">
+        <p className="font-bold text-white text-xl w-2/3 text-center">{t("description")}</p>
+        <div className="flex gap-5">
+          <Link
+            href="https://ctrl-sebastian.itch.io/space-typing-hero"
+            className=" bg-white px-4 py-3 text-2xl font-bold text-black rounded-xl"
+          >
+            {t("playButton")}
+          </Link>
+          <button
+            disabled
+            className="opacity-30 bg-white px-4 py-3 text-2xl font-bold text-black rounded-xl flex items-center"
+          >
             <ArrowDownOnSquareIcon className="w-8 h-8" />
-            Descargar
+            {t("downloadButton")}
           </button>
         </div>
+        <Link href="/games" className="z-50 gap-5 text-lg text-white font-semibold bg-gradient-to-br from-cyan-800 to-violet-700 flex rounded-xl items-center px-4 py-3"> 
+          {" "}
+          <ArrowLeftIcon className="w-8 h-8" />
+          Other Games{" "}
+        </Link>
       </section>
     </div>
   );

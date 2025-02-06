@@ -1,8 +1,10 @@
 import "./sponsors.css";
 import {Link} from '../../../../i18n/routing';
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 export default function Sponsors() {
+  const t = useTranslations("Sponsors");
   const sponsors = [
     {
       name: "Grupo Thomas",
@@ -53,9 +55,9 @@ export default function Sponsors() {
   return (
     <div className="z-10 text-center space-y-10 h-screen">
       <div className="titleArea text-white">
-        <h1 className="sponsorsPage-title font-bold">Sponsor Us</h1>
-        <h3 className="sponsorsPage-text font-semibold">
-          Your support will help us get our country the recognition it deserves.
+        <h1 className="font-bold text-5xl sm:text-7xl md:text-8xl lg:text-7xl">{t("title")}</h1>
+        <h3 className="mx-10 text-xl sm:text-6xl md:text-7xl lg:text-6xl font-semibold">
+          {t("subtitle")}
         </h3>
       </div>
 
@@ -90,7 +92,7 @@ export default function Sponsors() {
         <button className="button-82-pushable mt-20">
           <span className="button-82-shadow"></span>
           <span className="button-82-edge"></span>
-          <span className="button-82-front text font-semibold">Sponsor Us</span>
+          <span className="button-82-front text font-semibold">{t("buttonText")}</span>
         </button>
       </Link>
     </div>

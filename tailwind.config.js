@@ -8,6 +8,8 @@ module.exports = {
   theme: {
     screens: {
       'xs': '375px',
+
+      'xm': '480px',
       
       'sm': '640px',
       // => @media (min-width: 640px) { ... }
@@ -27,7 +29,7 @@ module.exports = {
       '2xl': '1536px',
       // => @media (min-width: 1536px) { ... }
       
-      '3xl': '1920px',
+      '3xl': '1900px',
     },
     extend: {
       width: {
@@ -38,6 +40,7 @@ module.exports = {
         ["infinite-slider"]: "infiniteSlider 50s linear infinite",
         'infinite-scroll': 'infinite-scroll 12s linear infinite',
         border: 'border 2s linear infinite',
+        bounceX: 'bounceX 1s infinite',
       },
       keyframes: {
         'infinite-scroll': {
@@ -52,6 +55,10 @@ module.exports = {
         },
         border: {
           to: { '--border-angle': '360deg' },
+        },
+        bounceX: {
+          '0%, 100%': { transform: 'translateX(0)' },
+          '50%': { transform: 'translateX(-25%)' },
         },
 
       },
