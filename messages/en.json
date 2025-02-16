@@ -325,6 +325,32 @@
       "instagram": "Instagram",
       "youtube": "Youtube"
     },
+    "youtube": {
+      "invite": "Visit our",
+      "channelName": "Youtube Channel!",
+      "description": "Our videos showcase the engineering prowess and dedication that led us to become four-time category winners at HERC. Join us behind the scenes to see our innovative designs and the challenges we overcame.",
+      "subscribe": "Subscribe",
+      "continue": "to stay updated on our latest projects and events."
+    },
+    "hptopics": {
+      "mechanics": "Mechanics",
+      "design": "Design",
+      "roverRequirements": "Rover Requirements",
+      "vehicleParts": "Vehicle parts",
+      "astronomicalEvents": "Astronomical events",
+      "schoolVisits": "School visits",
+      "stemEvents": "STEM events",
+      "giveaways": "Giveaways"
+    },
+    "rctopics": {
+      "electronics": "Electronics",
+      "taskToolsComponents": "Task Tools Components",
+      "roverRequirements": "Rover Requirements",
+      "vehicleParts": "Vehicle parts",
+      "astronomicalEvents": "Astronomical events",
+      "schoolVisits": "School visits",
+      "stemEvents": "STEM events"
+    },
     "video1": {
       "username": "@apolo27rd",
       "description": "🎥💸 When #Manufacturing needs $$$ and #Funding doesn't cooperate... 😂💀 💬 Who else can relate? 👇",
