@@ -38,6 +38,7 @@ module.exports = {
       },
       animation: {
         ["infinite-slider"]: "infiniteSlider 50s linear infinite",
+        ["infinite-slider-social-media"]: "infiniteSliderSocialMedia 50s linear infinite",
         'infinite-scroll': 'infinite-scroll 12s linear infinite',
         border: 'border 2s linear infinite',
         bounceX: 'bounceX 1s infinite',
@@ -51,6 +52,12 @@ module.exports = {
           "0%": { transform: "translateX(0)" },
           "100%": {
             transform: "translateX(calc(-200px * 11))",
+          },
+        },
+        infiniteSliderSocialMedia: {
+          "0%": { transform: "translateX(0)" },
+          "100%": {
+            transform: "translateX(calc(-200px * 8))",
           },
         },
         border: {

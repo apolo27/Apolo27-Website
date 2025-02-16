@@ -184,7 +184,7 @@
     "internationalbusiness": "Lic. en Negocios Internacionales",
     "biotechnology": "Lic. en Biotecnología",
     "education": "Lic. en Educación",
-    
+
     "HumanPoweredTeam": {
       "title": "Equipo Propulsado por Humanos",
       "rcDivision": "División RC",
@@ -323,6 +323,32 @@
       "tiktok": "Tiktok",
       "instagram": "Instagram",
       "youtube": "Youtube"
+    },
+    "youtube": {
+      "invite": "Visita nuestro",
+      "channelName": "Canal de Youtube",
+      "description": "Nuestros videos muestran la destreza y dedicación que nos llevó a ganar cuatro veces en las categorías de HERC. Acompáñanos detrás de escena para ver nuestros diseños innovadores y los desafíos que superamos.",
+      "subscribe": "Suscríbete",
+      "continue": "para estar al día con nuestros últimos proyectos y eventos."
+    },
+    "hptopics": {
+      "mechanics": "Mecánica",
+      "design": "Diseño",
+      "roverRequirements": "Requisitos del Rover",
+      "vehicleParts": "Partes del vehículo",
+      "astronomicalEvents": "Eventos astronómicos",
+      "schoolVisits": "Visitas escolares",
+      "stemEvents": "Eventos STEM",
+      "giveaways": "Sorteos"
+    },
+    "rctopics": {
+      "electronics": "Electrónica",
+      "taskToolsComponents": "Componentes de Tasktools",
+      "roverRequirements": "Requisitos del Rover",
+      "vehicleParts": "Partes del vehículo",
+      "astronomicalEvents": "Eventos astronómicos",
+      "schoolVisits": "Visitas escolares",
+      "stemEvents": "Eventos STEM"
     },
     "video1": {
       "username": "@apolo27rd",
