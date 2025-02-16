@@ -324,6 +324,25 @@
       "instagram": "Instagram",
       "youtube": "Youtube"
     },
+    "hptopics": {
+      "mechanics": "Mécanique",
+      "design": "Conception",
+      "roverRequirements": "Exigences du Rover",
+      "vehicleParts": "Pièces du véhicule",
+      "astronomicalEvents": "Événements astronomiques",
+      "schoolVisits": "Visites scolaires",
+      "stemEvents": "Événements STEM",
+      "giveaways": "Cadeaux"
+    },
+    "rctopics": {
+      "electronics": "Électronique",
+      "taskToolsComponents": "Composants des Outils de Tâches",
+      "roverRequirements": "Exigences du Rover",
+      "vehicleParts": "Pièces du véhicule",
+      "astronomicalEvents": "Événements astronomiques",
+      "schoolVisits": "Visites scolaires",
+      "stemEvents": "Événements STEM"
+    },
     "video1": {
       "username": "@apolo27rd",
       "description": "🎥💸 Quand #Fabrication a besoin de $$$ et que #Financement ne coopère pas... 😂💀 💬 Qui peut s'identifier ? 👇",

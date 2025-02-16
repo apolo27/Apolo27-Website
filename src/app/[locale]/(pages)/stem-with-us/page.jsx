@@ -195,6 +195,7 @@ export default function StemWithUs() {
 
       <section className="z-10 flex flex-col md:flex-row justify-between gap-5 md:gap-20 items-center text-white my-20">
         <div className="w-full md:w-96 2xl:w-[425px] rounded-r-[175px] rounded-l-xl bg-slate-800 bg-opacity-70 h-full py-8 md:py-20 pl-20 mr-20 md:pl-5 md:mr-0">
+          <Link href={"/social-media/#hp"} className="bg-gradient-to-br from-red-700 to-violet-400 w-fit rounded-full px-5">HP</Link>
           <p className="align-middle font-bold text-3xl md:text-4xl md:mb-5 pr-5">
             {t("youtube.invite")}{" "}
             <Link
