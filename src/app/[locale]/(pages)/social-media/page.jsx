@@ -11,6 +11,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { useTranslations } from "next-intl";
 import { LinkIcon } from "@heroicons/react/20/solid";
+import { getRecentVideos } from "../stem-with-us/services/FetchYTVideos";
 
 import { Link } from "../../../../i18n/routing";
 
