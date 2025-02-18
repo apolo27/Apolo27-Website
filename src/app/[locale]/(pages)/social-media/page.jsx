@@ -589,41 +589,107 @@ export default function SocialMedia() {
 }
 */
 }
+import Image from "next/image";
 import React, { useEffect, useRef } from "react";
 
 export default function SocialMedia() {
   const videoRef = useRef(null);
 
   useEffect(() => {
-    // This will help debug any loading issues
     if (videoRef.current) {
-      videoRef.current.addEventListener("error", (e) => {
-        console.error("Video error:", videoRef.current.error);
+      videoRef.current.addEventListener("error", () => {
+        console.error("Error en el video de Apolo 27:", videoRef.current.error);
       });
     }
+
+    return () => {
+      if (videoRef.current) {
+        videoRef.current.removeEventListener("error", () => {
+          console.error("Evento de error eliminado en Video de Apolo 27");
+        });
+      }
+    };
   }, []);
 
   return (
-    <div className="min-h-screen flex flex-row bg-gradient-to-r from-slate-900 to-black text-white">
-      <div className="w-20 lg:w-48 flex items-center justify-center px-2 py-4"></div>
-      <video
-        ref={videoRef}
-        width="600"
-        controls
-        autoPlay={false}
-        loop
-        onError={(e) => console.error("Video error event:", e)}>
-        {/* Try both paths to see which one works */}
-        <source
-          src="/videos/social-media/Apolo-27-3d.mp4"
-          type="video/mp4"
-          onError={(e) => console.error("Source error:", e)}
+    <div className="grid grid-cols-[350px_1fr_300px] gap-10 h-screen p-4 m-8">
+      <Image
+        width={600}
+        height={600}
+        src="/images/social-media/red-star.svg"
+        alt="Estrella Roja"
+        className="absolute top-200 left-20 w-[1000px] h-[1000px] -z-10"
+      />
+
+      <div>
+        <Image
+          src="/videos/social-media/social-video.gif"
+          width={100}
+          height={500}
+          alt="Animación Social Media"
+          className="w-full h-auto object-cover rounded z-1"
+          onError={() =>
+            console.error("Error al cargar el GIF de Social Media")
+          }
         />
-        <p>
-          Tu navegador no soporta la reproducción de video. Error code:{" "}
-          {videoRef.current?.error?.code}
-        </p>
-      </video>
+      </div>
+
+      <div className="lg:h-[400px] z-1">
+        <video
+          ref={videoRef}
+          controls
+          autoPlay
+          loop
+          onError={(e) => console.error("Error en el video de Apolo 27")}
+          className="">
+          {/* Try both paths to see which one works */}
+          <source src="/videos/social-media/Apolo-27-3d.mp4" type="video/mp4" />
+          <p>Tu navegador no soporta la reproducción de video.</p>
+        </video>
+      </div>
+
+      <div className="p-4">
+        <Image
+          src="/videos/social-media/social-video.gif"
+          width={100}
+          height={500}
+          alt="Animación Social Media"
+          className="w-full h-auto object-cover rounded py-4 z-1"
+          onError={() =>
+            console.error("Error al cargar el GIF de Social Media")
+          }
+        />
+        <Image
+          src="/videos/social-media/social-video.gif"
+          width={100}
+          height={500}
+          alt="Animación Social Media"
+          className="w-full h-auto object-cover rounded z-1"
+          onError={() =>
+            console.error("Error al cargar el GIF de Social Media")
+          }
+        />
+        <Image
+          src="/videos/social-media/social-video.gif"
+          width={100}
+          height={500}
+          alt="Animación Social Media"
+          className="w-full h-auto object-cover rounded "
+          onError={() =>
+            console.error("Error al cargar el GIF de Social Media")
+          }
+        />
+        <Image
+          src="/videos/social-media/social-video.gif"
+          width={100}
+          height={500}
+          alt="Animación Social Media"
+          className="w-full h-auto object-cover rounded "
+          onError={() =>
+            console.error("Error al cargar el GIF de Social Media")
+          }
+        />
+      </div>
     </div>
   );
 }
