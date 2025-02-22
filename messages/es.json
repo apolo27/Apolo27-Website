@@ -223,6 +223,7 @@
   },
   "Games": {
     "Subtitle": "Descubre STEM a través de nuestros juegos.",
+    "comingSoon": "Próximamente...",
     "HERCSimulation": {
       "title": "Simulación NASA HERC",
       "caption": "Experimenta el NASA HERC en tu propio dispositivo.",
@@ -410,5 +411,11 @@
       "title": "¿Quieres planear una visita?",
       "subtitle": "¡Contáctanos ahora!"
     }
+  },
+  "Blogs": {
+    "pageTitle": "Blogs Apolo 27",
+    "subtitle": "El equipo de redes sociales de Apolo 27 está a cargo de administrar nuestra comunidad y actualizar a nuestro país sobre todos nuestros eventos y avances.",
+    "title" : "Título: ",
+    "published": "Publicado:"
   }
 }

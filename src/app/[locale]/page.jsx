@@ -88,7 +88,7 @@ export default function Home() {
         {/* simulation large screen */}
         <Link
           href="/games/Herc-Simulation"
-          className="hidden scale-90 lg:w-[555px] lg:h-[220px] 1xl:scale-100 3xl:scale-110 lg:block absolute left-0 1xl:left-20 3xl:left-60 hover:cursor-pointer hover:opacity-65"
+          className="z-10 hidden scale-90 lg:w-[555px] lg:h-[220px] 1xl:scale-100 3xl:scale-110 lg:block absolute left-0 1xl:left-20 3xl:left-60 hover:cursor-pointer filter hover:brightness-90 transition-all"
           style={{
             backgroundImage: "url('/images/landing/simulation.webp')",
             backgroundRepeat: "no-repeat",
@@ -616,15 +616,15 @@ export default function Home() {
                     }
                   >
                     <div className="md:px-4 flex flex-col md:flex-row items-center w-full justify-evenly bg-gradient-to-b from-cyan-600 to-cyan-900 rounded-t-2xl py-4 md:py-8">
-                      <p className="text-5xl lg:text-6xl font-boldrounded-xl bg-cyan-950/[0.7] rounded-lg p-1">
+                      <p className="text-5xl ont-boldrounded-xl bg-cyan-950/[0.7] rounded-lg p-1">
                         {yearData.year}
                       </p>
-                      <p className="text-2xl lg:text-3xl text-center md:text-left w-1/2">
+                      <p className="text-2xl text-center md:text-left ">
                         {t(yearData.teams[1]?.title)}
                       </p>
                     </div>
                     <div className="p-4 space-y-5">
-                      <p className="text-md md:text-lg text-center md:text-left font-semibold px-8 md:px-4">
+                      <p className="text-md md:text-lg text-center md:text-left font-semibold md:px-4">
                         {t(yearData.teams[1]?.description)}
                       </p>
                       <div className="rounded-2xl overflow-hidden">
@@ -634,7 +634,7 @@ export default function Home() {
                         width="0"
                         height="0"
                         sizes="100vw"
-                        className="px-8 pb-8 md:px-4 w-full h-full h-30"
+                        className="pb-8 md:px-4 w-full h-full h-30"
                       />
                       </div>
                     </div>

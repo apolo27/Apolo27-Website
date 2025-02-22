@@ -46,7 +46,7 @@ export default function SocialMedia() {
 
         <div className="space-y-5">
           <div className="flex items-center flex-col lg:flex-row gap-4 justify-center w-full lg:grid grid-cols-1 grid-rows-2 lg:grid-cols-2 lg:grid-rows-1 h-fit">
-            <div className=" h-fit space-y-2 lg:justify-self-center rounded-2xl p-5 transition-all duration-75 [background:linear-gradient(45deg,#080b11,theme(colors.slate.800)_50%,#172033)_padding-box,conic-gradient(from_var(--border-angle),theme(colors.slate.600/.48)_80%,_theme(colors.indigo.500)_86%,_theme(colors.indigo.300)_90%,_theme(colors.indigo.500)_94%,_theme(colors.slate.600/.48))_border-box] md:hover:[background:linear-gradient(45deg,#080b11,theme(colors.slate.800)_50%,#172033)_padding-box,conic-gradient(from_var(--border-angle),theme(colors.slate.600/.48)_80%,_theme(colors.indigo.500)_86%,_theme(colors.indigo.300)_90%,_theme(colors.indigo.500)_94%,_theme(colors.slate.600/.48))_border-box] border-2 border-transparent animate-border">
+            <div className="z-10 h-fit space-y-2 lg:justify-self-center rounded-2xl p-5 transition-all duration-75 [background:linear-gradient(45deg,#080b11,theme(colors.slate.800)_50%,#172033)_padding-box,conic-gradient(from_var(--border-angle),theme(colors.slate.600/.48)_80%,_theme(colors.indigo.500)_86%,_theme(colors.indigo.300)_90%,_theme(colors.indigo.500)_94%,_theme(colors.slate.600/.48))_border-box] md:hover:[background:linear-gradient(45deg,#080b11,theme(colors.slate.800)_50%,#172033)_padding-box,conic-gradient(from_var(--border-angle),theme(colors.slate.600/.48)_80%,_theme(colors.indigo.500)_86%,_theme(colors.indigo.300)_90%,_theme(colors.indigo.500)_94%,_theme(colors.slate.600/.48))_border-box] border-2 border-transparent animate-border">
               <p className="font-bold text-3xl">Topics</p>
               <ul className="space-y-2 text-xl lg:text-2xl font-semibold">
                 <li>• {t("hptopics.mechanics")}</li>
@@ -65,33 +65,33 @@ export default function SocialMedia() {
                 width={200}
                 height={200}
                 src={"/images/social-media/hp/keramsi.jpg"}
-                className="slide"
+                className="slide z-10"
               />
               <Image
                 alt="social media post"
                 width={200}
                 height={200}
                 src={"/images/social-media/hp/portamasas.jpg"}
-                className="slide"
+                className="slide z-10"
               />
               <Image
                 alt="social media post"
                 width={200}
                 height={200}
                 src={"/images/social-media/hp/stemfest.jpg"}
-                className="slide"
+                className="slide z-10"
               />
               <Image
                 alt="social media post"
                 width={200}
                 height={200}
                 src={"/images/social-media/hp/vehiclepart.jpg"}
-                className="slide"
+                className="slide z-10"
               />
             </div>
           </div>
 
-          <p className="hidden md:block text-center font-bold text-3xl  md:mb-5 pr-5">
+          <p className="hidden md:block text-center font-bold text-3xl  md:mb-5 pr-5 z-10">
             {t("youtube.invite")}{" "}
             <Link
               href="https://www.youtube.com/@apolo2730"
@@ -101,8 +101,9 @@ export default function SocialMedia() {
             </Link>{" "}
             <LinkIcon className="h-5 w-5 inline-block" />
           </p>
-          <section className="z-10 flex flex-col md:flex-row justify-center gap-5  items-center text-white my-20">
-            <div className="w-full md:w-96 2xl:w-[425px] rounded-r-[175px] rounded-l-xl bg-slate-800 bg-opacity-70 h-full py-8 md:py-20 pl-20 mr-20 md:pl-5 md:mr-0">
+
+          <div className=" flex flex-col md:flex-row lg:w-full lg:grid grid-cols-2 grid-rows-1 justify-center gap-5 lg:gap-0 items-center text-white my-20">
+            <div className="lg:justify-self-center z-10 w-full md:w-96 2xl:w-[425px] rounded-r-[175px] rounded-l-xl bg-slate-800/80  h-full py-8 md:py-20 pl-20 mr-20 md:pl-5 md:mr-0">
               <p className="md:hidden text-center font-bold text-3xl  md:mb-5 pr-5">
                 {t("youtube.invite")}{" "}
                 <Link
@@ -113,7 +114,7 @@ export default function SocialMedia() {
                 </Link>{" "}
                 <LinkIcon className="h-5 w-5 inline-block" />
               </p>
-              <p className="hidden md:block pr-5">
+              <p className="hidden md:block pr-5 font-medium">
                 {t("youtube.description")}
                 <Link href="https://www.youtube.com/@apolo2730">
                   {t("youtube.subscribe")}
@@ -121,11 +122,10 @@ export default function SocialMedia() {
                 {t("youtube.continue")}
               </p>
             </div>
-            <div className="grid grid-cols-1  grid-rows-2 gap-5 mx-8">
+            <div className="lg:justify-self-center grid grid-cols-1  grid-rows-2 gap-5 mx-8">
               {recentVideos.slice(0, 2).map((video, i) => (
-                <div
+                <div className="relative  md:flex gap-4 md:p-4  rounded-2xl hover:cursor-pointer hover:scale-105 transition-all duration-75 [background:linear-gradient(45deg,#080b11,theme(colors.slate.800)_50%,#172033)_padding-box,conic-gradient(from_var(--border-angle),theme(colors.slate.600/.48)_80%,_theme(colors.indigo.500)_86%,_theme(colors.indigo.300)_90%,_theme(colors.indigo.500)_94%,_theme(colors.slate.600/.48))_border-box] md:hover:[background:linear-gradient(45deg,#080b11,theme(colors.slate.800)_50%,#172033)_padding-box,conic-gradient(from_var(--border-angle),theme(colors.slate.600/.48)_80%,_theme(colors.indigo.500)_86%,_theme(colors.indigo.300)_90%,_theme(colors.indigo.500)_94%,_theme(colors.slate.600/.48))_border-box] border-2 border-transparent animate-border"
                   key={i}
-                  className="relative max-w-[400px] md:flex gap-4 md:p-4  rounded-2xl hover:cursor-pointer hover:scale-105 transition-all duration-75 [background:linear-gradient(45deg,#080b11,theme(colors.slate.800)_50%,#172033)_padding-box,conic-gradient(from_var(--border-angle),theme(colors.slate.600/.48)_80%,_theme(colors.indigo.500)_86%,_theme(colors.indigo.300)_90%,_theme(colors.indigo.500)_94%,_theme(colors.slate.600/.48))_border-box] md:hover:[background:linear-gradient(45deg,#080b11,theme(colors.slate.800)_50%,#172033)_padding-box,conic-gradient(from_var(--border-angle),theme(colors.slate.600/.48)_80%,_theme(colors.indigo.500)_86%,_theme(colors.indigo.300)_90%,_theme(colors.indigo.500)_94%,_theme(colors.slate.600/.48))_border-box] border-2 border-transparent animate-border"
                 >
                   <p className="md:hidden absolute -top-2 -left-2 text-black bg-white font-bold rounded-full px-3 py-1 z-10 animate-pulse">
                     {i + 1}
@@ -145,7 +145,7 @@ export default function SocialMedia() {
                 </div>
               ))}
             </div>
-          </section>
+          </div>
 
           <div className="mx-10 lg:mx-0 lg:w-full bg-black border-white border-2  grid grid-flow-col justify-items-center text-white rounded-xl">
             <a
@@ -211,6 +211,7 @@ export default function SocialMedia() {
           </div>
         </div>
       </section>
+
       <hr className="my-8" />
 
       <section id="rc" className="text-white space-y-3 my-10">
@@ -225,31 +226,31 @@ export default function SocialMedia() {
                 width={200}
                 height={200}
                 src={"/images/social-media/rc/astronight.jpg"}
-                className="slide"
+                className="slide z-10"
               />
               <Image
                 alt="social media post"
                 width={200}
                 height={200}
                 src={"/images/social-media/rc/lidar.jpg"}
-                className="slide"
+                className="slide z-10"
               />
               <Image
                 alt="social media post"
                 width={200}
                 height={200}
                 src={"/images/social-media/rc/whatif.jpg"}
-                className="slide"
+                className="slide z-10"
               />
               <Image
                 alt="social media post"
                 width={200}
                 height={200}
                 src={"/images/social-media/rc/visita.png"}
-                className="slide"
+                className="slide z-10"
               />
             </div>
-            <div className="w-fit h-fit space-y-2 lg:justify-self-center rounded-2xl p-5 transition-all duration-75 [background:linear-gradient(45deg,#080b11,theme(colors.slate.800)_50%,#172033)_padding-box,conic-gradient(from_var(--border-angle),theme(colors.slate.600/.48)_80%,_theme(colors.indigo.500)_86%,_theme(colors.indigo.300)_90%,_theme(colors.indigo.500)_94%,_theme(colors.slate.600/.48))_border-box] md:hover:[background:linear-gradient(45deg,#080b11,theme(colors.slate.800)_50%,#172033)_padding-box,conic-gradient(from_var(--border-angle),theme(colors.slate.600/.48)_80%,_theme(colors.indigo.500)_86%,_theme(colors.indigo.300)_90%,_theme(colors.indigo.500)_94%,_theme(colors.slate.600/.48))_border-box] border-2 border-transparent animate-border">
+            <div className="z-10 w-fit h-fit space-y-2 lg:justify-self-center rounded-2xl p-5 transition-all duration-75 [background:linear-gradient(45deg,#080b11,theme(colors.slate.800)_50%,#172033)_padding-box,conic-gradient(from_var(--border-angle),theme(colors.slate.600/.48)_80%,_theme(colors.indigo.500)_86%,_theme(colors.indigo.300)_90%,_theme(colors.indigo.500)_94%,_theme(colors.slate.600/.48))_border-box] md:hover:[background:linear-gradient(45deg,#080b11,theme(colors.slate.800)_50%,#172033)_padding-box,conic-gradient(from_var(--border-angle),theme(colors.slate.600/.48)_80%,_theme(colors.indigo.500)_86%,_theme(colors.indigo.300)_90%,_theme(colors.indigo.500)_94%,_theme(colors.slate.600/.48))_border-box] border-2 border-transparent animate-border">
               <p className="font-bold text-3xl">Topics</p>
               <ul className="space-y-2 text-xl lg:text-2xl font-medium">
                 <li>• {t("rctopics.electronics")}</li>
@@ -264,7 +265,7 @@ export default function SocialMedia() {
           </div>
           <hr className="my-8 mx-5" />
 
-          <section className="space-y-5">
+          <div className="space-y-5">
             <div className="flex flex-col md:flex-row gap-4 justify-center w-full">
               <div className="flex md:hidden flex-col justify-between w-full  text-center md:text-left z-10">
                 <p className="text-[#67E1A8] text-2xl md:text-4xl 2xl:text-5xl font-semibold">
@@ -307,7 +308,7 @@ export default function SocialMedia() {
               </p>
               <div className="grid justify-items-center grid-cols-1 grid-rows-2 md:grid-cols-2 gap-4 lg:h-40">
                 <iframe
-                  className="rounded-xl"
+                  className="rounded-xl z-10"
                   src="https://open.spotify.com/embed/episode/5ntjIKS1FuMbEKDZ9VdxBh?utm_source=generator"
                   width="80%"
                   height="152"
@@ -317,7 +318,7 @@ export default function SocialMedia() {
                   loading="lazy"
                 ></iframe>
                 <iframe
-                  className="rounded-xl"
+                  className="rounded-xl z-10"
                   src="https://open.spotify.com/embed/episode/3ZLKpuAP8JUbZfPQxH9uaZ?utm_source=generator"
                   width="80%"
                   height="152"
@@ -328,7 +329,7 @@ export default function SocialMedia() {
                 ></iframe>
               </div>
             </div>
-          </section>
+          </div>
 
           <div className="mx-10 lg:mx-0 lg:w-full bg-black border-white border-2  grid grid-flow-col justify-items-center text-white rounded-xl">
             <a

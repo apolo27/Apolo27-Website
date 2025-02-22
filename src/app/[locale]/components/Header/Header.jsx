@@ -26,11 +26,11 @@ export default function Header() {
         className={`${
           pathName === "/"
             ? "bg-[#40D1FF] font-semibold"
-            : pathName === "/marketplace"
+            : pathName === "/marketplace" || pathName === "/stem-with-us"
             ? "bg-transparent absolute"
-            : pathName === "/stem-with-us"
-            ? "bg-transparent absolute"
-            : "bg-gray-800 z-50"
+            : pathName === "/social-media"
+            ? "bg-apolo-empty-background"
+            : "bg-apolo-empty-background z-50"
         } w-full font-poppins shadow-md z-50`}
       >
         <div className="flex items-center justify-between p-4">
