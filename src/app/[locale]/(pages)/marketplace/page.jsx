@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { useState } from "react";
 import Image from "next/image";
 import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
@@ -12,8 +12,10 @@ import {
 
 import { useTranslations } from "next-intl";
 
-import ItemCarousel from './components/ItemCarousel'
+import ItemCarousel from "./components/ItemCarousel";
 import { XMarkIcon } from "@heroicons/react/20/solid";
+
+import ItemCarouselNavigateable from "./components/ItemCarouselNavigateable";
 
 export default function Marketplace() {
   const t = useTranslations("Marketplace");
@@ -28,45 +30,51 @@ export default function Marketplace() {
     ALL: "All",
   });
 
-
   const items = [
     // T-Shirts
     {
       id: 1,
       name: "White Rover T-Shirt",
-      description: "Camiseta blanca con dibujo técnico de rover HP (Human Powered) en la espalda con el titulo Apolo 27 debajo. En el lado izquierdo del pecho lleva la frase \"Take off to the sky \" con un cohete rodeandole.",
+      description:
+        'Camiseta blanca con dibujo técnico de rover HP (Human Powered) en la espalda con el titulo Apolo 27 debajo. En el lado izquierdo del pecho lleva la frase "Take off to the sky " con un cohete rodeandole.',
       category: CategoryEnum.T_SHIRT,
-      images: ["/images/marketplace/white-tshirt-front.jpeg", "/images/marketplace/white-tshirt-back.jpeg"],
+      images: [
+        "/images/marketplace/white-tshirt-front.jpeg",
+        "/images/marketplace/white-tshirt-back.jpeg",
+      ],
     },
     {
       id: 2,
       name: "Black Rover Tshirt",
-      description: "Camiseta negra con dibujo técnico de rover HP (Human Powered) en la espalda con el titulo Apolo 27 debajo. En el lado izquierdo del pecho lleva la frase \"Take off to the sky \" con un cohete rodeandole.",
+      description:
+        'Camiseta negra con dibujo técnico de rover HP (Human Powered) en la espalda con el titulo Apolo 27 debajo. En el lado izquierdo del pecho lleva la frase "Take off to the sky " con un cohete rodeandole.',
       category: CategoryEnum.T_SHIRT,
-      images: ["/images/marketplace/black-tshirt-front.jpeg", "/images/marketplace/black-tshirt-back.jpeg"],
+      images: [
+        "/images/marketplace/black-tshirt-front.jpeg",
+        "/images/marketplace/black-tshirt-back.jpeg",
+      ],
     },
-   
+
     // Hats
     {
       id: 7,
       name: "Apolo 27 Cap",
-      description: "Gorra blanca con el titulo de Apolo 27 con fondo de crucetas.",
+      description:
+        "Gorra blanca con el titulo de Apolo 27 con fondo de crucetas.",
       category: CategoryEnum.HATS,
       images: ["/images/marketplace/white-cap.jpeg"],
     },
     {
       id: 8,
       name: "Fly Me To The Moon Cap",
-      description: "Gorra negra con media Luna y la frase \"Fly me to the \".",
+      description: 'Gorra negra con media Luna y la frase "Fly me to the ".',
       category: CategoryEnum.HATS,
       images: ["/images/marketplace/black-cap.jpeg"],
     },
-    
   ];
 
   const [selectedCategory, setSelectedCategory] = useState(CategoryEnum.ALL);
   const [selectedProduct, setSelectedProduct] = useState(items[0]);
-
 
   const selectProduct = (product) => {
     setSelectedProduct(product);
@@ -95,55 +103,40 @@ export default function Marketplace() {
         <p className="font-bold text-white text-2xl">{t("banner.subtitle")}</p>
       </div>
 
-
       <div className="flex flex-col  bg-[#121836] justify-center items-center md:items-stretch w-full h-full p-4">
-        {/* <div className="text-white font-bold text-4xl text-center p-8 lg:p-16 space-y-10">
-          <div className="flex flex-col lg:flex-row justify-center space-x-4">
-            <Image
-              alt="merch1"
-              width={300}
-              height={300}
-              src="/images/marketplace/300.png"
-              className="transition-all opacity-80 filter blur-sm hover:blur-0 hover:opacity-60"
-            />
-            <Image
-              alt="merch2"
-              width={300}
-              height={300}
-              src="/images/marketplace/300.png"
-              className="transition-all opacity-80 filter blur-sm hover:blur-0 hover:opacity-60"
-            />
-            <Image
-              alt="merch3"
-              width={300}
-              height={300}
-              src="/images/marketplace/300.png"
-              className="transition-all opacity-80 filter blur-sm hover:blur-0 hover:opacity-60"
-            />
-          </div>
-          <p className="flex justify-center">
-            Coming Soon
-            <span className="block animate-bounce duration-75">.</span>
-            <span className="block animate-bounce duration-100">.</span>
-            <span className="block animate-bounce duration-150">.</span>
-          </p>
-        </div> */}
-
         <div className="w-full flex flex-col items-center text-white ">
-          <p className="px-3 text-2xl font-bold text-center w-full">Filter by</p>
-          <div className="flex w-full flex-row justify-center">
-            {
-              [CategoryEnum.ALL, CategoryEnum.T_SHIRT, CategoryEnum.HOODIE, CategoryEnum.HATS, CategoryEnum.ACCESSORIES].filter(category => category === CategoryEnum.ALL || items.some(item => item.category === category)).map((category, i) => (
-                <button key={i} className={
-                  categoryBtnStyle +
-                  (selectedCategory === category ? " bg-[#666A95]" : "")
-                } onClick={() => setSelectedCategory(category)}>{category}</button>
-              ))
-            }
+          <p className="px-3 text-2xl font-bold text-center w-full">
+            Filter by
+          </p>
+          <div className="flex w-full flex-row justify-center gap-5">
+            {[
+              CategoryEnum.ALL,
+              CategoryEnum.T_SHIRT,
+              CategoryEnum.HOODIE,
+              CategoryEnum.HATS,
+              CategoryEnum.ACCESSORIES,
+            ]
+              .filter(
+                (category) =>
+                  category === CategoryEnum.ALL ||
+                  items.some((item) => item.category === category)
+              )
+              .map((category, i) => (
+                <button
+                  key={i}
+                  className={
+                    categoryBtnStyle +
+                    (selectedCategory === category ? " bg-[#666A95]" : "")
+                  }
+                  onClick={() => setSelectedCategory(category)}
+                >
+                  {category}
+                </button>
+              ))}
           </div>
         </div>
 
-        <div className="w-full space-y-5">
+        <div className="w-full space-y-5 max-w-[1125px] mx-auto">
           <div className="flex items-center">
             <MagnifyingGlassIcon className="w-12 h-12 pl-5 py-2 text-white text-opacity-50 bg-white bg-opacity-20 rounded-l-xl" />
             <input
@@ -169,7 +162,9 @@ export default function Marketplace() {
                   onClick={() => selectProduct(item)}
                 >
                   <ItemCarousel slides={item.images} />
-                  <p className="text-black font-bold py-3 bg-white rounded-xl">{item.name}</p>
+                  <p className="text-black font-bold py-3 bg-white rounded-xl">
+                    {item.name}
+                  </p>
                 </div>
               ))}
           </section>
@@ -182,29 +177,51 @@ export default function Marketplace() {
         className="relative z-50 w-screen h-screen text-white"
       >
         <DialogBackdrop className="fixed inset-0 bg-black/80" />
-        <div className="fixed inset-0 flex w-screen items-center justify-center p-4 overflow-y-scroll">
-          <DialogPanel className=" max-w-2xl 2xl:max-w-none space-y-4 w-screen h-screen p-12">
-            <DialogTitle className="font-bold text-2xl">{selectedProduct ? selectedProduct.name : "Product Name"}</DialogTitle>
-            <ItemCarousel slides={selectedProduct ? selectedProduct.images : []} />
-            <Description className="font-bold">Descripcion del producto:</Description>
-            <Description className="font-semibold">{selectedProduct.description}</Description>
-            <div className="absolute top-0 right-10 bg-white rounded-md flex items-center">
-              <button onClick={() => setIsOpen(false)}>
-                <XMarkIcon className="w-12 h-12 text-black" />
-              </button>
+        <div className="fixed inset-0 flex w-screen max-w-[1125px] mx-auto items-center justify-center p-4">
+          <DialogPanel className="max-w-2xl 2xl:max-w-none space-y-4 w-screen h-screen mt-20 p-12">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
+            
+              <div className="max-w-[500px] mx-auto">
+                <ItemCarouselNavigateable
+                  slides={selectedProduct ? selectedProduct.images : []}
+                  options={{ loop: true }}
+                />
+              </div>
+              <div className="flex justify-evenly flex-col gap-5">
+              <DialogTitle className="font-bold text-2xl">
+              {selectedProduct ? selectedProduct.name : "Product Name"}
+            </DialogTitle>
+                <Description className="font-bold">
+                  Descripcion del producto:
+                </Description>
+                <Description className="font-semibold">
+                  {selectedProduct.description}
+                </Description>
+                <div className="group absolute top-5 right-10 bg-white rounded-md flex items-center">
+                  <button onClick={() => setIsOpen(false)}>
+                    <XMarkIcon className="group-hover:text-red-500 w-12 h-12 text-black" />
+                  </button>
+                </div>
+                <div className="flex items-center gap-5">
+                  <p className="font-bold text-lg">Ordenar ahora:</p>
+                  <Image
+                    src={"/images/marketplace/WhatsAppButtonGreenMedium.svg"}
+                    alt="whatsapp logo"
+                    width={200}
+                    height={10}
+                    className="hover:cursor-pointer hover:scale-105 transition-all"
+                    onClick={() =>
+                      window.open(
+                        `https://wa.me/18293671803/?text=${buildWhatsAppMessage(
+                          selectedProduct.name
+                        )}`,
+                        "_blank"
+                      )
+                    }
+                  />
+                </div>
+              </div>
             </div>
-            <div className="flex items-center gap-5">
-            <p className="font-bold text-lg">Ordenar ahora:</p>
-            <Image 
-              src={"/images/marketplace/WhatsAppButtonGreenMedium.svg"} 
-              alt="whatsapp logo" 
-              width={200} 
-              height={10}
-              className="hover:cursor-pointer hover:scale-105 transition-all"
-              onClick={() => window.open(`https://wa.me/18293671803/?text=${buildWhatsAppMessage(selectedProduct.name)}`, "_blank")}
-            />
-            </div>
-
           </DialogPanel>
         </div>
       </Dialog>

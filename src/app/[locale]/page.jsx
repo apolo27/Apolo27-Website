@@ -88,7 +88,7 @@ export default function Home() {
         {/* simulation large screen */}
         <Link
           href="/games/Herc-Simulation"
-          className="z-10 hidden scale-90 lg:w-[555px] lg:h-[220px] 1xl:scale-100 3xl:scale-110 lg:block absolute left-0 1xl:left-20 3xl:left-60 hover:cursor-pointer filter hover:brightness-90 transition-all"
+          className="z-10 hidden scale-90 lg:w-[555px] lg:h-[220px] 1xl:scale-100 3xl:scale-110 lg:block absolute left-0 1xl:left-20 3xl:left-60 4xl:left-96 hover:cursor-pointer filter hover:brightness-90 transition-all"
           style={{
             backgroundImage: "url('/images/landing/simulation.webp')",
             backgroundRepeat: "no-repeat",
@@ -98,7 +98,7 @@ export default function Home() {
         {/* stem large screen*/}
         <Link
           href="/stem-with-us#form"
-          className="hidden lg:flex transition-all border border-1 border-[#424B5B] bg-black/[0.8] w-full  lg:w-[425px] 1xl:w-[520px] 3xl:scale-105 py-2 h-fit md:absolute md:left-1/2 md:transform md:-translate-x-1/2 rounded-full items-center justify-evenly hover:cursor-pointer hover:scale-105 "
+          className="hidden lg:flex justify-center gap-5 4xl:gap-20 transition-all border border-1 border-[#424B5B] bg-black/[0.8] w-full  lg:w-[425px] 1xl:w-[520px] 4xl:w-[1000px] 3xl:scale-105 py-2 h-fit md:absolute md:left-1/2 md:transform md:-translate-x-1/2 rounded-full items-center hover:cursor-pointer hover:scale-105 "
         >
           <Image
             src={"/images/icons/formIcon.webp"}
@@ -212,7 +212,7 @@ export default function Home() {
         {/* sponsor us large screen */}
         <Link
           href="/sponsors"
-          className="scale-90 lg:w-[555px] lg:h-[240px] 1xl:scale-100 3xl:scale-110 hidden lg:block absolute right-0 1xl:right-20 3xl:right-60 text-center"
+          className="scale-90 lg:w-[555px] lg:h-[240px] 1xl:scale-100 3xl:scale-110 hidden lg:block absolute right-0 1xl:right-20 3xl:right-60 4xl:right-96 text-center"
           style={{
             overflow: "hidden",
             backgroundImage: "url('/images/landing/sponsorus.webp')",
