@@ -333,6 +333,7 @@ export default function Home() {
                 className="w-full "
               />
             </Link>
+
             <Link
               href="/remote-controlled-team"
               className={`${teamClassName} drop-shadow-sm h-fit space-y-2 rounded-[50px] w-2/5 2xl:w-2/6 overflow-hidden relative `}
@@ -340,7 +341,7 @@ export default function Home() {
                 backgroundImage: "url('/images/about-us/blue-galaxy.webp')",
               }}
             >
-              <p className="font-extrabold text-4xl text-white text-right pt-10 w-3/4 pr-5 ml-32 2xl:w-3/5 2xl:ml-60 max-h-[184px]">
+              <p className="font-extrabold text-4xl text-white text-right pt-10  pr-5 max-h-[184px]">
               {t("remoteControlledConstellation")}
               </p>
                 <hr></hr>
@@ -354,26 +355,6 @@ export default function Home() {
                 className="w-full "
               />
             </Link>
-            {/* <Link
-              href="/remote-controlled-team"
-              className={`${teamClassName} drop-shadow-sm h-[600px] rounded-[50px] w-2/5 2xl:w-2/6 overflow-hidden relative`}
-              style={{
-                backgroundImage: "url('/images/about-us/blue-galaxy.webp')",
-              }}
-            >
-              <p className="font-bold text-5xl text-white text-right pt-10 w-3/4 pr-5 ml-32 3xl:w-3/5 3xl:ml-60">
-                {t("remoteControlledConstellation")}
-              </p>
-              <Image
-                src="/images/timeline/2025-rc.webp"
-                alt="Team Lead HP"
-                width="0"
-                height="0"
-                sizes="100vw"
-                style={{objectFit: "contain"}}
-                className="w-full"
-              />
-            </Link> */}
           </div>
 
           {/* team divisions mobile */}

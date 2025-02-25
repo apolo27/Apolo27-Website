@@ -17,6 +17,8 @@ import { XMarkIcon } from "@heroicons/react/20/solid";
 
 import ItemCarouselNavigateable from "./components/ItemCarouselNavigateable";
 
+import { Link } from "../../../../i18n/routing";
+
 export default function Marketplace() {
   const t = useTranslations("Marketplace");
   const [searchBar, setSearchBar] = useState("");
@@ -162,7 +164,7 @@ export default function Marketplace() {
                   onClick={() => selectProduct(item)}
                 >
                   <ItemCarousel slides={item.images} />
-                  <p className="text-black font-bold py-3 bg-white rounded-xl">
+                  <p className="text-black font-bold text-sm md:text-base lg:text-lg py-3 bg-white rounded-xl">
                     {item.name}
                   </p>
                 </div>
@@ -178,9 +180,8 @@ export default function Marketplace() {
       >
         <DialogBackdrop className="fixed inset-0 bg-black/80" />
         <div className="fixed inset-0 flex w-screen max-w-[1125px] mx-auto items-center justify-center p-4">
-          <DialogPanel className="max-w-2xl 2xl:max-w-none space-y-4 w-screen h-screen mt-20 p-12">
+          <DialogPanel className="w-screen 2xl:w-full h-screen mt-20 p-12">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
-            
               <div className="max-w-[500px] mx-auto">
                 <ItemCarouselNavigateable
                   slides={selectedProduct ? selectedProduct.images : []}
@@ -188,15 +189,18 @@ export default function Marketplace() {
                 />
               </div>
               <div className="flex justify-evenly flex-col gap-5">
-              <DialogTitle className="font-bold text-2xl">
-              {selectedProduct ? selectedProduct.name : "Product Name"}
-            </DialogTitle>
-                <Description className="font-bold">
-                  Descripcion del producto:
-                </Description>
-                <Description className="font-semibold">
-                  {selectedProduct.description}
-                </Description>
+                <DialogTitle className="font-bold text-2xl xl:text-4xl">
+                  {selectedProduct ? selectedProduct.name : "Product Name"}
+                </DialogTitle>
+                <div>
+                  <Description className="font-bold text-2xl">
+                    Descripcion del producto:
+                    <hr className="my-1"></hr>
+                  </Description>
+                  <Description className="font-semibold">
+                    {selectedProduct.description}
+                  </Description>
+                </div>
                 <div className="group absolute top-5 right-10 bg-white rounded-md flex items-center">
                   <button onClick={() => setIsOpen(false)}>
                     <XMarkIcon className="group-hover:text-red-500 w-12 h-12 text-black" />
@@ -220,6 +224,7 @@ export default function Marketplace() {
                     }
                   />
                 </div>
+                <Link href=" ">Adquirir de otra manera</Link>
               </div>
             </div>
           </DialogPanel>
