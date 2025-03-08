@@ -60,7 +60,7 @@ export default function Home() {
         </p>
         <Link
           href="/stem-with-us"
-          className="flex lg:hidden transition-all border border-1 border-[#424B5B] bg-black/[0.8] w-full sm:w-5/6 md:w-4/6 pl-2 py-2 h-fit  rounded-2xl  items-center justify-evenly hover:cursor-pointer hover:scale-105 "
+          className="flex lg:hidden transition-all border border-1 border-[#424B5B] bg-black/[0.8] w-full sm:w-5/6 md:w-4/6 pl-2 py-2 h-fit  rounded-2xl  items-center justify-evenly hover:cursor-pointer group z-10"
         >
           <Image
             src={"/images/icons/formIcon.webp"}
@@ -71,7 +71,7 @@ export default function Home() {
             className="hidden sm:block w-9 h-9 md:w-12 md:h-12"
           />
           <div className="text-left">
-            <p className="font-semibold text-white md:text-lg">
+            <p className="font-semibold text-white md:text-lg group-hover:text-blue-200">
               {t("stemVisitTitle")}
             </p>
             <p className="text-gray-100 text-xs md:text-normal">

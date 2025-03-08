@@ -41,8 +41,8 @@ export default function Marketplace() {
         'Camiseta blanca con dibujo técnico de rover HP (Human Powered) en la espalda con el titulo Apolo 27 debajo. En el lado izquierdo del pecho lleva la frase "Take off to the sky " con un cohete rodeandole.',
       category: CategoryEnum.T_SHIRT,
       images: [
-        "/images/marketplace/white-tshirt-front.jpeg",
-        "/images/marketplace/white-tshirt-back.jpeg",
+        "/images/marketplace/white-tshirt-front.webp",
+        "/images/marketplace/white-tshirt-back.webp",
       ],
     },
     {
@@ -52,8 +52,8 @@ export default function Marketplace() {
         'Camiseta negra con dibujo técnico de rover HP (Human Powered) en la espalda con el titulo Apolo 27 debajo. En el lado izquierdo del pecho lleva la frase "Take off to the sky " con un cohete rodeandole.',
       category: CategoryEnum.T_SHIRT,
       images: [
-        "/images/marketplace/black-tshirt-front.jpeg",
-        "/images/marketplace/black-tshirt-back.jpeg",
+        "/images/marketplace/black-tshirt-front.webp",
+        "/images/marketplace/black-tshirt-back.webp",
       ],
     },
 
@@ -64,14 +64,14 @@ export default function Marketplace() {
       description:
         "Gorra blanca con el titulo de Apolo 27 con fondo de crucetas.",
       category: CategoryEnum.HATS,
-      images: ["/images/marketplace/white-cap.jpeg"],
+      images: ["/images/marketplace/white-cap.webp"],
     },
     {
       id: 8,
       name: "Fly Me To The Moon Cap",
       description: 'Gorra negra con media Luna y la frase "Fly me to the ".',
       category: CategoryEnum.HATS,
-      images: ["/images/marketplace/black-cap.jpeg"],
+      images: ["/images/marketplace/black-cap.webp"],
     },
   ];
 
@@ -93,7 +93,7 @@ export default function Marketplace() {
       <div
         className="z-10 w-full h-[400px] p-8 lg:p-0 text-center flex flex-col justify-center border-b border-blue-100"
         style={{
-          backgroundImage: `url('/images/marketplace/banner2.webp')`,
+          backgroundImage: `url('/images/marketplace/banner.webp')`,
           backgroundPosition: "center center", // Adjust position of image
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
@@ -159,12 +159,12 @@ export default function Marketplace() {
               .map((item, i) => (
                 <div
                   key={i}
-                  className="space-y-2 items-center p-1 bg-black rounded-xl
+                  className="space-y-2 items-center p-1  rounded-xl
                   hover:cursor-pointer z-10 text-center"
                   onClick={() => selectProduct(item)}
                 >
                   <ItemCarousel slides={item.images} />
-                  <p className="text-black font-bold text-sm md:text-base lg:text-lg py-3 bg-white rounded-xl">
+                  <p className="text-white font-semibold text-sm md:text-base lg:text-lg">
                     {item.name}
                   </p>
                 </div>
