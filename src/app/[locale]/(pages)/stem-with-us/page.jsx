@@ -63,7 +63,7 @@ export default function StemWithUs() {
           width="0"
           height="0"
           sizes="100vw"
-          className="w-48 h-48 sm:w-60 sm:h-60 md:w-72 md:h-72 lg:w-96 lg:h-96 rounded-full shadow-lg"
+          className="hidden md:block w-48 h-48 sm:w-60 sm:h-60 md:w-72 md:h-72 lg:w-96 lg:h-96 rounded-full shadow-lg"
         />
 
         <div className="text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-poppins">

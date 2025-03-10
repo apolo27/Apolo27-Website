@@ -98,12 +98,15 @@ export default function RemoteControlledTeam() {
     >
       <div className="w-full flex items-center justify-center mb-10">
         <div className="relative w-fit">
-          <p className="text-6xl 2xl:text-7xl font-bold bg-gradient-to-br from-blue-600 to-cyan-400 text-transparent bg-clip-text pb-10 mb-5">
+          <p className="text-3xl md:text-6xl 2xl:text-7xl font-bold bg-gradient-to-br from-blue-600 to-cyan-400 text-transparent bg-clip-text ">
             {t("RemoteControlledTeam.title")}
           </p>
-          <Link href="/human-powered-team" className="absolute bottom-0 left-0 flex items-center gap-4 text-white font-medium py-2 px-3 rounded-full bg-gradient-to-br from-red-800 to-violet-700 transition-all ease-in-out hover:scale-105">
+          <span className="w-full flex justify-center md:justify-start items-center mt-2">
+
+          <Link href="/human-powered-team" className="w-fit flex items-center gap-4 text-white font-medium py-2 px-3 rounded-full bg-gradient-to-br from-red-800 to-violet-700 transition-all ease-in-out hover:scale-105">
             <ArrowLeftIcon className="w-5 h-5" /> {t("RemoteControlledTeam.hpDivision")}
           </Link>
+          </span>
         </div>
       </div>{" "}
 

@@ -30,27 +30,34 @@ export default function SocialMedia() {
   return (
     <div className="bg-apolo-empty-background lg:px-40 py-10 2xl:px-[375px]">
       <section id="hp">
-        <div className="text-white grid lg:grid-cols-3 lg:grid-rows-1 items-center">
-          <p className="font-black text-[40px]">¿Ya nos sigues en nuestras</p>
+        <div className="text-white grid text-center grid-cols-1 lg:grid-cols-3 lg:grid-rows-1 items-center">
+          <p className="font-black text-xl lg:text-[40px]">
+            ¿Ya nos sigues en nuestras
+          </p>
+          <p className="lg:hidden font-black text-xl lg:text-[40px]">
+            redes sociales?
+          </p>
           <Image
             src={"/images/social-media/phone.png"}
             alt="phone"
             width={400}
             height={200}
-            className="z-10"
+            className="z-10 justify-self-center"
           />
           <div className=" ">
-            <p className="font-black text-[40px]">redes sociales?</p>
-            <div className="flex text-center gap-5 font-black w-full">
+            <p className="hidden lg:block font-black text-[40px]">
+              redes sociales?
+            </p>
+            <div className="flex justify-center items-center text-center gap-5 font-black md:w-full">
               <Link
-                className="hover:z-10 w-full max-w-[286px] px-3 py-1 border-2 border-white rounded-xl
+                className="hover:z-10 w-1/3 max-w-[286px] px-3 py-1 border-2 border-white rounded-xl
                             hover:bg-gradient-to-br from-red-700 to-violet-400"
                 href={"/human-powered-team"}
               >
                 HP Division
               </Link>
               <Link
-                className="hover:z-10 w-full max-w-[286px] px-3 py-1 border-2 border-white rounded-xl
+                className="hover:z-10 w-1/3 max-w-[286px] px-3 py-1 border-2 border-white rounded-xl
                             hover:bg-gradient-to-br from-blue-600 to-cyan-400"
                 href={"/remote-controlled-eam"}
               >
@@ -60,10 +67,10 @@ export default function SocialMedia() {
           </div>
         </div>
         <div className="max-w-[1200px] relative my-10">
-          <p className="text-red-500 font-extrabold text-[50px] absolute -top-10 left-1/2 -translate-x-1/2 division-shadow">
+          <p className="text-red-500 w-full text-center font-extrabold text-4xl lg:text-[50px] absolute -top-5 left-1/2 -translate-x-1/2 division-shadow">
             HP DIVISION
           </p>
-          <p className="p-10 border-2 border-[#F12222] text-[25px] leading-loose text-white text-center rounded-t-lg rounded-b-3xl">
+          <p className="max-w-[350px] mx-auto md:max-w-full m-2 lg:m-0 p-5 lg:p-10 border-2 border-[#F12222] text-md lg:text-[25px] leading-loose text-white text-center rounded-t-lg rounded-b-3xl">
             La división HP de Apolo27 se enfoca en mecánica, diseño y requisitos
             de Rovers. Participamos en eventos STEM, organizamos visitas
             escolares y sorteos. ¡Descubre nuestro trabajo detrás de cámaras y
@@ -72,14 +79,14 @@ export default function SocialMedia() {
           </p>
         </div>
 
-        <p className="font-black text-[35px] text-center text-white">
+        <p className="font-black text-2xl lg:text-[35px] text-center text-white mb-3">
           Tiktoks, posts, videos y más
         </p>
 
         <div className="flex items-center flex-col lg:flex-row-reverse gap-4 justify-center w-full lg:grid grid-cols-1 grid-rows-2 lg:grid-cols-2 lg:grid-rows-1 h-fit">
           <div className="z-10 h-fit space-y-2 lg:justify-self-center rounded-2xl p-5 transition-all duration-75 [background:linear-gradient(45deg,#080b11,theme(colors.slate.800)_50%,#172033)_padding-box,conic-gradient(from_var(--border-angle),theme(colors.slate.600/.48)_80%,_theme(colors.indigo.500)_86%,_theme(colors.indigo.300)_90%,_theme(colors.indigo.500)_94%,_theme(colors.slate.600/.48))_border-box] md:hover:[background:linear-gradient(45deg,#080b11,theme(colors.slate.800)_50%,#172033)_padding-box,conic-gradient(from_var(--border-angle),theme(colors.slate.600/.48)_80%,_theme(colors.indigo.500)_86%,_theme(colors.indigo.300)_90%,_theme(colors.indigo.500)_94%,_theme(colors.slate.600/.48))_border-box] border-2 border-transparent animate-border">
-            <p className="font-bold text-3xl text-white">Topics</p>
-            <ul className="space-y-2 text-xl lg:text-2xl font-semibold">
+            <p className="font-bold text-2xl md:text-3xl text-white">Topics</p>
+            <ul className="space-y-2 text-xl lg:text-2xl font-medium">
               <li>• {t("hptopics.mechanics")}</li>
               <li>• {t("hptopics.design")}</li>
               <li>• {t("hptopics.roverRequirements")}</li>
@@ -90,34 +97,38 @@ export default function SocialMedia() {
               <li>• {t("hptopics.giveaways")}</li>
             </ul>
           </div>
-          <div className="flex overflow-x-scroll lg:grid grid-cols-1 grid-rows-4 sm:grid-cols-2 sm:grid-rows-2 gap-4 h-fit">
+          <div className="grid grid-cols-2 grid-rows-2 gap-4">
             <Image
               alt="social media post"
-              width={200}
-              height={200}
+              width="0"
+              height="0"
               src={"/images/social-media/hp/keramsi.jpg"}
-              className="slide z-10"
+              sizes="100vw"
+              className="w-full h-full z-10"
             />
             <Image
               alt="social media post"
-              width={200}
-              height={200}
+              width="0"
+              height="0"
               src={"/images/social-media/hp/portamasas.jpg"}
-              className="slide z-10"
+              sizes="100vw"
+              className="w-full h-full z-10"
             />
             <Image
               alt="social media post"
-              width={200}
-              height={200}
+              width="0"
+              height="0"
               src={"/images/social-media/hp/stemfest.jpg"}
-              className="slide z-10"
+              sizes="100vw"
+              className="w-full h-full z-10"
             />
             <Image
               alt="social media post"
-              width={200}
-              height={200}
+              width="0"
+              height="0"
               src={"/images/social-media/hp/vehiclepart.jpg"}
-              className="slide z-10"
+              sizes="100vw"
+              className="w-full h-full z-10"
             />
           </div>
         </div>
@@ -156,7 +167,7 @@ export default function SocialMedia() {
           <div className="lg:justify-self-center grid grid-cols-1  grid-rows-2 gap-5 mx-8">
             {recentVideos.slice(0, 2).map((video, i) => (
               <div
-                className="relative  md:flex items-center gap-4 md:p-4  rounded-2xl hover:cursor-pointer hover:scale-105 transition-all duration-75 [background:linear-gradient(45deg,#080b11,theme(colors.slate.800)_50%,#172033)_padding-box,conic-gradient(from_var(--border-angle),theme(colors.slate.600/.48)_80%,_theme(colors.indigo.500)_86%,_theme(colors.indigo.300)_90%,_theme(colors.indigo.500)_94%,_theme(colors.slate.600/.48))_border-box] md:hover:[background:linear-gradient(45deg,#080b11,theme(colors.slate.800)_50%,#172033)_padding-box,conic-gradient(from_var(--border-angle),theme(colors.slate.600/.48)_80%,_theme(colors.indigo.500)_86%,_theme(colors.indigo.300)_90%,_theme(colors.indigo.500)_94%,_theme(colors.slate.600/.48))_border-box] border-2 border-transparent animate-border"
+                className="relative max-w-[344px] md:max-w-full  md:flex items-center gap-4 md:p-4  rounded-2xl hover:cursor-pointer hover:scale-105 transition-all duration-75 [background:linear-gradient(45deg,#080b11,theme(colors.slate.800)_50%,#172033)_padding-box,conic-gradient(from_var(--border-angle),theme(colors.slate.600/.48)_80%,_theme(colors.indigo.500)_86%,_theme(colors.indigo.300)_90%,_theme(colors.indigo.500)_94%,_theme(colors.slate.600/.48))_border-box] md:hover:[background:linear-gradient(45deg,#080b11,theme(colors.slate.800)_50%,#172033)_padding-box,conic-gradient(from_var(--border-angle),theme(colors.slate.600/.48)_80%,_theme(colors.indigo.500)_86%,_theme(colors.indigo.300)_90%,_theme(colors.indigo.500)_94%,_theme(colors.slate.600/.48))_border-box] border-2 border-transparent animate-border"
                 key={i}
               >
                 <p className="md:hidden absolute -top-2 -left-2 text-black bg-white font-bold rounded-full px-3 py-1 z-10 animate-pulse">
@@ -171,7 +182,7 @@ export default function SocialMedia() {
                   style={{ objectFit: "cover" }}
                   className="w-full h-32 md:w-[250px] md:h-[75] rounded-t-2xl"
                 />
-                <div className="bg-slate-950 rounded-b-xl md:rounded-2xl h-full flex items-center">
+                <div className="bg-slate-950 rounded-b-xl md:rounded-2xl  flex items-center">
                   <p className="font-semibold pb-5 pt-5 md:pt-0 md:pb-0 px-5">
                     {video.title}
                   </p>
@@ -245,24 +256,25 @@ export default function SocialMedia() {
         </div>
       </section>
 
-      <hr className="my-20 mx-5" />
+      <hr className="my-10 mx-5" />
 
       <section id="rc" className="text-white space-y-3 my-10">
         <div className="max-w-[1200px] relative my-10">
-          <p className="text-cyan-500 font-extrabold text-[50px] absolute -top-10 left-1/2 -translate-x-1/2 division-shadow">
+          <p className="text-cyan-500 w-full text-center font-extrabold text-4xl lg:text-[50px] absolute -top-5  left-1/2 -translate-x-1/2 division-shadow">
             RC DIVISION
           </p>
-          <p className="p-10 border-2 border-cyan-600 text-[25px] leading-loose text-white text-center rounded-t-lg rounded-b-3xl">
-            La división RC de Apolo27 se enfoca en mecánica, electrónica y programación
-            de Rovers. Participamos en eventos STEM, organizamos visitas
-            escolares y sorteos. ¡Descubre nuestro trabajo detrás de cámaras y
-            suscríbete a nuestro canal de YouTube para ver nuestros diseños
-            innovadores y logros! 🚀
+          <p className="max-w-[350px] mx-auto md:max-w-full m-2 lg:m-0 p-5 lg:p-10 border-2 border-cyan-600 text-md lg:text-[25px] leading-loose text-white text-center rounded-t-lg rounded-b-3xl">
+            La división RC de Apolo27 se enfoca en mecánica, electrónica y
+            programación de Rovers. Participamos en eventos STEM, organizamos
+            visitas escolares y sorteos. ¡Descubre nuestro trabajo detrás de
+            cámaras y suscríbete a nuestro canal de YouTube para ver nuestros
+            diseños innovadores y logros! 🚀
           </p>
         </div>
+
         <div className="space-y-5">
           <div className="flex items-center flex-col-reverse lg:flex-row gap-4 justify-center w-full lg:grid grid-cols-1 grid-rows-2 lg:grid-cols-2 lg:grid-rows-1 h-fit">
-          <div className="z-10 w-fit h-fit space-y-2 lg:justify-self-center rounded-2xl p-5 transition-all duration-75 max-w-[350px] [background:linear-gradient(45deg,#080b11,theme(colors.slate.800)_50%,#172033)_padding-box,conic-gradient(from_var(--border-angle),theme(colors.slate.600/.48)_80%,_theme(colors.indigo.500)_86%,_theme(colors.indigo.300)_90%,_theme(colors.indigo.500)_94%,_theme(colors.slate.600/.48))_border-box] md:hover:[background:linear-gradient(45deg,#080b11,theme(colors.slate.800)_50%,#172033)_padding-box,conic-gradient(from_var(--border-angle),theme(colors.slate.600/.48)_80%,_theme(colors.indigo.500)_86%,_theme(colors.indigo.300)_90%,_theme(colors.indigo.500)_94%,_theme(colors.slate.600/.48))_border-box] border-2 border-transparent animate-border">
+            <div className="z-10 w-fit h-fit space-y-2 lg:justify-self-center rounded-2xl p-5 transition-all duration-75 max-w-[350px] [background:linear-gradient(45deg,#080b11,theme(colors.slate.800)_50%,#172033)_padding-box,conic-gradient(from_var(--border-angle),theme(colors.slate.600/.48)_80%,_theme(colors.indigo.500)_86%,_theme(colors.indigo.300)_90%,_theme(colors.indigo.500)_94%,_theme(colors.slate.600/.48))_border-box] md:hover:[background:linear-gradient(45deg,#080b11,theme(colors.slate.800)_50%,#172033)_padding-box,conic-gradient(from_var(--border-angle),theme(colors.slate.600/.48)_80%,_theme(colors.indigo.500)_86%,_theme(colors.indigo.300)_90%,_theme(colors.indigo.500)_94%,_theme(colors.slate.600/.48))_border-box] border-2 border-transparent animate-border">
               <p className="font-bold text-3xl">Topics</p>
               <ul className="space-y-2 text-xl lg:text-2xl font-medium">
                 <li>• {t("rctopics.electronics")}</li>
@@ -304,75 +316,80 @@ export default function SocialMedia() {
                 className="slide z-10"
               />
             </div>
-         
+          </div>
+
+          <div className="flex flex-col md:flex-row gap-4 justify-center w-full">
+            <div className="flex md:hidden flex-col justify-between w-full  text-center md:text-left z-10">
+              <p className="text-[#67E1A8] text-2xl md:text-4xl 2xl:text-5xl font-semibold">
+                {t("podcast.title")}
+              </p>
+              <div className="text-4xl md:text-4xl 3xl:text-6xl font-extrabold">
+                <Link
+                  href="https://open.spotify.com/show/2bH4oR7PzY41YXcMOFCl2j?si=f8f8b7f8c9aa410b"
+                  className="hover:cursor-pointer bg-clip-text text-transparent bg-gradient-to-t from-[#379AE1] to-[#69BF77] text-3xl md:text-5xl 2xl:text-6xl "
+                >
+                  Caribe STEM
+                </Link>
+              </div>
+            </div>
+            <div className="w-full  flex justify-center z-10">
+              <Image
+                src="/images/social-media/caribestem.webp"
+                alt="Instagram"
+                width="0"
+                height="0"
+                sizes="100vw"
+                className="w-[300px] h-[300px] 2xl:w-[400px] 2xl:h-[400px] "
+              />
+            </div>
+            <div className="flex flex-col justify-between w-full  text-center md:text-left z-10">
+              <p className="hidden md:block text-[#67E1A8] text-2xl md:text-4xl 2xl:text-5xl font-semibold">
+                {t("podcast.title")}
+              </p>
+              <div className="hidden md:block text-4xl md:text-4xl 3xl:text-6xl font-extrabold">
+                <Link
+                  href={
+                    "https://open.spotify.com/show/2bH4oR7PzY41YXcMOFCl2j?si=f8f8b7f8c9aa410b"
+                  }
+                  className="group bg-clip-text text-transparent bg-gradient-to-t from-[#379AE1] to-[#69BF77] text-3xl md:text-5xl 2xl:text-6xl transition-all"
+                >
+                  Caribe STEM{" "}
+                  <LinkIcon className="group-hover:h-8 group-hover:w-8 h-5 w-5 inline-block text-white transition-all" />
+                </Link>
+              </div>
+              <p className="bg-gray-800 border-cyan-600 border-2 rounded-3xl p-3 mx-5 md:bg-transparent md:border-none md:p-0 md:mx-0 text-white font-semibold 2xl:text-xl">
+                {t("podcast.description")}
+              </p>
+            </div>
           </div>
 
           <div className="space-y-5">
-            <div className="flex flex-col md:flex-row gap-4 justify-center w-full">
-              <div className="flex md:hidden flex-col justify-between w-full  text-center md:text-left z-10">
-                <p className="text-[#67E1A8] text-2xl md:text-4xl 2xl:text-5xl font-semibold">
-                  {t("podcast.title")}
-                </p>
-                <div className="text-4xl md:text-4xl 3xl:text-6xl font-extrabold">
-                  <Link href="https://open.spotify.com/show/2bH4oR7PzY41YXcMOFCl2j?si=f8f8b7f8c9aa410b" className="hover:cursor-pointer bg-clip-text text-transparent bg-gradient-to-t from-[#379AE1] to-[#69BF77] text-3xl md:text-5xl 2xl:text-6xl ">
-                    Caribe STEM
-                  </Link>
-                </div>
-              </div>
-              <div className="w-full  flex justify-center z-10">
-                <Image
-                  src="/images/social-media/caribestem.webp"
-                  alt="Instagram"
-                  width="0"
-                  height="0"
-                  sizes="100vw"
-                  className="w-[300px] h-[300px] 2xl:w-[400px] 2xl:h-[400px] "
-                />
-              </div>
-              <div className="flex flex-col justify-between w-full  text-center md:text-left z-10">
-                <p className="hidden md:block text-[#67E1A8] text-2xl md:text-4xl 2xl:text-5xl font-semibold">
-                  {t("podcast.title")}
-                </p>
-                <div className="hidden md:block text-4xl md:text-4xl 3xl:text-6xl font-extrabold">
-                  <Link href={"https://open.spotify.com/show/2bH4oR7PzY41YXcMOFCl2j?si=f8f8b7f8c9aa410b"} className="group bg-clip-text text-transparent bg-gradient-to-t from-[#379AE1] to-[#69BF77] text-3xl md:text-5xl 2xl:text-6xl transition-all">
-                    Caribe STEM <LinkIcon className="group-hover:h-8 group-hover:w-8 h-5 w-5 inline-block text-white transition-all" />
-                  </Link>
-                </div>
-                <p className="bg-gray-800 border-cyan-600 border-2 rounded-3xl p-3 mx-5 md:bg-transparent md:border-none md:p-0 md:mx-0 text-white font-semibold 2xl:text-xl">
-                  {t("podcast.description")}
-                </p>
-              </div>
-            </div>
-
-            <div className="space-y-5">
-              <p className="text-center font-bold text-xl rounded-full bg-white text-black mx-10 px-5">
-                Enjoy some chapters
-              </p>
-              <div className="grid justify-items-center grid-cols-1 grid-rows-2 md:grid-cols-2 gap-4 lg:h-40">
-                <iframe
-                  className="rounded-xl z-10"
-                  src="https://open.spotify.com/embed/episode/5ntjIKS1FuMbEKDZ9VdxBh?utm_source=generator"
-                  width="80%"
-                  height="152"
-                  frameBorder="0"
-                  allowFullScreen=""
-                  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                  loading="lazy"
-                ></iframe>
-                <iframe
-                  className="rounded-xl z-10"
-                  src="https://open.spotify.com/embed/episode/3ZLKpuAP8JUbZfPQxH9uaZ?utm_source=generator"
-                  width="80%"
-                  height="152"
-                  frameBorder="0"
-                  allowFullScreen=""
-                  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                  loading="lazy"
-                ></iframe>
-              </div>
+            <p className="text-center font-bold text-xl rounded-full bg-white text-black mx-10 px-5">
+              Enjoy some chapters
+            </p>
+            <div className="grid justify-items-center grid-cols-1 grid-rows-2 md:grid-cols-2 gap-4 lg:h-40">
+              <iframe
+                className="rounded-xl z-10"
+                src="https://open.spotify.com/embed/episode/5ntjIKS1FuMbEKDZ9VdxBh?utm_source=generator"
+                width="80%"
+                height="152"
+                frameBorder="0"
+                allowFullScreen=""
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy"
+              ></iframe>
+              <iframe
+                className="rounded-xl z-10"
+                src="https://open.spotify.com/embed/episode/3ZLKpuAP8JUbZfPQxH9uaZ?utm_source=generator"
+                width="80%"
+                height="152"
+                frameBorder="0"
+                allowFullScreen=""
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy"
+              ></iframe>
             </div>
           </div>
-
           <div className="mx-10 lg:mx-0 lg:w-full bg-black border-white border-2  grid grid-flow-col justify-items-center text-white rounded-xl">
             <a
               href="https://www.tiktok.com/@apolo27_rc"

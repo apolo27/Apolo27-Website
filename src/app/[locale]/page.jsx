@@ -405,11 +405,11 @@ export default function Home() {
         id="timeline"
         className=" bg-[#101321] justify-between w-full space-y-10 pt-20 px-5 lg:px-40 2xl:px-60 pb-40"
       >
-        <p className="text-center outlined-title text-[#101321] text-7xl font-extrabold w-full ">
+        <p className="text-center outlined-title text-[#101321] text-3xl md:text-7xl font-extrabold w-full ">
           {t("missionTitle")}
         </p>
 
-        <p className="text-center outlined-subtitle text-[#101321] text-5xl font-extrabold w-full ">
+        <p className="text-center outlined-subtitle text-[#101321] text-2xl md:text-5xl font-extrabold w-full ">
           {t("timelineTitle")}
         </p>
 
@@ -543,7 +543,7 @@ export default function Home() {
                       {t(yearData.teams[0].title)}
                     </p>
                   </div>
-                  <div className="py-2 space-y-5">
+                  <div className="py-2 px-2 space-y-5">
                     <p className="text-md md:text-lg text-center md:text-left font-semibold xs:px-8 md:px-4">
                       {t(yearData.teams[0].description)}
                     </p>
