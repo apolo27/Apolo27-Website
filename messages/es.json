@@ -282,29 +282,14 @@
       "title": "Apolo 27",
       "subtitle": "Un catálogo de ropa del espacio exterior"
     },
+    "filter": "Filtrar por:",
     "comingSoon": "Próximamente",
-    "names": {
-      "all": "Todos",
-      "tShirt": {
-        "1": "Camiseta blanca básica",
-        "2": "Camiseta con estampado gráfico",
-        "3": "Camiseta con logo vintage"
-      },
-      "hoodie": {
-        "1": "Sudadera cómoda",
-        "2": "Sudadera con cremallera",
-        "3": "Sudadera pesada"
-      },
-      "hats": {
-        "1": "Gorra Snapback",
-        "2": "Gorro de lana",
-        "3": "Sombrero tipo bucket"
-      },
-      "accessories": {
-        "1": "Cinturón de cuero",
-        "2": "Gafas de sol",
-        "3": "Reloj"
-      }
+    "categories": {
+      "all": "All",
+      "tShirt": "camisetas",
+      "hoodie": "hoodies",
+      "hats": "gorras",
+      "accessories": "accesorios"
     },
     "searchPlaceholder": "Busca tu próximo estilo",
     "dialog": {
@@ -314,12 +299,20 @@
     }
   },
   "SocialMedia": {
-    "title": "Redes Sociales",
+    "title1": "¿Ya nos sigues en nuestras",
+    "title2": "redes sociales?",
+    "hpdivision": "División HP",
+    "hpdivisionDescription": "La división HP de Apolo27 se enfoca en mecánica, diseño y requisitos de Rovers. Participamos en eventos STEM, organizamos visitas escolares y sorteos. ¡Descubre nuestro trabajo detrás de cámaras y suscríbete a nuestro canal de YouTube para ver nuestros diseños innovadores y logros! 🚀",
+
+    "rcdivision": "División RC",
+    "rcdivisionDescription": "La división RC de Apolo27 se enfoca en mecánica, electrónica y programación de Rovers. Participamos en eventos STEM, organizamos visitas escolares y sorteos. ¡Descubre nuestro trabajo detrás de cámaras y suscríbete a nuestro canal de YouTube para ver nuestros diseños innovadores y logros! 🚀",
+
     "subtitle": "El equipo de redes sociales de Apolo 27 es el encargado de gestionar nuestra comunidad y poner al día a nuestro país sobre todos nuestros acontecimientos y progresos.",
     "podcast": {
       "title": "Podcast",
       "name": "Caribe STEM",
-      "description": "Caribe STEM es un podcast creado para compartir y difundir STEM (ciencia, tecnología, ingeniería y matemáticas) en la República Dominicana y en toda América Latina. Creado por Apolo 27, el equipo universitario que representa al INTEC en la competencia NASA HERC."
+      "description": "Caribe STEM es un podcast creado para compartir y difundir STEM (ciencia, tecnología, ingeniería y matemáticas) en la República Dominicana y en toda América Latina. Creado por Apolo 27, el equipo universitario que representa al INTEC en la competencia NASA HERC.",
+      "enjoy": "¡Disfruta nustros últimos episodios!"
     },
     "tabs": {
       "tiktok": "Tiktok",

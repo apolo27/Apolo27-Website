@@ -31,11 +31,9 @@ export default function SocialMedia() {
     <div className="bg-apolo-empty-background lg:px-40 py-10 2xl:px-[375px]">
       <section id="hp">
         <div className="text-white grid text-center grid-cols-1 lg:grid-cols-3 lg:grid-rows-1 items-center">
-          <p className="font-black text-xl lg:text-[40px]">
-            ¿Ya nos sigues en nuestras
-          </p>
+          <p className="font-black text-xl lg:text-[35px]">{t("title1")}</p>
           <p className="lg:hidden font-black text-xl lg:text-[40px]">
-            redes sociales?
+            {t("title2")}
           </p>
           <Image
             src={"/images/social-media/phone.png"}
@@ -46,37 +44,97 @@ export default function SocialMedia() {
           />
           <div className=" ">
             <p className="hidden lg:block font-black text-[40px]">
-              redes sociales?
+              {t("title2")}
             </p>
             <div className="flex justify-center items-center text-center gap-5 font-black md:w-full">
               <Link
-                className="hover:z-10 w-1/3 max-w-[286px] px-3 py-1 border-2 border-white rounded-xl
+                className="hover:z-10 w-1/3 lg:w-fit max-w-[286px] px-3 py-1 border-2 border-white rounded-xl
                             hover:bg-gradient-to-br from-red-700 to-violet-400"
                 href={"/human-powered-team"}
               >
-                HP Division
+                {t("hpdivision")}
               </Link>
               <Link
-                className="hover:z-10 w-1/3 max-w-[286px] px-3 py-1 border-2 border-white rounded-xl
-                            hover:bg-gradient-to-br from-blue-600 to-cyan-400"
+                className="hover:z-10 w-1/3 lg:w-fit max-w-[286px] px-3 py-1 border-2 border-white rounded-xl
+                hover:bg-gradient-to-br from-blue-600 to-cyan-400"
                 href={"/remote-controlled-eam"}
-              >
-                RC Division
+                >
+                {t("rcdivision")}
               </Link>
             </div>
           </div>
         </div>
         <div className="max-w-[1200px] relative my-10">
-          <p className="text-red-500 w-full text-center font-extrabold text-4xl lg:text-[50px] absolute -top-5 left-1/2 -translate-x-1/2 division-shadow">
-            HP DIVISION
+          <p className="text-red-500 w-full text-center font-extrabold text-4xl lg:text-[50px] absolute -top-5 left-1/2 -translate-x-1/2 division-shadow uppercase">
+            {t("hpdivision")}
           </p>
-          <p className="max-w-[350px] mx-auto md:max-w-full m-2 lg:m-0 p-5 lg:p-10 border-2 border-[#F12222] text-md lg:text-[25px] leading-loose text-white text-center rounded-t-lg rounded-b-3xl">
-            La división HP de Apolo27 se enfoca en mecánica, diseño y requisitos
-            de Rovers. Participamos en eventos STEM, organizamos visitas
-            escolares y sorteos. ¡Descubre nuestro trabajo detrás de cámaras y
-            suscríbete a nuestro canal de YouTube para ver nuestros diseños
-            innovadores y logros! 🚀
-          </p>
+          <div className="p-5 lg:p-10 lg:pb-5 border-2 border-[#F12222] rounded-t-lg rounded-b-3xl space-y-3">
+            <p className="max-w-[350px] mx-auto md:max-w-full m-2 lg:m-0  text-md lg:text-xl leading-loose text-white text-center ">
+              {t("hpdivisionDescription")}
+            </p>
+            <div className="mx-10 lg:mx-0 lg:w-full bg-black border-white border-2  grid grid-flow-col justify-items-center text-white rounded-xl">
+              <a
+                href="https://www.tiktok.com/@apolo27rd"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition-transform hover:bg-gray-800 w-full h-full py-4 flex justify-center group rounded-l-xl"
+              >
+                <FontAwesomeIcon
+                  className="group-hover:scale-110"
+                  icon={faTiktok}
+                  size="xl"
+                />
+              </a>
+              <a
+                href="https://www.instagram.com/apolo27_rd"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition-transform hover:bg-gray-800 w-full h-full py-4 flex justify-center group"
+              >
+                <FontAwesomeIcon
+                  className="group-hover:scale-110"
+                  icon={faInstagram}
+                  size="xl"
+                />
+              </a>
+              <a
+                href="https://www.facebook.com/Apolo27.rd/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition-transform hover:bg-gray-800 w-full h-full py-4 flex justify-center group"
+              >
+                <FontAwesomeIcon
+                  className="group-hover:scale-110"
+                  icon={faFacebook}
+                  size="xl"
+                />
+              </a>
+              <a
+                href="https://x.com/apolo27_rd"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition-transform hover:bg-gray-800 w-full h-full py-4 flex justify-center group"
+              >
+                <FontAwesomeIcon
+                  className="group-hover:scale-110"
+                  icon={faXTwitter}
+                  size="xl"
+                />
+              </a>
+              <a
+                href="https://www.youtube.com/@apolo2730"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition-transform hover:bg-gray-800 w-full h-full py-4 flex justify-center group rounded-r-xl"
+              >
+                <FontAwesomeIcon
+                  className="group-hover:scale-110"
+                  icon={faYoutube}
+                  size="xl"
+                />
+              </a>
+            </div>
+          </div>
         </div>
 
         <p className="font-black text-2xl lg:text-[35px] text-center text-white mb-3">
@@ -191,85 +249,58 @@ export default function SocialMedia() {
             ))}
           </div>
         </div>
-
-        <div className="mx-10 lg:mx-0 lg:w-full bg-black border-white border-2  grid grid-flow-col justify-items-center text-white rounded-xl">
-          <a
-            href="https://www.tiktok.com/@apolo27rd"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="transition-transform hover:bg-gray-800 w-full h-full py-4 flex justify-center group rounded-l-xl"
-          >
-            <FontAwesomeIcon
-              className="group-hover:scale-110"
-              icon={faTiktok}
-              size="xl"
-            />
-          </a>
-          <a
-            href="https://www.instagram.com/apolo27_rd"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="transition-transform hover:bg-gray-800 w-full h-full py-4 flex justify-center group"
-          >
-            <FontAwesomeIcon
-              className="group-hover:scale-110"
-              icon={faInstagram}
-              size="xl"
-            />
-          </a>
-          <a
-            href="https://www.facebook.com/Apolo27.rd/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="transition-transform hover:bg-gray-800 w-full h-full py-4 flex justify-center group"
-          >
-            <FontAwesomeIcon
-              className="group-hover:scale-110"
-              icon={faFacebook}
-              size="xl"
-            />
-          </a>
-          <a
-            href="https://x.com/apolo27_rd"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="transition-transform hover:bg-gray-800 w-full h-full py-4 flex justify-center group"
-          >
-            <FontAwesomeIcon
-              className="group-hover:scale-110"
-              icon={faXTwitter}
-              size="xl"
-            />
-          </a>
-          <a
-            href="https://www.youtube.com/@apolo2730"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="transition-transform hover:bg-gray-800 w-full h-full py-4 flex justify-center group rounded-r-xl"
-          >
-            <FontAwesomeIcon
-              className="group-hover:scale-110"
-              icon={faYoutube}
-              size="xl"
-            />
-          </a>
-        </div>
       </section>
 
       <hr className="my-10 mx-5" />
 
       <section id="rc" className="text-white space-y-3 my-10">
         <div className="max-w-[1200px] relative my-10">
-          <p className="text-cyan-500 w-full text-center font-extrabold text-4xl lg:text-[50px] absolute -top-5  left-1/2 -translate-x-1/2 division-shadow">
-            RC DIVISION
+          <p className="text-cyan-500 w-full text-center font-extrabold text-4xl lg:text-[50px] absolute -top-5  left-1/2 -translate-x-1/2 division-shadow uppercase">
+            {t("rcdivision")}
           </p>
-          <p className="max-w-[350px] mx-auto md:max-w-full m-2 lg:m-0 p-5 lg:p-10 border-2 border-cyan-600 text-md lg:text-[25px] leading-loose text-white text-center rounded-t-lg rounded-b-3xl">
-            La división RC de Apolo27 se enfoca en mecánica, electrónica y
-            programación de Rovers. Participamos en eventos STEM, organizamos
-            visitas escolares y sorteos. ¡Descubre nuestro trabajo detrás de
-            cámaras y suscríbete a nuestro canal de YouTube para ver nuestros
-            diseños innovadores y logros! 🚀
-          </p>
+          <div className="m-2 lg:m-0 p-5 lg:p-10 lg:pb-5 border-2 border-cyan-600 rounded-t-lg rounded-b-3xl space-y-3">
+            <p className="max-w-[350px] mx-auto md:max-w-full  text-md lg:text-xl leading-loose text-white text-center ">
+              {t("rcdivisionDescription")}
+            </p>
+            <div className="mx-10 lg:mx-0 lg:w-full bg-black border-white border-2  grid grid-flow-col justify-items-center text-white rounded-xl">
+              <a
+                href="https://www.tiktok.com/@apolo27_rc"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition-transform hover:bg-gray-800 w-full h-full py-4 flex justify-center group rounded-l-xl"
+              >
+                <FontAwesomeIcon
+                  className="group-hover:scale-110"
+                  icon={faTiktok}
+                  size="xl"
+                />
+              </a>
+              <a
+                href="https://www.instagram.com/apolo27_rc/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition-transform hover:bg-gray-800 w-full h-full py-4 flex justify-center group"
+              >
+                <FontAwesomeIcon
+                  className="group-hover:scale-110"
+                  icon={faInstagram}
+                  size="xl"
+                />
+              </a>
+              <a
+                href="https://www.facebook.com/profile.php?id=61566864257448"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition-transform hover:bg-gray-800 w-full h-full py-4 flex justify-center group rounded-r-xl"
+              >
+                <FontAwesomeIcon
+                  className="group-hover:scale-110"
+                  icon={faFacebook}
+                  size="xl"
+                />
+              </a>
+            </div>
+          </div>
         </div>
 
         <div className="space-y-5">
@@ -365,7 +396,7 @@ export default function SocialMedia() {
 
           <div className="space-y-5">
             <p className="text-center font-bold text-xl rounded-full bg-white text-black mx-10 px-5">
-              Enjoy some chapters
+              {t("podcast.enjoy")}
             </p>
             <div className="grid justify-items-center grid-cols-1 grid-rows-2 md:grid-cols-2 gap-4 lg:h-40">
               <iframe
@@ -389,44 +420,6 @@ export default function SocialMedia() {
                 loading="lazy"
               ></iframe>
             </div>
-          </div>
-          <div className="mx-10 lg:mx-0 lg:w-full bg-black border-white border-2  grid grid-flow-col justify-items-center text-white rounded-xl">
-            <a
-              href="https://www.tiktok.com/@apolo27_rc"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="transition-transform hover:bg-gray-800 w-full h-full py-4 flex justify-center group rounded-l-xl"
-            >
-              <FontAwesomeIcon
-                className="group-hover:scale-110"
-                icon={faTiktok}
-                size="xl"
-              />
-            </a>
-            <a
-              href="https://www.instagram.com/apolo27_rc/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="transition-transform hover:bg-gray-800 w-full h-full py-4 flex justify-center group"
-            >
-              <FontAwesomeIcon
-                className="group-hover:scale-110"
-                icon={faInstagram}
-                size="xl"
-              />
-            </a>
-            <a
-              href="https://www.facebook.com/profile.php?id=61566864257448"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="transition-transform hover:bg-gray-800 w-full h-full py-4 flex justify-center group rounded-r-xl"
-            >
-              <FontAwesomeIcon
-                className="group-hover:scale-110"
-                icon={faFacebook}
-                size="xl"
-              />
-            </a>
           </div>
         </div>
       </section>

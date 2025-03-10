@@ -283,29 +283,14 @@
       "title": "Apolo 27",
       "subtitle": "An outer space clothing catalog"
     },
+    "filter": "Filter by:",
     "comingSoon": "Coming Soon",
-    "names": {
+    "categories": {
       "all": "All",
-      "tShirt": {
-        "1": "Basic White T-Shirt",
-        "2": "Graphic Print T-Shirt",
-        "3": "Vintage Logo T-Shirt"
-      },
-      "hoodie": {
-        "1": "Comfort Fit Hoodie",
-        "2": "Zip-Up Hoodie",
-        "3": "Heavyweight Hoodie"
-      },
-      "hats": {
-        "1": "Snapback Cap",
-        "2": "Beanie",
-        "3": "Bucket Hat"
-      },
-      "accessories": {
-        "1": "Leather Belt",
-        "2": "Sunglasses",
-        "3": "Watch"
-      }
+      "tShirt": "t-shirt",
+      "hoodie": "hoodie",
+      "hats": "hats",
+      "accessories": "accesories"
     },
     "searchPlaceholder": "Search for your next fit",
     "dialog": {
@@ -315,12 +300,16 @@
     }
   },
   "SocialMedia": {
-    "title": "Social Media",
+    "title1": "Do you follow us in",
+    "title2": "our social media?",
+    "hpdivision": "HP Division",
+    "rcdivision": "RC Division",
     "subtitle": "The social media team of Apolo 27 is in charge of managing our community and updating our country about all of our events and progress.",
     "podcast": {
       "title": "Podcast",
       "name": "Caribe STEM",
-      "description": "Caribe STEM is a podcast created to share and disseminate STEM (science, technology, engineering, and mathematics) in the Dominican Republic and throughout Latin America. Created by Apolo 27, the university team representing INTEC in the NASA HERC competition."
+      "description": "Caribe STEM is a podcast created to share and disseminate STEM (science, technology, engineering, and mathematics) in the Dominican Republic and throughout Latin America. Created by Apolo 27, the university team representing INTEC in the NASA HERC competition.",
+      "enjoy": "Enjoy our latest episode!"
     },
     "tabs": {
       "tiktok": "Tiktok",

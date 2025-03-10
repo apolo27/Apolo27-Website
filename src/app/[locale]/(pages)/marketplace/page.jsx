@@ -108,7 +108,7 @@ export default function Marketplace() {
       <div className="flex flex-col  bg-[#121836] justify-center items-center md:items-stretch w-full h-full p-4">
         <div className="w-full flex flex-col items-center text-white ">
           <p className="px-3 text-2xl font-bold text-center w-full">
-            Filter by
+            {t("filter")}
           </p>
           <div className="flex w-full flex-row justify-center gap-5">
             {[
@@ -176,7 +176,7 @@ export default function Marketplace() {
       <Dialog
         open={isOpen}
         onClose={() => setIsOpen(false)}
-        className="relative z-50 w-screen h-screen text-white"
+        className="relative z-50 w-screen  h-screen text-white"
       >
         <DialogBackdrop className="fixed inset-0 bg-black/80" />
         <div className="fixed inset-0 flex w-screen max-w-[1125px] mx-auto items-center justify-center p-4">
