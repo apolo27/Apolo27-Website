@@ -296,7 +296,7 @@ export default function Home() {
       </section>
 
       <div className="flex bg-[#101321] text-center flex-col gap-3 md:gap-7 items-center justify-center pt-5 md:pt-10 2xl:pt-0">
-        <p className="explore-more-text bg-clip-text bg-gradient-to-r from-gray-800 via-white via-50% to-gray-800 text-transparent font-bold text-xl md:text-3xl 3xl:text-4xl w-1/2 md:w-60 2xl:w-96 lg:pt-40 2xl:pt-20">
+        <p className="explore-more-text bg-clip-text bg-gradient-to-r from-gray-800 via-white via-50% to-gray-800 text-transparent font-bold text-xl md:text-3xl 3xl:text-4xl w-1/2 md:w-60 2xl:w-96 lg:pt-40 2xl:pt-9 3xl:pt-20">
           {t("exploreMore")}
         </p>
         <div>
