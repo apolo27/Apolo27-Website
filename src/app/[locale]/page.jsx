@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Image from "next/image";
+import FullScreenImage from "./components/FullScreenImage/";
 import { Timer } from "./components/Timer";
 import { ArrowUpIcon } from "@heroicons/react/20/solid";
 
@@ -28,7 +29,7 @@ export default function Home() {
 
   const [isOpen, setIsOpen] = useState(false);
   const [team, setTeam] = useState(undefined);
-  const teamClassName = `opacity-80 hover:opacity-100 transition-all hover:cursor-pointer hover:scale-105`;
+  const teamClassName = `opacity-80 hover:opacity-100 transition-all hover:cursor-pointer`;
   const timelineItem = `max-w-[450px] bg-[#121837] border border-[#666A95] text-white text-center rounded-2xl flex flex-col items-center md:items-start`;
   const currentTimelineItem = `max-w-[450px] bg-[#121837] border border-[#666A95] text-white text-center rounded-2xl flex flex-col items-center md:items-start shadow-[0px_20px_207px_10px_rgba(165,_39,_255,_0.48)] bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] `;
 
@@ -312,49 +313,48 @@ export default function Home() {
           {/* team divisions large screen */}
 
           <div className="hidden lg:flex w-full justify-evenly">
-            <Link
-              href="/human-powered-team"
+            <div
               className={`${teamClassName} drop-shadow-sm h-fit space-y-2 rounded-[50px] w-2/5 2xl:w-2/6 overflow-hidden relative `}
               style={{
                 backgroundImage: "url('/images/about-us/red-galaxy.webp')",
               }}
             >
-              <p className="font-extrabold text-4xl text-white text-left pl-5 pt-10 max-h-[184px]">
-                {t("humanPoweredConstellation")}
-              </p>
+              <Link href="/human-powered-team">
+                <p className="font-extrabold text-4xl text-white text-left pl-5 pt-10 max-h-[184px]">
+                  {t("humanPoweredConstellation")}
+                </p>
+              </Link>
               <hr></hr>
-              <Image
-                src="/images/timeline/2025-hp.webp"
-                alt="Team Lead HP"
-                width="0"
-                height="0"
-                sizes="100vw"
-                style={{objectFit: "contain"}}
-                className="w-full "
-              />
-            </Link>
+              <div className="max-w-[512px] max-h-[318px]">
 
-            <Link
-              href="/remote-controlled-team"
+              <FullScreenImage
+              
+              src="/images/timeline/2025-hp.webp"
+              title={"Team HP 2025"}
+              resize={false}
+              />
+              </div>
+            </div>
+
+            <div
               className={`${teamClassName} drop-shadow-sm h-fit space-y-2 rounded-[50px] w-2/5 2xl:w-2/6 overflow-hidden relative `}
               style={{
                 backgroundImage: "url('/images/about-us/blue-galaxy.webp')",
               }}
             >
-              <p className="font-extrabold text-4xl text-white text-right pt-10  pr-5 max-h-[184px]">
-              {t("remoteControlledConstellation")}
-              </p>
-                <hr></hr>
-              <Image
+              <Link href="/remote-controlled-team">
+                <p className="font-extrabold text-4xl text-white text-right pt-10  pr-5 max-h-[184px]">
+                  {t("remoteControlledConstellation")}
+                </p>
+              </Link>
+              <hr></hr>
+              <FullScreenImage
+                title={"Team RC 2025"}
                 src="/images/timeline/2025-rc.webp"
                 alt="Team Lead HP"
-                width="0"
-                height="0"
-                sizes="100vw"
-                style={{objectFit: "contain"}}
-                className="w-full "
+                fullSize={false}
               />
-            </Link>
+            </div>
           </div>
 
           {/* team divisions mobile */}
@@ -367,7 +367,7 @@ export default function Home() {
               }}
             >
               {" "}
-              <p className="font-bold text-3xl sm:text-4xl text-white text-left pl-5 mb-5">
+              <p className="font-bold text-2xl sm:text-4xl text-white text-left pl-5 mb-5">
                 Human <br></br> Powered Team
               </p>
               <Image
@@ -386,7 +386,7 @@ export default function Home() {
                 backgroundImage: "url('/images/about-us/blue-galaxy.webp')",
               }}
             >
-              <p className="font-bold text-3xl sm:text-4xl text-white px-5 mb-5">
+              <p className="font-bold text-2xl sm:text-4xl text-white px-5 mb-5">
                 Remote Controlled Team
               </p>
               <Image
@@ -487,14 +487,14 @@ export default function Home() {
                         {t(yearData.teams[0].description)}
                       </p>
                       <div className="rounded-2xl overflow-hidden">
-                      <Image
-                        src={yearData.teams[0].image}
-                        alt="Team Image"
-                        width="0"
-                        height="0"
-                        sizes="100vw"
-                        className="px-8 md:px-4 w-full h-30 rounded-2xl"
-                      />
+                        <Image
+                          src={yearData.teams[0].image}
+                          alt="Team Image"
+                          width="0"
+                          height="0"
+                          sizes="100vw"
+                          className="px-8 md:px-4 w-full h-30 rounded-2xl"
+                        />
                       </div>
                       {/* <button
                       onClick={() => showTeam(team)}
@@ -544,7 +544,7 @@ export default function Home() {
                     </p>
                   </div>
                   <div className="py-2 px-2 space-y-5">
-                    <p className="text-md md:text-lg text-center md:text-left font-semibold xs:px-8 md:px-4">
+                    <p className="text-md md:text-lg text-center md:text-left font-semibold xs:px-5 md:px-4">
                       {t(yearData.teams[0].description)}
                     </p>
                     <div className="rounded-2xl overflow-hidden">
@@ -554,7 +554,7 @@ export default function Home() {
                         width="0"
                         height="0"
                         sizes="100vw"
-                        className="xs:px-8 xs:pb-8 md:px-4 w-full h-full "
+                        className="xs:px-2 xs:pb-2 md:px-4 rounded-2xl w-full h-full "
                       />
                     </div>
                   </div>
@@ -609,14 +609,14 @@ export default function Home() {
                         {t(yearData.teams[1]?.description)}
                       </p>
                       <div className="rounded-2xl overflow-hidden">
-                      <Image
-                        src={yearData.teams[1]?.image}
-                        alt="Team Image"
-                        width="0"
-                        height="0"
-                        sizes="100vw"
-                        className="pb-8 md:px-4 w-full h-full h-30"
-                      />
+                        <Image
+                          src={yearData.teams[1]?.image}
+                          alt="Team Image"
+                          width="0"
+                          height="0"
+                          sizes="100vw"
+                          className="pb-8 md:px-4 w-full h-full h-30"
+                        />
                       </div>
                     </div>
                   </div>
