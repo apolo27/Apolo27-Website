@@ -53,7 +53,7 @@ export default function Sponsors() {
   ];
 
   return (
-    <div className="text-center space-y-10 pt-10 lg:h-screen bg-apolo-empty-background ">
+    <div className="text-center space-y-10 pt-10  bg-apolo-empty-background ">
       <div className="titleArea text-white">
         <h1 className="font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
           {t("title")}
@@ -63,27 +63,23 @@ export default function Sponsors() {
         </h3>
       </div>
 
-      <div className="hidden  relative m-auto w-full overflow-hidden before:absolute before:left-0 before:top-0 before:z-[2] before:h-full before:w-[100px]  before:content-[''] after:absolute after:right-0 after:top-0 after:z-[2] after:h-full after:w-[100px] after:-scale-x-100 after:content-['']">
-        <div className="mb-20 animate-infinite-slider w-[calc(450px*11)] h-60 flex gap-10 items-center">
+      <div className="bg-stone-600/[0.3] relative z-10 max-w-[1125px] mx-auto rounded-lg shadow-lg my-5 flex justify-center flex-col items-center">
+        <p className="w-fit rounded-3xl px-3 py-2 text-gray-950 bg-slate-50 mt-5 font-semibold text-lg">Nuestros Patrocinadores</p>
+        <div
+          className="
+       
+      grid grid-rows-flow grid-cols-1 xs:grid-cols-2 md:grid-cols-3 
+      justify-items-center gap-10 justify-center items-center"
+        >
           {sponsors.map((sponsor, i) => (
             <Image
               key={i}
-              width="0"
-              height="0"
+              width={0}
+              height={0}
               sizes="100vw"
-              className="slide flex w-1/11 items-center justify-center"
-              src={sponsor.img}
-              alt={sponsor.name}
-            />
-          ))}
-
-          {sponsors.map((sponsor, i) => (
-            <Image
-              key={i}
-              width="0"
-              height="0"
-              sizes="100vw"
-              className="slide flex w-1/11 h-fit items-center justify-center"
+              className={`${
+                i === sponsors.length - 1 ? "col-span-2 lg:col-span-1" : ""
+              } w-[150px] h-[150px] sm:w-[200px] sm:h-[200px] md:w-[250px] md:h-[250px] lg:w-[300px] lg:h-[300px] object-contain`}
               src={sponsor.img}
               alt={sponsor.name}
             />
@@ -91,21 +87,8 @@ export default function Sponsors() {
         </div>
       </div>
 
-      <div className="mb-24 px-5 grid grid-rows-flow grid-cols-1 xs:grid-cols-2 md:grid-cols-3 justify-items-center gap-10 justify-center items-center">
-        {sponsors.map((sponsor, i) => (
-          <Image
-            key={i}
-            width={150}
-            height={150}
-            className={`${i === sponsors.length - 1? "col-span-2": ""}`}
-            src={sponsor.img}
-            alt={sponsor.name}
-          />
-        ))}
-      </div>
-
       <Link href="https://www.paypal.com/donate/?hosted_button_id=4ERGH2W4NPAWW">
-        <button className="button-82-pushable mt-20">
+        <button className="button-82-pushable my-20">
           <span className="button-82-shadow"></span>
           <span className="button-82-edge"></span>
           <span className="button-82-front text font-semibold">
