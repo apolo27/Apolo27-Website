@@ -46,7 +46,7 @@
     "moment": "^2.30.1",
     "motion": "^11.11.17",
     "next": "15.1.6",
-    "next-intl": "^3.26.3",
+    "next-intl": "4.0.2",
     "puppeteer": "^24.0.0",
     "react": "^18",
     "react-big-calendar": "^1.17.1",

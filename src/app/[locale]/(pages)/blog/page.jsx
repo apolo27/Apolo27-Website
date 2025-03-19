@@ -22,12 +22,12 @@ export default function BlogsPage() {
         {t("pageTitle")}
       </p>
 
-      <p className="text-white font-medium text-md lg:text-lg text-center mx-10">
+      <p className="text-white font-medium text-md lg:text-lg text-center mx-10 max-w-[1225px] lg:mx-auto ">
         {t("subtitle")}
       </p>
-      <hr className="my-8 mx-5" />
+      <hr className="my-8 max-w-[1225px] mx-auto " />
 
-      <ul className="grid grid-cols-1 gap-7 md:gap-5 xl:gap-10 sm:grid-cols-2 md:grid-cols-3 justify-center justify-items-center">
+      <ul className=" max-w-[1225px] mx-auto grid grid-cols-1 gap-7 md:gap-5 xl:gap-10 sm:grid-cols-2 md:grid-cols-3 justify-center justify-items-center">
         {blogs.map((blog, i) => (
           <li
             key={i}

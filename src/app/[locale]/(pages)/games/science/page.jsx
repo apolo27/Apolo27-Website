@@ -6,13 +6,13 @@ import { useTranslations } from "next-intl";
 import Link from "next/link";
 
 export default function ScienceGame() {
-  const t = useTranslations("Games.ScienceGame");
+  const t = useTranslations("Games");
   const router = useRouter();
 
   return (
     <div className="flex-col my-20 justify-center items-center">
       <p className="text-center font-bold text-green-500 text-6xl mb-10">
-        {t("title")}
+        {t("ScienceGame.title")}
       </p>
       <div className="w-2/3 bg-gray-200 rounded-2xl z-10 flex justify-center items-center self-center text-center h-96 mb-10">
         <p className="text-slate-700 text-3xl lg:text-6xl font-bold">
@@ -21,7 +21,7 @@ export default function ScienceGame() {
       </div>
       <section className="flex flex-col gap-5 items-center">
         <p className="font-bold text-white text-xl w-2/3 text-center">
-          {t("description")}
+          {t("ScienceGame.description")}
         </p>
         <div className="flex gap-5">
           <Link
@@ -44,7 +44,7 @@ export default function ScienceGame() {
         >
           {" "}
           <ArrowLeftIcon className="w-8 h-8" />
-          Other Games{" "}
+          {t("otherGames")}{" "}
         </button>
       </section>
     </div>

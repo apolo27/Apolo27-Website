@@ -195,8 +195,8 @@ export default function Marketplace() {
                 <div>
                   <Description className="font-bold text-2xl">
                     Descripcion del producto:
-                    <hr className="my-1"></hr>
                   </Description>
+                    <hr className="my-1"></hr>
                   <Description className="font-semibold">
                     {selectedProduct.description}
                   </Description>
