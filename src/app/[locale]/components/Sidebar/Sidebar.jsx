@@ -42,7 +42,7 @@ const Sidebar = ({ toggleSidebar, isOpen }) => {
             { icon: <BeakerIcon className="w-5 h-5 inline-block" />, href: "/stem-with-us", label: t("stemWithUs") },
             { icon: <BanknotesIcon className="w-5 h-5 inline-block" />, href: "/sponsors", label: t("sponsors") },
             { icon: <ComputerDesktopIcon className="w-5 h-5 inline-block" />, href: "/games", label: t("games") },
-            { icon: <GlobeAltIcon className="w-5 h-5 inline-block" />, href: "/social-media", label: t("socialMedia") },
+            //{ icon: <GlobeAltIcon className="w-5 h-5 inline-block" />, href: "/social-media", label: t("socialMedia") },
             { icon: <BuildingStorefrontIcon className="w-5 h-5 inline-block" />, href: "/marketplace", label: t("marketplace") },
           ].map((item, i) => (
             <li key={i} className="relative">
