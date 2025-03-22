@@ -54,7 +54,7 @@ export default function Header() {
                 { href: "/stem-with-us", label: t("stemWithUs") },
                 { href: "/sponsors", label: t("sponsors") },
                 { href: "/games", label: t("games") },
-                { href: "/social-media", label: t("socialMedia") },
+                //{ href: "/social-media", label: t("socialMedia") },
                 { href: "/marketplace", label: t("marketplace") },
               ].map((item, i) => (
                 <li key={i} className="relative">

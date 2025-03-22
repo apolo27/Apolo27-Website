@@ -235,29 +235,26 @@
       "title": "Templo de Matemáticas",
       "caption": "Mejora tus habilidades matemáticas en el misterioso Templo de Matemáticas.",
       "description": "¡Corre, salta y resuelve! Conquista el Templo de Matemáticas con tu destreza aritmética. ¡Los desafíos matemáticos te esperan! ¿Puedes escapar del templo con tus habilidades matemáticas?",
-      "playButton": "Jugar",
-      "downloadButton": "Descargar",
       "comingSoon": "Próximamente..."
     },
     "ScienceGame": {
       "title": "Laboratorio de ciencias",
       "caption": "Descubre los elementos que nos rodean.",
       "description": "¡Desata tu científico interior! Combina elementos para descubrir los secretos de la naturaleza. Conviértete en un maestro de los elementos.",
-      "playButton": "Jugar",
-      "downloadButton": "Descargar",
       "comingSoon": "Próximamente..."
     },
     "TechnologyGame": {
       "title": "Héroe de Escritura Espacial",
       "caption": "Aprende a usar tu teclado como un profesional.",
       "description": "¡Defiende la galaxia con tus habilidades de mecanografía! Escribe rápido, dispara más rápido. Salva el universo de los invasores alienígenas.",
-      "playButton": "Jugar",
-      "downloadButton": "Descargar",
       "comingSoon": "Próximamente..."
     },
     "title": "JUEGOS STEM",
     "subtitle": "Descubre STEM a través de nuestros juegos.",
     "visitButton": "Visitar",
+    "otherGames": "Otros juegos",
+    "playButton": "Jugar",
+    "downloadButton": "Descargar",
     "games": [
       {
         "title": "Simulación NASA HERC",

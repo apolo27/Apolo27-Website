@@ -59,12 +59,12 @@ export default function Games() {
         {t("Subtitle")}
       </p>
 
-      <hr className="my-8 mx-20" />
-      <div className="text-white w-full text-center flex flex-col justify-center items-center space-y-10 xl:space-y-20">
+      <hr className="my-8  max-w-[1225px] mx-auto " />
+      <div className="text-white w-full max-w-[1225px] mx-auto  text-center flex flex-col justify-center items-center space-y-10 xl:space-y-20">
         {games.map((game, index) => (
           <div
             key={index}
-            className={`w-3/4 flex flex-col-reverse gap-10 md:gap-0 md:flex-row ${
+            className={` flex flex-col-reverse gap-10  md:flex-row ${
               index % 2 === 0 ? "  md:flex-row-reverse" : ""
             } justify-between items-center z-10 `}
           >
@@ -76,10 +76,10 @@ export default function Games() {
                   </p>
                 )
               }
-              <p className="text-3xl 2xl:text-5xl font-semibold">
+              <p className="text-2xl 2xl:text-5xl font-semibold">
                 {game.title}
               </p>
-              <p className="2xl:text-3xl">{game.caption}</p>
+              <p className="2xl:text-2xl">{game.caption}</p>
               <button
                 type="button"
                 onClick={() => router.push(game.link)}

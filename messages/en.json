@@ -228,9 +228,8 @@
     "HERCSimulation": {
       "title": "NASA HERC Simulation",
       "caption": "Exprience the NASA HERC with your own device.",
-      "description": "On this Simulation, you will indulge into the competition team Apolo 27 will go through in Huntsville, Alabama. Learn the obstacles and tasks our Rover will face and help us get first in the shortest time possible! We trust you on this mission!",
-      "playButton": "Play",
-      "downloadButton": "Download"
+      "description": "On this Simulation, you will indulge into the competition team Apolo 27 will go through in Huntsville, Alabama. Learn the obstacles and tasks our Rover will face and help us get first in the shortest time possible! We trust you on this mission!"
+
     },
     "MathGame": {
       "title": "Math Temple",
@@ -244,21 +243,20 @@
       "title": "Science Lab",
       "caption": "Discover the elements that surround us.",
       "description": "Unleash your inner scientist! Combine elements to discover the secrets of nature. Become a master of the elements.",
-      "playButton": "Play",
-      "downloadButton": "Download",
       "comingSoon": "Coming Soon..."
     },
     "TechnologyGame": {
       "title": "Space Typing Hero",
       "caption": "Learn to use your keyboard like a pro.",
       "description": "Defend the galaxy with your typing skills! Type fast, shoot faster! Save the universe from alien invaders.",
-      "playButton": "Play",
-      "downloadButton": "Download",
       "comingSoon": "Coming Soon..."
     },
     "title": "STEM GAMES",
     "subtitle": "Discover STEM through our games.",
     "visitButton": "Visit",
+    "otherGames": "Other games",
+          "playButton": "Play",
+      "downloadButton": "Download",
     "games": [
       {
         "title": "NASA HERC Simulation",

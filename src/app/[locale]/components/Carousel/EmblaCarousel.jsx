@@ -2,8 +2,6 @@ import './embla.css';
 import React from "react";
 import Autoplay from "embla-carousel-autoplay";
 import useEmblaCarousel from "embla-carousel-react";
-import Image from "next/image";
-import { PlayCircleIcon } from "@heroicons/react/24/outline";
 
 const EmblaCarousel = ({children, options, className}) => {
   const [emblaRef, emblaApi] = useEmblaCarousel(options, [Autoplay()]);
