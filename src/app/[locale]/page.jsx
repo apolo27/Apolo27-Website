@@ -323,17 +323,15 @@ export default function Home() {
                 <p className="font-extrabold text-4xl text-white text-left pl-5 pt-10 max-h-[184px]">
                   {t("humanPoweredConstellation")}
                 </p>
+                <hr></hr>
+                <div className="max-w-[512px] max-h-[318px]">
+                  <FullScreenImage
+                    src="/images/timeline/2025-hp.webp"
+                    title={"Team HP 2025"}
+                    resize={false}
+                  />
+                </div>
               </Link>
-              <hr></hr>
-              <div className="max-w-[512px] max-h-[318px]">
-
-              <FullScreenImage
-              
-              src="/images/timeline/2025-hp.webp"
-              title={"Team HP 2025"}
-              resize={false}
-              />
-              </div>
             </div>
 
             <div
@@ -346,14 +344,14 @@ export default function Home() {
                 <p className="font-extrabold text-4xl text-white text-right pt-10  pr-5 max-h-[184px]">
                   {t("remoteControlledConstellation")}
                 </p>
+                <hr></hr>
+                <FullScreenImage
+                  title={"Team RC 2025"}
+                  src="/images/timeline/2025-rc.webp"
+                  alt="Team Lead HP"
+                  fullSize={false}
+                />
               </Link>
-              <hr></hr>
-              <FullScreenImage
-                title={"Team RC 2025"}
-                src="/images/timeline/2025-rc.webp"
-                alt="Team Lead HP"
-                fullSize={false}
-              />
             </div>
           </div>
 
