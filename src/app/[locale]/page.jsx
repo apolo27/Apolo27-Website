@@ -312,39 +312,22 @@ export default function Home() {
 
           {/* team divisions large screen */}
 
-          <div className="hidden lg:flex w-full justify-evenly">
-            <div
-              className={`${teamClassName} drop-shadow-sm h-fit space-y-2 rounded-[50px] w-2/5 2xl:w-2/6 overflow-hidden relative `}
-              style={{
-                backgroundImage: "url('/images/about-us/red-galaxy.webp')",
-              }}
-            >
-              <Link href="/human-powered-team">
-                <p className="font-extrabold text-4xl text-white text-left pl-5 pt-10 max-h-[184px]">
-                  {t("humanPoweredConstellation")}
-                </p>
-                <hr></hr>
-                <div className="max-w-[512px] max-h-[318px]">
-                  <FullScreenImage
-                    src="/images/timeline/2025-hp.webp"
-                    title={"Team HP 2025"}
-                    resize={false}
-                  />
-                </div>
+          <section className="flex flex-wrap  w-full justify-evenly">
+            <div className="group hover:cursor-pointer">
+              <Link href={"/human-powered-team"}>
+                <FullScreenImage
+                  src="/images/timeline/2025-hp.webp"
+                  title={"Team HP 2025"}
+                  fullSize={false}
+                />
               </Link>
+              <p className="text-white font-bold text-xl text-center group-hover:text-red-200">
+                {t("hpTeam")}
+              </p>
             </div>
 
-            <div
-              className={`${teamClassName} drop-shadow-sm h-fit space-y-2 rounded-[50px] w-2/5 2xl:w-2/6 overflow-hidden relative `}
-              style={{
-                backgroundImage: "url('/images/about-us/blue-galaxy.webp')",
-              }}
-            >
-              <Link href="/remote-controlled-team">
-                <p className="font-extrabold text-4xl text-white text-right pt-10  pr-5 max-h-[184px]">
-                  {t("remoteControlledConstellation")}
-                </p>
-                <hr></hr>
+            <div className="group hover:cursor-pointer">
+              <Link href={"/remote-controlled-team"}>
                 <FullScreenImage
                   title={"Team RC 2025"}
                   src="/images/timeline/2025-rc.webp"
@@ -352,50 +335,11 @@ export default function Home() {
                   fullSize={false}
                 />
               </Link>
+              <p className="text-white font-bold text-xl text-center group-hover:text-blue-200">
+                {t("rcTeam")}
+              </p>
             </div>
-          </div>
-
-          {/* team divisions mobile */}
-          <div className="flex lg:hidden justify-between gap-5 ">
-            <Link
-              href="/human-powered-team"
-              className={`${teamClassName} w-1/2 rounded-br-[100px] rounded-tr-[100px] overflow-hidden relative pt-10`}
-              style={{
-                backgroundImage: "url('/images/about-us/red-galaxy.webp')",
-              }}
-            >
-              {" "}
-              <p className="font-bold text-2xl sm:text-4xl text-white text-left pl-5 mb-5">
-                Human <br></br> Powered Team
-              </p>
-              <Image
-                className=""
-                src="/images/timeline/2025-hp.webp"
-                alt="Team Lead HP"
-                width={520}
-                height={300}
-              />
-            </Link>
-
-            <Link
-              href="/remote-controlled-team"
-              className={`${teamClassName} w-1/2 rounded-bl-[100px] rounded-tl-[100px] text-right overflow-hidden relative pt-10`}
-              style={{
-                backgroundImage: "url('/images/about-us/blue-galaxy.webp')",
-              }}
-            >
-              <p className="font-bold text-2xl sm:text-4xl text-white px-5 mb-5">
-                Remote Controlled Team
-              </p>
-              <Image
-                className="absolute  right-0"
-                src="/images/timeline/2025-rc.webp"
-                alt="Team Lead RC"
-                width={520}
-                height={300}
-              />
-            </Link>
-          </div>
+          </section>
         </section>
       </div>
 

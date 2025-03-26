@@ -26,8 +26,8 @@
     "sponsorUsTitle": "赞助我们！",
     "sponsorUsSubtitle": "团队需要您的帮助才能赢得比赛！",
     "divisionsTitle": "阿波罗27号2025年的分部",
-    "humanPoweredConstellation": "人力驱动星座",
-    "remoteControlledConstellation": "遥控星座",
+    "hpTeam": "人力驱动星座",
+    "rcTeam": "遥控星座",
     "timeline": {
       "awards": {
         "overallWinner1": {

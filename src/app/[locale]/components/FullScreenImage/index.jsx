@@ -16,9 +16,12 @@ const FullScreenImage = ({title, src, fullSize = false }) => {
     return (
         <div className="flex flex-col items-center my-3">
             <div className="relative">
-                <img
-                    className={`rounded-lg object-contain ${ fullSize ? 'w-[300px] h-[500px]': '' }`}
+                <Image
+                    className={`rounded-lg object-contain ${ fullSize ? 'w-full': 'w-[350px] h-[240px] lg:w-[600px] lg:h-[500px]' }`}
                     src={src} alt={title}
+                    width={0}
+                    height={0}
+                    sizes="100vw"
                     />
                 <button
                     onClick={handleButtonClick}
@@ -50,7 +53,9 @@ const FullScreenImage = ({title, src, fullSize = false }) => {
             >
                 <div className="bg-black bg-opacity-50 fixed inset-0"></div>
                 <div className="relative p-2 bg-white rounded-lg">
-                    <img
+                    <Image
+                        width={1000}
+                        height={1000}
                         src={src}
                         alt={title}
                         className="rounded-lg max-h-screen max-w-screen p-4"

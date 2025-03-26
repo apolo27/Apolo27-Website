@@ -26,8 +26,8 @@
     "sponsorUsTitle": "¡Patrocínanos!",
     "sponsorUsSubtitle": "¡El equipo necesita tu ayuda para ganar!",
     "divisionsTitle": "DIVISIONES DE APOLO 27 EN 2025",
-    "humanPoweredConstellation": "Rover Propulsado por Humanos",
-    "remoteControlledConstellation": "Rover Controlado Remotamente",
+    "hpTeam": "Rover Propulsado por Humanos",
+    "rcTeam": "Rover Controlado Remotamente",
     "timeline": {
       "awards": {
         "overallWinner1": {
