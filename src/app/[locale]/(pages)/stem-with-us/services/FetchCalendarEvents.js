@@ -17,6 +17,7 @@ export function getEvents(callback) {
           location: event.location
         });
       });
+      console.log(events);
       sessionStorage.setItem("events", JSON.stringify(events))
       const storedEventsString = sessionStorage.getItem('events');
       const storedEventsArray = JSON.parse(storedEventsString);
