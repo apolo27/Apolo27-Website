@@ -30,7 +30,7 @@ export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
   const [team, setTeam] = useState(undefined);
   const teamClassName = `opacity-80 hover:opacity-100 transition-all hover:cursor-pointer`;
-  const timelineItem = `max-w-[450px] bg-[#121837] border border-[#666A95] text-white text-center rounded-2xl flex flex-col items-center md:items-start`;
+  const timelineItem = `max-w-[450px] bg-[#121837] border border-[#666A95] text-white text-center rounded-2xl flex flex-col items-center`;
   const currentTimelineItem = `max-w-[450px] bg-[#121837] border border-[#666A95] text-white text-center rounded-2xl flex flex-col items-center md:items-start shadow-[0px_20px_207px_10px_rgba(165,_39,_255,_0.48)] bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] `;
 
   const flipCard = (i) => {
@@ -326,7 +326,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="group hover:cursor-pointer">
+            <div className="group hover:cursor-pointer h-fit">
               <Link href={"/remote-controlled-team"}>
                 <FullScreenImage
                   title={"Team RC 2025"}
@@ -358,7 +358,7 @@ export default function Home() {
         <div className="big-timeline">
           <Timeline position="alternate-reverse" className="w-full">
             {teamsByYear.map((yearData, i) => (
-              <TimelineItem key={i} className="z-10 mt-5">
+              <TimelineItem key={i} className="z-10 mt-5 xl:min-h-[350px]">
                 {yearData.teams.length > 1 && (
                   <TimelineOppositeContent className="2xl:flex 2xl:justify-center">
                     <div
@@ -370,16 +370,13 @@ export default function Home() {
                       }
                     `}
                     >
-                      <div className="gap-4 px-4 flex flex-col md:flex-row items-center w-full justify-evenly bg-gradient-to-b from-cyan-600 to-cyan-900 rounded-t-2xl py-8">
-                        <p className="text-5xl font-boldrounded-xl bg-cyan-950/[0.7] rounded-lg p-1">
-                          {yearData?.year}
-                        </p>
-                        <p className="text-2xl text-center md:text-left w-5/6">
+                      <div className="gap-4 px-4 flex flex-col md:flex-row items-center w-full justify-evenly bg-gradient-to-b from-cyan-600 to-cyan-900 rounded-t-2xl py-4">
+                        <p className="text-2xl text-center font-semibold">
                           {t(yearData.teams[1]?.title)}
                         </p>
                       </div>
                       <div className="p-4 space-y-5">
-                        <p className="text-md md:text-lg text-center md:text-left font-semibold px-8 md:px-4">
+                        <p className="text-md md:text-lg text-center font-semibold px-8 md:px-4">
                           {t(yearData.teams[1]?.description)}
                         </p>
                         <div className="rounded-2xl overflow-hidden">
@@ -403,12 +400,29 @@ export default function Home() {
                   </TimelineOppositeContent>
                 )}
 
+                {yearData.teams.length < 2 && (
+                  <TimelineOppositeContent>
+                    <div className="rounded-2xl overflow-hidden w-full h-full flex items-center">
+                      <Image
+                        src={yearData.teams[0].image}
+                        alt="Team Image"
+                        width="0"
+                        height="0"
+                        sizes="100vw"
+                        className="px-8 md:px-4 w-full h-30 max-w-[450px] rounded-2xl"
+                      />
+                    </div>
+                  </TimelineOppositeContent>
+                )}
+
                 <TimelineSeparator>
-                  <TimelineDot />
+                  <p className="text-5xl lg:text-6xl font-boldrounded-xl bg-cyan-950/[0.7] rounded-lg px-2 py-1">
+                    {yearData.year}
+                  </p>
                   <TimelineConnector />
                 </TimelineSeparator>
-
-                <TimelineContent className="2xl:flex 2xl:justify-center">
+                
+                <TimelineContent className=" w-full  flex items-center">
                   <div
                     className={`${
                       i === teamsByYear.length - 1
@@ -416,28 +430,27 @@ export default function Home() {
                         : timelineItem
                     }`}
                   >
-                    <div className="px-4 flex flex-col md:flex-row items-center w-full justify-evenly bg-gradient-to-b from-cyan-600 to-cyan-900 rounded-t-2xl py-8">
-                      <p className="text-5xl lg:text-6xl font-boldrounded-xl bg-cyan-950/[0.7] rounded-lg p-1">
-                        {yearData.year}
-                      </p>
-                      <p className="text-2xl text-center md:text-left w-1/2">
+                    <div className="px-4 flex flex-col md:flex-row items-center w-full justify-evenly bg-gradient-to-b from-cyan-600 to-cyan-900 rounded-t-2xl py-4">
+                      <p className="text-2xl text-center font-semibold">
                         {t(yearData.teams[0].title)}
                       </p>
                     </div>
                     <div className="p-4 space-y-5">
-                      <p className="text-md md:text-lg text-center md:text-left font-semibold px-8 md:px-4">
+                      <p className="text-md md:text-lg text-center font-semibold px-8 md:px-4">
                         {t(yearData.teams[0].description)}
                       </p>
-                      <div className="rounded-2xl overflow-hidden">
-                        <Image
-                          src={yearData.teams[0].image}
-                          alt="Team Image"
-                          width="0"
-                          height="0"
-                          sizes="100vw"
-                          className="px-8 md:px-4 w-full h-30 rounded-2xl"
-                        />
-                      </div>
+                      {yearData.teams.length > 1 && (
+                        <div className="rounded-2xl overflow-hidden">
+                          <Image
+                            src={yearData.teams[0].image}
+                            alt="Team Image"
+                            width="0"
+                            height="0"
+                            sizes="100vw"
+                            className="px-8 md:px-4 w-full h-30 rounded-2xl"
+                          />
+                        </div>
+                      )}
                       {/* <button
                       onClick={() => showTeam(team)}
                       className="bg-gradient-to-br from-cyan-950 to-cyan-800 p-4 rounded-xl font-semibold hover:scale-105 transition-all"
