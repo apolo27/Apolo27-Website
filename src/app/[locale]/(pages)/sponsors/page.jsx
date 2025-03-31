@@ -63,7 +63,7 @@ export default function Sponsors() {
         </h3>
       </div>
 
-      <div className="bg-stone-600/[0.3] relative z-10 max-w-[1125px] mx-auto rounded-lg shadow-lg my-5 flex justify-center flex-col items-center">
+      <div className="relative z-10 max-w-[1125px] mx-auto rounded-lg shadow-lg my-5 flex justify-center flex-col items-center">
         <p className="w-fit rounded-3xl px-3 py-2 text-gray-950 bg-slate-50 mt-5 font-semibold text-lg">Nuestros Patrocinadores</p>
         <div
           className="
