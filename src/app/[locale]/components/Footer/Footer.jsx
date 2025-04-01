@@ -5,20 +5,30 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faFacebook,
   faInstagram,
+  faSpotify,
   faTiktok,
   faXTwitter,
   faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
+import Image from "next/image";
 export default function Footer() {
   return (
     <footer
-      className="flex z-50 p-10 bg-[#0d0f18] border-t-2 border-[#b9efff9f]"
+      className="flex z-50 p-10 pb-12 bg-[#0d0f18] border-t-2 border-[#b9efff9f]"
       style={{ position: "relative", zIndex: 10 }}
     >
-      <div className="container">
-        <div className="row">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 w-full max-w-[1125px] mx-auto text-white">
           <div className="footer-col">
-            <h4>Apolo 27</h4>
+            <Image
+            alt="apolo 27 logo"
+            src={"/images/logos/logoblanco.webp"}
+            width={75}
+            height={75}
+            />
+            <p>The <Link className="font-medium text-blue-100" href={"https://www.intec.edu.do/"}>INTEC</Link> team participating in NASA HERC</p>
+          </div>
+          <div className="footer-col">
+            <h4>About Us</h4>
             <ul className="">
               <li>
                 <Link href="/#timeline">Our Timeline</Link>
@@ -27,17 +37,26 @@ export default function Footer() {
                 <Link href="human-powered-team">Human Powered Team</Link>
               </li>
               <li>
-                <Link href="remote-controlled-team">Remote Controlled Team</Link>
+                <Link href="remote-controlled-team">
+                  Remote Controlled Team
+                </Link>
               </li>
-              <li>
+
+            </ul>
+          </div>
+          <div className="footer-col">
+          <h4>Explore</h4>
+            <ul>
+            <li>
                 <Link href="games">STEM Games</Link>
               </li>
               <li>
                 <Link href="marketplace">Marketplace</Link>
               </li>
             </ul>
+            
           </div>
-          <div className="footer-col">
+          {/* <div className="footer-col">
             <h4>Data Dashboard</h4>
             <ul>
               <li>
@@ -47,7 +66,7 @@ export default function Footer() {
                 <Link href="">Rover</Link>
               </li>
             </ul>
-          </div>
+          </div> */}
           <div className="footer-col">
             <h4>Stem With Us</h4>
             <ul>
@@ -62,41 +81,83 @@ export default function Footer() {
               </li>
             </ul>
           </div>
-          <div className="footer-col">
+          {/* <div className="footer-col">
             <h4>follow us</h4>
-            <div className="social-links flex gap-5">
-              <FontAwesomeIcon
-                className="hover:cursor-pointer hover:scale-110 text-white"
-                icon={faTiktok}
-                size="2xl"
-              />
-              <FontAwesomeIcon
-                href="://www.instagram.com/apolo27_rd/"
-                className="hover:cursor-pointer hover:scale-110 text-pink-500"
-                icon={faInstagram}
-                size="2xl"
-              />
-              <FontAwesomeIcon
-                className="hover:cursor-pointer hover:scale-110 text-blue-500"
-                icon={faFacebook}
-                size="2xl"
-              />
-              <FontAwesomeIcon
-                href="://www.tiktok.com/@apolo27rd"
-                className="hover:cursor-pointer hover:scale-110 text-white"
-                icon={faXTwitter}
-                size="2xl"
-              />
-              <FontAwesomeIcon
-                href="://www.youtube.com/@apolo2730"
-                className="hover:cursor-pointer hover:scale-110 text-red-500"
-                icon={faYoutube}
-                size="2xl"
-              />
+            <div className="space-y-4">
+              <div className="social-links flex gap-5">
+                <p
+                  href={"/social-media/#hp"}
+                  className="bg-gradient-to-br from-red-700 to-violet-400 text-lg font-semibold px-4 py-2 text-white rounded-full"
+                >
+                  HP
+                </p>
+                <FontAwesomeIcon
+                  className="hover:cursor-pointer hover:scale-110 text-white"
+                  icon={faTiktok}
+                  size="2xl"
+                  href="https://www.tiktok.com/@apolo27rd"
+                />
+                <FontAwesomeIcon
+                  href="https://www.instagram.com/apolo27_rd/"
+                  className="hover:cursor-pointer hover:scale-110 text-pink-500"
+                  icon={faInstagram}
+                  size="2xl"
+                />
+                <FontAwesomeIcon
+                  className="hover:cursor-pointer hover:scale-110 text-blue-500"
+                  icon={faFacebook}
+                  size="2xl"
+                  href="https://www.facebook.com/Apolo27.rd"
+                />
+                <FontAwesomeIcon
+                  href="https://x.com/apolo27_rd"
+                  className="hover:cursor-pointer hover:scale-110 text-white"
+                  icon={faXTwitter}
+                  size="2xl"
+                />
+                <FontAwesomeIcon
+                  href="https://www.youtube.com/@apolo2730"
+                  className="hover:cursor-pointer hover:scale-110 text-red-500"
+                  icon={faYoutube}
+                  size="2xl"
+                />
+              </div>
+              <div className="social-links flex gap-5 items-center">
+                <p
+                  href={"/social-media/#rc"}
+                  className="bg-gradient-to-br from-blue-600 to-cyan-400 text-lg font-semibold px-4 py-2 text-white rounded-full"
+                >
+                  RC
+                </p>
+                <FontAwesomeIcon
+                  className="hover:cursor-pointer hover:scale-110 text-white"
+                  icon={faTiktok}
+                  size="2xl"
+                  href="https://www.tiktok.com/@apolo27_rc"
+                />
+                <FontAwesomeIcon
+                  href="://www.instagram.com/apolo27_rd/"
+                  className="hover:cursor-pointer hover:scale-110 text-pink-500"
+                  icon={faInstagram}
+                  size="2xl"
+                />
+                <FontAwesomeIcon
+                  className="hover:cursor-pointer hover:scale-110 text-blue-500"
+                  icon={faFacebook}
+                  size="2xl"
+                  href="https://www.facebook.com/profile.php?id=61566864257448"
+                />
+                <FontAwesomeIcon
+                  href="https://open.spotify.com/show/2bH4oR7PzY41YXcMOFCl2j?si=f8f8b7f8c9aa410b"
+                  className="hover:cursor-pointer hover:scale-110 text-green-500"
+                  icon={faSpotify}
+                  size="2xl"
+                />
+              </div>
             </div>
-          </div>
+          </div> */}
+          <p className="col-span-full text-center text-gray-400/[0.5]">Made with 💗 by Apolo 27 (2025)</p>
         </div>
-      </div>
     </footer>
   );
 }

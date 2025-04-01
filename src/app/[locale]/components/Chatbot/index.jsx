@@ -185,7 +185,7 @@ export const Chatbot = ({ isSidebarOpen }) => {
           }`}
         >
           <span className="text-white text-xl">💬</span>
-          <span className="text-white font-medium">Apolito</span>
+          <span className="text-white font-medium hidden lg:block">Apolito</span>
           {open && (
             <button
               onClick={(e) => {

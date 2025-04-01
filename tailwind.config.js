@@ -30,6 +30,8 @@ module.exports = {
       // => @media (min-width: 1536px) { ... }
       
       '3xl': '1900px',
+
+      '4xl': '2000px',
     },
     extend: {
       width: {

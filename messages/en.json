@@ -26,8 +26,8 @@
     "sponsorUsTitle": "Sponsor Us!",
     "sponsorUsSubtitle": "The team needs your help to win!",
     "divisionsTitle": "APOLO 27's 2025 DIVISIONS",
-    "humanPoweredConstellation": "Human Powered Constellation",
-    "remoteControlledConstellation": "Remote Controlled Constellation",
+    "hpTeam": "Human Powered Constellation",
+    "rcTeam": "Remote Controlled Constellation",
     "timeline": {
       "awards": {
         "overallWinner1": {
@@ -165,8 +165,8 @@
             "/images/badges/stem-engagement.webp"
           ],
           "rcDivision": "Remote Controlled",
-          "rcTitle": "PIONEERING REMOTE CONTROLLED MISSIONS",
-          "rcDescription": "Our RC team embarks on its first year with bold ideas and even bolder engineering.",
+          "rcTitle": "PIONEERING RC MISSIONS",
+          "rcDescription": "Our RC team embarks on its first year with bold ideas and even bolder engineering. We're ready to make our mark in the world of remote-controlled exploration.",
           "rcTeamAwards": []
         }
       }
@@ -224,12 +224,12 @@
   },
   "Games": {
     "Subtitle": "Discover STEM through our games.",
+    "comingSoon": "Coming Soon...",
     "HERCSimulation": {
       "title": "NASA HERC Simulation",
       "caption": "Exprience the NASA HERC with your own device.",
-      "description": "On this Simulation, you will indulge into the competition team Apolo 27 will go through in Huntsville, Alabama. Learn the obstacles and tasks our Rover will face and help us get first in the shortest time possible! We trust you on this mission!",
-      "playButton": "Play",
-      "downloadButton": "Download"
+      "description": "On this Simulation, you will indulge into the competition team Apolo 27 will go through in Huntsville, Alabama. Learn the obstacles and tasks our Rover will face and help us get first in the shortest time possible! We trust you on this mission!"
+
     },
     "MathGame": {
       "title": "Math Temple",
@@ -243,21 +243,20 @@
       "title": "Science Lab",
       "caption": "Discover the elements that surround us.",
       "description": "Unleash your inner scientist! Combine elements to discover the secrets of nature. Become a master of the elements.",
-      "playButton": "Play",
-      "downloadButton": "Download",
       "comingSoon": "Coming Soon..."
     },
     "TechnologyGame": {
       "title": "Space Typing Hero",
       "caption": "Learn to use your keyboard like a pro.",
       "description": "Defend the galaxy with your typing skills! Type fast, shoot faster! Save the universe from alien invaders.",
-      "playButton": "Play",
-      "downloadButton": "Download",
       "comingSoon": "Coming Soon..."
     },
     "title": "STEM GAMES",
     "subtitle": "Discover STEM through our games.",
     "visitButton": "Visit",
+    "otherGames": "Other games",
+          "playButton": "Play",
+      "downloadButton": "Download",
     "games": [
       {
         "title": "NASA HERC Simulation",
@@ -282,29 +281,14 @@
       "title": "Apolo 27",
       "subtitle": "An outer space clothing catalog"
     },
+    "filter": "Filter by:",
     "comingSoon": "Coming Soon",
-    "names": {
+    "categories": {
       "all": "All",
-      "tShirt": {
-        "1": "Basic White T-Shirt",
-        "2": "Graphic Print T-Shirt",
-        "3": "Vintage Logo T-Shirt"
-      },
-      "hoodie": {
-        "1": "Comfort Fit Hoodie",
-        "2": "Zip-Up Hoodie",
-        "3": "Heavyweight Hoodie"
-      },
-      "hats": {
-        "1": "Snapback Cap",
-        "2": "Beanie",
-        "3": "Bucket Hat"
-      },
-      "accessories": {
-        "1": "Leather Belt",
-        "2": "Sunglasses",
-        "3": "Watch"
-      }
+      "tShirt": "t-shirt",
+      "hoodie": "hoodie",
+      "hats": "hats",
+      "accessories": "accesories"
     },
     "searchPlaceholder": "Search for your next fit",
     "dialog": {
@@ -314,11 +298,16 @@
     }
   },
   "SocialMedia": {
-    "title": "Social Media",
+    "title1": "Do you follow us in",
+    "title2": "our social media?",
+    "hpdivision": "HP Division",
+    "rcdivision": "RC Division",
+    "subtitle": "The social media team of Apolo 27 is in charge of managing our community and updating our country about all of our events and progress.",
     "podcast": {
       "title": "Podcast",
       "name": "Caribe STEM",
-      "description": "Caribe STEM is a podcast created to share and disseminate STEM (science, technology, engineering, and mathematics) in the Dominican Republic and throughout Latin America. Created by Apolo 27, the university team representing INTEC in the NASA HERC competition."
+      "description": "Caribe STEM is a podcast created to share and disseminate STEM (science, technology, engineering, and mathematics) in the Dominican Republic and throughout Latin America. Created by Apolo 27, the university team representing INTEC in the NASA HERC competition.",
+      "enjoy": "Enjoy our latest episode!"
     },
     "tabs": {
       "tiktok": "Tiktok",
@@ -384,7 +373,7 @@
   "Sponsors": {
     "title": "Sponsor Us",
     "subtitle": "Your support will help us get our country the recognition it deserves.",
-    "buttonText": "Sponsor Us"
+    "buttonText": "Be a Sponsor"
   },
   "StemWithUs": {
     "subtitle": "A Journey to the unknown.",
@@ -411,5 +400,11 @@
       "title": "Want to plan a visit?",
       "subtitle": "Contact Us Now!"
     }
+  },
+  "Blogs": {
+    "pageTitle": "Apolo 27 Blogs",
+    "subtitle": "The social media team of Apolo 27 is in charge of managing our community and updating our country about all of our events and progress.",
+    "title" : "Title: ",
+    "published": "Published: "
   }
 }

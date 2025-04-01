@@ -43,8 +43,8 @@ export default function Games() {
     },
   ];
   return (
-    <div className="text-center space-y-10 pt-10 pb-20">
-      <h1 className="font-extrabold text-white text-4xl sm:text-6xl stem-games-title">
+    <div className="text-center space-y-10 pt-10 pb-20 bg-apolo-empty-background ">
+      <h1 className="font-extrabold text-white text-5xl">
         <Link href="/stem-with-us" className="relative group">
           <span className="text-green-500">S</span>
           <span className="text-blue-500">T</span>
@@ -55,22 +55,31 @@ export default function Games() {
         </Link>
         &nbsp;GAMES
       </h1>
-      <p className="font-semibold text-white text-xl sm:text-2xl stem-games-title">
+      <p className="font-semibold text-white text-md sm:text-2xl">
         {t("Subtitle")}
       </p>
-      <div className="text-white w-full text-center flex flex-col justify-center items-center space-y-10 xl:space-y-20">
+
+      <hr className="my-8 max-w-[300px] lg:max-w-[1225px] mx-auto " />
+      <div className="text-white w-full max-w-[1225px] mx-auto  text-center flex flex-col justify-center items-center space-y-10 xl:space-y-20">
         {games.map((game, index) => (
           <div
             key={index}
-            className={`w-3/4 flex flex-col-reverse gap-10 md:gap-0 md:flex-row ${
+            className={` flex flex-col-reverse gap-10  md:flex-row ${
               index % 2 === 0 ? "  md:flex-row-reverse" : ""
             } justify-between items-center z-10 `}
           >
             <div className="w-10/12 md:w-1/2 space-y-5">
-              <p className="text-3xl 2xl:text-5xl font-semibold">
+              {
+                !game.isPublished && (
+                  <p className="text-red-500 text-lg font-semibold">
+                    {t("comingSoon")}
+                  </p>
+                )
+              }
+              <p className="text-2xl 2xl:text-5xl font-semibold">
                 {game.title}
               </p>
-              <p className="2xl:text-3xl">{game.caption}</p>
+              <p className="2xl:text-2xl">{game.caption}</p>
               <button
                 type="button"
                 onClick={() => router.push(game.link)}

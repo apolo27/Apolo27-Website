@@ -127,11 +127,26 @@
   display: flex;
 }
 
+.division-shadow{
+  text-shadow: 2px 0 #0D0F19, -2px 0 #0D0F19, 0 2px #0D0F19, 0 -2px #0D0F19,
+  1px 1px #0D0F19, -1px -1px #0D0F19, 1px -1px #0D0F19, -1px 1px #0D0F19;
+
+}
+
 @media (min-width: 1024px) {
   .big-timeline {
     display: block;
   }
   .mobile-timeline{
     display: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  .outlined-title {
+    -webkit-text-stroke: 5px transparent;
+  }
+  .outlined-subtitle {
+    -webkit-text-stroke: 5px transparent;
   }
 }

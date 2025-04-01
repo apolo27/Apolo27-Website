@@ -6,11 +6,11 @@ import {
 import { Link } from "../../../../../i18n/routing";
 
 export default function MathGame() {
-  const t = useTranslations("Games.MathGame");
+  const t = useTranslations("Games");
   return (
     <div className="flex-col my-20 justify-center items-center">
       <p className="text-center font-bold text-purple-500 text-6xl mb-10">
-        {t("title")}
+        {t("MathGame.title")}
       </p>
       <div className="w-2/3 bg-gray-200 rounded-2xl z-10 flex justify-center items-center self-center text-center h-96 mb-10">
         <p className="text-slate-700 text-3xl lg:text-6xl font-bold">
@@ -19,7 +19,7 @@ export default function MathGame() {
       </div>
       <section className="flex flex-col gap-5 items-center">
         <p className="font-bold text-white text-xl w-2/3 text-center">
-          {t("description")}
+          {t("MathGame.description")}
         </p>
         <div className="flex gap-5">
           <Link
@@ -42,7 +42,7 @@ export default function MathGame() {
         >
           {" "}
           <ArrowLeftIcon className="w-8 h-8" />
-          Other Games{" "}
+          {t("otherGames")}{" "}
         </Link>
       </section>
     </div>

@@ -56,14 +56,14 @@ export default function StemWithUs() {
 
   return (
     <div className="relative flex flex-col items-center justify-between min-h-screen pt-16 pb-16">
-      <div className="flex flex-col md:flex-row items-center justify-center md:space-x-12 relative z-10 text-center md:text-left mb-8 mt-10">
+      <div className="flex flex-col md:flex-row items-center justify-center md:space-x-12 relative text-center md:text-left mb-8 mt-10">
         <Image
           src="/images/stem-with-us/Planet.webp"
           alt="Planet"
           width="0"
           height="0"
           sizes="100vw"
-          className="w-48 h-48 sm:w-60 sm:h-60 md:w-72 md:h-72 lg:w-96 lg:h-96 rounded-full shadow-lg"
+          className="hidden md:block w-48 h-48 sm:w-60 sm:h-60 md:w-72 md:h-72 lg:w-96 lg:h-96 rounded-full shadow-lg"
         />
 
         <div className="text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-poppins">
@@ -83,14 +83,14 @@ export default function StemWithUs() {
         id="blogs"
         className="mb-10 z-10 w-full h-fit  text-white md:bg-slate-900 md:bg-opacity-85 md:py-10 3xl:bg-transparent 3xl:py-0 3xl:mr-0 3xl:rounded-r-none"
       >
-        <div className="flex gap-10">
+        <div className="flex flex-col md:flex-row gap-5 md:gap-10 ">
 
-        <div className="flex justify-center mb-5 bg-teal-50 text-slate-900   bg-opacity-85 p-4 rounded-r-[50px] w-3/5">
-          <p className="font-bold text-4xl">{t("blogs.title")}</p>
+        <div className="flex md:justify-center mb-5 bg-teal-50 text-slate-900 bg-opacity-85 p-4 rounded-r-[50px] w-4/5 md:w-3/5">
+          <p className="font-bold text-2xl md:text-4xl">{t("blogs.title")}</p>
         </div>
-        <Link href="/blog" className="bg-teal-50 text-slate-900 bg-opacity-85 p-4 rounded-[50px] w-fit h-fit flex items-center gap-5 group">
-          <p className="font-bold text-2xl">See more</p>
-          <ArrowRightIcon className="h-10 w-10 inline-block group-hover:animate-bounceX" />
+        <Link href="/blog" className="hidden md:flex  bg-teal-50 text-slate-900 bg-opacity-85 px-3 py-1 md:p-4 rounded-[50px] w-fit h-fit items-center gap-1 md:gap-5 group">
+          <p className="font-bold text-md md:text-2xl w-full">Read more</p>
+          <ArrowRightIcon className="h-8 w-8 md:h-10 md:w-10 inline-block group-hover:animate-bounceX" />
         </Link>
         </div>
         <div className="flex flex-col items-center md:flex-row justify-center gap-5">
@@ -134,15 +134,19 @@ export default function StemWithUs() {
               </div>
             );
           })}
+                  <Link href="/blog" className="md:hidden flex  bg-teal-50 text-slate-900 bg-opacity-85 px-3 py-1 md:p-4 rounded-[50px] w-fit h-fit items-center gap-1 md:gap-5 group">
+          <p className="font-bold text-md md:text-2xl w-full">Read more</p>
+          <ArrowRightIcon className="h-8 w-8 md:h-10 md:w-10 inline-block group-hover:animate-bounceX" />
+        </Link>
         </div>
       </section>
 
       <section
         id="calendar"
-        className="relative z-10 mt-20 w-full text-white text-center"
+        className="relative z-10 mt-20 w-full text-white text-center space-y-5"
       >
         <p className="text-3xl font-bold ">{t("calendar.title")}</p>
-        <div className=" relative flex justify-center flex-col lg:flex-row items-center gap-4">
+        <div className="max-w-[350px] sm:max-w-[600px] md:max-w-full mx-auto relative flex justify-center flex-col lg:flex-row items-center gap-4">
           <Calendar
             className="calendario max-w-[800px] h-[500px] lg:h-[700px] w-full 3xl:max-w-full 3xl:w-[1000px]"
             localizer={localizer}
@@ -193,10 +197,10 @@ export default function StemWithUs() {
         </div>
       </section>
 
-      <section className="z-10 flex flex-col md:flex-row justify-between gap-5 md:gap-20 items-center text-white my-20">
-        <div className="w-full md:w-96 2xl:w-[425px] rounded-r-[175px] rounded-l-xl bg-slate-800 bg-opacity-70 h-full py-8 md:py-20 pl-20 mr-20 md:pl-5 md:mr-0">
+      <section className="z-10 flex flex-col lg:flex-row justify-between gap-5 lg:gap-20 items-center text-white my-20">
+        <div className="w-full lg:w-96 2xl:w-[425px] rounded-r-[175px] rounded-l-xl bg-slate-800 bg-opacity-70 h-full py-8 lg:py-20 pl-20 mr-20 lg:pl-5 lg:mr-0">
           <Link href={"/social-media/#hp"} className="bg-gradient-to-br from-red-700 to-violet-400 w-fit rounded-full px-5">HP</Link>
-          <p className="align-middle font-bold text-3xl md:text-4xl md:mb-5 pr-5">
+          <p className="align-middle font-bold text-3xl lg:text-4xl lg:mb-5 pr-5">
             {t("youtube.invite")}{" "}
             <Link
               href="https://www.youtube.com/@apolo2730"
@@ -206,7 +210,7 @@ export default function StemWithUs() {
             </Link>{" "}
             <LinkIcon className="h-5 w-5 inline-block" />
           </p>
-          <p className="hidden md:block pr-5">
+          <p className="hidden lg:block pr-5">
             {t("youtube.description")}
             <Link href="https://www.youtube.com/@apolo2730">
               {t("youtube.subscribe")}
@@ -218,9 +222,9 @@ export default function StemWithUs() {
           {recentVideos.map((video, i) => (
             <div
               key={i}
-              className="relative w-fit md:w-64 rounded-2xl hover:cursor-pointer hover:scale-105 transition-all duration-75 [background:linear-gradient(45deg,#080b11,theme(colors.slate.800)_50%,#172033)_padding-box,conic-gradient(from_var(--border-angle),theme(colors.slate.600/.48)_80%,_theme(colors.indigo.500)_86%,_theme(colors.indigo.300)_90%,_theme(colors.indigo.500)_94%,_theme(colors.slate.600/.48))_border-box] md:hover:[background:linear-gradient(45deg,#080b11,theme(colors.slate.800)_50%,#172033)_padding-box,conic-gradient(from_var(--border-angle),theme(colors.slate.600/.48)_80%,_theme(colors.indigo.500)_86%,_theme(colors.indigo.300)_90%,_theme(colors.indigo.500)_94%,_theme(colors.slate.600/.48))_border-box] border-2 border-transparent animate-border"
+              className="relative w-fit lg:w-64 rounded-2xl hover:cursor-pointer hover:scale-105 transition-all duration-75 [background:linear-gradient(45deg,#080b11,theme(colors.slate.800)_50%,#172033)_padding-box,conic-gradient(from_var(--border-angle),theme(colors.slate.600/.48)_80%,_theme(colors.indigo.500)_86%,_theme(colors.indigo.300)_90%,_theme(colors.indigo.500)_94%,_theme(colors.slate.600/.48))_border-box] lg:hover:[background:linear-gradient(45deg,#080b11,theme(colors.slate.800)_50%,#172033)_padding-box,conic-gradient(from_var(--border-angle),theme(colors.slate.600/.48)_80%,_theme(colors.indigo.500)_86%,_theme(colors.indigo.300)_90%,_theme(colors.indigo.500)_94%,_theme(colors.slate.600/.48))_border-box] border-2 border-transparent animate-border"
             >
-              <p className="md:hidden absolute -top-2 -left-2 text-black bg-white font-bold rounded-full px-3 py-1 z-10 animate-pulse">{ i + 1 }</p>
+              <p className="lg:hidden absolute -top-2 -left-2 text-black bg-white font-bold rounded-full px-3 py-1 z-10 animate-pulse">{ i + 1 }</p>
               <Image
                 src={video.thumbnail}
                 alt={video.title}
@@ -228,9 +232,9 @@ export default function StemWithUs() {
                 height="0"
                 sizes="100vw"
                 style={{ objectFit: "cover" }}
-                className="w-full h-32 md:w-[250px] md:h-[75] rounded-t-2xl"
+                className="w-full h-32 lg:w-[250px] lg:h-[75] rounded-t-2xl"
               />
-              <p className="font-semibold pb-5 pt-5 md:pt-2 px-5 bg-slate-950 rounded-b-2xl">
+              <p className="font-semibold pb-5 pt-5 lg:pt-2 px-5 bg-slate-950 rounded-b-2xl">
                 {video.title}
               </p>
             </div>

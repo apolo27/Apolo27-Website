@@ -9,7 +9,7 @@ import Image from "next/image";
 import EmblaCarousel from "../../../components/Carousel/EmblaCarousel";
 
 export default function TechnologyGame() {
-  const t = useTranslations("Games.TechnologyGame");
+  const t = useTranslations("Games");
   const OPTIONS = { dragFree: true, loop: true, containScroll: false };
   return (
     <div className="flex-col my-20">
@@ -56,7 +56,7 @@ export default function TechnologyGame() {
         />
       </EmblaCarousel>
       <section className="flex flex-col gap-5 items-center">
-        <p className="font-bold text-white text-xl w-2/3 text-center">{t("description")}</p>
+        <p className="font-bold text-white text-xl w-2/3 text-center">{t("TechnologyGame.description")}</p>
         <div className="flex gap-5">
           <Link
             href="https://ctrl-sebastian.itch.io/space-typing-hero"

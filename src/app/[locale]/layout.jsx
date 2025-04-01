@@ -1,8 +1,10 @@
 import "./global.css";
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { notFound } from "next/navigation";
-import { routing } from '../../i18n/routing'
+import { routing } from "../../i18n/routing";
 
 import { Chatbot } from "./components/Chatbot";
 import Footer from "./components/Footer/Footer";
@@ -34,6 +36,8 @@ export default async function LocaleLayout({ children, params: { locale } }) {
           </main>
           <Footer />
         </NextIntlClientProvider>
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );

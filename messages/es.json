@@ -26,8 +26,8 @@
     "sponsorUsTitle": "¡Patrocínanos!",
     "sponsorUsSubtitle": "¡El equipo necesita tu ayuda para ganar!",
     "divisionsTitle": "DIVISIONES DE APOLO 27 EN 2025",
-    "humanPoweredConstellation": "Rover Propulsado por Humanos",
-    "remoteControlledConstellation": "Rover Controlado Remotamente",
+    "hpTeam": "Rover Propulsado por Humanos",
+    "rcTeam": "Rover Controlado Remotamente",
     "timeline": {
       "awards": {
         "overallWinner1": {
@@ -223,6 +223,7 @@
   },
   "Games": {
     "Subtitle": "Descubre STEM a través de nuestros juegos.",
+    "comingSoon": "Próximamente...",
     "HERCSimulation": {
       "title": "Simulación NASA HERC",
       "caption": "Experimenta el NASA HERC en tu propio dispositivo.",
@@ -234,29 +235,26 @@
       "title": "Templo de Matemáticas",
       "caption": "Mejora tus habilidades matemáticas en el misterioso Templo de Matemáticas.",
       "description": "¡Corre, salta y resuelve! Conquista el Templo de Matemáticas con tu destreza aritmética. ¡Los desafíos matemáticos te esperan! ¿Puedes escapar del templo con tus habilidades matemáticas?",
-      "playButton": "Jugar",
-      "downloadButton": "Descargar",
       "comingSoon": "Próximamente..."
     },
     "ScienceGame": {
       "title": "Laboratorio de ciencias",
       "caption": "Descubre los elementos que nos rodean.",
       "description": "¡Desata tu científico interior! Combina elementos para descubrir los secretos de la naturaleza. Conviértete en un maestro de los elementos.",
-      "playButton": "Jugar",
-      "downloadButton": "Descargar",
       "comingSoon": "Próximamente..."
     },
     "TechnologyGame": {
       "title": "Héroe de Escritura Espacial",
       "caption": "Aprende a usar tu teclado como un profesional.",
       "description": "¡Defiende la galaxia con tus habilidades de mecanografía! Escribe rápido, dispara más rápido. Salva el universo de los invasores alienígenas.",
-      "playButton": "Jugar",
-      "downloadButton": "Descargar",
       "comingSoon": "Próximamente..."
     },
     "title": "JUEGOS STEM",
     "subtitle": "Descubre STEM a través de nuestros juegos.",
     "visitButton": "Visitar",
+    "otherGames": "Otros juegos",
+    "playButton": "Jugar",
+    "downloadButton": "Descargar",
     "games": [
       {
         "title": "Simulación NASA HERC",
@@ -281,29 +279,14 @@
       "title": "Apolo 27",
       "subtitle": "Un catálogo de ropa del espacio exterior"
     },
+    "filter": "Filtrar por:",
     "comingSoon": "Próximamente",
-    "names": {
-      "all": "Todos",
-      "tShirt": {
-        "1": "Camiseta blanca básica",
-        "2": "Camiseta con estampado gráfico",
-        "3": "Camiseta con logo vintage"
-      },
-      "hoodie": {
-        "1": "Sudadera cómoda",
-        "2": "Sudadera con cremallera",
-        "3": "Sudadera pesada"
-      },
-      "hats": {
-        "1": "Gorra Snapback",
-        "2": "Gorro de lana",
-        "3": "Sombrero tipo bucket"
-      },
-      "accessories": {
-        "1": "Cinturón de cuero",
-        "2": "Gafas de sol",
-        "3": "Reloj"
-      }
+    "categories": {
+      "all": "All",
+      "tShirt": "camisetas",
+      "hoodie": "hoodies",
+      "hats": "gorras",
+      "accessories": "accesorios"
     },
     "searchPlaceholder": "Busca tu próximo estilo",
     "dialog": {
@@ -313,11 +296,20 @@
     }
   },
   "SocialMedia": {
-    "title": "Redes Sociales",
+    "title1": "¿Ya nos sigues en nuestras",
+    "title2": "redes sociales?",
+    "hpdivision": "División HP",
+    "hpdivisionDescription": "La división HP de Apolo27 se enfoca en mecánica, diseño y requisitos de Rovers. Participamos en eventos STEM, organizamos visitas escolares y sorteos. ¡Descubre nuestro trabajo detrás de cámaras y suscríbete a nuestro canal de YouTube para ver nuestros diseños innovadores y logros! 🚀",
+
+    "rcdivision": "División RC",
+    "rcdivisionDescription": "La división RC de Apolo27 se enfoca en mecánica, electrónica y programación de Rovers. Participamos en eventos STEM, organizamos visitas escolares y sorteos. ¡Descubre nuestro trabajo detrás de cámaras y suscríbete a nuestro canal de YouTube para ver nuestros diseños innovadores y logros! 🚀",
+
+    "subtitle": "El equipo de redes sociales de Apolo 27 es el encargado de gestionar nuestra comunidad y poner al día a nuestro país sobre todos nuestros acontecimientos y progresos.",
     "podcast": {
       "title": "Podcast",
       "name": "Caribe STEM",
-      "description": "Caribe STEM es un podcast creado para compartir y difundir STEM (ciencia, tecnología, ingeniería y matemáticas) en la República Dominicana y en toda América Latina. Creado por Apolo 27, el equipo universitario que representa al INTEC en la competencia NASA HERC."
+      "description": "Caribe STEM es un podcast creado para compartir y difundir STEM (ciencia, tecnología, ingeniería y matemáticas) en la República Dominicana y en toda América Latina. Creado por Apolo 27, el equipo universitario que representa al INTEC en la competencia NASA HERC.",
+      "enjoy": "¡Disfruta nustros últimos episodios!"
     },
     "tabs": {
       "tiktok": "Tiktok",
@@ -383,7 +375,7 @@
   "Sponsors": {
     "title": "Patrocínanos",
     "subtitle": "Tu apoyo nos ayudará a obtener el reconocimiento que nuestro país merece.",
-    "buttonText": "Patrocínanos"
+    "buttonText": "Hazte patrocinador"
   },
   "StemWithUs": {
     "subtitle": "Un viaje hacia lo desconocido.",
@@ -410,5 +402,11 @@
       "title": "¿Quieres planear una visita?",
       "subtitle": "¡Contáctanos ahora!"
     }
+  },
+  "Blogs": {
+    "pageTitle": "Blogs Apolo 27",
+    "subtitle": "El equipo de redes sociales de Apolo 27 está a cargo de administrar nuestra comunidad y actualizar a nuestro país sobre todos nuestros eventos y avances.",
+    "title" : "Título: ",
+    "published": "Publicado:"
   }
 }
