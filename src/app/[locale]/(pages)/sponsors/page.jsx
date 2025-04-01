@@ -64,11 +64,12 @@ export default function Sponsors() {
       </div>
 
       <div className="relative z-10 max-w-[1125px] mx-auto rounded-lg shadow-lg my-5 flex justify-center flex-col items-center">
-        <p className="w-fit rounded-3xl px-3 py-2 text-gray-950 bg-slate-50 mt-5 font-semibold text-lg">Nuestros Patrocinadores</p>
+        <p className="w-fit rounded-3xl px-3 py-2 text-gray-950 bg-slate-50 mt-5 font-semibold text-lg">
+          Nuestros Patrocinadores
+        </p>
         <div
           className="
-       
-      grid grid-rows-flow grid-cols-1 xs:grid-cols-2 md:grid-cols-3 
+          grid grid-rows-flow grid-cols-1 xs:grid-cols-2 md:grid-cols-3 
       justify-items-center gap-10 justify-center items-center"
         >
           {sponsors.map((sponsor, i) => (

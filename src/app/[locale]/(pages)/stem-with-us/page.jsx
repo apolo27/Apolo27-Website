@@ -160,10 +160,10 @@ export default function StemWithUs() {
           />
           {eventToShow !== undefined && (
             <div className="bg-black bg-opacity-70 p-4 rounded-2xl w-5/6 lg:w-2/6 h-fit border-2 border-white">
-              <div className="event space-y-2">
+              <div className="event space-y-5">
                 <p className="font-bold text-3xl">{eventToShow.title}</p>
                 <p className="font-semibold text-xl">{eventToShow.location}</p>
-                <p className="text-md">
+                <p className="text-lg">
                   {t("calendar.event.start")}{" "}
                   {new Date(eventToShow.start).toLocaleString("en", {
                     year: "numeric",
@@ -188,7 +188,7 @@ export default function StemWithUs() {
                     href={eventToShow.htmlLink}
                     className="px-4 py-2 bg-white font-semibold text-black text-xl rounded-md hover:slate-200"
                   >
-                    {t("calendar.follow")}
+                    {t("calendar.event.follow")}
                   </Link>
                 </button>
               </div>
