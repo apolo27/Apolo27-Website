@@ -408,5 +408,21 @@
     "subtitle": "El equipo de redes sociales de Apolo 27 está a cargo de administrar nuestra comunidad y actualizar a nuestro país sobre todos nuestros eventos y avances.",
     "title" : "Título: ",
     "published": "Publicado:"
+  },
+  "Footer": {
+    "title": "Apolo 27",
+    "subtitle": "Los primeros ganadores de la División Universitaria de República Dominicana en el Human Exploration Rover Challenge de la NASA.",
+    "aboutUs": "Sobre Nosotros",
+    "ourTimeline": "Nuestra Cronología",
+    "hpTeam": "Equipo Propulsado por Humanos",
+    "rcTeam": "Equipo Controlado Remotamente",
+    "explore": "Explorar",
+    "stemGames": "Juegos STEM",
+    "marketplace": "Tienda",
+    "stemWithUs": "STEM Con Nosotros",
+    "blogs": "Blogs",
+    "calendar": "Calendario de Eventos",
+    "schoolVisits": "Agenda una visita escolar",
+    "madeWithLove": "Hecho con 💗 por Apolo 27"
   }
 }

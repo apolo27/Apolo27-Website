@@ -10,7 +10,6 @@ import { Calendar, momentLocalizer } from "react-big-calendar";
 import moment from "moment";
 import "moment/locale/en-gb";
 import "moment/locale/es";
-const localizer = momentLocalizer(moment);
 
 import { getEvents } from "./services/FetchCalendarEvents";
 import { getRecentVideos } from "./services/FetchYTVideos";
@@ -22,6 +21,8 @@ import { LinkIcon } from "@heroicons/react/24/outline";
 
 import { useTranslations } from "next-intl";
 import { ArrowRightIcon } from "@heroicons/react/20/solid";
+
+const localizer = momentLocalizer(moment);
 
 export default function StemWithUs() {
   const t = useTranslations("StemWithUs");
