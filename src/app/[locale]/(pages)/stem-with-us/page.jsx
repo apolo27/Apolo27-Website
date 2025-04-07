@@ -42,6 +42,7 @@ export default function StemWithUs() {
       setEvents(JSON.parse(sessionStorage.getItem("events")));
     }
 
+    
     if (sessionStorage.getItem("recentVideos") === null) {
       getRecentVideos(setRecentVideos);
     } else {
@@ -53,6 +54,7 @@ export default function StemWithUs() {
     } else {
       setBlogs(JSON.parse(sessionStorage.getItem("blogs")));
     }
+    
   }, []);
 
   return (

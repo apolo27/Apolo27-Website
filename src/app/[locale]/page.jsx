@@ -379,9 +379,9 @@ export default function Home() {
                           {t(yearData.teams[1]?.description)}
                         </p>
                         <div className="rounded-2xl overflow-hidden">
-                          <Image
+                          <FullScreenImage
                             src={yearData.teams[1]?.image}
-                            alt="Team Image"
+                            title={"Team Image"}
                             width="0"
                             height="0"
                             sizes="100vw"
@@ -402,9 +402,9 @@ export default function Home() {
                 {yearData.teams.length < 2 && (
                   <TimelineOppositeContent>
                     <div className="rounded-2xl overflow-hidden w-full h-full flex items-center">
-                      <Image
+                      <FullScreenImage
                         src={yearData.teams[0].image}
-                        alt="Team Image"
+                        title="Team Image"
                         width="0"
                         height="0"
                         sizes="100vw"
@@ -440,9 +440,9 @@ export default function Home() {
                       </p>
                       {yearData.teams.length > 1 && (
                         <div className="rounded-2xl overflow-hidden">
-                          <Image
+                          <FullScreenImage
                             src={yearData.teams[0].image}
-                            alt="Team Image"
+                            title="Team Image"
                             width="0"
                             height="0"
                             sizes="100vw"

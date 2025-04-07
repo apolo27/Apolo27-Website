@@ -8,16 +8,16 @@ export function getEvents(callback) {
     if (!err) {
       const events = [];
       JSON.parse(resp.text).items.map(event => {
-        console.log(events);
+        console.log(event)
         return events.push({
           title: event.summary,
           htmlLink: event.htmlLink,
-          start: moment(event.start.dateTime).toDate(),
-          end: moment(event.end.dateTime).toDate(),
+          start: moment(event.start.date || event.start.dateTime).toDate(),
+          end: moment(event.end.date || event.end.dateTime).toDate(),
           location: event.location
         });
       });
-      console.log(events);
+
       sessionStorage.setItem("events", JSON.stringify(events))
       const storedEventsString = sessionStorage.getItem('events');
       const storedEventsArray = JSON.parse(storedEventsString);
