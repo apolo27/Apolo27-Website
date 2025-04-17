@@ -7,7 +7,7 @@ export default function Sponsors() {
   const t = useTranslations("Sponsors");
   const sponsors = [
     {
-      name: "Ministerio de la juventud",
+      name: "Presidencia de la República Dominicana",
       img: "/images/sponsors/juventud.png",
     },
     {
@@ -39,10 +39,6 @@ export default function Sponsors() {
       img: "/images/sponsors/ole.png",
     },
     {
-      name: "Pizzarelli",
-      img: "/images/sponsors/pizzarellilogo.png",
-    },
-    {
       name: "Pabe Comercial",
       img: "/images/sponsors/pabecomercial.png",
     },
@@ -63,12 +59,11 @@ export default function Sponsors() {
         </h3>
       </div>
 
-      <div className="bg-stone-600/[0.3] relative z-10 max-w-[1125px] mx-auto rounded-lg shadow-lg my-5 flex justify-center flex-col items-center">
-        <p className="w-fit rounded-3xl px-3 py-2 text-gray-950 bg-slate-50 mt-5 font-semibold text-lg">Nuestros Patrocinadores</p>
+      <div className="relative z-10 max-w-[1125px] mx-auto rounded-lg shadow-lg my-5 flex justify-center flex-col items-center">
+
         <div
           className="
-       
-      grid grid-rows-flow grid-cols-1 xs:grid-cols-2 md:grid-cols-3 
+          grid grid-rows-flow grid-cols-1 xs:grid-cols-2 md:grid-cols-3 
       justify-items-center gap-10 justify-center items-center"
         >
           {sponsors.map((sponsor, i) => (

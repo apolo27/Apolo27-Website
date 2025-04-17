@@ -10,7 +10,6 @@ import { Calendar, momentLocalizer } from "react-big-calendar";
 import moment from "moment";
 import "moment/locale/en-gb";
 import "moment/locale/es";
-const localizer = momentLocalizer(moment);
 
 import { getEvents } from "./services/FetchCalendarEvents";
 import { getRecentVideos } from "./services/FetchYTVideos";
@@ -22,6 +21,8 @@ import { LinkIcon } from "@heroicons/react/24/outline";
 
 import { useTranslations } from "next-intl";
 import { ArrowRightIcon } from "@heroicons/react/20/solid";
+
+const localizer = momentLocalizer(moment);
 
 export default function StemWithUs() {
   const t = useTranslations("StemWithUs");
@@ -41,6 +42,7 @@ export default function StemWithUs() {
       setEvents(JSON.parse(sessionStorage.getItem("events")));
     }
 
+    
     if (sessionStorage.getItem("recentVideos") === null) {
       getRecentVideos(setRecentVideos);
     } else {
@@ -52,6 +54,7 @@ export default function StemWithUs() {
     } else {
       setBlogs(JSON.parse(sessionStorage.getItem("blogs")));
     }
+    
   }, []);
 
   return (
@@ -160,10 +163,10 @@ export default function StemWithUs() {
           />
           {eventToShow !== undefined && (
             <div className="bg-black bg-opacity-70 p-4 rounded-2xl w-5/6 lg:w-2/6 h-fit border-2 border-white">
-              <div className="event space-y-2">
+              <div className="event space-y-5">
                 <p className="font-bold text-3xl">{eventToShow.title}</p>
                 <p className="font-semibold text-xl">{eventToShow.location}</p>
-                <p className="text-md">
+                <p className="text-lg">
                   {t("calendar.event.start")}{" "}
                   {new Date(eventToShow.start).toLocaleString("en", {
                     year: "numeric",
@@ -188,7 +191,7 @@ export default function StemWithUs() {
                     href={eventToShow.htmlLink}
                     className="px-4 py-2 bg-white font-semibold text-black text-xl rounded-md hover:slate-200"
                   >
-                    {t("calendar.follow")}
+                    {t("calendar.event.follow")}
                   </Link>
                 </button>
               </div>

@@ -15,10 +15,11 @@ const FullScreenImage = ({title, src, fullSize = false }) => {
 
     return (
         <div className="flex flex-col items-center my-3">
-            <div className="relative">
+            <div className="relative ">
                 <Image
-                    className={`rounded-lg object-contain ${ fullSize ? 'w-full': 'w-[350px] h-[240px] lg:w-[600px] lg:h-[500px]' }`}
-                    src={src} alt={title}
+                    className={`rounded-lg object-contain ${ fullSize ? 'w-full': 'w-[350px] lg:w-[600px] ' }`}
+                    alt={title}
+                    src={src}
                     width={0}
                     height={0}
                     sizes="100vw"

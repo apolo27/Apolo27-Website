@@ -44,7 +44,7 @@ export default function Games() {
   ];
   return (
     <div className="text-center space-y-10 pt-10 pb-20 bg-apolo-empty-background ">
-      <h1 className="font-extrabold text-white text-3xl md:text-5xl stem-games-title">
+      <h1 className="font-extrabold text-white text-5xl">
         <Link href="/stem-with-us" className="relative group">
           <span className="text-green-500">S</span>
           <span className="text-blue-500">T</span>
@@ -55,11 +55,11 @@ export default function Games() {
         </Link>
         &nbsp;GAMES
       </h1>
-      <p className="font-semibold text-white text-xl sm:text-2xl stem-games-title">
+      <p className="font-semibold text-white text-md sm:text-2xl">
         {t("Subtitle")}
       </p>
 
-      <hr className="my-8  max-w-[1225px] mx-auto " />
+      <hr className="my-8 max-w-[300px] lg:max-w-[1225px] mx-auto " />
       <div className="text-white w-full max-w-[1225px] mx-auto  text-center flex flex-col justify-center items-center space-y-10 xl:space-y-20">
         {games.map((game, index) => (
           <div

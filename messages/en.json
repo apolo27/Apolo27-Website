@@ -165,8 +165,8 @@
             "/images/badges/stem-engagement.webp"
           ],
           "rcDivision": "Remote Controlled",
-          "rcTitle": "PIONEERING REMOTE CONTROLLED MISSIONS",
-          "rcDescription": "Our RC team embarks on its first year with bold ideas and even bolder engineering.",
+          "rcTitle": "PIONEERING RC MISSIONS",
+          "rcDescription": "Our RC team embarks on its first year with bold ideas and even bolder engineering. We're ready to make our mark in the world of remote-controlled exploration.",
           "rcTeamAwards": []
         }
       }
@@ -406,5 +406,21 @@
     "subtitle": "The social media team of Apolo 27 is in charge of managing our community and updating our country about all of our events and progress.",
     "title" : "Title: ",
     "published": "Published: "
+  },
+  "Footer": {
+    "title": "Apolo 27",
+    "subtitle": "The first Dominican Republic University Division Winners at NASA's Human Exploration Rover Challenge.",
+    "aboutUs": "About Us",
+    "ourTimeline": "Our Timeline",
+    "hpTeam": "Human Powered Team",
+    "rcTeam": "Remote Controlled Team",
+    "explore": "Explore",
+    "stemGames": "STEM Games",
+    "marketplace": "Marketplace",
+    "stemWithUs": "STEM With Us",
+    "blogs": "Blogs",
+    "calendar": "Events Calendar",
+    "schoolVisits": "Book a school visit",
+    "madeWithLove": "Made with 💗 by Apolo 27"
   }
 }

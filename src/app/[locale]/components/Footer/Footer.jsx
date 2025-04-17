@@ -1,17 +1,11 @@
+import "./Footer.css";
 import React from "react";
 import { Link } from "../../../../i18n/routing";
-import "./Footer.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faFacebook,
-  faInstagram,
-  faSpotify,
-  faTiktok,
-  faXTwitter,
-  faYoutube,
-} from "@fortawesome/free-brands-svg-icons";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
+
 export default function Footer() {
+  const t = useTranslations("Footer");
   return (
     <footer
       className="flex z-50 p-10 pb-12 bg-[#0d0f18] border-t-2 border-[#b9efff9f]"
@@ -25,138 +19,52 @@ export default function Footer() {
             width={75}
             height={75}
             />
-            <p>The <Link className="font-medium text-blue-100" href={"https://www.intec.edu.do/"}>INTEC</Link> team participating in NASA HERC</p>
+            <p>{t("subtitle")}</p>
           </div>
           <div className="footer-col">
-            <h4>About Us</h4>
+            <h4>{t("aboutUs")}</h4>
             <ul className="">
               <li>
-                <Link href="/#timeline">Our Timeline</Link>
+                <Link href="/#timeline">{t("ourTimeline")}</Link>
               </li>
               <li>
-                <Link href="human-powered-team">Human Powered Team</Link>
+                <Link href="human-powered-team">{t("hpTeam")}</Link>
               </li>
               <li>
                 <Link href="remote-controlled-team">
-                  Remote Controlled Team
+                  {t("rcTeam")}
                 </Link>
               </li>
 
             </ul>
           </div>
           <div className="footer-col">
-          <h4>Explore</h4>
+          <h4>{t("explore")}</h4>
             <ul>
             <li>
-                <Link href="games">STEM Games</Link>
+                <Link href="games">{t("stemGames")}</Link>
               </li>
               <li>
-                <Link href="marketplace">Marketplace</Link>
+                <Link href="marketplace">{t("marketplace")}</Link>
               </li>
             </ul>
             
           </div>
-          {/* <div className="footer-col">
-            <h4>Data Dashboard</h4>
-            <ul>
-              <li>
-                <Link href="">Overview</Link>
-              </li>
-              <li>
-                <Link href="">Rover</Link>
-              </li>
-            </ul>
-          </div> */}
           <div className="footer-col">
-            <h4>Stem With Us</h4>
+            <h4>{t("stemWithUs")}</h4>
             <ul>
               <li>
-                <Link href="/stem-with-us#blogs">Blog</Link>
+                <Link href="/stem-with-us#blogs">{t("blogs")}</Link>
               </li>
               <li>
-                <Link href="/stem-with-us#calendar">Events Calendar</Link>
+                <Link href="/stem-with-us#calendar">{t("calendar")}</Link>
               </li>
               <li>
-                <Link href="/stem-with-us#form">Book a School Visit</Link>
+                <Link href="/stem-with-us#form">{t("schoolVisits")}</Link>
               </li>
             </ul>
           </div>
-          {/* <div className="footer-col">
-            <h4>follow us</h4>
-            <div className="space-y-4">
-              <div className="social-links flex gap-5">
-                <p
-                  href={"/social-media/#hp"}
-                  className="bg-gradient-to-br from-red-700 to-violet-400 text-lg font-semibold px-4 py-2 text-white rounded-full"
-                >
-                  HP
-                </p>
-                <FontAwesomeIcon
-                  className="hover:cursor-pointer hover:scale-110 text-white"
-                  icon={faTiktok}
-                  size="2xl"
-                  href="https://www.tiktok.com/@apolo27rd"
-                />
-                <FontAwesomeIcon
-                  href="https://www.instagram.com/apolo27_rd/"
-                  className="hover:cursor-pointer hover:scale-110 text-pink-500"
-                  icon={faInstagram}
-                  size="2xl"
-                />
-                <FontAwesomeIcon
-                  className="hover:cursor-pointer hover:scale-110 text-blue-500"
-                  icon={faFacebook}
-                  size="2xl"
-                  href="https://www.facebook.com/Apolo27.rd"
-                />
-                <FontAwesomeIcon
-                  href="https://x.com/apolo27_rd"
-                  className="hover:cursor-pointer hover:scale-110 text-white"
-                  icon={faXTwitter}
-                  size="2xl"
-                />
-                <FontAwesomeIcon
-                  href="https://www.youtube.com/@apolo2730"
-                  className="hover:cursor-pointer hover:scale-110 text-red-500"
-                  icon={faYoutube}
-                  size="2xl"
-                />
-              </div>
-              <div className="social-links flex gap-5 items-center">
-                <p
-                  href={"/social-media/#rc"}
-                  className="bg-gradient-to-br from-blue-600 to-cyan-400 text-lg font-semibold px-4 py-2 text-white rounded-full"
-                >
-                  RC
-                </p>
-                <FontAwesomeIcon
-                  className="hover:cursor-pointer hover:scale-110 text-white"
-                  icon={faTiktok}
-                  size="2xl"
-                  href="https://www.tiktok.com/@apolo27_rc"
-                />
-                <FontAwesomeIcon
-                  href="://www.instagram.com/apolo27_rd/"
-                  className="hover:cursor-pointer hover:scale-110 text-pink-500"
-                  icon={faInstagram}
-                  size="2xl"
-                />
-                <FontAwesomeIcon
-                  className="hover:cursor-pointer hover:scale-110 text-blue-500"
-                  icon={faFacebook}
-                  size="2xl"
-                  href="https://www.facebook.com/profile.php?id=61566864257448"
-                />
-                <FontAwesomeIcon
-                  href="https://open.spotify.com/show/2bH4oR7PzY41YXcMOFCl2j?si=f8f8b7f8c9aa410b"
-                  className="hover:cursor-pointer hover:scale-110 text-green-500"
-                  icon={faSpotify}
-                  size="2xl"
-                />
-              </div>
-            </div>
-          </div> */}
-          <p className="col-span-full text-center text-gray-400/[0.5]">Made with 💗 by Apolo 27 (2025)</p>
+          <p className="col-span-full text-center text-gray-400/[0.5]">{t("madeWithLove")}</p>
         </div>
     </footer>
   );
