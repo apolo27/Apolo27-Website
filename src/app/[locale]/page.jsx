@@ -55,7 +55,7 @@ export default function Home() {
   return (
     <>
       <div className="text-center h-fit  space-y-8 lg:space-y-20 2xl:space-y-10 bg-gradient-to-t from-[#101321] to-[#40D1FF] px-5 md:px-40 flex flex-col items-center pt-5">
-        <Timer />
+        {/* <Timer /> */}
         <p className="mt-4 font-bold text-xl xs:text-3xl lg:text-5xl 3xl:text-6xl w-full sm:w-5/6 md:w-5/6  text-transparent bg-clip-text bg-gradient-to-b from-white to-gray-500">
           {t("title")}
         </p>
